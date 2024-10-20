@@ -1,24 +1,23 @@
+/* Estilo para a lista de destaques */
 .highlights-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .highlight-item {
-    list-style: none;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .highlight-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.highlight-item {
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+}
 
-  
-  /* src/app/components/HighlightsSection/index.module.css */
+.highlight-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo do modal */
 .modal {
   position: fixed;
   top: 50%;
@@ -26,7 +25,7 @@
   transform: translate(-50%, -50%);
   background: #ffffff;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 0;
   max-width: 400px;
   width: 90%;
   max-height: 80vh;
@@ -39,7 +38,12 @@
   overflow: hidden;
 }
 
-.video-wrapper {
+.modal-header-buttons{
+  display: flex;
+}
+
+/* Estilo para o contêiner da mídia (vídeo ou imagem) */
+.media-wrapper {
   width: 100%;
   height: auto;
   max-height: 60vh;
@@ -49,16 +53,34 @@
   background: #000;
 }
 
-.video-container {
+.video-container,
+.image-container {
   pointer-events: none; /* Permite que o Swiper detecte o swipe */
   width: 100%;
   height: 100%;
 }
 
-.video-player {
+.video-player,
+.media-player {
   width: 100%;
   height: 100%;
   object-fit: contain;
   border-radius: 8px;
   pointer-events: auto; /* Ativa a interação com os controles do vídeo */
+}
+
+/* Estilo do botão de som */
+.mute-button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.mute-button:hover {
+  background-color: #555;
 }
