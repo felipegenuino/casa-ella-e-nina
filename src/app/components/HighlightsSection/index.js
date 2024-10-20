@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Modal from 'react-modal';
 
 // import Swiper core and required modules
-import {  Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import {  Navigation, Pagination, Scrollbar, A11y  } from 'swiper/modules';
 import { Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
@@ -29,6 +29,7 @@ const galleries = [
       videos: [
         '/midias/gallery/thumb-1.mp4',
         '/midias/gallery/thumb-2.mp4',
+        '/midias/gallery/thumb-3.mp4',
       ],
     },
     {
@@ -36,8 +37,9 @@ const galleries = [
       thumb: '/midias/gallery/thumb-2.jpg',
       title: 'Experiência na Praia',
       videos: [
-        'https://www.youtube.com/embed/TY_KiHRhHPc',
-        'https://www.youtube.com/embed/9CF56sfRXC8'
+        '/midias/gallery/thumb-1.mp4',
+        '/midias/gallery/thumb-2.mp4',
+        '/midias/gallery/thumb-3.mp4',
       ],
     },
   ];
@@ -52,6 +54,7 @@ const HighlightsSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeGallery, setActiveGallery] = useState(null);
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+ 
 
   const openModal = (galleryIndex) => {
     setActiveGallery(galleries[galleryIndex]);
@@ -86,58 +89,41 @@ const HighlightsSection = () => {
           overlayClassName={styles.overlay}
         >
           <button onClick={closeModal} className={styles['close-button']}>Fechar</button>
+
+
+
           <Swiper
-             // install Swiper modules
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
             direction="vertical"
             slidesPerView={1}
-            spaceBetween={50}
-  
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
- 
-
             onSlideChange={(swiper) => setActiveVideoIndex(swiper.activeIndex)}
             className={styles['swiper-container']}
-
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
           >
             {activeGallery.videos.map((videoUrl, index) => (
               <SwiperSlide key={index}>
                 <div className={styles['video-wrapper']}>
-            {activeVideoIndex === index && (
-              isYouTubeVideo(videoUrl) ? (
-                <iframe
-                  src={`${videoUrl}?autoplay=1`}
-                  frameBorder="0"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  title={`Video ${index + 1} of ${activeGallery.title}`}
-                  className={styles['video-player']}
-                ></iframe>
-              ) : (
-                <video
-                  src={videoUrl}
-                  controls
-                  autoPlay
-                  loop
-                  muted
-                  className={styles['video-player']}
-                ></video>
-              )
-            )}
-          </div>
+                  {activeVideoIndex === index && (
+                    <div className={styles['video-container']}>
+                      <video
+                        src={videoUrl}
+                        //controls
+                        autoPlay
+                        loop
+                        className={`${styles['video-player']} ${styles['local-video']}`}
+                      ></video>
+                    </div>
+                  )}
+                </div>
               </SwiperSlide>
-
-              
             ))}
-
-<span slot="container-start">Container Start</span>
-  <span slot="container-end">Container End</span>
-  <span slot="wrapper-start">Wrapper Start</span>
-  <span slot="wrapper-end">Wrapper End</span>
           </Swiper>
+
+
+
+          
         </Modal>
       )}
     </section>
