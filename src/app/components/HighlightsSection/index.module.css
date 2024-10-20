@@ -79,6 +79,11 @@
   cursor: pointer;
   transition: background-color 0.3s;
   margin-top: 0.5rem;
+  z-index: 999999;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  pointer-events: all;
 }
 
 .mute-button:hover {
