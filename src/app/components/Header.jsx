@@ -15,7 +15,7 @@ export function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">Casa Boutique Ella & Nina</Link>
+        <Link href="/" className='heading'>Casa Boutique Ella & Nina</Link>
       </div>
       <button
         className={styles.hamburger}

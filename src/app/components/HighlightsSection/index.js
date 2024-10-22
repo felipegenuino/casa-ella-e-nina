@@ -45,6 +45,81 @@ const galleries = [
       { type: 'video', url: '/midias/gallery/video-4.mp4', description: 'Aria label'  },
     ],
   },
+  {
+    id: 1,
+    thumb: '/midias/gallery/thumb-1.jpg',
+    title: 'Sobre as Casas',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-3.jpg', description: 'Tour virtual pela casa 1'  },
+      { type: 'video', url: '/midias/gallery/video-1.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-1.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-2.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-5.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-6.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-7.jpg', description: 'Aria label'  },
+    ],
+  },
+  {
+    id: 2,
+    thumb: '/midias/gallery/thumb-2.jpg',
+    title: 'Experiência na Praia',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-3.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-4.mp4', description: 'Aria label'  },
+    ],
+  },
+  {
+    id: 1,
+    thumb: '/midias/gallery/thumb-1.jpg',
+    title: 'Sobre as Casas',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-3.jpg', description: 'Tour virtual pela casa 1'  },
+      { type: 'video', url: '/midias/gallery/video-1.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-1.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-2.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-5.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-6.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-7.jpg', description: 'Aria label'  },
+    ],
+  },
+  {
+    id: 2,
+    thumb: '/midias/gallery/thumb-2.jpg',
+    title: 'Experiência na Praia',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-3.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-4.mp4', description: 'Aria label'  },
+    ],
+  },
+  {
+    id: 1,
+    thumb: '/midias/gallery/thumb-1.jpg',
+    title: 'Sobre as Casas',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-3.jpg', description: 'Tour virtual pela casa 1'  },
+      { type: 'video', url: '/midias/gallery/video-1.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-1.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-2.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-5.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-6.jpg', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-7.jpg', description: 'Aria label'  },
+    ],
+  },
+  {
+    id: 2,
+    thumb: '/midias/gallery/thumb-2.jpg',
+    title: 'Experiência na Praia',
+    media: [
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-3.mp4', description: 'Aria label'  },
+      { type: 'image', url: '/midias/gallery/image-2.jpg', description: 'Aria label'  },
+      { type: 'video', url: '/midias/gallery/video-4.mp4', description: 'Aria label'  },
+    ],
+  },
 ];
 const HighlightsSection = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -77,7 +152,7 @@ const HighlightsSection = () => {
   
     return (
       <section>
-        <h2>Momentos Especiais</h2>
+        <h2 className='sr-only'>Momentos Especiais</h2>
         <ul className={styles['highlights-list']}>
           {galleries.map((gallery, index) => (
             <li key={gallery.id} className={styles['highlight-item']}>
@@ -87,8 +162,8 @@ const HighlightsSection = () => {
                 aria-expanded={modalIsOpen}
                 aria-label={`Ver galeria de ${gallery.title}`}
               >
-                <img src={gallery.thumb} alt={gallery.title} />
-                <p>{gallery.title}</p>
+                <img className='rounded-full' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
+                <p aria-hidden="true">{gallery.title}</p>
               </button>
             </li>
           ))}

@@ -5,8 +5,8 @@ import {Footer} from './components/Footer';
 
 
 const geistSans = localFont({
-  src: "../../public/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+  src: "../../public/fonts/FrauncesVariable.woff",
+  variable: "--font-title-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
@@ -24,9 +24,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} antialiased`}
+        className={`${geistSans.variable} antialiased flex justify-center`}
       >
-        <Header/>
+        {/* <Header/> */}
         {children}
         <Footer/>
       </body>

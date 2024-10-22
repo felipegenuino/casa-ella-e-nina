@@ -1,0 +1,13 @@
+.section-hero {
+    background-color: var(--green);
+    background-image: url(https://cdn.prod.website-files.com/6604f81…/6622af7…_Texture-Key_lime.png);
+    background-position: 0 0;
+    background-size: auto;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    position: relative;
+}

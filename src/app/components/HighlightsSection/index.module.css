@@ -11,10 +11,24 @@
   cursor: pointer;
 }
 
+.highlight-item button{
+  max-width: 120px;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
 .highlight-item img {
-  width: 100%;
+  width: 90px; 
   height: auto;
-  border-radius: 8px;
+   border-radius: 100%;
+}
+
+.highlight-item p { 
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 10px;
+  opacity: 0.5;
 }
 
 /* Estilo do modal */
