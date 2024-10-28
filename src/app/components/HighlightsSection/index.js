@@ -151,24 +151,26 @@ const HighlightsSection = () => {
     }, [modalIsOpen]);
   
     return (
-      <section>
-        <h2 className='sr-only'>Momentos Especiais</h2>
-        <ul className={styles['highlights-list']}>
+      <div className='hightlight _container mx-auto w-100'>
+        
+        <div className=" max-w-7xl px-0 lg:px-8 mx-auto ">        
+           <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
           {galleries.map((gallery, index) => (
-            <li key={gallery.id} className={styles['highlight-item']}>
+            <div role="listitem" key={gallery.id} className="text-center px-3">
               <button
                 onClick={() => openModal(index)}
                 role="button"
                 aria-expanded={modalIsOpen}
                 aria-label={`Ver galeria de ${gallery.title}`}
               >
-                <img className='rounded-full' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
-                <p aria-hidden="true">{gallery.title}</p>
+                <img className='rounded-full min-w-28 min-h-28' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
+                <p aria-hidden="true" className='text-xs my-2 font-medium'>{gallery.title}</p>
               </button>
-            </li>
+            </div>
           ))}
-        </ul>
-  
+        </div>
+        </div>
+
         {activeGallery && (
           <Modal
             isOpen={modalIsOpen}
@@ -176,6 +178,7 @@ const HighlightsSection = () => {
             className={styles.modal}
             overlayClassName={styles.overlay}
             ariaHideApp={false}
+            closeTimeoutMS={200}
             contentLabel={`Galeria de ${activeGallery.title}`}
           >
             <button
@@ -236,7 +239,7 @@ const HighlightsSection = () => {
             </Swiper>
           </Modal>
         )}
-      </section>
+      </div>
     );
   };
   

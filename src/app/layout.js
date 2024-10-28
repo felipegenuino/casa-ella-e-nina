@@ -1,17 +1,17 @@
 import localFont from "next/font/local";
 import "../styles/globals.css";
- import {Header} from './components/Header';
+//  import {Header} from './components/Header';
 import {Footer} from './components/Footer';
 
 
-const geistSans = localFont({
+const fontTitle = localFont({
   src: "../../public/fonts/FrauncesVariable.woff",
-  variable: "--font-title-sans",
+  variable: "--font-title",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "../../public/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+const fontBody = localFont({
+  src: "../../public/fonts/PlusJakartaSans-VariableFont_wght.woff",
+  variable: "--font-body",
   weight: "100 900",
 });
 
@@ -23,8 +23,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body
-        className={`${geistSans.variable} antialiased flex justify-center`}
+       <body
+        className={`${fontTitle.variable} ${fontBody.variable} antialiased w-100`}
       >
         {/* <Header/> */}
         {children}
