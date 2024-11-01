@@ -151,19 +151,24 @@ const HighlightsSection = () => {
     }, [modalIsOpen]);
   
     return (
-      <div className='hightlight _container mx-auto w-100'>
-        
-        <div className=" max-w-7xl px-0 lg:px-8 mx-auto ">        
+      <div className='hightlight _container mx-auto w-100 py-8 w-full bg-gradient-to-b from-indigo-500'>
+ 
+
+
+
+        <div className=" max-w-7xl px-0 lg:px-8 mx-auto relative rounded-xl overflow-auto">        
            <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
           {galleries.map((gallery, index) => (
             <div role="listitem" key={gallery.id} className="text-center px-3">
-              <button
+              <button 
                 onClick={() => openModal(index)}
                 role="button"
                 aria-expanded={modalIsOpen}
                 aria-label={`Ver galeria de ${gallery.title}`}
               >
-                <img className='rounded-full min-w-28 min-h-28' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
+                <div className='ease-in duration-300 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-full p-1 shadow-sm'>
+                <img className='rounded-full min-w-24 min-h-24 ' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
+                </div>
                 <p aria-hidden="true" className='text-xs my-2 font-medium'>{gallery.title}</p>
               </button>
             </div>
