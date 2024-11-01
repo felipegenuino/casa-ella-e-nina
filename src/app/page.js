@@ -14,12 +14,12 @@ export default function HomePage() {
            
 
 
-    <section className='know flex bg-primary items-center justify-center min-h-screen bg-teal-100 text-center'> 
+    <section className='know flex bg-primary items-center justify-center min-h-screen bg-teal-100 text-center py-24 px-8'> 
             <div className='container max-w-7xl justify-center flex flex-col items-center  '>
                   <div className='w-full justify-center '> 
 
         <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">We invest in the world’s potential</h1>
-        <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Nossas casas boutique oferecem uma experiência 5 estrelas, acomodando até 5 hóspedes em 2 quartos, 2 banheiros e uma piscina privativa. Com um toque elegante e artesão, cada casa é equipada para o máximo conforto. Localizadas na paradisíaca Praia do Patacho, a poucos minutos dos melhores pontos turísticos. Aceitamos pets e nosso café da manhã é incluso. Reserve agora para vivenciar momentos inesquecíveis.</p>
+        <p class="mb-6 xs:text-xs font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">Nossas casas boutique oferecem uma experiência 5 estrelas, acomodando até 5 hóspedes em 2 quartos, 2 banheiros e uma piscina privativa. Com um toque elegante e artesão, cada casa é equipada para o máximo conforto. Localizadas na paradisíaca Praia do Patacho, a poucos minutos dos melhores pontos turísticos. Aceitamos pets e nosso café da manhã é incluso. Reserve agora para vivenciar momentos inesquecíveis.</p>
 
          <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
             Learn more
