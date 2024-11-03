@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
  
 
 import brandPic from '/public/midias/hero/brand-hero-light.svg'
-import HighlightsSection from '@/app/components/HighlightsSection';
+import HighlightsSection from '@/app/blocks/HighlightsSection';
 
 
 
