@@ -43,18 +43,18 @@ export default function Ambientes() {
 
 return (
     <section className="py-24  min-h-screen px-8 lg:text-center flex flex-col justify-center bg-white-0	">
-        <div className=' mx-auto  max-w-7xl '>
-            <h2 className="mb-4 max-w-6xl text-4xl md:text-5xl lg:text-6xl font-extrabold leading-none tracking-tight text-gray-900 ">
+        <div className='    '>
+            <h2 className="mb-4  mx-auto max-w-2xl text-4xl md:text-5xl lg:text-6xl font-extrabold leading-none tracking-tight text-gray-900 ">
               <span className='underline underline-offset-3 decoration-4 decoration-blue-400 block  text-2xl pb-2'>Experiência Única</span> 
                Casa Boutique  da Praia do Patacho </h2>
-               <p  className='mb-6 max-w-6xl  xs:text-xs font-normal text-gray-500 lg:text-xl'>Descubra um refúgio exclusivo na paradisíaca Praia do Patacho, onde elegância e conforto se encontram em cada detalhe.</p>
-            <p className='mb-6 max-w-6xl  xs:text-xs font-normal text-gray-800 lg:text-xl'> Nossas casas boutique oferecem uma experiência 5 estrelas, com ambientes cuidadosamente planejados para proporcionar momentos inesquecíveis. Desde áreas de lazer privativas até dormitórios com toque artesanal, cada espaço foi projetado para que você se sinta em casa enquanto desfruta das belezas naturais de Alagoas.</p>
+               <p  className='mb-6  mx-auto max-w-2xl xs:text-xs font-normal text-gray-500 lg:text-xl'>Descubra um refúgio exclusivo na paradisíaca Praia do Patacho, onde elegância e conforto se encontram em cada detalhe.</p>
+              <p className='mb-6 mx-auto max-w-2xl xs:text-xs font-normal text-gray-800 lg:text-md'> Nossas casas boutique oferecem uma experiência 5 estrelas, com ambientes cuidadosamente planejados para proporcionar momentos inesquecíveis. Desde áreas de lazer privativas até dormitórios com toque artesanal, cada espaço foi projetado para que você se sinta em casa enquanto desfruta das belezas naturais de Alagoas.</p>
         </div>
     
       <div className="mx-auto w-full xxx-max-w-6xl relative" role="region" aria-label="Carrossel de imagens das casas">
         <Swiper 
           spaceBetween={24} 
-          slidesPerView={2}  
+          slidesPerView={1}  
           grabCursor={true}  
           breakpoints={{
             640: { slidesPerView: 2 },
