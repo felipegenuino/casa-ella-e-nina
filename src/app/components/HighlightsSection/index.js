@@ -151,10 +151,7 @@ const HighlightsSection = () => {
     }, [modalIsOpen]);
   
     return (
-      <div className='hightlight _container mx-auto w-100 py-8 w-full bg-gradient-to-b from-indigo-500'>
- 
-
-
+      <div className='hightlight _container mx-auto w-100 py-5 w-full bg-white from-indigo-500'> 
 
         <div className=" max-w-7xl px-0 lg:px-8 mx-auto relative rounded-xl overflow-auto">        
            <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
@@ -166,10 +163,10 @@ const HighlightsSection = () => {
                 aria-expanded={modalIsOpen}
                 aria-label={`Ver galeria de ${gallery.title}`}
               >
-                <div className='ease-in duration-300 bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-full p-1 shadow-sm'>
-                <img className='rounded-full min-w-24 min-h-24 ' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
+                <div className='ease-in duration-300 bg-white hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 rounded-full p-0 shadow-sm aspect-square'>
+                <img className='rounded-full min-w-24 min-h-24 aspect-square p-1 border-solid border-2 border-black-600' src={gallery.thumb} alt={gallery.title} aria-hidden="true" />
                 </div>
-                <p aria-hidden="true" className='text-xs my-2 font-medium'>{gallery.title}</p>
+                <p aria-hidden="true" className='text-[10px]  md:text[12px] my-2 font-medium'>{gallery.title}</p>
               </button>
             </div>
           ))}
