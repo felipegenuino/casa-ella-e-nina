@@ -12,7 +12,15 @@ export default function RefugioLuxo() {
           <p className="mb-6 xs:text-xs font-normal text-gray-800 lg:text-xl ">Com espaço para até 5 hóspedes, cada casa conta com 2 quartos, 2 banheiros e uma piscina privativa, perfeita para momentos de relaxamento e lazer. Situadas na paradisíaca Praia do Patacho, a poucos minutos de atrações turísticas imperdíveis, nossas casas são pet-friendly e oferecem um delicioso café da manhã para começar o dia da melhor forma. Reserve agora e crie memórias inesquecíveis em um dos destinos mais encantadores de Alagoas</p>
         </div> 
       <div className='w-4xl w-full bg-white/20 rounded-2xl max-w-full lg:px-24    relative' >
-          <iframe className="w-24 min-w-full rounded-2xl aspect-video mx-auto"   src="https://www.youtube.com/embed/93trkmx3Ixo?si=m2L9gqO7Yk4Cj49b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe 
+          className="w-24 min-w-full rounded-2xl aspect-video mx-auto"   
+          src="https://www.youtube.com/embed/93trkmx3Ixo?si=m2L9gqO7Yk4Cj49b" 
+          title="YouTube video player" 
+          frameborder="0"   
+          referrerPolicy="no-referrer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen></iframe>
       </div>
 </div>
 </section> 

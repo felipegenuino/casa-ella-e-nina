@@ -1,76 +1,88 @@
 "use client";
 
 import Ambientes from './blocks/Ambientes';
- // src/app/page.js
+// src/app/page.js
 import Hero from './blocks/Hero';
 import RefugioLuxo from './blocks/RefugioLuxo';
+import Impact from './blocks/Impact';
+import Footer from './blocks/Footer';
+import Testimonials from './blocks/Testimonials';
 
 
 
 export default function HomePage() {
   return (
-    <main className='w-100'> 
-      <Hero />  
+    <main className='w-100'>
+      <Hero />
 
-      <RefugioLuxo />
+      {/* <RefugioLuxo /> */}
 
       <Ambientes />
+      <Testimonials />
 
 
 
 
 
-    <section className='bg-white	 flex items-center justify-center h-screen'> 
+      <section className="text-gray-600 body-font">
+        <div className="max-w-screen-xl mx-auto  container px-5 py-32 mx-auto flex flex-wrap">
+          <div className="flex w-full mb-20 flex-wrap">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900 lg:w-1/3 lg:mb-0 mb-4">Momentos Compartilhados</h1>
+            <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">Confira os momentos reais e experiências incríveis de quem já se hospedou na Casa Boutique Ella e Nina. Siga-nos no Instagram para acompanhar as novidades e se inspirar para a sua próxima viagem!</p>
+          </div>
+          <div className="flex flex-wrap md:-m-2 -m-1">
+            <div className="flex flex-wrap w-1/2">
+              <div className="md:p-2 p-1 w-1/2">
+                <img alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..." className="w-full h-full object-cover object-center block" src="/midias/instagram/h-4.jpg" />
+              </div>
+              <div className="md:p-2 p-1 w-1/2">
+                <img alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho." className="w-full h-full object-cover object-center block" src="/midias/instagram/7.jpg" />
+              </div>
+              <div className="md:p-2 p-1 w-full">
 
-      <div className='md:w-[740px]'>
-      <h1>Moments s</h1>
-        <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Viva essa experiência <span class=" underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600"> Momentos Especiais</span></h2>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">Nossas casas boutique oferecem uma experiência cinco estrelas, com conforto, estilo e exclusividade.</p>
-        <p> As casas Ella e Nina estão prontas para receber até 5 hóspedes, com 2 quartos espaçosos, 2 banheiros modernos e uma piscina privativa em cada unidade. Localizadas na paradisíaca Praia do Patacho, as casas são um refúgio de tranquilidade, a poucos minutos dos melhores pontos turísticos de Alagoas.</p>
-        <p> Pets são bem-vindos, e o café da manhã, cuidadosamente preparado com produtos locais, está incluso em sua estadia.</p>
-            
-      </div>  
-       </section>
+                <img alt="Começar a semana assim..." className="w-full object-cover h-full object-center block" src="/midias/instagram/2.jpg" />
+              </div>
+            </div>
+            <div className="flex flex-wrap w-1/2">
+              <div className="md:p-2 p-1 w-full">
+                <img alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..." className="w-full h-full object-cover object-center block" src="/midias/instagram/b-1.jpg" />
+              </div>
+              <div className="md:p-2 p-1 w-1/2">
+                <img alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..." className="w-full h-full object-cover object-center block" src="/midias/instagram/6.jpg" />
+              </div>
+              <div className="md:p-2 p-1 w-1/2">
+                <img alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho." className="w-full h-full object-cover object-center block" src="/midias/instagram/h-3.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
 
 
+      <section className="py-32">
+        <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
+          <div className="max-w-xl md:mx-auto">
+            <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              Reserve sua estadia perfeita
+            </h3>
+            <p className="mt-3 text-gray-600">
+              Escolha a melhor plataforma para garantir uma experiência inesquecível na Praia do Patacho. Faça sua reserva de forma rápida e segura com nossos parceiros de confiança.
+            </p>
+          </div>
+          <div className="flex gap-3 items-center mt-4 md:justify-center">
+            <a href="javascript:void(0)" className="inline-block py-2 px-4 text-white font-medium bg-[#E61E4D] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none" aria-label='Reservar no Airbnb'>
+              <img className='h-8' aria-hidden='true' src='/midias/brands/airbnb-white.svg' alt='airbnb' />
+            </a>
 
-
-
-
-    <section className='envarioments bg-indigo-300 flex items-center justify-center h-screen'>
-      
-      
-      
-      
-       <h1>Ambientes</h1> 
-       
- 
- 
-<div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
-  <div class="md:flex">
-    <div class="md:shrink-0">
-      <img class="h-48 w-full object-cover md:h-full md:w-48" src="https://images.unsplash.com/photo-1650698678900-3b1aba1baac9?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Modern building architecture" />
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Company retreats</div>
-      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible accommodation for your team</a>
-      <p class="mt-2 text-slate-500">Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a list of places to do just that.</p>
-    </div>
-  </div>
-</div> 
-       
-       
-       
-       </section>
-    <section className='comodities flex items-center justify-center h-screen'> <h1>Comodidades</h1> </section>
-    <section className='instagram bg-indigo-200  flex items-center justify-center h-screen'> <h1>Instagram</h1> </section>
-    <section className='booking bg-indigo-100  flex items-center justify-center h-screen'> <h1>Reserve sua experiencia</h1> </section>
-
-    <footer>
-      <h2>footer</h2>
-    </footer>
+            <a href="javascript:void(0)" className="inline-block py-3 px-4 text-white font-medium bg-[#003B95] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none" aria-label='Reservar no Booking.com'>
+              <img className='h-6' aria-hidden='true' src='/midias/brands/booking-white.svg' alt='booking.com' />
+            </a>
+          </div>
+        </div>
+      </section>
+      <Footer />
 
     </main>
   );
