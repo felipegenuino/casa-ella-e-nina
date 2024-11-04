@@ -18,9 +18,9 @@ export default function Hero() {
             <section className="py-12">
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 pb-8  sm:max-w-lg md:px-0 lg:max-w-xl">
-                        <h5 className="text-sm text-indigo-600 font-medium">
-                            Estadias inesquecívei
-                        </h5>
+                        <p className="text-indigo-600 font-semibold">
+                            Estadias Inesquecível
+                        </p>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             Viva uma experiência de luxo e conforto na Praia do Patacho
                         </h2>
