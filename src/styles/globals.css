@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
- 
- 
-
 body {
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, .heading {
+h1,
+h2,
+h3,
+h4,
+h5,
+.heading {
   font-family: var(--font-title);
 }
 
@@ -19,9 +21,6 @@ h1, h2, h3, h4, h5, .heading {
     text-wrap: balance;
   }
 }
-
- 
-
 
 .player-wrapper {
   position: relative;
@@ -33,11 +32,8 @@ h1, h2, h3, h4, h5, .heading {
   top: 0;
   left: 0;
 }
- 
- 
 
-
- /* Estilizando a barra de rolagem para navegadores baseados em WebKit */
+/* Estilizando a barra de rolagem para navegadores baseados em WebKit */
 ::-webkit-scrollbar {
   width: 12px; /* Largura da barra de rolagem vertical */
   height: 8px; /* Altura da barra de rolagem horizontal */

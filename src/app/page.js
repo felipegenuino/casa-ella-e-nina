@@ -109,7 +109,8 @@ export default function HomePage() {
           </div>
           <div className="flex gap-3 items-center mt-4 md:justify-center">
             <a
-              href="javascript:void(0)"
+              href="#"
+              onClick={(e) => e.preventDefault()}
               className="inline-block py-2 px-4 text-white font-medium bg-[#E61E4D] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
               aria-label="Reservar no Airbnb"
             >
@@ -123,7 +124,8 @@ export default function HomePage() {
             </a>
 
             <a
-              href="javascript:void(0)"
+              href="#"
+              onClick={(e) => e.preventDefault()}
               className="inline-block py-3 px-4 text-white font-medium bg-[#003B95] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
               aria-label="Reservar no Booking.com"
             >
