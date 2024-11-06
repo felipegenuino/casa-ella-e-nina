@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore from "swiper";
 import Image from "next/image";
-import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
+import { PlayIcon, PauseIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -405,11 +405,11 @@ const HighlightsSection = () => {
           <div className="relative w-full h-full flex items-center justify-center">
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white bg-gray-800 rounded-full p-2 z-50"
+              className="absolute top-4 right-4 text-white transition bg-gray-800 hover:bg-gray-900 rounded-full px-3 py-2 z-50 flex items-center gap-2"
               ref={closeModalButtonRef}
               aria-label="Fechar galeria"
             >
-              Fechar
+              Fechar <Cross1Icon />
             </button>
 
             <Swiper
@@ -441,7 +441,13 @@ const HighlightsSection = () => {
                             className="max-h-[90vh] max-w-full object-contain"
                             aria-label={mediaItem.description}
                             onClick={handleVideoPress}
+                            tabIndex="0"
                           ></video>
+                          <div aria-live="polite" className="sr-only">
+                            {activeMediaIndex === index
+                              ? mediaItem.description
+                              : ""}
+                          </div>
                           <button
                             onClick={toggleMute}
                             className="absolute bottom-4 right-4 text-white bg-gray-800 rounded-full p-2 z-50"
