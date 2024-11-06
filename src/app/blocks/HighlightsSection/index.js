@@ -11,6 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore from "swiper";
 import Image from "next/image";
+import { PlayIcon, PauseIcon } from "@radix-ui/react-icons";
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -19,276 +20,276 @@ const galleries = [
   {
     id: 1,
     thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Sobre as Casas",
+    title: "Galeria 1",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-3.jpg",
-        description: "Tour virtual pela casa 1",
+        description: "Leganda da imagem 3",
       },
       {
         type: "video",
         url: "/midias/gallery/video-1.mp4",
-        description: "Aria label",
+        description: "Legenda do video 1",
       },
       {
         type: "image",
         url: "/midias/gallery/image-1.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 1",
       },
       {
         type: "video",
         url: "/midias/gallery/video-2.mp4",
-        description: "Aria label",
+        description: "Legenda do video 2",
       },
       {
         type: "image",
         url: "/midias/gallery/image-5.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 5",
       },
       {
         type: "image",
         url: "/midias/gallery/image-6.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 6",
       },
       {
         type: "image",
         url: "/midias/gallery/image-7.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 7",
       },
     ],
   },
   {
     id: 2,
     thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Experiência na Praia",
+    title: "Galeria 2",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-3.mp4",
-        description: "Aria label",
+        description: "Legenda do video 3",
       },
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-4.mp4",
-        description: "Aria label",
+        description: "Legenda do video 4",
       },
     ],
   },
   {
-    id: 1,
+    id: 3,
     thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Sobre as Casas",
+    title: "Galeria 3",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-3.jpg",
-        description: "Tour virtual pela casa 1",
+        description: "Legenda da imagem 3",
       },
       {
         type: "video",
         url: "/midias/gallery/video-1.mp4",
-        description: "Aria label",
+        description: "Legenda do video 1",
       },
       {
         type: "image",
         url: "/midias/gallery/image-1.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 1",
       },
       {
         type: "video",
         url: "/midias/gallery/video-2.mp4",
-        description: "Aria label",
+        description: "Legenda do video 2",
       },
       {
         type: "image",
         url: "/midias/gallery/image-5.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 5",
       },
       {
         type: "image",
         url: "/midias/gallery/image-6.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 6",
       },
       {
         type: "image",
         url: "/midias/gallery/image-7.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 7",
       },
     ],
   },
   {
-    id: 2,
+    id: 4,
     thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Experiência na Praia",
+    title: "Galeria 4",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-3.mp4",
-        description: "Aria label",
+        description: "Legenda do video 3",
       },
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-4.mp4",
-        description: "Aria label",
+        description: "Legenda do video 4",
       },
     ],
   },
   {
-    id: 1,
+    id: 5,
     thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Sobre as Casas",
+    title: "Galeria 5",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-3.jpg",
-        description: "Tour virtual pela casa 1",
+        description: "Legenda da imagem 3",
       },
       {
         type: "video",
         url: "/midias/gallery/video-1.mp4",
-        description: "Aria label",
+        description: "Legenda do video 1",
       },
       {
         type: "image",
         url: "/midias/gallery/image-1.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 1",
       },
       {
         type: "video",
         url: "/midias/gallery/video-2.mp4",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "image",
         url: "/midias/gallery/image-5.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 5",
       },
       {
         type: "image",
         url: "/midias/gallery/image-6.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 6",
       },
       {
         type: "image",
         url: "/midias/gallery/image-7.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 7",
       },
     ],
   },
   {
-    id: 2,
+    id: 6,
     thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Experiência na Praia",
+    title: "Galeria 6",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-3.mp4",
-        description: "Aria label",
+        description: "Legenda da imagem 3",
       },
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-4.mp4",
-        description: "Aria label",
+        description: "Legenda do video 4",
       },
     ],
   },
   {
-    id: 1,
+    id: 7,
     thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Sobre as Casas",
+    title: "Galeria 7",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-3.jpg",
-        description: "Tour virtual pela casa 1",
+        description: "Legenda da imagem 3",
       },
       {
         type: "video",
         url: "/midias/gallery/video-1.mp4",
-        description: "Aria label",
+        description: "Legenda do video 1",
       },
       {
         type: "image",
         url: "/midias/gallery/image-1.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 1",
       },
       {
         type: "video",
         url: "/midias/gallery/video-2.mp4",
-        description: "Aria label",
+        description: "Legenda do video 2",
       },
       {
         type: "image",
         url: "/midias/gallery/image-5.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 5",
       },
       {
         type: "image",
         url: "/midias/gallery/image-6.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 6",
       },
       {
         type: "image",
         url: "/midias/gallery/image-7.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 7",
       },
     ],
   },
   {
-    id: 2,
+    id: 8,
     thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Experiência na Praia",
+    title: "Galeria 8",
     media: [
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-3.mp4",
-        description: "Aria label",
+        description: "Legenda do video 3",
       },
       {
         type: "image",
         url: "/midias/gallery/image-2.jpg",
-        description: "Aria label",
+        description: "Legenda da imagem 2",
       },
       {
         type: "video",
         url: "/midias/gallery/video-4.mp4",
-        description: "Aria label",
+        description: "Legenda do video 4",
       },
     ],
   },
@@ -373,11 +374,11 @@ const HighlightsSection = () => {
               <button
                 onClick={() => openModal(index)}
                 aria-expanded={modalIsOpen}
-                aria-label={`Ver galeria de ${gallery.title}`}
+                aria-label={`Pressione para ver galeria de ${gallery.title}`}
               >
-                <div className="bg-white hover:bg-violet-600 rounded-full shadow-sm aspect-square">
+                <div className="bg-white hover:bg-indigo-600 transition rounded-full shadow-sm aspect-square">
                   <img
-                    className="rounded-full min-w-24 min-h-24 p-1 border-2 border-black"
+                    className="rounded-full min-w-24 min-h-24 p-1 border-2 border-gray"
                     src={gallery.thumb}
                     alt={gallery.title}
                     aria-hidden="true"
@@ -398,7 +399,7 @@ const HighlightsSection = () => {
           onRequestClose={closeModal}
           ariaHideApp={false}
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-90"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-10"
           contentLabel={`Galeria de ${activeGallery.title}`}
         >
           <div className="relative w-full h-full flex items-center justify-center">
@@ -448,7 +449,7 @@ const HighlightsSection = () => {
                               isMuted ? "Ativar som" : "Desativar som"
                             }
                           >
-                            {isMuted ? "🔇" : "🔊"}
+                            {isMuted ? <PauseIcon /> : <PlayIcon />}
                           </button>
                         </div>
                       ) : (
