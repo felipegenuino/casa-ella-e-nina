@@ -12,10 +12,11 @@ import Ambientes from "./blocks/Ambientes";
 import SkipToContent from "./components/SkipToContent";
 import MomentosCompartilhados from "./blocks/MomentosCompartilhados";
 import Reserve from "./blocks/Reserve";
+import Hero2 from "./blocks/Hero2";
 
 export default function HomePage() {
   return (
-    <main className="w-100 p-4" id="main-content">
+    <main className="w-100" id="main-content">
       <SkipToContent />
       <Hero />
       {/* <RefugioLuxo /> */}

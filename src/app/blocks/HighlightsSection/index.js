@@ -366,7 +366,7 @@ const HighlightsSection = () => {
   }, [modalIsOpen]);
 
   return (
-    <div className="highlight-container mx-auto py-5 bg-white">
+    <div className="highlight-container mx-auto py-5 border">
       <div className="max-w-7xl px-0 lg:px-8 mx-auto relative rounded-xl overflow-auto">
         <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
           {galleries.map((gallery, index) => (
@@ -384,7 +384,10 @@ const HighlightsSection = () => {
                     aria-hidden="true"
                   />
                 </div>
-                <p aria-hidden="true" className="text-xs my-2 font-medium">
+                <p
+                  aria-hidden="true"
+                  className="text-xs my-2 font-medium text-white"
+                >
                   {gallery.title}
                 </p>
               </button>
