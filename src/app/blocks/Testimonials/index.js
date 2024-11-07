@@ -32,14 +32,14 @@ const testimonials = [
     stayDuration: "Ficou algumas noites",
     rating: 5,
     comment:
-      "O espaço é muito bem pensado e muito bem executado. Bom espaço para descansar e curtir com privacidade. Juliana e Val (funcionários do estabelecimento) garantem um suporte rápido, deixando a estadia melhor ainda. Pretendo retornar assim que possível! O melhor Airbnb que já fiquei na Rota! <3",
+      "O espaço é muito bem pensado e muito bem executado. Bom espaço para descansar e curtir com privacidade. Juliana e Val (funcionários do estabelecimento) garantem um suporte rápido, deixando a estadia melhor ainda.",
     image: "/midias/testimonials/joao-felipe.webp",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-32 bg-gray-100">
+    <section className="py-32 bg-gray-100 ">
       <div className="max-w-screen-xl mx-auto  px-8  md:px-8 ">
         <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  border-b border-gray-200 pb-8  ">
           <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
@@ -68,21 +68,22 @@ export default function Testimonials() {
           <div> </div>
         </div>
 
-        <div className=" grid max-w-2xl grid-cols-1  gap-x-12 lg:gap-x-24 gap-y-16  mt-4 mb-8 pt-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className=" grid max-w-2xl grid-cols-1  gap-x-12 lg:gap-x-18 gap-y-16  mt-4 mb-8 pt-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex max-w-xl flex-col items-start justify-between"
+              className="flex max-w-xl flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 rounded-xl"
             >
-              <div className="p-0 flex  gap-y-0 text-xs flex-col">
-                <div className="relative mt-8 flex items-center gap-x-4">
+              <div className="p-0 flex  gap-y-0 text-xs flex-col  h-full">
+                <div className="relative flex flex-col gap-x-4">
                   <Image
                     src={testimonial.image}
                     alt={`Foto de ${testimonial.name}`}
-                    width={50}
-                    height={50}
-                    className="h-10 w-10 rounded-full bg-gray-50"
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-lg bg-gray-50"
                   />
+
                   <div className="text-sm/6">
                     <p className="font-semibold text-gray-900">
                       <span className="absolute inset-0" />
@@ -92,16 +93,18 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                <p className="text-xs text-gray-500 mt-2">
-                  <span className="text-yellow-400 ">
+                {/* <p className="text-xs text-gray-500 mt-2">
+                  · {testimonial.date}·{" "}
+                  <span className="text-xs">{testimonial.stayDuration}</span>
+                </p> */}
+                <p className="mt-4 mb-2 text-gray-700 text-lg">
+                  {testimonial.comment}
+                </p>
+                <p className="mt-auto">
+                  <span className="text-black text-xl ">
                     {"★".repeat(testimonial.rating)}
                     {"☆".repeat(5 - testimonial.rating)}
                   </span>
-                  · {testimonial.date}·{" "}
-                  <span className="text-xs">{testimonial.stayDuration}</span>
-                </p>
-                <p className="mt-2 text-gray-700 text-sm">
-                  {testimonial.comment}
                 </p>
               </div>
             </div>
