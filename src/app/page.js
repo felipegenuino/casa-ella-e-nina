@@ -13,6 +13,7 @@ import SkipToContent from "./components/SkipToContent";
 import MomentosCompartilhados from "./blocks/MomentosCompartilhados";
 import Reserve from "./blocks/Reserve";
 import Hero2 from "./blocks/Hero2";
+import Amenities from "./blocks/Comodidades";
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Hero />
       {/* <RefugioLuxo /> */}
       <Ambientes />
+      <Amenities />
       <Testimonials />
       <MomentosCompartilhados />
       <Reserve />

@@ -401,8 +401,8 @@ const HighlightsSection = () => {
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
           ariaHideApp={false}
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-10"
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-100"
+          overlayClassName="fixed inset-0  bg-opacity-90 z-10"
           contentLabel={`Galeria de ${activeGallery.title}`}
         >
           <div className="relative w-full h-full flex items-center justify-center">

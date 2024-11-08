@@ -44,35 +44,35 @@ export default function Hero() {
 
       <HighlightsSection />
 
-      <div className="z-10 max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  bg-white/10 rounded-md mt-10">
+      <div className="z-10 max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  bg-white/10 rounded-md mt-10 py-10">
         <div className="flex-none space-y-5 px-4  sm:max-w-lg md:px-0 lg:max-w-xl ">
           <p className="text-white font-medium">Porto de Pedras - Alagoas</p>
           <h2 className="text-4xl text-white font-extrabold md:text-5xl">
             Viva uma experiência de luxo e conforto na Praia do Patacho
           </h2>
-          <div class="flex flex-wrap items-center gap-3 lg:gap-6 text-white/80 ">
-            <div class="flex items-center gap-2 text-xs  lg:text-lg lg:font-medium">
+          <div className="flex flex-wrap items-center gap-3 lg:gap-6 text-white/80 ">
+            <div className="flex items-center gap-2 text-xs  lg:text-lg lg:font-medium">
               <Users
                 size={28}
-                class="relative shrink-0 top-0 h-5 w-5"
+                className="relative shrink-0 top-0 h-5 w-5"
                 aria-hidden="true"
               />
               <div>2 Hóspedes</div>
             </div>
 
-            <div class="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
+            <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
               <HouseSimple
                 size={28}
-                class="relative shrink-0 top-0 h-5 w-5"
+                className="relative shrink-0 top-0 h-5 w-5"
                 aria-hidden="true"
               />
               <div>1 Quarto</div>
             </div>
 
-            <div class="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
+            <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
               <Bed
                 size={28}
-                class="relative shrink-0 top-0 h-5 w-5"
+                className="relative shrink-0 top-0 h-5 w-5"
                 aria-hidden="true"
               />
               <div>2 camas</div>
@@ -93,7 +93,7 @@ export default function Hero() {
               className="flex items-center justify-center  py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
             >
               <ArrowDown size={32} />
-              Conheça os Ambientes
+              Reserve Agora
             </a>
             <a
               href="#"
