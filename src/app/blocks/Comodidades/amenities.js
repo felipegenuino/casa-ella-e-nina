@@ -134,13 +134,16 @@ const amenities = [
   {
     category: "Ar livre",
     items: [
-      { name: "Pátio ou varanda (Privativa)" },
-      { name: "Quintal privado — totalmente cercado" },
-      { name: "Móveis externos" },
-      { name: "Rede" },
-      { name: "Área de jantar externa" },
-      { name: "Cozinha ao ar livre" },
-      { name: "Churrasqueira" },
+      { name: "Pátio ou varanda (Privativa)", icon: "patio-varanda.svg" },
+      {
+        name: "Quintal privado — totalmente cercado",
+        icon: "quintal-privado.svg",
+      },
+      { name: "Móveis externos", icon: "moveis-externo.svg" },
+      { name: "Rede", icon: "rede.svg" },
+      { name: "Área de jantar externa", icon: "moveis-externo.svg" },
+      { name: "Cozinha ao ar livre", icon: "churrasco.svg" },
+      { name: "Churrasqueira", icon: "churrasco.svg" },
       {
         name: "Itens básicos de praia",
         details:

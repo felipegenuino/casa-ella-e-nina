@@ -79,31 +79,28 @@ export default function Hero() {
             </div>
           </div>
           <p className="text-white/90">
-            Descubra um refúgio onde o charme e a sofisticação encontram a
-            natureza exuberante. Nossas casas boutique oferecem uma estadia de
-            cinco estrelas, repleta de detalhes pensados para seu conforto.
-            Desfrute de momentos únicos com sua família e amigos, em um ambiente
-            acolhedor e totalmente equipado. Reserve agora e comece a planejar
-            sua experiência memorável.
+            Se você procura privacidade, conforto e uma experiência única em um
+            dos destinos mais belos do litoral brasileiro, a Casa Boutique é o
+            lugar perfeito. Ideal para casais, nossa casa acomoda até duas
+            pessoas adultas e oferece um refúgio exclusivo em meio à natureza
+            exuberante de Porto de Pedras.
           </p>
           <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center  py-2 px-4 text-center text-white font-medium bg-indigo-600 duration-150 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
+              className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium  duration-150 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
             >
-              <ArrowDown size={32} />
-              Reserve Agora
+              {/* <ArrowDown size={32} /> */}
+              Conferir disponibilidade
             </a>
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center gap-x-2 py-2 px-4 
-              text-gray-700 hover:text-gray-500 font-medium duration-150 
-              bg-gray-100 active:bg-gray-100 border rounded-lg md:inline-flex"
+              className="flex items-center justify-center h-[64px] text-xl py-3 px-4 text-center text-black font-medium  duration-150  bg-white hover:bg-gray-500 active:bg-gray-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
             >
               <WhatsappLogo size={32} />
-              Tire dúvidas pelo WhatsApp
+              Fale conosco
             </a>
           </div>
         </div>

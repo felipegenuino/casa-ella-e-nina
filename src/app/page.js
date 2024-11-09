@@ -14,6 +14,7 @@ import MomentosCompartilhados from "./blocks/MomentosCompartilhados";
 import Reserve from "./blocks/Reserve";
 import Hero2 from "./blocks/Hero2";
 import Amenities from "./blocks/Comodidades";
+import Avaliacao from "./blocks/Avaliacao";
 
 export default function HomePage() {
   return (

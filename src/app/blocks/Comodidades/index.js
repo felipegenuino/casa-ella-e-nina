@@ -30,52 +30,66 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className="px-4 py-8">
-      <h2 className="text-2xl font-bold">O que esse lugar oferece</h2>
-      <p className="text-gray-600">
-        Veja algumas das comodidades disponíveis neste local.
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-        {mainAmenities.map((item, index) => (
-          <div key={index} className="flex items-start space-x-3 py-2">
-            <Image
-              src={`/midias/amenities/${item.icon}`}
-              alt=""
-              // className="w-6 h-6 w-6"
-              width={24}
-              height={24}
-            />
-            <div>
-              <p
-                className={`font-medium ${
-                  item.unavailable ? "line-through text-gray-400" : ""
-                }`}
-              >
-                {item.name}
-              </p>
-              {item.details && (
-                <p
-                  className={`text-sm ${
-                    item.unavailable
-                      ? "line-through text-gray-400"
-                      : "text-gray-500"
-                  }`}
-                >
-                  {item.details}
-                </p>
-              )}
-            </div>
+    <section className="px-4 py-32   ">
+      <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  border-b border-gray-200 pb-8">
+        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
+          <div>
+            <p className="text-indigo-600 font-semibold py-2">Comodidades</p>
           </div>
-        ))}
+          <div className="grid grid-cols-1 items-start space-y-3 ">
+            <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
+              O que esse lugar oferece
+            </p>
+            <p className="xs:mt-3 text-gray-600">
+              Veja algumas das comodidades disponíveis neste local.
+            </p>
+          </div>
+        </div>
       </div>
 
-      <button
-        onClick={openModal}
-        className="mt-6 inline-block px-4 py-2 border rounded-lg text-indigo-600 font-medium hover:bg-indigo-50"
-      >
-        Mostrar todas as comodidades
-      </button>
+      <div className="max-w-screen-xl mx-auto  mt-6 pt-8 flex justify-between items-center">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+          {mainAmenities.map((item, index) => (
+            <div key={index} className="flex items-start space-x-3 py-2">
+              <Image
+                src={`/midias/amenities/${item.icon}`}
+                alt=""
+                // className="w-6 h-6 w-6"
+                width={24}
+                height={24}
+              />
+              <div>
+                <p
+                  className={`font-medium ${
+                    item.unavailable ? "line-through text-gray-400" : ""
+                  }`}
+                >
+                  {item.name}
+                </p>
+                {item.details && (
+                  <p
+                    className={`text-sm ${
+                      item.unavailable
+                        ? "line-through text-gray-400"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    {/* {item.details} */}
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="max-w-screen-xl mx-auto">
+        <button
+          onClick={openModal}
+          className="mt-6 inline-block px-4 py-2 border rounded-lgduration-190 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none text-white"
+        >
+          Mostrar todas as 55 comodidades
+        </button>
+      </div>
 
       <Modal
         isOpen={modalIsOpen}
@@ -85,7 +99,7 @@ const AmenitiesSection = () => {
         overlayClassName="fixed inset-0 bg-black/[.5] z-10"
         contentLabel="Todas as comodidades"
       >
-        <div className="rounded-xl overflow-hidden bg-white rounded-lg max-w-3xl w-full relative flex flex-col max-h-[90vh]">
+        <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
             <h2 className="text-2xl font-bold">Todas as comodidades</h2>
             <button
@@ -98,9 +112,9 @@ const AmenitiesSection = () => {
             </button>
           </header>
 
-          <div className="overflow-y-auto p-6">
+          <div className="overflow-y-auto p-6 pt-12">
             {amenities.map((category, index) => (
-              <div key={index} className="mb-4">
+              <div key={index} className="mb-4 pb-14">
                 <h3 className="font-semibold text-lg mb-2">
                   {category.category}
                 </h3>

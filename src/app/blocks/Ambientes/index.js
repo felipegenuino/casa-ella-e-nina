@@ -1,135 +1,63 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import Modal from "react-modal";
 import Image from "next/image";
+import { Cross1Icon } from "@radix-ui/react-icons";
+import slides from "./slides"; // Importa slides de slides.js
 
 export default function Ambientes() {
-  const slides = [
-    {
-      image: "/midias/ambientes/1-0.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-    {
-      image: "/midias/ambientes/1-1.jpg",
-      caption: "Vista da piscina privativa ao entardecer",
-    },
-    {
-      image: "/midias/ambientes/1-2.jpg",
-      caption: "Área de estar com detalhes artesanais",
-    },
-    {
-      image: "/midias/ambientes/2.jpg",
-      caption: "Quarto decorado com toque acolhedor",
-    },
-    {
-      image: "/midias/ambientes/3.jpg",
-      caption: "Café da manhã com itens regionais",
-    },
-    {
-      image: "/midias/ambientes/4.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-    {
-      image: "/midias/ambientes/5.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-    {
-      image: "/midias/ambientes/6.jpg",
-      caption: "Vista da piscina privativa ao entardecer",
-    },
-    // { image: '/midias/ambientes/7.jpg', caption: 'Área de estar com detalhes artesanais' },
-    {
-      image: "/midias/ambientes/8.jpg",
-      caption: "Quarto decorado com toque acolhedor",
-    },
-    {
-      image: "/midias/ambientes/9.jpg",
-      caption: "Café da manhã com itens regionais",
-    },
-    {
-      image: "/midias/ambientes/10.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-    {
-      image: "/midias/ambientes/11.jpg",
-      caption: "Vista da piscina privativa ao entardecer",
-    },
-    {
-      image: "/midias/ambientes/12.jpg",
-      caption: "Área de estar com detalhes artesanais",
-    },
-    {
-      image: "/midias/ambientes/13.jpg",
-      caption: "Quarto decorado com toque acolhedor",
-    },
-    {
-      image: "/midias/ambientes/14.jpg",
-      caption: "Café da manhã com itens regionais",
-    },
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const closeModalButtonRef = useRef(null);
 
-    {
-      image: "/midias/ambientes/j-1.jpg",
-      caption: "Vista da piscina privativa ao entardecer",
-    },
-    {
-      image: "/midias/ambientes/j-2.jpg",
-      caption: "Área de estar com detalhes artesanais",
-    },
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
 
-    {
-      image: "/midias/ambientes/q-1.jpg",
-      caption: "Quarto decorado com toque acolhedor",
-    },
-    {
-      image: "/midias/ambientes/q-2.jpg",
-      caption: "Café da manhã com itens regionais",
-    },
-    {
-      image: "/midias/ambientes/q-4.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-    {
-      image: "/midias/ambientes/q-5.jpg",
-      caption: "Café da manhã com itens regionais",
-    },
-
-    {
-      image: "/midias/ambientes/s-1.jpg",
-      caption: "Fachada da casa com a praia ao fundo",
-    },
-  ];
+  useEffect(() => {
+    if (modalIsOpen && closeModalButtonRef.current) {
+      closeModalButtonRef.current.focus();
+    }
+  }, [modalIsOpen]);
 
   return (
-    <section className="py-32 min-h-screen px-8 flex flex-col justify-center bg-white-0	">
-      <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  border-b border-gray-200 pb-8  ">
-        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
+    <section className="py-32 min-h-screen px-8 flex flex-col justify-center bg-white">
+      <div className="max-w-screen-xl mx-auto px-8 lg:px-0 border-b border-gray-200 pb-8">
+        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
           <div>
             <p className="text-indigo-600 font-semibold py-2">
               Experiência Única
             </p>
           </div>
-
           <div className="grid grid-cols-2 items-start">
-            <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
-              <span className="lg:block">Viva momentos de conforto </span>e
+            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              <span className="lg:block">Viva momentos de conforto</span> e
               exclusividade
             </p>
-            <p className="xs:mt-3 text-gray-600">
-              Nossas casas boutique oferecem ambientes projetados com conforto e
-              elegância. Aproveite áreas de lazer privativas e quartos
-              aconchegantes que combinam estilo artesanal e modernidade. Tudo
-              pensado para proporcionar momentos únicos e relaxantes enquanto
-              você aprecia a beleza natural de Alagoas
-            </p>
+            <div className="space-y-3">
+              <p className="xs:mt-3 text-gray-600">
+                Nossas casas boutique oferecem ambientes projetados com conforto
+                e elegância. Aproveite áreas de lazer privativas e quartos
+                aconchegantes que combinam estilo artesanal e modernidade. Tudo
+                pensado para proporcionar momentos únicos e relaxantes enquanto
+                você aprecia a beleza natural de Alagoas.
+              </p>
+              <button
+                onClick={openModal}
+                aria-label="Mostrar mais sobre este lugar"
+                className="text-indigo-600 font-medium hover:underline"
+              >
+                Mostrar mais
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div
-        className="mx-auto w-full xxx-max-w-6xl relative   mt-8 mb-8 pt-8 lg:mx-0"
+        className="mx-auto w-full xxx-max-w-6xl relative mt-8 mb-8 pt-8 lg:mx-0"
         role="region"
         aria-label="Carrossel de imagens das casas"
       >
@@ -147,12 +75,11 @@ export default function Ambientes() {
             prevEl: ".swiper-button-prev",
             nextEl: ".swiper-button-next",
           }}
-          // pagination={{ clickable: true }}
           autoplay={{
-            delay: 6000, // Define o tempo de espera entre as transições (em milissegundos)
-            disableOnInteraction: true, // Continua o autoplay mesmo após interação do usuário
+            delay: 6000,
+            disableOnInteraction: true,
           }}
-          modules={[Autoplay]} // Adiciona o módulo de autoplay
+          modules={[Autoplay]}
           className="rounded-lg overflow-hidden"
         >
           {slides.map((slide, index) => (
@@ -166,7 +93,7 @@ export default function Ambientes() {
                 alt={slide.caption}
                 width={100}
                 height={100}
-                className="w-full w-f h-auto rounded-lg object-cover"
+                className="w-full h-auto rounded-lg object-cover"
               />
               <p className="mt-2 text-xs text-gray-700">{slide.caption}</p>
             </SwiperSlide>
@@ -181,6 +108,73 @@ export default function Ambientes() {
           aria-label="Próximo slide"
         ></button>
       </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        ariaHideApp={false}
+        className="fixed inset-0 flex items-center justify-center  bg-black/[.06] bg-opacity-80 p-4"
+        overlayClassName="fixed inset-0 bg-black bg-opacity-60 z-10"
+        contentLabel="Sobre este espaço"
+      >
+        <div className="bg-white rounded-lg max-w-3xl w-full p-6 relative overflow-y-auto max-h-[80vh]">
+          <button
+            onClick={closeModal}
+            ref={closeModalButtonRef}
+            className="absolute top-4 right-4 text-gray-700 hover:text-gray-900"
+            aria-label="Fechar modal"
+          >
+            <Cross1Icon />
+          </button>
+          <h2 className="text-2xl font-bold mb-4">Sobre este espaço</h2>
+          <div className="space-y-4 text-gray-700">
+            <p>
+              Se você procura privacidade, conforto e uma experiência única em
+              um dos destinos mais belos do litoral brasileiro, a Casa Boutique
+              é o lugar perfeito. Ideal para casais, nossa casa acomoda até duas
+              pessoas adultas e oferece um refúgio exclusivo em meio à natureza
+              exuberante de Porto de Pedras.
+            </p>
+            <h3 className="text-lg font-semibold">O espaço</h3>
+            <p>
+              Nossas casas boutique oferecem ambientes projetados com conforto e
+              elegância. Aproveite áreas de lazer privativas e quartos
+              aconchegantes que combinam estilo artesanal e modernidade. Tudo
+              pensado para proporcionar momentos únicos e relaxantes enquanto
+              você aprecia a beleza natural de Alagoas.
+            </p>
+            <p>
+              Com duas edificações charmosas e exclusivas, esta propriedade
+              recém-inaugurada foi pensada para oferecer o máximo em
+              privacidade, conforto e estilo. Na primeira edificação, você
+              desfrutará de uma luxuosa suíte master, equipada com banheiro de
+              chuveiro duplo, closet e uma acolhedora sala de estar.
+            </p>
+            <p>
+              A segunda edificação, separada da suíte, garante ainda mais
+              privacidade e abriga uma cozinha completa e moderna, perfeita para
+              preparar suas refeições com tranquilidade, além de contar com um
+              lavabo para sua conveniência.
+            </p>
+            <p>
+              Entre as duas edificações, um verdadeiro oásis espera por você:
+              uma piscina privativa para duas pessoas, rodeada por um jardim
+              exuberante com espreguiçadeiras e uma mesa ideal para refeições ao
+              ar livre. Aqui, o luxo e a praticidade se encontram para criar uma
+              estadia inesquecível em um ambiente completamente exclusivo e
+              acolhedor.
+            </p>
+            <h3 className="text-lg font-semibold">Acesso do hóspede</h3>
+            <p>
+              Na Casa Boutique, nossos hóspedes são recebidos pela nossa
+              recepcionista Juliana, que estará à disposição para garantir uma
+              estadia tranquila e confortável.
+            </p>
+            <h3 className="text-lg font-semibold">Outras observações</h3>
+            <p>Consulte-nos sobre pets de pequeno porte.</p>
+          </div>
+        </div>
+      </Modal>
     </section>
   );
 }

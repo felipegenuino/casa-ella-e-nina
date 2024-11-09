@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Avaliacao from "../Avaliacao";
 
 const testimonials = [
   {
@@ -110,6 +111,8 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
+
+        <Avaliacao />
       </div>
     </section>
   );
