@@ -36,14 +36,25 @@ const testimonials = [
       "O espaço é muito bem pensado e muito bem executado. Bom espaço para descansar e curtir com privacidade. Juliana e Val (funcionários do estabelecimento) garantem um suporte rápido, deixando a estadia melhor ainda.",
     image: "/midias/testimonials/joao-felipe.webp",
   },
+  {
+    id: 4,
+    name: "Sandro Groisman",
+    time: "Comentário via Google Place",
+    date: "3 semanas atrás",
+    stayDuration: "Ficou algumas noites",
+    rating: 5,
+    comment:
+      "Minha estadia na Casa Boutique Nina foi excelente. A casa é linda, bem decorada, com uma iluminação aconchegante e perfeita para relaxar. O lugar é super tranquilo, cercado de verde, com muitas janelas que deixam entrar uma brisa maravilhosa. A piscina privativa estava sempre limpa, e a privacidade do local tornou tudo ainda melhor. Dormimos super bem, o ambiente é muito confortável. E o café da manhã preparado pela Juliana foi delicioso! Ela é muito atenciosa, sempre cuidando de cada detalhe. Sem dúvida, um lugar perfeito para descansar e desconectar. Com certeza, vou querer voltar!",
+    image: "/midias/testimonials/sandro-groisman.png",
+  },
 ];
 
 export default function Testimonials() {
   return (
     <section className="py-32 bg-gray-100 ">
-      <div className="max-w-screen-xl mx-auto  px-8  md:px-8 ">
-        <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  border-b border-gray-200 pb-8  ">
-          <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
+      <div className="max-w-screen-xl mx-auto px-8 md:px-8">
+        <div className="max-w-screen-xl mx-auto px-8 lg:px-0 border-b border-gray-200 pb-8">
+          <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
             <div>
               <p className="text-indigo-600 font-semibold py-2">
                 O Que Nossos Hóspedes Dizem
@@ -51,31 +62,20 @@ export default function Testimonials() {
             </div>
 
             <div className="grid grid-cols-2 items-start">
-              <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
+              <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                 Histórias de experiências memoráveis na Casa Ella e Nina
               </p>
-              {/* <p className="xs:mt-3 text-gray-600">
-                Nossas casas boutique oferecem ambientes projetados com conforto
-                e elegância. Aproveite áreas de lazer privativas e quartos
-                aconchegantes que combinam estilo artesanal e modernidade. Tudo
-                pensado para proporcionar momentos únicos e relaxantes enquanto
-                você aprecia a beleza natural de Alagoas
-              </p> */}
             </div>
           </div>
         </div>
 
-        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0 grid grid-cols-2 ">
-          <div> </div>
-        </div>
-
-        <div className=" grid max-w-2xl grid-cols-1  gap-x-12 lg:gap-x-18 gap-y-16  mt-4 mb-8 pt-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-          {testimonials.map((testimonial) => (
+        <div className="grid max-w-2xl grid-cols-1 gap-x-12 lg:gap-x-18 gap-y-16 mt-4 mb-8 pt-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          {testimonials.slice(0, 3).map((testimonial) => (
             <div
               key={testimonial.id}
               className="flex max-w-xl flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 rounded-xl"
             >
-              <div className="p-0 flex  gap-y-0 text-xs flex-col  h-full">
+              <div className="p-0 flex gap-y-0 text-xs flex-col h-full">
                 <div className="relative flex flex-col gap-x-4">
                   <Image
                     src={testimonial.image}
@@ -94,15 +94,11 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                {/* <p className="text-xs text-gray-500 mt-2">
-                  · {testimonial.date}·{" "}
-                  <span className="text-xs">{testimonial.stayDuration}</span>
-                </p> */}
                 <p className="mt-4 mb-2 text-gray-700 text-lg">
                   {testimonial.comment}
                 </p>
                 <p className="mt-auto">
-                  <span className="text-black text-xl ">
+                  <span className="text-black text-xl">
                     {"★".repeat(testimonial.rating)}
                     {"☆".repeat(5 - testimonial.rating)}
                   </span>

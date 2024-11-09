@@ -30,65 +30,77 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className="px-4 py-32   ">
-      <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  border-b border-gray-200 pb-8">
-        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
-          <div>
-            <p className="text-indigo-600 font-semibold py-2">Comodidades</p>
-          </div>
-          <div className="grid grid-cols-1 items-start space-y-3 ">
-            <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
-              O que esse lugar oferece
-            </p>
-            <p className="xs:mt-3 text-gray-600">
-              Veja algumas das comodidades disponíveis neste local.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="max-w-screen-xl mx-auto  mt-6 pt-8 flex justify-between items-center">
-        <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
-          {mainAmenities.map((item, index) => (
-            <div key={index} className="flex items-start space-x-3 py-2">
-              <Image
-                src={`/midias/amenities/${item.icon}`}
-                alt=""
-                // className="w-6 h-6 w-6"
-                width={24}
-                height={24}
-              />
+    <section className="px-4 py-32 bg-teal-50 overflow-hidden relative">
+      <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  ">
+        <div className="flex flex-wrap w-full">
+          <div className="lg:w-3/5  md:pr-10 md:py-6 ">
+            <div className="block-heading  mb-8 px-4 space-y-3 mt-6 sm:px-0 md:mt-0 border-b border-gray-200 pb-8  ">
               <div>
-                <p
-                  className={`font-medium ${
-                    item.unavailable ? "line-through text-gray-400" : ""
-                  }`}
-                >
-                  {item.name}
+                <p className="text-indigo-600 font-semibold py-2">
+                  Comodidades
                 </p>
-                {item.details && (
-                  <p
-                    className={`text-sm ${
-                      item.unavailable
-                        ? "line-through text-gray-400"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    {/* {item.details} */}
-                  </p>
-                )}
+              </div>
+              <div className="grid grid-cols-1 items-start space-y-3 ">
+                <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
+                  O que esse lugar oferece
+                </p>
+                <p className="xs:mt-3 text-gray-600">
+                  Veja algumas das comodidades disponíveis neste local.
+                </p>
               </div>
             </div>
-          ))}
+
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+              {mainAmenities.map((item, index) => (
+                <div key={index} className="flex items-start space-x-3 py-2">
+                  <Image
+                    src={`/midias/amenities/${item.icon}`}
+                    alt=""
+                    // className="w-6 h-6 w-6"
+                    width={24}
+                    height={24}
+                  />
+                  <div>
+                    <p
+                      className={`font-medium ${
+                        item.unavailable ? "line-through text-gray-400" : ""
+                      }`}
+                    >
+                      {item.name}
+                    </p>
+                    {item.details && (
+                      <p
+                        className={`text-sm ${
+                          item.unavailable
+                            ? "line-through text-gray-400"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        {/* {item.details} */}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <button
+              onClick={openModal}
+              className="mt-6 inline-block px-4 py-2 border rounded-lgduration-190 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none text-white"
+            >
+              Mostrar todas as 55 comodidades
+            </button>
+          </div>
+          <div className="lg:w-2/5   bg-teal-200 invisible lg:visible relative  ">
+            <Image
+              src="/midias/hero/img-1.jpg"
+              className=" md:rounded-tl-[108px] h-fit	 absolute object-cover object-center"
+              alt=""
+              width={700}
+              height={500}
+            />
+          </div>
         </div>
-      </div>
-      <div className="max-w-screen-xl mx-auto">
-        <button
-          onClick={openModal}
-          className="mt-6 inline-block px-4 py-2 border rounded-lgduration-190 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none text-white"
-        >
-          Mostrar todas as 55 comodidades
-        </button>
       </div>
 
       <Modal
