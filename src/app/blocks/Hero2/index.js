@@ -109,10 +109,12 @@ export default function Hero() {
         </div>
 
         <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
-          <img
+          <Image
             src="/midias/hero/img-1.jpg"
             className=" md:rounded-tl-[108px]"
             alt=""
+            width={700}
+            height={500}
           />
         </div>
       </div>
@@ -121,13 +123,17 @@ export default function Hero() {
       <div className=" z-10 py-10 my-4 w-full text-center text-gray-100 font-semibold">
         <p className="text-sm mb-4">Escolha Onde Quer Reservar</p>
         <div className="flex justify-center items-center gap-8">
-          <img
-            className="h-14"
+          <Image
+            // className="h-14"
             src="/midias/brands/airbnb-white.svg"
             alt="airbnb"
+            width={175}
+            height={56}
           />
-          <img
-            className="h-10 mt-2"
+          <Image
+            // className="h-10 mt-2"
+            width={222}
+            height={40}
             src="/midias/brands/booking-white.svg"
             alt="booking"
           />

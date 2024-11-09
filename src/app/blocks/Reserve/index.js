@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Reserve() {
@@ -21,8 +22,9 @@ export default function Reserve() {
             className="inline-block py-2 px-4 text-white font-medium bg-[#E61E4D] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
             aria-label="Reservar no Airbnb"
           >
-            <img
-              className="h-8"
+            <Image
+              width={100}
+              height={32}
               aria-hidden="true"
               src="/midias/brands/airbnb-white.svg"
               alt="airbnb"
@@ -36,8 +38,9 @@ export default function Reserve() {
             className="inline-block py-3 px-4 text-white font-medium bg-[#003B95] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
             aria-label="Reservar no Booking.com"
           >
-            <img
-              className="h-6"
+            <Image
+              width={133}
+              height={24}
               aria-hidden="true"
               src="/midias/brands/booking-white.svg"
               alt="booking.com"

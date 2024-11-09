@@ -366,7 +366,7 @@ const HighlightsSection = () => {
   }, [modalIsOpen]);
 
   return (
-    <div className="highlight-container mx-auto py-5 border">
+    <div className="highlight-container mx-auto py-5 border overflow-auto w-full">
       <div className="max-w-7xl px-0 lg:px-8 mx-auto relative rounded-xl overflow-auto">
         <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
           {galleries.map((gallery, index) => (
@@ -377,8 +377,10 @@ const HighlightsSection = () => {
                 aria-label={`Pressione para ver galeria de ${gallery.title}`}
               >
                 <div className="bg-white hover:bg-indigo-600 transition rounded-full shadow-sm aspect-square">
-                  <img
+                  <Image
                     className="rounded-full min-w-24 min-h-24 p-1 border-2 border-gray"
+                    width={500}
+                    height={500}
                     src={gallery.thumb}
                     alt={gallery.title}
                     aria-hidden="true"

@@ -4,6 +4,7 @@ import { Cross1Icon } from "@radix-ui/react-icons";
 
 // src/app/blocks/Comodidades/index.js
 import amenities from "./amenities";
+import Image from "next/image";
 
 const AmenitiesSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -38,7 +39,13 @@ const AmenitiesSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         {mainAmenities.map((item, index) => (
           <div key={index} className="flex items-start space-x-3 py-2">
-            <img src={item.icon} alt="" className="w-6 h-6" />
+            <Image
+              src={`/midias/amenities/${item.icon}`}
+              alt=""
+              // className="w-6 h-6 w-6"
+              width={24}
+              height={24}
+            />
             <div>
               <p
                 className={`font-medium ${
@@ -74,11 +81,11 @@ const AmenitiesSection = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         ariaHideApp={false}
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 p-4"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-80 z-10"
+        className="fixed inset-0 flex items-center justify-center  bg-black/[.06]  p-4"
+        overlayClassName="fixed inset-0 bg-black/[.5] z-10"
         contentLabel="Todas as comodidades"
       >
-        <div className="bg-white rounded-lg max-w-3xl w-full relative flex flex-col max-h-[90vh]">
+        <div className="rounded-xl overflow-hidden bg-white rounded-lg max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
             <h2 className="text-2xl font-bold">Todas as comodidades</h2>
             <button
@@ -97,13 +104,20 @@ const AmenitiesSection = () => {
                 <h3 className="font-semibold text-lg mb-2">
                   {category.category}
                 </h3>
+
                 {category.items.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-start space-x-3 py-2"
+                    className="flex items-start space-x-3 py-6 border-b	border-slate-200"
                     aria-hidden={item.unavailable ? "true" : "false"}
                   >
-                    <img src={item.icon} alt="" className="w-6 h-6" />
+                    <Image
+                      src={`/midias/amenities/${item.icon}`}
+                      alt=""
+                      width={24}
+                      height={24}
+                      // className="w-6 h-6"
+                    />
                     <div>
                       <p
                         className={`font-medium ${

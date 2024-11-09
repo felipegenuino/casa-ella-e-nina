@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 export default function Ambientes() {
   const slides = [
@@ -160,10 +161,12 @@ export default function Ambientes() {
               className="flex flex-col items-center relative"
               aria-hidden={index !== 0}
             >
-              <img
+              <Image
                 src={slide.image}
                 alt={slide.caption}
-                className="w-full h-auto rounded-lg object-cover"
+                width={100}
+                height={100}
+                className="w-full w-f h-auto rounded-lg object-cover"
               />
               <p className="mt-2 text-xs text-gray-700">{slide.caption}</p>
             </SwiperSlide>

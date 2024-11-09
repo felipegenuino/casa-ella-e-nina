@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function MomentosCompartilhados() {
@@ -29,21 +30,27 @@ export default function MomentosCompartilhados() {
         <div className="flex flex-wrap md:-m-2 -m-1">
           <div className="flex flex-wrap w-1/2">
             <div className="md:p-2 p-1 w-1/2">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
                 className="w-full h-full object-cover object-center block"
                 src="/midias/instagram/h-4.jpg"
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
                 className="w-full h-full object-cover object-center block"
                 src="/midias/instagram/7.jpg"
               />
             </div>
             <div className="md:p-2 p-1 w-full">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Começar a semana assim..."
                 className="w-full object-cover h-full object-center block"
                 src="/midias/instagram/2.jpg"
@@ -52,21 +59,27 @@ export default function MomentosCompartilhados() {
           </div>
           <div className="flex flex-wrap w-1/2">
             <div className="md:p-2 p-1 w-full">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
                 className="w-full h-full object-cover object-center block"
                 src="/midias/instagram/b-1.jpg"
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
                 className="w-full h-full object-cover object-center block"
                 src="/midias/instagram/6.jpg"
               />
             </div>
             <div className="md:p-2 p-1 w-1/2">
-              <img
+              <Image
+                width={500}
+                height={500}
                 alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
                 className="w-full h-full object-cover object-center block"
                 src="/midias/instagram/h-3.jpg"
