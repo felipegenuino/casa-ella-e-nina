@@ -50,7 +50,7 @@ const AmenitiesSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
               {mainAmenities.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3 py-2">
                   <Image

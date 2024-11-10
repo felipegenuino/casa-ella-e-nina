@@ -36,9 +36,18 @@ export default function Hero() {
 
       {/* Camada de sobreposição com gradiente ou cor */}
 
-      <div className="absolute inset-0 bg-indigo-600/80"></div>
+      <div className="absolute inset-0 bg-indigo-600/70"></div>
 
-      <div className="absolute h-full inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
+      <div
+        className="
+        absolute 
+        h-full
+        inset-0
+        bg-gradient-to-b 
+        from-black/70  
+        to-black/30
+        "
+      ></div>
 
       {/* Conteúdo do Hero */}
 

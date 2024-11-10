@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "../styles/globals.css";
 //  import {Header} from './components/Header';
-import { Footer } from "./components/Footer";
 
 const fontTitle = localFont({
   src: "../../public/fonts/GeistVF.woff",

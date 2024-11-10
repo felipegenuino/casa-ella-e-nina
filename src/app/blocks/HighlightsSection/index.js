@@ -376,9 +376,17 @@ const HighlightsSection = () => {
                 aria-expanded={modalIsOpen}
                 aria-label={`Pressione para ver galeria de ${gallery.title}`}
               >
-                <div className="bg-white hover:bg-indigo-600 transition rounded-full shadow-sm aspect-square">
+                <div
+                  className="
+                  ease-in-out rounded-full shadow-sm aspect-square duration-300 transition-all
+
+                                 hover:bg-white
+                                 bg-white/10
+             
+              "
+                >
                   <Image
-                    className="rounded-full min-w-24 min-h-24 p-1 border-2 border-gray"
+                    className="rounded-full min-w-20 min-h-20  border-4 border-transparent"
                     width={500}
                     height={500}
                     src={gallery.thumb}
@@ -388,7 +396,7 @@ const HighlightsSection = () => {
                 </div>
                 <p
                   aria-hidden="true"
-                  className="text-xs my-2 font-medium text-white"
+                  className="text-xs my-2 font-bold text-white"
                 >
                   {gallery.title}
                 </p>
