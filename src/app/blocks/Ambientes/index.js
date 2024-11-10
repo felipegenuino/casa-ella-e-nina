@@ -8,6 +8,7 @@ import Modal from "react-modal";
 import Image from "next/image";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import slides from "./slides"; // Importa slides de slides.js
+import { ArrowSquareOut } from "@phosphor-icons/react";
 
 export default function Ambientes() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Ambientes() {
   return (
     <section className="py-32 min-h-screen lg:px-8 flex flex-col justify-center bg-white">
       <div className="max-w-screen-xl mx-auto lg:px-0 border-b border-gray-200 pb-8">
-        <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
+        <div className="block-heading w-full mx-4 space-y-3 mt-6 sm:px-0 md:mt-0">
           <div>
             <p className="text-indigo-600 font-semibold py-2">
               Experiência Única
@@ -44,12 +45,16 @@ export default function Ambientes() {
                 pensado para proporcionar momentos únicos e relaxantes enquanto
                 você aprecia a beleza natural de Alagoas.
               </p>
+
               <button
                 onClick={openModal}
                 aria-label="Mostrar mais sobre este lugar"
-                className="text-indigo-600 font-medium hover:underline"
+                className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
+              active:scale-95 active:shadow-sm"
               >
                 Mostrar mais
+                <ArrowSquareOut size={24} />
               </button>
             </div>
           </div>
@@ -57,7 +62,7 @@ export default function Ambientes() {
       </div>
 
       <div
-        className="mx-auto w-full xxx-max-w-6xl relative mt-8 mb-8 pt-8 lg:mx-0"
+        className="lg:mx-auto w-full xxx-max-w-6xl relative mt-8 mx-4 pt-8 "
         role="region"
         aria-label="Carrossel de imagens das casas"
       >

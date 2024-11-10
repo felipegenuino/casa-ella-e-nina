@@ -51,9 +51,9 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-32 bg-gray-100 ">
-      <div className="max-w-screen-xl mx-auto px-8 md:px-8">
-        <div className="max-w-screen-xl mx-auto px-8 lg:px-0 border-b border-gray-200 pb-8">
+    <section className="py-24 lg:py-32 bg-gray-100 ">
+      <div className="max-w-screen-xl mx-auto lg:px-8 md:px-8">
+        <div className="lg:border-b lg:border-gray-200 lg:pb-8">
           <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
             <div>
               <p className="text-indigo-600 font-semibold py-2">
@@ -61,7 +61,7 @@ export default function Testimonials() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-start">
               <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                 Histórias de experiências memoráveis na Casa Ella e Nina
               </p>
@@ -69,14 +69,14 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid max-w-2xl grid-cols-1 gap-x-12 lg:gap-x-18 gap-y-16 mt-4 mb-8 pt-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+        <div className="grid grid-cols-1 lg:gap-x-6  lg:gap-y-16 mt-4 mb-8 pt-2  lg:grid-cols-3">
           {testimonials.slice(0, 3).map((testimonial) => (
             <div
               key={testimonial.id}
-              className="flex max-w-xl flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 rounded-xl"
+              className="flex w-full flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 py-12  lg:rounded-xl"
             >
               <div className="p-0 flex gap-y-0 text-xs flex-col h-full">
-                <div className="relative flex flex-col gap-x-4">
+                <div className="relative flex lg:flex-col gap-x-4">
                   <Image
                     src={testimonial.image}
                     alt={`Foto de ${testimonial.name}`}

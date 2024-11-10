@@ -98,7 +98,10 @@ export default function Hero() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium  duration-150 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
+              className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium  duration-150 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg md:inline-flex   
+              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
+              active:scale-95 active:shadow-sm 
+              "
             >
               {/* <ArrowDown size={32} /> */}
               Conferir disponibilidade
@@ -106,10 +109,14 @@ export default function Hero() {
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
-              className="flex items-center justify-center h-[64px] text-xl py-3 px-4 text-center text-black font-medium  duration-150  bg-white hover:bg-gray-500 active:bg-gray-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none"
+              className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium duration-150 border border-2 border-white rounded-lg shadow-lg md:inline-flex  
+              hover:bg-purple-50 hover:text-purple-700 hover:shadow-md
+              active:bg-purple-100 active:scale-95 active:shadow-sm
+              gap-2
+              "
             >
-              <WhatsappLogo size={32} />
-              Fale conosco
+              <WhatsappLogo size={32} weight="fill" />
+              Fale com Anfitrião
             </a>
           </div>
         </div>
@@ -128,7 +135,7 @@ export default function Hero() {
       {/* Logos de Reservas */}
       <div className=" z-10 py-10 my-4 w-full text-center text-gray-100 font-semibold">
         <p className="text-sm mb-4">Escolha Onde Quer Reservar</p>
-        <div className="flex justify-center items-center gap-8">
+        <div className="flex justify-center items-center px-4 gap-8">
           <Image
             // className="h-14"
             src="/midias/brands/airbnb-white.svg"

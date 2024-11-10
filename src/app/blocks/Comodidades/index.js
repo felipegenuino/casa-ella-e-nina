@@ -30,10 +30,10 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className="lg:px-4 pl-4 bg-teal-50 overflow-hidden relative">
-      <div className="_max-w-screen-xl mx-auto  lg:px-8 ">
+    <section className=" bg-teal-50 overflow-hidden relative">
+      <div className="_max-w-screen-xl mx-auto ">
         <div className="flex flex-wrap w-full">
-          <div className="lg:w-3/5 lg:px-32 py-28 md:pr-10 ">
+          <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16   py-28  mx-auto ">
             <div className="block-heading  mb-8 space-y-3 mt-6  md:mt-0 border-b border-gray-200 pb-8  ">
               <div>
                 <p className="text-indigo-600 font-semibold py-2">
@@ -86,12 +86,14 @@ const AmenitiesSection = () => {
 
             <button
               onClick={openModal}
-              className="mt-6 inline-block px-4 py-2 border rounded-lgduration-190 bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-indigo-500 active:bg-indigo-700 rounded-lg shadow-lg md:inline-flex hover:shadow-none text-white"
+              className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
+              active:scale-95 active:shadow-sm"
             >
               Mostrar todas as 55 comodidades
             </button>
           </div>
-          <div className="lg:w-2/5   bg-teal-200 hidden lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
+          <div className="xl:w-2/5 lg:w-1/5   bg-teal-200 hidden lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
         </div>
       </div>
 
