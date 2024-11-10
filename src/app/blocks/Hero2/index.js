@@ -44,7 +44,7 @@ export default function Hero() {
 
       <HighlightsSection />
 
-      <div className="z-10 max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  bg-white/10 rounded-md mt-10 py-10">
+      <div className="z-10 max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  __bg-white/10 rounded-md mt-10 py-10">
         <div className="flex-none space-y-5 px-4  sm:max-w-lg md:px-0 lg:max-w-xl ">
           <p className="text-white font-medium">Porto de Pedras - Alagoas</p>
           <h2 className="text-4xl text-white font-extrabold md:text-5xl">
