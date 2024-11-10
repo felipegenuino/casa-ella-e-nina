@@ -30,10 +30,10 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className="px-4 py-32 bg-teal-50 overflow-hidden relative">
-      <div className="max-w-screen-xl mx-auto  px-8  lg:px-0  ">
+    <section className="lg:px-4 pl-4 bg-teal-50 overflow-hidden relative">
+      <div className="_max-w-screen-xl mx-auto  px-8  lg:px-0  ">
         <div className="flex flex-wrap w-full">
-          <div className="lg:w-3/5  md:pr-10 md:py-6 ">
+          <div className="lg:w-3/5 lg:px-32 py-28 md:pr-10 ">
             <div className="block-heading  mb-8 px-4 space-y-3 mt-6 sm:px-0 md:mt-0 border-b border-gray-200 pb-8  ">
               <div>
                 <p className="text-indigo-600 font-semibold py-2">
@@ -91,15 +91,7 @@ const AmenitiesSection = () => {
               Mostrar todas as 55 comodidades
             </button>
           </div>
-          <div className="lg:w-2/5   bg-teal-200 invisible lg:visible relative  ">
-            <Image
-              src="/midias/hero/img-1.jpg"
-              className=" md:rounded-tl-[108px] h-fit	 absolute object-cover object-center"
-              alt=""
-              width={700}
-              height={500}
-            />
-          </div>
+          <div className="lg:w-2/5   bg-teal-200 hidden lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
         </div>
       </div>
 
