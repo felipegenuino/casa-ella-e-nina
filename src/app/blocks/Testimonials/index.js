@@ -69,14 +69,14 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:gap-x-6  lg:gap-y-16 mt-4 mb-8 pt-2  lg:grid-cols-3">
+        <div className="grid grid-cols-1  lg:gap-x-6  lg:gap-y-16 mt-4 mb-8 pt-2  lg:grid-cols-3">
           {testimonials.slice(0, 3).map((testimonial) => (
             <div
               key={testimonial.id}
               className="flex w-full flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 py-12  lg:rounded-xl"
             >
-              <div className="p-0 flex gap-y-0 text-xs flex-col h-full">
-                <div className="relative flex lg:flex-col gap-x-4">
+              <div className="p-0 flex gap-y-0 text-xs flex-col md:flex-row lg:flex-col h-full md:items-start">
+                <div className="relative flex md:flex-col lg:flex-col  gap-x-4 md:px-4 ">
                   <Image
                     src={testimonial.image}
                     alt={`Foto de ${testimonial.name}`}
@@ -94,11 +94,11 @@ export default function Testimonials() {
                   </div>
                 </div>
 
-                <p className="mt-4 mb-2 text-gray-700 text-lg">
+                <p className="mt-4 md:mt-0 lg:mt-4 mb-2 text-gray-700 text-lg md:flex-1">
                   {testimonial.comment}
                 </p>
-                <p className="mt-auto">
-                  <span className="text-black text-xl">
+                <p className="mt-auto md:mt-0 lg:mt-auto md:px-4 lg:px-0 ">
+                  <span className="text-black text-xl ">
                     {"★".repeat(testimonial.rating)}
                     {"☆".repeat(5 - testimonial.rating)}
                   </span>

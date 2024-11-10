@@ -32,8 +32,8 @@ const AmenitiesSection = () => {
   return (
     <section className=" bg-teal-50 overflow-hidden relative">
       <div className="_max-w-screen-xl mx-auto ">
-        <div className="flex flex-wrap w-full">
-          <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16   py-28  mx-auto ">
+        <div className="flex flex-wrap w-full px-4">
+          <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16  py-12 lg:py-28  mx-auto ">
             <div className="block-heading  mb-8 space-y-3 mt-6  md:mt-0 border-b border-gray-200 pb-8  ">
               <div>
                 <p className="text-indigo-600 font-semibold py-2">
@@ -86,7 +86,7 @@ const AmenitiesSection = () => {
 
             <button
               onClick={openModal}
-              className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+              className="mt-6 lg:mt-14 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
               hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
               active:scale-95 active:shadow-sm"
             >

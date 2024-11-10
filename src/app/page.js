@@ -15,6 +15,7 @@ import Reserve from "./blocks/Reserve";
 import Hero2 from "./blocks/Hero2";
 import Amenities from "./blocks/Comodidades";
 import Avaliacao from "./blocks/Avaliacao";
+import FAQSection from "./blocks/Faq";
 
 export default function HomePage() {
   return (
@@ -27,6 +28,7 @@ export default function HomePage() {
       <Testimonials />
       <MomentosCompartilhados />
       <Reserve />
+      <FAQSection />
       <Footer />
     </main>
   );

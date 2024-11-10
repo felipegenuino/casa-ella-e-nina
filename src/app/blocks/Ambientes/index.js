@@ -34,7 +34,7 @@ export default function Ambientes() {
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 items-start space-y-3">
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              <span className="lg:block">Viva momentos de conforto</span> e
+              <span className="md:block">Viva momentos </span> de conforto e
               exclusividade
             </p>
             <div className="space-y-3">

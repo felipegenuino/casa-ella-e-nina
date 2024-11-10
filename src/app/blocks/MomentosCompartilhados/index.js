@@ -3,18 +3,18 @@ import React from "react";
 
 export default function MomentosCompartilhados() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="max-w-screen-xl mx-auto container py-32 flex flex-wrap">
-        <div className="max-w-screen-xl mx-auto lg:px-0  border-b border-gray-200 pb-8  ">
-          <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0  ">
+    <section className="py-24 lg:py-32">
+      <div className="max-w-screen-xl mx-auto container  flex flex-wrap">
+        <div className="border-b border-gray-200 pb-8 mb-8">
+          <div className="block-heading w-full  px-4 md:px-8 lg:px-0 space-y-3 mt-6 md:mt-0  ">
             <div>
               <p className="text-indigo-600 font-semibold py-2">
                 O Que Nossos Hóspedes Dizem
               </p>
             </div>
 
-            <div className="grid grid-cols-1  lg:grid-cols-2 items-start">
-              <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <div className="grid grid-cols-1  lg:grid-cols-2 items-start space-y-3">
+              <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl pr-24">
                 Momentos Compartilhados
               </p>
               <p className="xs:mt-3 text-gray-600">
@@ -28,7 +28,7 @@ export default function MomentosCompartilhados() {
         </div>
 
         <div className="flex flex-wrap md:-m-2 -m-1">
-          <div className="flex flex-wrap w-1/2">
+          <div className="flex flex-wrap w-full lg:w-1/2">
             <div className="md:p-2 p-1 w-1/2">
               <Image
                 width={500}
@@ -57,7 +57,7 @@ export default function MomentosCompartilhados() {
               />
             </div>
           </div>
-          <div className="flex flex-wrap w-1/2">
+          <div className="flex flex-wrap w-full lg:w-1/2">
             <div className="md:p-2 p-1 w-full">
               <Image
                 width={500}
