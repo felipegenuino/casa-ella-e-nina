@@ -23,15 +23,15 @@ export default function Ambientes() {
   }, [modalIsOpen]);
 
   return (
-    <section className="py-32 min-h-screen px-8 flex flex-col justify-center bg-white">
-      <div className="max-w-screen-xl mx-auto px-8 lg:px-0 border-b border-gray-200 pb-8">
+    <section className="py-32 min-h-screen lg:px-8 flex flex-col justify-center bg-white">
+      <div className="max-w-screen-xl mx-auto lg:px-0 border-b border-gray-200 pb-8">
         <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
           <div>
             <p className="text-indigo-600 font-semibold py-2">
               Experiência Única
             </p>
           </div>
-          <div className="grid grid-cols-2 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-start space-y-3">
             <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
               <span className="lg:block">Viva momentos de conforto</span> e
               exclusividade

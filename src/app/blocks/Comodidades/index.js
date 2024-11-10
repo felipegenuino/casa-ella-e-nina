@@ -31,10 +31,10 @@ const AmenitiesSection = () => {
 
   return (
     <section className="lg:px-4 pl-4 bg-teal-50 overflow-hidden relative">
-      <div className="_max-w-screen-xl mx-auto  px-8  lg:px-0  ">
+      <div className="_max-w-screen-xl mx-auto  lg:px-8 ">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-3/5 lg:px-32 py-28 md:pr-10 ">
-            <div className="block-heading  mb-8 px-4 space-y-3 mt-6 sm:px-0 md:mt-0 border-b border-gray-200 pb-8  ">
+            <div className="block-heading  mb-8 space-y-3 mt-6  md:mt-0 border-b border-gray-200 pb-8  ">
               <div>
                 <p className="text-indigo-600 font-semibold py-2">
                   Comodidades
@@ -50,7 +50,7 @@ const AmenitiesSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
               {mainAmenities.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3 py-2">
                   <Image
