@@ -2,16 +2,16 @@ import Image from "next/image";
 
 export default function Avaliacao() {
   return (
-    <section className="py-4 pt-16 flex flex-col justify-center">
-      <div className="max-w-screen-xl px-8 mx-auto lg:px-0 border-b border-gray-200 pb-8">
+    <section className="py-4 lg:pt-16 flex flex-col justify-center">
+      <div className="lg:max-w-screen-xl w-full px-8 mx-auto lg:px-0 border-b border-gray-200 pb-8">
         <div className="flex items-center space-x-2 text-gray-800">
           ★<span className="text-2xl font-semibold">5,0</span>
           <span className="text-gray-600">· 3 comentários</span>
         </div>
 
-        <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">
           {/* Avaliação Geral */}
-          <div>
+          <div className="col-span-2 sm:col-span-1 sm:row-span-2 mb-4">
             <h3 className="text-sm font-semibold text-gray-800">
               Avaliação geral
             </h3>
@@ -70,7 +70,7 @@ export default function Avaliacao() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-center border-l border-gray-300 px-2"
+              className="flex flex-col items-center text-center border-l border-gray-300 px-2 sm:py-6"
             >
               <h4 className="text-sm font-semibold text-gray-800">
                 {item.label}
