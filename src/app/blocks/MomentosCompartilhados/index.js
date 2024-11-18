@@ -4,7 +4,7 @@ import React from "react";
 export default function MomentosCompartilhados() {
   return (
     <section className="py-24 lg:py-32">
-      <div className="max-w-screen-xl mx-auto container  flex flex-wrap">
+      <div className="mx-auto container  flex flex-wrap">
         <div className="border-b border-gray-200 pb-8 mb-8">
           <div className="block-heading w-full  px-4 md:px-8 lg:px-0 space-y-3 mt-6 md:mt-0  ">
             <div>
@@ -27,7 +27,7 @@ export default function MomentosCompartilhados() {
           </div>
         </div>
 
-        <div className="flex flex-wrap md:-m-2 -m-1">
+        <div className=" flex flex-wrap md:-m-2 -m-1">
           <div className="flex flex-wrap w-full lg:w-1/2">
             <div className="md:p-2 p-1 w-1/2">
               <Image
