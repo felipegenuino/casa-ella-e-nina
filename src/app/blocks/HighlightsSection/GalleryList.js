@@ -1,38 +1,23 @@
 import React from "react";
-import Image from "next/image";
 
-const GalleryList = ({ galleries, openModal }) => {
-  return (
-    <div
-      role="list"
-      className="flex flex-nowrap lg:justify-center gap-1 overflow-x-auto"
-    >
-      {galleries.map((gallery, index) => (
-        <div role="listitem" key={gallery.id} className="text-center px-3">
-          <button
-            onClick={() => openModal(index)}
-            aria-expanded="false"
-            aria-label={`Pressione para ver galeria de ${gallery.title}`}
-          >
-            <div className="ease-in-out rounded-full shadow-sm aspect-square duration-300 transition-all hover:bg-white bg-white/10">
-              <Image
-                className="rounded-full min-w-20 min-h-20 border-4 border-transparent"
-                width={124}
-                height={124}
-                src={gallery.thumb}
-                alt={gallery.title}
-                placeholder="blur"
-                blurDataURL={gallery.thumbBlurUrl}
-              />
-            </div>
-            <p aria-hidden="true" className="text-xs my-2 font-bold text-white">
-              {gallery.title}
-            </p>
-          </button>
-        </div>
-      ))}
-    </div>
-  );
-};
+const GalleryList = ({ galleries, openModal }) => (
+  <div className="flex flex-nowrap gap-4 overflow-x-auto px-4">
+    {galleries.map((gallery) => (
+      <button
+        key={gallery.id}
+        onClick={() => openModal(gallery)}
+        className="flex-shrink-0 w-40"
+        aria-label={`Abrir galeria ${gallery.title}`}
+      >
+        <img
+          src={gallery.thumb}
+          alt={`Thumbnail da galeria ${gallery.title}`}
+          className="w-full h-40 object-cover rounded-lg"
+        />
+        <p className="text-white text-center mt-2">{gallery.title}</p>
+      </button>
+    ))}
+  </div>
+);
 
 export default GalleryList;

@@ -1,16 +1,27 @@
-"use client";
-
-import { useState } from "react";
-import ModalContent from "./ModalContent";
+import React, { useState, useEffect } from "react";
+import Modal from "react-modal";
+import SwiperCore, { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import GalleryList from "./GalleryList";
+import ModalContent from "./ModalContent";
+import { preloadMedia } from "./helpers";
 import galleries from "./galleries";
+
+SwiperCore.use([Navigation, Pagination]);
 
 const HighlightsSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeGallery, setActiveGallery] = useState(null);
 
-  const openModal = (galleryIndex) => {
-    setActiveGallery(galleries[galleryIndex]);
+  useEffect(() => {
+    preloadMedia(galleries);
+  }, []);
+
+  const openModal = (gallery) => {
+    setActiveGallery(gallery);
     setModalIsOpen(true);
   };
 
@@ -20,14 +31,18 @@ const HighlightsSection = () => {
   };
 
   return (
-    <div className="highlight-container mx-auto py-5 w-full z-10">
+    <div className="highlight-container mx-auto py-5 border overflow-auto w-full z-10">
       <GalleryList galleries={galleries} openModal={openModal} />
-      {modalIsOpen && activeGallery && (
-        <ModalContent
+      {modalIsOpen && (
+        <Modal
           isOpen={modalIsOpen}
-          gallery={activeGallery}
-          closeModal={closeModal}
-        />
+          onRequestClose={closeModal}
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-10"
+          ariaHideApp={false}
+        >
+          <ModalContent gallery={activeGallery} closeModal={closeModal} />
+        </Modal>
       )}
     </div>
   );
