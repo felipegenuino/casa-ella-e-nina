@@ -2,12 +2,12 @@
 const galleries = [
   {
     id: 1,
-    thumb: "/midias/gallery/thumb-1.jpg",
+    thumb: "/midias/gallery/thumb-1-p.jpg",
     title: "Galeria 1",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-3.jpg",
+        url: "/midias/gallery/image-3-p.jpg",
         description: "Leganda da imagem 3",
       },
       {
@@ -17,7 +17,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-1.jpg",
+        url: "/midias/gallery/image-1-p.jpg",
         description: "Legenda da imagem 1",
       },
       {
@@ -27,29 +27,29 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-5.jpg",
+        url: "/midias/gallery/image-5-p.jpg",
         description: "Legenda da imagem 5",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-6.jpg",
+        url: "/midias/gallery/image-6-p.jpg",
         description: "Legenda da imagem 6",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-7.jpg",
+        url: "/midias/gallery/image-7-p.jpg",
         description: "Legenda da imagem 7",
       },
     ],
   },
   {
     id: 2,
-    thumb: "/midias/gallery/thumb-2.jpg",
+    thumb: "/midias/gallery/thumb-2-p.jpg",
     title: "Galeria 2",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -59,7 +59,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -71,12 +71,12 @@ const galleries = [
   },
   {
     id: 3,
-    thumb: "/midias/gallery/thumb-1.jpg",
+    thumb: "/midias/gallery/thumb-1-p.jpg",
     title: "Galeria 3",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-3.jpg",
+        url: "/midias/gallery/image-3-p.jpg",
         description: "Legenda da imagem 3",
       },
       {
@@ -86,7 +86,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-1.jpg",
+        url: "/midias/gallery/image-1-p.jpg",
         description: "Legenda da imagem 1",
       },
       {
@@ -96,29 +96,29 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-5.jpg",
+        url: "/midias/gallery/image-5-p.jpg",
         description: "Legenda da imagem 5",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-6.jpg",
+        url: "/midias/gallery/image-6-p.jpg",
         description: "Legenda da imagem 6",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-7.jpg",
+        url: "/midias/gallery/image-7-p.jpg",
         description: "Legenda da imagem 7",
       },
     ],
   },
   {
     id: 4,
-    thumb: "/midias/gallery/thumb-2.jpg",
+    thumb: "/midias/gallery/thumb-2-p.jpg",
     title: "Galeria 4",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -128,7 +128,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -140,12 +140,12 @@ const galleries = [
   },
   {
     id: 5,
-    thumb: "/midias/gallery/thumb-1.jpg",
+    thumb: "/midias/gallery/thumb-1-p.jpg",
     title: "Galeria 5",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-3.jpg",
+        url: "/midias/gallery/image-3-p.jpg",
         description: "Legenda da imagem 3",
       },
       {
@@ -155,7 +155,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-1.jpg",
+        url: "/midias/gallery/image-1-p.jpg",
         description: "Legenda da imagem 1",
       },
       {
@@ -165,29 +165,29 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-5.jpg",
+        url: "/midias/gallery/image-5-p.jpg",
         description: "Legenda da imagem 5",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-6.jpg",
+        url: "/midias/gallery/image-6-p.jpg",
         description: "Legenda da imagem 6",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-7.jpg",
+        url: "/midias/gallery/image-7-p.jpg",
         description: "Legenda da imagem 7",
       },
     ],
   },
   {
     id: 6,
-    thumb: "/midias/gallery/thumb-2.jpg",
+    thumb: "/midias/gallery/thumb-2-p.jpg",
     title: "Galeria 6",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -197,7 +197,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -209,12 +209,12 @@ const galleries = [
   },
   {
     id: 7,
-    thumb: "/midias/gallery/thumb-1.jpg",
+    thumb: "/midias/gallery/thumb-1-p.jpg",
     title: "Galeria 7",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-3.jpg",
+        url: "/midias/gallery/image-3-p.jpg",
         description: "Legenda da imagem 3",
       },
       {
@@ -224,7 +224,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-1.jpg",
+        url: "/midias/gallery/image-1-p.jpg",
         description: "Legenda da imagem 1",
       },
       {
@@ -234,29 +234,29 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-5.jpg",
+        url: "/midias/gallery/image-5-p.jpg",
         description: "Legenda da imagem 5",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-6.jpg",
+        url: "/midias/gallery/image-6-p.jpg",
         description: "Legenda da imagem 6",
       },
       {
         type: "image",
-        url: "/midias/gallery/image-7.jpg",
+        url: "/midias/gallery/image-7-p.jpg",
         description: "Legenda da imagem 7",
       },
     ],
   },
   {
     id: 8,
-    thumb: "/midias/gallery/thumb-2.jpg",
+    thumb: "/midias/gallery/thumb-2-p.jpg",
     title: "Galeria 8",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
@@ -266,7 +266,7 @@ const galleries = [
       },
       {
         type: "image",
-        url: "/midias/gallery/image-2.jpg",
+        url: "/midias/gallery/image-2-p.jpg",
         description: "Legenda da imagem 2",
       },
       {
