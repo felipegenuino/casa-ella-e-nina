@@ -1,4 +1,5 @@
 "use client";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,7 +14,7 @@ import SwiperCore from "swiper";
 import Image from "next/image";
 import { PlayIcon, PauseIcon, Cross1Icon } from "@radix-ui/react-icons";
 
-import galleries from "./galleries"; // Importando o objeto isolado
+import galleries from "./galleries"; // Importando o objeto atualizado
 
 SwiperCore.use([Pagination, Navigation]);
 
@@ -55,22 +56,6 @@ const HighlightsSection = () => {
   };
 
   useEffect(() => {
-    // Pré-carregar imagens e vídeos
-    galleries.forEach((gallery) => {
-      gallery.media.forEach((media) => {
-        if (media.type === "image") {
-          const img = new window.Image(); // Certifique-se de usar a API nativa
-          img.src = media.url;
-
-          img.onload = () => console.log(`Imagem carregada: ${media.url}`);
-          img.onerror = () =>
-            console.log(`Erro ao carregar a imagem: ${media.url}`);
-        }
-      });
-    });
-  }, []);
-
-  useEffect(() => {
     if (modalIsOpen && closeModalButtonRef.current) {
       closeModalButtonRef.current.focus();
     }
@@ -90,7 +75,6 @@ const HighlightsSection = () => {
         } else if (e.key === "ArrowLeft" && swiperRef.current) {
           swiperRef.current.swiper.slidePrev();
         } else if (e.key === " " && videoRef.current) {
-          // Prevenir o comportamento padrão de rolar a página quando a tecla de espaço é pressionada
           e.preventDefault();
           handleVideoPress();
         }
@@ -106,7 +90,10 @@ const HighlightsSection = () => {
   return (
     <div className="highlight-container mx-auto py-5 border overflow-auto w-full">
       <div className="max-w-7xl px-0 lg:px-8 mx-auto relative rounded-xl overflow-auto">
-        <div role="list" className="flex flex-nowrap gap-1 overflow-x-auto">
+        <div
+          role="list"
+          className="flex flex-nowrap justify-center gap-1 overflow-x-auto"
+        >
           {galleries.map((gallery, index) => (
             <div role="listitem" key={gallery.id} className="text-center px-3">
               <button
@@ -114,24 +101,15 @@ const HighlightsSection = () => {
                 aria-expanded={modalIsOpen}
                 aria-label={`Pressione para ver galeria de ${gallery.title}`}
               >
-                <div
-                  className="
-                  ease-in-out 
-                  rounded-full 
-                  shadow-sm 
-                  aspect-square 
-                  duration-300 
-                  transition-all
-                  hover:bg-white
-                  bg-white/10"
-                >
+                <div className="ease-in-out rounded-full shadow-sm aspect-square duration-300 transition-all hover:bg-white bg-white/10">
                   <Image
-                    className="rounded-full min-w-20 min-h-20  border-4 border-transparent"
-                    width={500}
-                    height={500}
+                    className="rounded-full min-w-20 min-h-20 border-4 border-transparent"
+                    width={124}
+                    height={124}
                     src={gallery.thumb}
                     alt={gallery.title}
-                    aria-hidden="true"
+                    placeholder="blur"
+                    blurDataURL={gallery.thumbBlurUrl}
                   />
                 </div>
                 <p
@@ -152,7 +130,7 @@ const HighlightsSection = () => {
           onRequestClose={closeModal}
           ariaHideApp={false}
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-100"
-          overlayClassName="fixed inset-0  bg-opacity-90 z-10"
+          overlayClassName="fixed inset-0 bg-opacity-90 z-10"
           contentLabel={`Galeria de ${activeGallery.title}`}
         >
           <div className="relative w-full h-full flex items-center justify-center">
@@ -175,7 +153,6 @@ const HighlightsSection = () => {
               className="w-full h-full flex items-center justify-center"
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               navigation
-              preloadImages={true}
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               ref={swiperRef}
@@ -197,30 +174,16 @@ const HighlightsSection = () => {
                             onClick={handleVideoPress}
                             tabIndex="0"
                           ></video>
-                          <div aria-live="polite" className="sr-only">
-                            {activeMediaIndex === index
-                              ? mediaItem.description
-                              : ""}
-                          </div>
-                          <button
-                            onClick={toggleMute}
-                            className="absolute bottom-4 right-4 text-white bg-gray-800 rounded-full p-2 z-50"
-                            aria-label={
-                              isMuted ? "Ativar som" : "Desativar som"
-                            }
-                          >
-                            {isMuted ? <PauseIcon /> : <PlayIcon />}
-                          </button>
                         </div>
                       ) : (
                         <Image
+                          className="max-h-[90vh] max-w-full object-contain"
                           width={1200}
                           height={700}
-                          layout="responsive"
-                          priority
                           src={mediaItem.url}
                           alt={mediaItem.description}
-                          className="max-h-[90vh] max-w-full object-contain"
+                          placeholder="blur"
+                          blurDataURL={mediaItem.blurUrl}
                         />
                       ))}
                   </div>
