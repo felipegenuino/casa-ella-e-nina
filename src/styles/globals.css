@@ -56,3 +56,13 @@ h5,
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Cor do polegar ao passar o mouse */
 }
+
+.swiper-slide {
+  opacity: 0.5; /* Opacidade para slides não ativos */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.swiper-slide-active {
+  opacity: 1; /* Opacidade total para o slide ativo */
+  transform: scale(1.05); /* Leve aumento de tamanho no slide ativo */
+}

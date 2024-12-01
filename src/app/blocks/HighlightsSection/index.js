@@ -16,8 +16,35 @@ import galleries from "./galleries"; // Importando o objeto atualizado
 const HighlightsSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [activeGallery, setActiveGallery] = useState(null);
-  const [isMuted, setIsMuted] = useState(false);
-  const swiperRef = useRef(null);
+  const [activeSlideIndex, setActiveSlideIndex] = useState(null);
+  const videoRefs = useRef([]);
+
+  const handleSlideChange = (swiper) => {
+    setActiveSlideIndex(swiper.realIndex);
+
+    // Atualiza o estado dos vídeos (mute/unmute e start/stop)
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        video.muted = index !== swiper.realIndex; // Mute todos os vídeos, exceto o ativo
+        if (index === swiper.realIndex) {
+          video.play(); // Toca o vídeo do slide ativo
+        } else {
+          video.pause(); // Pausa os outros vídeos
+          video.currentTime = 0; // Reseta o tempo dos vídeos pausados
+        }
+      }
+    });
+  };
+
+  const preloadVideos = () => {
+    videoRefs.current.forEach((video) => {
+      if (video) {
+        video.load(); // Força o carregamento dos vídeos
+        video.currentTime = 0; // Configura o tempo inicial como 0
+        video.pause(); // Garante que os vídeos estejam pausados
+      }
+    });
+  };
 
   const openModal = (galleryIndex) => {
     setActiveGallery(galleries[galleryIndex]);
@@ -29,9 +56,9 @@ const HighlightsSection = () => {
     setActiveGallery(null);
   };
 
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
+  useEffect(() => {
+    preloadVideos(); // Pré-carregar os vídeos ao montar o componente
+  }, []);
 
   return (
     <div className="highlight-container mx-auto py-5 w-full">
@@ -79,10 +106,7 @@ const HighlightsSection = () => {
           overlayClassName="fixed inset-0 bg-opacity-90 z-10"
           contentLabel={`Galeria de ${activeGallery.title}`}
         >
-          <div
-            className="relative w-full h-full flex items-center
-          justify-center  content-center"
-          >
+          <div className="relative w-full h-full flex items-center justify-center content-center">
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-white transition bg-gray-800 hover:bg-gray-900 rounded-full px-3 py-2 z-50 flex items-center gap-2"
@@ -90,40 +114,43 @@ const HighlightsSection = () => {
             >
               Fechar
             </button>
+
             <Swiper
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               navigation
               pagination={{ clickable: true }}
-              spaceBetween={20} // Espaçamento entre os slides
-              slidesPerView={3} // Exibe 1.5 slides ao mesmo tempo
-              centeredSlides={true} // Centraliza o slide ativo
-              loop={true} // Permite o loop infinito
-              className="max-w-full max-h-full flex items-center justify-center  content-center"
-              onSlideChange={() => setIsMuted(false)}
-              ref={swiperRef}
+              centeredSlides={true}
+              loop={true}
+              spaceBetween={20}
+              slidesPerView={1.4}
+              breakpoints={{
+                640: { slidesPerView: 1.4, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 30 },
+                1024: { slidesPerView: 3, spaceBetween: 40 },
+                1280: { slidesPerView: 4, spaceBetween: 50 },
+              }}
+              className="w-full h-full"
+              onSlideChange={handleSlideChange} // Adicionando a função ao evento
             >
               {activeGallery.media.map((mediaItem, index) => (
                 <SwiperSlide
                   key={index}
-                  className="flex items-center justify-center  content-center"
+                  className="swiper-slide flex items-center content-center justify-center"
                 >
                   {mediaItem.type === "video" ? (
                     <video
+                      ref={(el) => (videoRefs.current[index] = el)}
                       src={mediaItem.url}
-                      muted={isMuted}
-                      autoPlay
+                      muted={true} // Inicialmente silenciado
                       loop
-                      width={480}
-                      height={852}
-                      className="max-h-[70vh]  max-w-full object-contain rounded-lg"
-                      onClick={toggleMute}
+                      className="max-h-[90vh] max-w-full object-contain rounded-lg"
                       aria-label={mediaItem.description}
                     ></video>
                   ) : (
                     <Image
-                      className="max-h-[70vh] max-w-full object-cover rounded-lg"
-                      width={480}
-                      height={852}
+                      className="max-h-[90vh] max-w-full object-contain rounded-lg"
+                      width={1200}
+                      height={800}
                       src={mediaItem.url}
                       alt={mediaItem.description}
                       placeholder="blur"
