@@ -13,287 +13,9 @@ import SwiperCore from "swiper";
 import Image from "next/image";
 import { PlayIcon, PauseIcon, Cross1Icon } from "@radix-ui/react-icons";
 
-SwiperCore.use([Pagination, Navigation]);
+import galleries from "./galleries"; // Importando o objeto isolado
 
-// Atualizamos a estrutura do array para incluir vídeos e imagens.
-const galleries = [
-  {
-    id: 1,
-    thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Galeria 1",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-3.jpg",
-        description: "Leganda da imagem 3",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-1.mp4",
-        description: "Legenda do video 1",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-1.jpg",
-        description: "Legenda da imagem 1",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-2.mp4",
-        description: "Legenda do video 2",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-5.jpg",
-        description: "Legenda da imagem 5",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-6.jpg",
-        description: "Legenda da imagem 6",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-7.jpg",
-        description: "Legenda da imagem 7",
-      },
-    ],
-  },
-  {
-    id: 2,
-    thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Galeria 2",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-3.mp4",
-        description: "Legenda do video 3",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-4.mp4",
-        description: "Legenda do video 4",
-      },
-    ],
-  },
-  {
-    id: 3,
-    thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Galeria 3",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-3.jpg",
-        description: "Legenda da imagem 3",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-1.mp4",
-        description: "Legenda do video 1",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-1.jpg",
-        description: "Legenda da imagem 1",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-2.mp4",
-        description: "Legenda do video 2",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-5.jpg",
-        description: "Legenda da imagem 5",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-6.jpg",
-        description: "Legenda da imagem 6",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-7.jpg",
-        description: "Legenda da imagem 7",
-      },
-    ],
-  },
-  {
-    id: 4,
-    thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Galeria 4",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-3.mp4",
-        description: "Legenda do video 3",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-4.mp4",
-        description: "Legenda do video 4",
-      },
-    ],
-  },
-  {
-    id: 5,
-    thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Galeria 5",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-3.jpg",
-        description: "Legenda da imagem 3",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-1.mp4",
-        description: "Legenda do video 1",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-1.jpg",
-        description: "Legenda da imagem 1",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-2.mp4",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-5.jpg",
-        description: "Legenda da imagem 5",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-6.jpg",
-        description: "Legenda da imagem 6",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-7.jpg",
-        description: "Legenda da imagem 7",
-      },
-    ],
-  },
-  {
-    id: 6,
-    thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Galeria 6",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-3.mp4",
-        description: "Legenda da imagem 3",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-4.mp4",
-        description: "Legenda do video 4",
-      },
-    ],
-  },
-  {
-    id: 7,
-    thumb: "/midias/gallery/thumb-1.jpg",
-    title: "Galeria 7",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-3.jpg",
-        description: "Legenda da imagem 3",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-1.mp4",
-        description: "Legenda do video 1",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-1.jpg",
-        description: "Legenda da imagem 1",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-2.mp4",
-        description: "Legenda do video 2",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-5.jpg",
-        description: "Legenda da imagem 5",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-6.jpg",
-        description: "Legenda da imagem 6",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-7.jpg",
-        description: "Legenda da imagem 7",
-      },
-    ],
-  },
-  {
-    id: 8,
-    thumb: "/midias/gallery/thumb-2.jpg",
-    title: "Galeria 8",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-3.mp4",
-        description: "Legenda do video 3",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/image-2.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/video-4.mp4",
-        description: "Legenda do video 4",
-      },
-    ],
-  },
-];
+SwiperCore.use([Pagination, Navigation]);
 
 const HighlightsSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -331,6 +53,22 @@ const HighlightsSection = () => {
       }
     }
   };
+
+  useEffect(() => {
+    // Pré-carregar imagens e vídeos
+    galleries.forEach((gallery) => {
+      gallery.media.forEach((media) => {
+        if (media.type === "image") {
+          const img = new window.Image(); // Certifique-se de usar a API nativa
+          img.src = media.url;
+
+          img.onload = () => console.log(`Imagem carregada: ${media.url}`);
+          img.onerror = () =>
+            console.log(`Erro ao carregar a imagem: ${media.url}`);
+        }
+      });
+    });
+  }, []);
 
   useEffect(() => {
     if (modalIsOpen && closeModalButtonRef.current) {
@@ -378,12 +116,14 @@ const HighlightsSection = () => {
               >
                 <div
                   className="
-                  ease-in-out rounded-full shadow-sm aspect-square duration-300 transition-all
-
-                                 hover:bg-white
-                                 bg-white/10
-             
-              "
+                  ease-in-out 
+                  rounded-full 
+                  shadow-sm 
+                  aspect-square 
+                  duration-300 
+                  transition-all
+                  hover:bg-white
+                  bg-white/10"
                 >
                   <Image
                     className="rounded-full min-w-20 min-h-20  border-4 border-transparent"
@@ -435,6 +175,7 @@ const HighlightsSection = () => {
               className="w-full h-full flex items-center justify-center"
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               navigation
+              preloadImages={true}
               pagination={{ clickable: true }}
               scrollbar={{ draggable: true }}
               ref={swiperRef}
@@ -473,8 +214,10 @@ const HighlightsSection = () => {
                         </div>
                       ) : (
                         <Image
-                          width="1200"
-                          height="700"
+                          width={1200}
+                          height={700}
+                          layout="responsive"
+                          priority
                           src={mediaItem.url}
                           alt={mediaItem.description}
                           className="max-h-[90vh] max-w-full object-contain"
