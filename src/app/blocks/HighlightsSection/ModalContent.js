@@ -8,11 +8,12 @@ const ModalContent = ({ gallery, closeModal }) => {
   return (
     <div className="relative w-full h-full ">
       {/* Header */}
-      <div class="px-12 py-8  flex justify-between items-center ">
+      <div class="px-12 py-4  flex justify-between items-center ">
         <div>
-          <h3 class="text-xl/7  font-semibold text-gray-100">
+          <h3 class="text-pretty text-2xl/7 font-semibold tracking-tight text-gray-100">
             {gallery.title || "Título da Galeria"}
           </h3>
+
           <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">
             {gallery.description || "Descrição da galeria"}
           </p>
@@ -51,7 +52,6 @@ const ModalContent = ({ gallery, closeModal }) => {
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-          navigation
           pagination={{ clickable: true }}
           onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
           id="swiper-gallery"

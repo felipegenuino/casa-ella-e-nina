@@ -20,7 +20,7 @@ import { Brandy } from "@phosphor-icons/react";
 
 export default function HomePage() {
   return (
-    <main className="w-100" id="main-content">
+    <main className="w-100  overflow-x-hidden" id="main-content">
       <SkipToContent />
 
       <Hero />
