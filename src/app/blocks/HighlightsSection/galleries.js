@@ -4,6 +4,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-1/thumb-1-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-1/thumb-1-blur.jpg",
     title: "Galeria 1",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
@@ -53,6 +54,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-2/thumb-2-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-2/thumb-2-blur.jpg",
     title: "Galeria 2",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
@@ -107,6 +109,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-3/thumb-3-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-3/thumb-3-blur.jpg",
     title: "Galeria 3",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
@@ -190,6 +193,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-4/thumb-4-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-4/thumb-4-blur.jpg",
     title: "Galeria 4",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
@@ -268,6 +272,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-5/thumb-5-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-5/thumb-5-blur.jpg",
     title: "Galeria 5",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
@@ -317,6 +322,7 @@ const galleries = [
     thumb: "/midias/gallery/gallerie-6/thumb-6-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-6/thumb-6-blur.jpg",
     title: "Galeria 6",
+    description: "alguma descrição",
     media: [
       {
         type: "image",
