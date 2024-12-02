@@ -3,8 +3,9 @@ const galleries = [
     id: 1,
     thumb: "/midias/gallery/gallerie-1/thumb-1-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-1/thumb-1-blur.jpg",
-    title: "Galeria 1",
-    description: "alguma descrição",
+    title: "Conheça a Casa",
+    description:
+      "Descubra o equilíbrio perfeito entre charme, conforto e exclusividade. Nossa casa boutique foi projetada para proporcionar uma experiência inesquecível em cada detalhe.",
     media: [
       {
         type: "image",
@@ -53,8 +54,9 @@ const galleries = [
     id: 2,
     thumb: "/midias/gallery/gallerie-2/thumb-2-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-2/thumb-2-blur.jpg",
-    title: "Galeria 2",
-    description: "alguma descrição",
+    title: "Ambientes Internos",
+    description:
+      "Ambientes aconchegantes e funcionais que combinam estilo e modernidade. Viva momentos únicos em cada espaço cuidadosamente planejado.",
     media: [
       {
         type: "image",
@@ -108,8 +110,9 @@ const galleries = [
     id: 3,
     thumb: "/midias/gallery/gallerie-3/thumb-3-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-3/thumb-3-blur.jpg",
-    title: "Galeria 3",
-    description: "alguma descrição",
+    title: "Área de Lazer",
+    description:
+      "Relaxe e se divirta em nossa área de lazer privativa, projetada para oferecer momentos de descanso com vista para a beleza natural ao seu redor.",
     media: [
       {
         type: "image",
@@ -192,8 +195,9 @@ const galleries = [
     id: 4,
     thumb: "/midias/gallery/gallerie-4/thumb-4-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-4/thumb-4-blur.jpg",
-    title: "Galeria 4",
-    description: "alguma descrição",
+    title: "Experiência Gastronômica",
+    description:
+      "Desfrute de momentos únicos ao redor da mesa. Nossa cozinha e espaço para refeições foram pensados para criar memórias saborosas.",
     media: [
       {
         type: "image",
@@ -271,8 +275,9 @@ const galleries = [
     id: 5,
     thumb: "/midias/gallery/gallerie-5/thumb-5-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-5/thumb-5-blur.jpg",
-    title: "Galeria 5",
-    description: "alguma descrição",
+    title: "Localização e Vista",
+    description:
+      "Encante-se com a localização privilegiada e as vistas deslumbrantes que fazem deste lugar o refúgio perfeito para relaxar e se conectar com a natureza.",
     media: [
       {
         type: "image",
@@ -321,8 +326,9 @@ const galleries = [
     id: 6,
     thumb: "/midias/gallery/gallerie-6/thumb-6-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-6/thumb-6-blur.jpg",
-    title: "Galeria 6",
-    description: "alguma descrição",
+    title: "Café da Manhã",
+    description:
+      "Comece o dia da melhor forma com um café da manhã preparado com carinho, acompanhado pela tranquilidade e beleza de Alagoas.",
     media: [
       {
         type: "image",
