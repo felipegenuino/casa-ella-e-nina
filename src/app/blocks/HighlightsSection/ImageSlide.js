@@ -1,11 +1,12 @@
 import React from "react";
 
-const ImageSlide = ({ src }) => (
-  <img
-    src={src}
-    alt="Imagem da galeria"
-    className="max-h-[90vh] max-w-full object-contain rounded-lg"
-  />
-);
+const ImageSlide = ({ src, description }) => {
+  return (
+    <div className="image-slide">
+      <img src={src} alt={description} />
+      <p>{description}</p>
+    </div>
+  );
+};
 
 export default ImageSlide;

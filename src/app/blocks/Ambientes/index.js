@@ -68,7 +68,7 @@ export default function Ambientes() {
       >
         <Swiper
           spaceBetween={24}
-          slidesPerView={1}
+          slidesPerView={1.5}
           grabCursor={true}
           breakpoints={{
             640: { slidesPerView: 2 },

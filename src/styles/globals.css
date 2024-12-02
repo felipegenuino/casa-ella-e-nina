@@ -57,20 +57,30 @@ h5,
   background-color: #555; /* Cor do polegar ao passar o mouse */
 }
 
-.swiper-slide {
-  opacity: 0.6; /* Opacidade para slides não ativos */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
-  transform: scale(0.9); /* Leve aumento de tamanho no slide ativo */
+#swiper-gallery .swiper-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: scale(0.95) !important;
 }
 
-.swiper-slide img {
+#swiper-gallery .swiper-slide img {
   border-radius: 10px;
 }
 
-.swiper-slide-active {
-  opacity: 1; /* Opacidade total para o slide ativo */
-  transform: scale(1.2); /* Leve aumento de tamanho no slide ativo */
+#swiper-gallery .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.1) !important;
   z-index: 10;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-content {
+  padding: 20px;
 }
