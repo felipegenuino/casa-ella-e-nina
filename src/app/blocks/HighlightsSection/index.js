@@ -31,13 +31,13 @@ const HighlightsSection = () => {
   };
 
   return (
-    <div className="highlight-container mx-auto py-5 border overflow-auto w-full z-10">
+    <div className="highlight-container mx-auto py-5  overflow-auto w-full z-10">
       <GalleryList galleries={galleries} openModal={openModal} />
       {modalIsOpen && (
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90"
+          className="fixed inset-0 flex items-center justify-center bg-slate-700	 bg-opacity-90"
           overlayClassName="fixed inset-0 bg-black bg-opacity-90 z-10"
           ariaHideApp={false}
         >

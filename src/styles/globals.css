@@ -58,11 +58,19 @@ h5,
 }
 
 .swiper-slide {
-  opacity: 0.5; /* Opacidade para slides não ativos */
+  opacity: 0.6; /* Opacidade para slides não ativos */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Transições suaves */
+  transform: scale(0.9); /* Leve aumento de tamanho no slide ativo */
+}
+
+.swiper-slide img {
+  border-radius: 10px;
 }
 
 .swiper-slide-active {
   opacity: 1; /* Opacidade total para o slide ativo */
-  transform: scale(1.05); /* Leve aumento de tamanho no slide ativo */
+  transform: scale(1.2); /* Leve aumento de tamanho no slide ativo */
+  z-index: 10;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }

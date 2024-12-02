@@ -14,7 +14,7 @@ const fontBody = localFont({
 });
 
 export const metadata = {
-  title: "Casa Ella e Nina",
+  title: "Casa Ella e Nina | Casas Boutique - Alagoas",
   description: "Adicionar texto",
 };
 

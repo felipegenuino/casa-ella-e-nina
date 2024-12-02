@@ -6,7 +6,7 @@ import { handleSlideChange } from "./helpers";
 
 const ModalContent = ({ gallery, closeModal }) => {
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full content-center py-20">
       <button
         onClick={closeModal}
         className="absolute top-4 right-4 bg-gray-800 text-white rounded-full p-2 z-50"
@@ -17,14 +17,16 @@ const ModalContent = ({ gallery, closeModal }) => {
       <Swiper
         slidesPerView={1.4}
         centeredSlides
+        grabCursor={true}
         spaceBetween={30}
         breakpoints={{
           768: { slidesPerView: 3 },
           1024: { slidesPerView: 4 },
         }}
-        navigation
-        pagination={{ clickable: true }}
+        // navigation
+        pagination={{ clickable: false }}
         onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
+        className="swiper-galley"
       >
         {gallery.media.map((media, index) => (
           <SwiperSlide key={index}>
