@@ -6,37 +6,69 @@ import { handleSlideChange } from "./helpers";
 
 const ModalContent = ({ gallery, closeModal }) => {
   return (
-    <div className="relative w-full h-full content-center py-20 ">
-      <button
-        onClick={closeModal}
-        className="absolute top-4 right-4 bg-gray-800 text-white  rounded-full p-2 z-50"
-        aria-label="Fechar galeria"
-      >
-        Fechar
-      </button>
-      <Swiper
-        slidesPerView={1.4}
-        centeredSlides
-        spaceBetween={30}
-        breakpoints={{
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
-        }}
-        navigation
-        pagination={{ clickable: true }}
-        onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
-        id="swiper-gallery"
-      >
-        {gallery.media.map((media, index) => (
-          <SwiperSlide key={index}>
-            {media.type === "video" ? (
-              <VideoSlide id={`video-${gallery.id}-${index}`} src={media.url} />
-            ) : (
-              <ImageSlide src={media.url} description={media.description} />
-            )}
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <div className="relative w-full h-full ">
+      <div class="px-12 py-8  flex justify-between items-center ">
+        <div>
+          <h3 class="text-xl/7  font-semibold text-gray-100">
+            Galeria de Exemplo
+          </h3>
+          <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">Alguma descrição</p>
+        </div>
+
+        <button
+          onClick={closeModal}
+          className="right-4 bg-gray-800 text-white flex flex-row content-center justify-between rounded-full align-center  px-4 py-2  z-50 gap-1 hover:bg-gray-900"
+          aria-label="Fechar galeria"
+        >
+          <span className="text-sm">Fechar</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+            className="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <div className="_content-center h-full bg-slate-900 flex-1 py-12">
+        <Swiper
+          slidesPerView={1.4}
+          centeredSlides
+          spaceBetween={30}
+          breakpoints={{
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
+          }}
+          navigation
+          pagination={{ clickable: true }}
+          onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
+          id="swiper-gallery"
+        >
+          {gallery.media.map((media, index) => (
+            <SwiperSlide key={index}>
+              {media.type === "video" ? (
+                <VideoSlide
+                  id={`video-${gallery.id}-${index}`}
+                  src={media.url}
+                  description={media.description}
+                />
+              ) : (
+                <ImageSlide src={media.url} description={media.description} />
+              )}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };
