@@ -70,6 +70,7 @@ export default function Ambientes() {
           spaceBetween={24}
           slidesPerView={1.5}
           grabCursor={true}
+          loop
           breakpoints={{
             640: { slidesPerView: 2 },
             768: { slidesPerView: 4 },
