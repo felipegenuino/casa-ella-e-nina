@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import Modal from "react-modal";
 import Image from "next/image";
 import { Cross1Icon } from "@radix-ui/react-icons";
@@ -62,7 +62,7 @@ export default function Ambientes() {
       </div>
 
       <div
-        className="lg:mx-auto w-full xxx-max-w-6xl relative mt-8 mx-4 pt-8 "
+        className="lg:mx-auto w-full xxx-max-w-6xl relative mt-8 mx-4 pt-8 pb-12"
         role="region"
         aria-label="Carrossel de imagens das casas"
       >
@@ -71,48 +71,42 @@ export default function Ambientes() {
           slidesPerView={1.5}
           grabCursor={true}
           loop
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 4 },
-            1280: { slidesPerView: 6 },
-            1536: { slidesPerView: 7 },
-          }}
-          navigation={{
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-          }}
           autoplay={{
             delay: 6000,
             disableOnInteraction: true,
           }}
-          modules={[Autoplay]}
+          pagination={{
+            clickable: true,
+            renderBullet: (index, className) => {
+              return `<span class="${className} bg-purple-500 w-3 h-3 rounded-full mx-1"></span>`;
+            },
+          }}
+          breakpoints={{
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 4 },
+            1280: { slidesPerView: 5 },
+            1536: { slidesPerView: 6 },
+          }}
+          modules={[Autoplay, Pagination]}
           className="rounded-lg overflow-hidden"
         >
           {slides.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className="flex flex-col items-center relative"
+              className="flex flex-col items-center relative mb-10"
               aria-hidden={index !== 0}
             >
               <Image
                 src={slide.image}
                 alt={slide.caption}
-                width={100}
-                height={100}
-                className="w-full h-auto rounded-lg object-cover"
+                width={300} // Ajuste conforme necessário
+                height={450} // Ajuste conforme necessário
+                className="object-cover rounded-lg bg-gray-300"
               />
-              <p className="mt-2 text-xs text-gray-700">{slide.caption}</p>
+              <p className="mt-2 text-xs text-gray-700 ">{slide.caption}</p>
             </SwiperSlide>
           ))}
         </Swiper>
-        <button
-          className="swiper-button-prev"
-          aria-label="Slide anterior"
-        ></button>
-        <button
-          className="swiper-button-next"
-          aria-label="Próximo slide"
-        ></button>
       </div>
 
       <Modal

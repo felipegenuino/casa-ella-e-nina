@@ -5,7 +5,14 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-900">
       <div className="container px-6 py-12 mx-auto">
-        <div className="flex flex-col items-center text-center">
+        <div
+          className="
+        flex 
+        flex-col 
+        items-start 
+        lg:items-center 
+        lg:text-center"
+        >
           <svg
             height="40"
             viewBox="0 0 310 76"
@@ -17,18 +24,21 @@ export default function Footer() {
             />
           </svg>
 
-          <div className="flex flex-wrap justify-center mt-8 -mx-4">
+          <div className="flex flex-wrap lg:justify-center mt-8 -mx-4">
             <Link
               href="#"
-              className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
-              aria-label="Reddit"
+              className="w-full
+              mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              aria-label="Reserve"
             >
               Reserve
             </Link>
 
             <Link
               href="/"
-              className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              className="
+              w-full
+              mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               aria-label="Reddit"
             >
               Ambientes
@@ -36,7 +46,9 @@ export default function Footer() {
 
             <Link
               href="/"
-              className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              className="
+              w-full
+              mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               aria-label="Reddit"
             >
               Comodidades
@@ -44,7 +56,7 @@ export default function Footer() {
 
             <Link
               href="/"
-              className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              className="w-full mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               aria-label="Reddit"
             >
               Fale conosco
@@ -52,7 +64,7 @@ export default function Footer() {
 
             <Link
               href="#"
-              className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+              className="w-full mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
               aria-label="Reddit"
             >
               Perguntas Frequentes
