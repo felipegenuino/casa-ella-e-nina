@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,16 +12,29 @@ import { ArrowSquareOut } from "@phosphor-icons/react";
 
 export default function Ambientes() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const closeModalButtonRef = useRef(null);
+  const [isSwiperReady, setIsSwiperReady] = useState(false);
+
+  // Pré-carregar imagens
+  useEffect(() => {
+    const preloadImages = async () => {
+      const imagePromises = slides.map((slide) => {
+        return new Promise((resolve) => {
+          const img = new window.Image(); // Garante o uso da API nativa
+          img.src = slide.image;
+          img.onload = resolve;
+          img.onerror = resolve; // Continua mesmo se alguma imagem falhar
+        });
+      });
+
+      await Promise.all(imagePromises);
+      setIsSwiperReady(true); // Ativa o Swiper somente quando todas as imagens estiverem carregadas
+    };
+
+    preloadImages();
+  }, []);
 
   const openModal = () => setModalIsOpen(true);
   const closeModal = () => setModalIsOpen(false);
-
-  useEffect(() => {
-    if (modalIsOpen && closeModalButtonRef.current) {
-      closeModalButtonRef.current.focus();
-    }
-  }, [modalIsOpen]);
 
   return (
     <section className="py-32 min-h-screen lg:px-8 flex flex-col justify-center bg-white overflow-x-hidden">
@@ -66,47 +79,56 @@ export default function Ambientes() {
         role="region"
         aria-label="Carrossel de imagens das casas"
       >
-        <Swiper
-          spaceBetween={24}
-          slidesPerView={1.5}
-          grabCursor={true}
-          loop
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: true,
-          }}
-          pagination={{
-            clickable: true,
-            renderBullet: (index, className) => {
-              return `<span class="${className} bg-purple-500 w-3 h-3 rounded-full mx-1"></span>`;
-            },
-          }}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            768: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
-            1536: { slidesPerView: 6 },
-          }}
-          modules={[Autoplay, Pagination]}
-          className="rounded-lg overflow-hidden"
-        >
-          {slides.map((slide, index) => (
-            <SwiperSlide
-              key={index}
-              className="flex flex-col items-center relative mb-10"
-              aria-hidden={index !== 0}
-            >
-              <Image
-                src={slide.image}
-                alt={slide.caption}
-                width={300} // Ajuste conforme necessário
-                height={450} // Ajuste conforme necessário
-                className="object-cover rounded-lg bg-gray-300"
-              />
-              <p className="mt-2 text-xs text-gray-700 ">{slide.caption}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        {/* Exibe um loader enquanto as imagens carregam */}
+        {!isSwiperReady && (
+          <div className="flex justify-center items-center h-[300px]">
+            <p>Carregando imagens...</p>
+          </div>
+        )}
+
+        {isSwiperReady && (
+          <Swiper
+            spaceBetween={24}
+            slidesPerView={1.5}
+            grabCursor={true}
+            loop
+            autoplay={{
+              delay: 6000,
+              disableOnInteraction: true,
+            }}
+            pagination={{
+              clickable: true,
+              renderBullet: (index, className) => {
+                return `<span class="${className}"></span>`;
+              },
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              768: { slidesPerView: 4 },
+              1280: { slidesPerView: 5 },
+              1536: { slidesPerView: 6 },
+            }}
+            modules={[Autoplay, Pagination]}
+            className="rounded-lg overflow-hidden"
+          >
+            {slides.map((slide, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex flex-col items-center relative mb-10"
+                aria-hidden={index !== 0}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.caption}
+                  width={300}
+                  height={450}
+                  className="object-cover rounded-lg bg-gray-300"
+                />
+                <p className="mt-2 text-xs text-gray-700 ">{slide.caption}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </div>
 
       <Modal
@@ -122,7 +144,6 @@ export default function Ambientes() {
             <h2 className="text-2xl font-bold">Sobre este espaço</h2>
             <button
               onClick={closeModal}
-              ref={closeModalButtonRef}
               className="text-gray-700 hover:text-gray-900"
               aria-label="Fechar modal"
             >
@@ -131,6 +152,7 @@ export default function Ambientes() {
           </header>
 
           <div className="overflow-y-auto p-6 space-y-12 py-12">
+            {/* Conteúdo do modal */}
             <div className=" space-y-4">
               <p>
                 Se você procura privacidade, conforto e uma experiência única em
