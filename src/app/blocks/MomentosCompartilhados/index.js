@@ -11,7 +11,7 @@ export default function MomentosCompartilhados() {
             O Que Nossos Hóspedes Dizem
           </p>
           <div className="space-y-5">
-            <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
               Momentos Compartilhados
             </h2>
 

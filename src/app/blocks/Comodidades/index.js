@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Modal from "react-modal";
 import { Cross1Icon } from "@radix-ui/react-icons";
+import { ArrowSquareOut } from "@phosphor-icons/react";
 
 // src/app/blocks/Comodidades/index.js
 import amenities from "./amenities";
@@ -30,14 +31,14 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className=" bg-teal-50 overflow-hidden relative">
+    <section className=" bg-teal-50 overflow-hidden relative border-t border-gray-200">
       <div className="_max-w-screen-xl mx-auto ">
         <div className="flex flex-wrap w-full px-6">
           <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16  py-12 lg:py-28  mx-auto ">
             <div className=" mb-8 border-b-gray-200 border-b pb-8">
               <p className="text-indigo-600 font-light py-2">Comodidades</p>
               <div className="space-y-5">
-                <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
                   O que esse lugar oferece
                 </h2>
 
@@ -85,11 +86,12 @@ const AmenitiesSection = () => {
 
             <button
               onClick={openModal}
-              className="mt-6 lg:mt-14 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+              className="mt-6 lg:mt-14 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg transition-all text-white 
               hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
               active:scale-95 active:shadow-sm"
             >
               Mostrar todas as 55 comodidades
+              <ArrowSquareOut size={24} />
             </button>
           </div>
           <div className="xl:w-2/5 lg:w-1/5   bg-teal-200 hidden lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
@@ -106,7 +108,7 @@ const AmenitiesSection = () => {
       >
         <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Todas as comodidades</h2>
+            <h2 className="text-2xl font-regular">Todas as comodidades</h2>
             <button
               onClick={closeModal}
               ref={closeModalButtonRef}

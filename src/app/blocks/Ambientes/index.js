@@ -41,21 +41,21 @@ export default function Ambientes() {
       <div className="max-w-screen-xl w-full  lg:px-8 md:px-8  px-6">
         <p className="text-indigo-600 font-light py-2">Experiência Única</p>
         <div className="space-y-5">
-          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
             <span className="md:block">Viva momentos </span> de conforto e
             exclusividade
           </h2>
 
-          <p className="text-gray-500  lg:max-w-lg  ">
-            <span>
+          <p className="text-gray-500  space-y-1  ">
+            <span className="lg:flex">
               Nossas casas boutique oferecem ambientes projetados com conforto e
               elegância.
             </span>
-            <span className="text-gray-800 mx-2 ">
+            <span className="text-gray-800 mx-2 lg:flex lg:mx-0">
               Aproveite áreas de lazer privativas e quartos aconchegantes que
               combinam estilo artesanal e modernidade.
             </span>
-            <span>
+            <span className="lg:flex">
               Tudo pensado para proporcionar momentos únicos e relaxantes
               enquanto você aprecia a beleza natural de Alagoas.
             </span>
@@ -65,7 +65,7 @@ export default function Ambientes() {
         <button
           onClick={openModal}
           aria-label="Mostrar mais sobre este lugar"
-          className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+          className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg transition-all text-white 
               hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
               active:scale-95 active:shadow-sm"
         >
@@ -141,7 +141,7 @@ export default function Ambientes() {
       >
         <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
-            <h2 className="text-2xl font-bold">Sobre este espaço</h2>
+            <h2 className="text-2xl font-regular">Sobre este espaço</h2>
             <button
               onClick={closeModal}
               className="text-gray-700 hover:text-gray-900"

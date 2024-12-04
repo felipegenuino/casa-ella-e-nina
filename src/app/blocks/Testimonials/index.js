@@ -51,14 +51,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 lg:py-32 bg-gray-100 ">
+    <section className="pt-24 lg:pt-32 bg-gray-100  border-b border-t border-gray-200">
       <div className="max-w-screen-xl mx-auto lg:px-8 md:px-8">
         <div className=" px-6 md:px-0 mb-8 w-full _bg-red-300">
           <p className="text-indigo-600 font-light py-2">
             O Que Nossos Hóspedes Dizem
           </p>
           <div className="space-y-5">
-            <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
               Histórias de experiências
               <span className="md:flex"> memoráveis na Casa Ella e Nina</span>
             </h2>

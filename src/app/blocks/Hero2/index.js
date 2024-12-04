@@ -44,8 +44,8 @@ export default function Hero() {
         h-full
         inset-0
         bg-gradient-to-b 
-        from-black/70  
-        to-black/30
+        from-black/80  
+        to-black/50
         "
       ></div>
 
@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="z-10 max-w-screen-lg mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  __bg-white/10 rounded-md mt-10 py-10">
         <div className="max-w-screen-lg">
           <div className="flex-none space-y-5 px-4 md:px-0 text-center justify-center ">
-            <div className="mx-auto space-y-5 py-24">
+            <div className="mx-auto py-40 lg:py-52">
               <Image
                 width={500}
                 height={500}
@@ -64,78 +64,116 @@ export default function Hero() {
                 className="mx-auto"
                 src="/midias/hero/brand-hero-light.svg"
               />
-              <p className="text-white tracking-widest	text-xl font-bold	">
+              <p className="text-white tracking-widest	mt-4 text-xl font-bold	">
                 Casas Boutique
               </p>
-              <p className="text-white font-medium">
+              <p className="text-white/50 font-regular">
                 Patacho . Alagoas . Brasil
               </p>
             </div>
-            <h2 className="text-4xl text-white font-extrabold md:text-5xl">
-              Viva uma experiência de luxo e conforto na Praia do Patacho
-            </h2>
-            <div className="flex flex-wrap items-center gap-3 lg:gap-6 justify-center text-white/80 ">
-              <div
-                className="flex items-center gap-2 text-xs  lg:text-lg 
+
+            <div className="space-y-8">
+              <h2
+                className="
+            text-4xl 
+            text-white 
+            text-center 
+            font-regular 
+            md:text-5xl
+            lg:text-6xl
+            "
+              >
+                <span className="lg:block text-indigo-300">
+                  Viva uma experiência
+                </span>
+                de luxo e conforto
+                <span className="lg:block text-indigo-300">
+                  na Praia do Patacho
+                </span>
+              </h2>
+
+              <div className="flex flex-wrap items-center gap-3 lg:gap-6 justify-center text-white/80 ">
+                <div
+                  className="flex items-center gap-2 text-xs  lg:text-lg 
               lg:font-medium"
-              >
-                <Users
-                  size={28}
-                  className="relative shrink-0 top-0 h-5 w-5"
-                  aria-hidden="true"
-                />
-                <div>2 Hóspedes</div>
+                >
+                  <Users
+                    size={28}
+                    className="relative shrink-0 top-0 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  <div>2 Hóspedes</div>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
+                  <HouseSimple
+                    size={28}
+                    className="relative shrink-0 top-0 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  <div>1 Quarto</div>
+                </div>
+
+                <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
+                  <Bed
+                    size={28}
+                    className="relative shrink-0 top-0 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  <div>2 camas</div>
+                </div>
               </div>
 
-              <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
-                <HouseSimple
-                  size={28}
-                  className="relative shrink-0 top-0 h-5 w-5"
-                  aria-hidden="true"
-                />
-                <div>1 Quarto</div>
-              </div>
+              <p className="text-white/90 max-w-screen-sm mx-auto">
+                Se você procura privacidade, conforto e uma experiência única em
+                um dos destinos mais belos do litoral brasileiro, a Casa
+                Boutique é o lugar perfeito. Ideal para casais, nossa casa
+                acomoda até duas pessoas adultas e oferece um refúgio exclusivo
+                em meio à natureza exuberante de Porto de Pedras.
+              </p>
+              <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+                <a
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className="
+                flex items-center justify-center 
+                text-lg py-3 px-4 
+                text-center text-white 
+                font-light  
+                duration-150 
+                bg-gradient-to-r 
+                from-indigo-700 to-indigo-600
+                hover:from-indigo-600 hover:to-indigo-700  
+                 active:from-indigo-700 active:to-indigo-700  
+                 rounded-lg shadow-lg md:inline-flex   
+             hover:shadow-xl 
+              active:scale-95 active:shadow-sm transition-all 
+              "
+                >
+                  {/* <ArrowDown size={32} /> */}
+                  Conferir disponibilidade
+                </a>
 
-              <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
-                <Bed
-                  size={28}
-                  className="relative shrink-0 top-0 h-5 w-5"
-                  aria-hidden="true"
-                />
-                <div>2 camas</div>
+                <a
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className="flex items-center justify-center 
+                text-lg py-3 px-4 
+                text-center text-white 
+                font-light  
+                duration-150 
+                bg-gradient-to-r 
+                hover:from-green-600 hover:to-green-700  
+                from-green-700 to-green-600  
+                active:from-green-700 active:to-green-700 
+                rounded-lg shadow-lg md:inline-flex  
+                hover:shadow-xl active:scale-95 active:shadow-sm transition-all 
+              "
+                >
+                  {/* <WhatsappLogo size={32} weight="fill" /> */}
+                  Fale com Anfitrião
+                </a>
               </div>
-            </div>
-            <p className="text-white/90 max-w-screen-sm mx-auto">
-              Se você procura privacidade, conforto e uma experiência única em
-              um dos destinos mais belos do litoral brasileiro, a Casa Boutique
-              é o lugar perfeito. Ideal para casais, nossa casa acomoda até duas
-              pessoas adultas e oferece um refúgio exclusivo em meio à natureza
-              exuberante de Porto de Pedras.
-            </p>
-            <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium  duration-150 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg md:inline-flex   
-              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
-              active:scale-95 active:shadow-sm 
-              "
-              >
-                {/* <ArrowDown size={32} /> */}
-                Conferir disponibilidade
-              </a>
-              <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
-                className="flex items-center justify-center text-xl h-[64px] py-3 px-4 text-center text-white font-medium duration-150 border border-2 border-white rounded-lg shadow-lg md:inline-flex  
-              hover:bg-purple-50 hover:text-purple-700 hover:shadow-md
-              active:bg-purple-100 active:scale-95 active:shadow-sm
-              gap-2
-              "
-              >
-                <WhatsappLogo size={32} weight="fill" />
-                Fale com Anfitrião
-              </a>
             </div>
           </div>
         </div>
@@ -152,8 +190,10 @@ export default function Hero() {
       </div>
 
       {/* Logos de Reservas */}
-      <div className=" z-10 py-10 my-4 w-full text-center text-gray-100 font-semibold">
-        <p className="text-sm mb-4">Escolha Onde Quer Reservar</p>
+      <div className=" z-10 py-10 my-4 w-full text-center ">
+        <p className="text-sm mb-4 text-indigo-200 font-regular">
+          Escolha Onde Quer Reservar
+        </p>
         <div className="flex justify-center items-center px-4 gap-8">
           <Image
             // className="h-14"
