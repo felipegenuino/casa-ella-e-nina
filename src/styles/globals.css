@@ -14,6 +14,7 @@ h4,
 h5,
 .heading {
   font-family: var(--font-title);
+  letter-spacing: -0.04em;
 }
 
 @layer utilities {
@@ -63,9 +64,10 @@ h5,
 }
 
 #swiper-gallery .swiper-slide {
-  opacity: 0.6;
+  opacity: 0.2;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: scale(0.95) !important;
+  /* transform: scale(0.95) !important; */
+  margin: 20px 0;
 }
 
 #swiper-gallery .swiper-slide img {
@@ -74,7 +76,8 @@ h5,
 
 #swiper-gallery .swiper-slide-active {
   opacity: 1;
-  transform: scale(1.1) !important;
+  /* transform: scale(1.1) !important; */
+  padding: 0 0;
   z-index: 10;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));

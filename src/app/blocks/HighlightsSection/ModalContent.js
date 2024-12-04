@@ -6,15 +6,15 @@ import { handleSlideChange } from "./helpers";
 
 const ModalContent = ({ gallery, closeModal }) => {
   return (
-    <div className="relative w-full h-full ">
+    <div className="relative w-full h-full _overflow-y-auto">
       {/* Header */}
       <div class="px-12 py-4  flex justify-between items-center ">
         <div>
-          <h3 class="text-pretty text-2xl/7 font-semibold tracking-tight text-gray-100">
+          <h3 class="text-pretty text-2xl/7 font-regular tracking-tight text-gray-100">
             {gallery.title || "Título da Galeria"}
           </h3>
 
-          <p class="mt-1 max-w-2xl text-sm/6 text-gray-500">
+          <p class="hidden lg:visible mt-1 max-w-2xl text-sm/6 text-gray-500">
             {gallery.description || "Descrição da galeria"}
           </p>
         </div>
@@ -43,7 +43,7 @@ const ModalContent = ({ gallery, closeModal }) => {
       </div>
 
       {/* Swiper Section */}
-      <div className=" h-full bg-slate-900 flex-1 py-12">
+      <div className="bg-slate-900 flex-1 lg:py-12 h-full _overflow-y-auto">
         <Swiper
           slidesPerView={1.4}
           centeredSlides
