@@ -53,17 +53,19 @@ export default function Testimonials() {
   return (
     <section className="py-24 lg:py-32 bg-gray-100 ">
       <div className="max-w-screen-xl mx-auto lg:px-8 md:px-8">
-        <div className="lg:border-b lg:border-gray-200 lg:pb-8">
-          <div className="block-heading w-full px-4 space-y-3 mt-6 sm:px-0 md:mt-0">
-            <div>
-              <p className="text-indigo-600 font-semibold py-2">
-                O Que Nossos Hóspedes Dizem
-              </p>
-            </div>
+        <div className=" px-6 md:px-0 mb-8 w-full _bg-red-300">
+          <p className="text-indigo-600 font-light py-2">
+            O Que Nossos Hóspedes Dizem
+          </p>
+          <div className="space-y-5">
+            <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              Histórias de experiências
+              <span className="md:flex"> memoráveis na Casa Ella e Nina</span>
+            </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-start">
-              <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                Histórias de experiências memoráveis na Casa Ella e Nina
+            <div className="text-gray-500  ">
+              <p class="xs:mt-3 text-gray-600">
+                Veja algumas das comodidades disponíveis neste local.
               </p>
             </div>
           </div>
@@ -76,7 +78,7 @@ export default function Testimonials() {
               className="flex w-full flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 py-12  lg:rounded-xl"
             >
               <div className="p-0 flex gap-y-0 text-xs flex-col md:flex-row lg:flex-col h-full md:items-start">
-                <div className="relative flex md:flex-col lg:flex-col  gap-x-4 md:px-4 ">
+                <div className="relative flex md:flex-col lg:flex-col  gap-x-4 md:px-4 lg:px-0 ">
                   <Image
                     src={testimonial.image}
                     alt={`Foto de ${testimonial.name}`}

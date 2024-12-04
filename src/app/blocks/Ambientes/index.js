@@ -37,45 +37,45 @@ export default function Ambientes() {
   const closeModal = () => setModalIsOpen(false);
 
   return (
-    <section className="py-32 min-h-screen lg:px-8 flex flex-col justify-center bg-white overflow-x-hidden">
-      <div className="max-w-screen-xl mx-auto lg:px-0 border-b border-gray-200 pb-8">
-        <div className="block-heading w-full mx-4 space-y-3 mt-6 sm:px-0 md:mt-0">
-          <div>
-            <p className="text-indigo-600 font-semibold py-2">
-              Experiência Única
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-start space-y-3">
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-              <span className="md:block">Viva momentos </span> de conforto e
-              exclusividade
-            </p>
-            <div className="space-y-3">
-              <p className="xs:mt-3 text-gray-600">
-                Nossas casas boutique oferecem ambientes projetados com conforto
-                e elegância. Aproveite áreas de lazer privativas e quartos
-                aconchegantes que combinam estilo artesanal e modernidade. Tudo
-                pensado para proporcionar momentos únicos e relaxantes enquanto
-                você aprecia a beleza natural de Alagoas.
-              </p>
+    <section className="py-32 min-h-screen lg:px-8 flex flex-col  bg-white overflow-x-hidden">
+      <div className="max-w-screen-xl w-full  lg:px-8 md:px-8  px-6">
+        <p className="text-indigo-600 font-light py-2">Experiência Única</p>
+        <div className="space-y-5">
+          <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <span className="md:block">Viva momentos </span> de conforto e
+            exclusividade
+          </h2>
 
-              <button
-                onClick={openModal}
-                aria-label="Mostrar mais sobre este lugar"
-                className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
+          <p className="text-gray-500  lg:max-w-lg  ">
+            <span>
+              Nossas casas boutique oferecem ambientes projetados com conforto e
+              elegância.
+            </span>
+            <span className="text-gray-800 mx-2 ">
+              Aproveite áreas de lazer privativas e quartos aconchegantes que
+              combinam estilo artesanal e modernidade.
+            </span>
+            <span>
+              Tudo pensado para proporcionar momentos únicos e relaxantes
+              enquanto você aprecia a beleza natural de Alagoas.
+            </span>
+          </p>
+        </div>
+
+        <button
+          onClick={openModal}
+          aria-label="Mostrar mais sobre este lugar"
+          className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-lg text-white 
               hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
               active:scale-95 active:shadow-sm"
-              >
-                Mostrar mais
-                <ArrowSquareOut size={24} />
-              </button>
-            </div>
-          </div>
-        </div>
+        >
+          Mostrar mais
+          <ArrowSquareOut size={24} />
+        </button>
       </div>
 
       <div
-        className="lg:mx-auto w-full xxx-max-w-6xl relative mt-8 mx-4 pt-8 pb-12"
+        className="lg:mx-auto w-full xxx-max-w-6xl relative mt-8  pl-6 md:px-6 pt-8 pb-12"
         role="region"
         aria-label="Carrossel de imagens das casas"
       >

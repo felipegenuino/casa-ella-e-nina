@@ -1,17 +1,19 @@
-import localFont from "next/font/local";
+import { Fraunces, Sora } from "next/font/google";
+
 import "../styles/globals.css";
 
 //  import {Header} from './components/Header';
 
-const fontTitle = localFont({
-  src: "../../public/fonts/GeistVF.woff",
+// Configurando as fontes Fraunces (títulos) e Bellota (corpo)
+const fontTitle = Fraunces({
+  subsets: ["latin"],
   variable: "--font-title",
-  weight: "100 900",
+  weight: ["400", "700"], // Use os pesos que deseja para os títulos
 });
-const fontBody = localFont({
-  src: "../../public/fonts/PlusJakartaSans-VariableFont_wght.woff",
+const fontBody = Sora({
+  subsets: ["latin"],
   variable: "--font-body",
-  weight: "100 900",
+  weight: ["400", "700"], // Use os pesos que deseja para o corpo de texto
 });
 
 export const metadata = {

@@ -7,7 +7,12 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ["var(--font-title)", "sans-serif"], // Usando Fraunces
+        body: ["var(--font-body)", "sans-serif"], // Usando Inter
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };

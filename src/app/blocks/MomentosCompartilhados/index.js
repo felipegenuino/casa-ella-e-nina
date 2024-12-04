@@ -1,33 +1,43 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function MomentosCompartilhados() {
   return (
-    <section className="py-24 lg:py-32">
-      <div className="mx-auto container  flex flex-wrap">
-        <div className="border-b border-gray-200 pb-8 mb-8">
-          <div className="block-heading w-full  px-4 md:px-8 lg:px-0 space-y-3 mt-6 md:mt-0  ">
-            <div>
-              <p className="text-indigo-600 font-semibold py-2">
-                O Que Nossos Hóspedes Dizem
-              </p>
-            </div>
+    <section className="pt-24 lg:pt-32 ">
+      <div className="flex flex-wrap space-y-6">
+        <div className="max-w-screen-xl w-full  lg:px-8 md:px-8  px-6 md:mx-auto">
+          <p className="text-indigo-600 font-light py-2">
+            O Que Nossos Hóspedes Dizem
+          </p>
+          <div className="space-y-5">
+            <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+              Momentos Compartilhados
+            </h2>
 
-            <div className="grid grid-cols-1  lg:grid-cols-2 items-start space-y-3">
-              <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl pr-24">
-                Momentos Compartilhados
-              </p>
-              <p className="xs:mt-3 text-gray-600">
+            <p className="">
+              <span className="text-gray-500 lg:flex">
                 Confira os momentos reais e experiências incríveis de quem já se
-                hospedou na Casa Boutique Ella e Nina. Siga-nos no Instagram
+                hospedou na Casa Boutique Ella e Nina.
+              </span>
+              <span className="text-gray-800 mx-2 lg:mx-0 lg:flex ">
+                Siga-nos no
+                <Link
+                  className=" mx-1 underline underline-offset-4  text-blue-800 transition-all "
+                  href="https://www.instagram.com/casasboutiquepatacho/"
+                  target="_blank"
+                  title="Vá para página do instagram (nova janela)"
+                >
+                  instagram
+                </Link>
                 para acompanhar as novidades e se inspirar para a sua próxima
                 viagem!
-              </p>
-            </div>
+              </span>
+            </p>
           </div>
         </div>
 
-        <div className=" flex flex-wrap md:-m-2 -m-1">
+        <div className="flex flex-wrap">
           <div className="flex flex-wrap w-full lg:w-1/2">
             <div className="md:p-2 p-1 w-1/2">
               <Image

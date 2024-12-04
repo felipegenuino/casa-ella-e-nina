@@ -32,21 +32,20 @@ const AmenitiesSection = () => {
   return (
     <section className=" bg-teal-50 overflow-hidden relative">
       <div className="_max-w-screen-xl mx-auto ">
-        <div className="flex flex-wrap w-full px-4">
+        <div className="flex flex-wrap w-full px-6">
           <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16  py-12 lg:py-28  mx-auto ">
-            <div className="block-heading  mb-8 space-y-3 mt-6  md:mt-0 border-b border-gray-200 pb-8  ">
-              <div>
-                <p className="text-indigo-600 font-semibold py-2">
-                  Comodidades
-                </p>
-              </div>
-              <div className="grid grid-cols-1 items-start space-y-3 ">
-                <p className=" text-gray-800 text-3xl font-semibold sm:text-4xl">
+            <div className=" mb-8 border-b-gray-200 border-b pb-8">
+              <p className="text-indigo-600 font-light py-2">Comodidades</p>
+              <div className="space-y-5">
+                <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
                   O que esse lugar oferece
-                </p>
-                <p className="xs:mt-3 text-gray-600">
-                  Veja algumas das comodidades disponíveis neste local.
-                </p>
+                </h2>
+
+                <div className="text-gray-500  lg:max-w-lg ">
+                  <p class="xs:mt-3 text-gray-600">
+                    Veja algumas das comodidades disponíveis neste local.
+                  </p>
+                </div>
               </div>
             </div>
 

@@ -1,7 +1,6 @@
 // src/app/blocks/FAQSection.js
 import { useState, useRef, useEffect } from "react";
 import faqs from "./faqs";
-import { ArrowDown } from "@phosphor-icons/react/dist/ssr";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQSection() {
@@ -21,8 +20,8 @@ export default function FAQSection() {
   }, [openIndex]);
 
   return (
-    <section className="py-8 lg:py-32 px-4 bg-gray-100">
-      <h2 className="text-2xl font-bold text-center mb-6">
+    <section className="py-8 lg:py-32 px-4 bg-gray-100 space-y-12">
+      <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl text-center ">
         Perguntas Frequentes
       </h2>
       <div className="max-w-2xl mx-auto">

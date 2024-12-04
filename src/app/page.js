@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 // src/app/page.js
 import Hero from "./blocks/Hero";
 import RefugioLuxo from "./blocks/RefugioLuxo";
