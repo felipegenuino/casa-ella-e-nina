@@ -31,10 +31,26 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className=" bg-teal-50 overflow-hidden relative border-t border-gray-200">
+    <section className=" bg-violet-50 overflow-hidden relative border-y border-violet-200">
       <div className="_max-w-screen-xl mx-auto ">
-        <div className="flex flex-wrap w-full px-6">
-          <div className="xl:w-3/5 lg:w-4/5 lg:px-6  xl:px-16  py-12 lg:py-28  mx-auto ">
+        <div
+          className="flex flex-wrap w-full  md:pr-0 
+        "
+        >
+          <div
+            className="w-full md:w-3/4 xl:w-3/5 lg:w-3/5 2xl:w-2/4 px-6
+          md:px-8 
+          lg:pl-8 
+          lg:pr-8 
+          xl:pl-24  
+           xl:pr-10 
+          2xl:pl-60
+           2xl:pr-12  
+          
+          py-12  *:
+          lg:py-28  
+          mx-auto "
+          >
             <div className=" mb-8 border-b-gray-200 border-b pb-8">
               <p className="text-indigo-600 font-light py-2">Comodidades</p>
               <div className="space-y-5">
@@ -50,7 +66,7 @@ const AmenitiesSection = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 gap-x-12">
               {mainAmenities.map((item, index) => (
                 <div key={index} className="flex items-start space-x-3 py-2">
                   <Image
@@ -94,7 +110,7 @@ const AmenitiesSection = () => {
               <ArrowSquareOut size={24} />
             </button>
           </div>
-          <div className="xl:w-2/5 lg:w-1/5   bg-teal-200 hidden lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
+          <div className=" md:w-1/4 lg:w-2/5 xl:w-2/5  2xl:w-2/4 w-full bg-teal-200  visible lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>
         </div>
       </div>
 

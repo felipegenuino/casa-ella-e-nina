@@ -4,18 +4,23 @@ import React from "react";
 export default function Reserve() {
   return (
     <section className="py-32">
-      <div className="max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
-        <div className="max-w-xl md:mx-auto space-y-12">
+      <div className="max-w-screen-xl mx-auto px-4  md:px-8">
+        <div className="space-y-12">
           <h3 className="text-gray-800 text-3xl font-regular sm:text-4xl">
-            Reserve sua estadia perfeita
+            Reserve Sua Estadia Perfeita
           </h3>
           <div className="space-y-6">
-            <p className="mt-3 text-gray-600">
-              Escolha a melhor plataforma para garantir uma experiência
-              inesquecível na Praia do Patacho. Faça sua reserva de forma rápida
-              e segura com nossos parceiros de confiança.
-            </p>
-            <div className="flex gap-3 items-center mt-4 md:justify-center">
+            <div className="space-y-1">
+              <p className="mt-3 text-gray-600">
+                Escolha a melhor plataforma para garantir uma experiência
+                inesquecível na Praia do Patacho.
+              </p>
+              <p>
+                Faça sua reserva de forma rápida e segura com nossos parceiros
+                de confiança.
+              </p>
+            </div>
+            <div className="flex gap-3 ">
               <a
                 href="#"
                 onClick={(e) => e.preventDefault()}

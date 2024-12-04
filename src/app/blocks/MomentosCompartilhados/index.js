@@ -4,18 +4,18 @@ import React from "react";
 
 export default function MomentosCompartilhados() {
   return (
-    <section className="pt-24 lg:pt-32 ">
-      <div className="flex flex-wrap space-y-6">
-        <div className="max-w-screen-xl w-full  lg:px-8 md:px-8  px-6 md:mx-auto">
+    <section className="pt-24 lg:pt-32 border-y border-yellow-200 bg-yellow-50 ">
+      <div className=" space-y-6">
+        <div className="max-w-screen-xl mx-auto px-4  md:px-8">
           <p className="text-indigo-600 font-light py-2">
             O Que Nossos Hóspedes Dizem
           </p>
-          <div className="space-y-5">
+          <div className="space-y-6">
             <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
               Momentos Compartilhados
             </h2>
 
-            <p className="">
+            <p className="space-y-1">
               <span className="text-gray-500 lg:flex">
                 Confira os momentos reais e experiências incríveis de quem já se
                 hospedou na Casa Boutique Ella e Nina.
@@ -37,7 +37,7 @@ export default function MomentosCompartilhados() {
           </div>
         </div>
 
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap pt-6">
           <div className="flex flex-wrap w-full lg:w-1/2">
             <div className="md:p-2 p-1 w-1/2">
               <Image

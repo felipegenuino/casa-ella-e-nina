@@ -38,7 +38,7 @@ export default function Ambientes() {
 
   return (
     <section className="py-32 min-h-screen lg:px-8 flex flex-col  bg-white overflow-x-hidden">
-      <div className="max-w-screen-xl w-full  lg:px-8 md:px-8  px-6">
+      <div className="max-w-screen-xl  w-full  mx-auto lg:px-8 md:px-8 px-6">
         <p className="text-indigo-600 font-light py-2">Experiência Única</p>
         <div className="space-y-5">
           <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">

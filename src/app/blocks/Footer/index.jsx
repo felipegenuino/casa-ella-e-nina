@@ -4,12 +4,15 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-white">
       <div className="container px-6 py-12 mx-auto">
         <div
           className="
         flex 
         flex-col 
+        md:flex-row-reverse
+        lg:flex-col
+        md:justify-between
         items-start 
         lg:items-center 
         lg:text-center"
@@ -67,9 +70,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
-
-        <div className=" flex flex-col md:flex-row justify-between lg:justify-center text-sm lg:text-center text-gray-500 dark:text-gray-300 space-y-4 md:space-y-0 md:space-x-4 ">
+        <div className=" mt-12 flex flex-col md:flex-row justify-between lg:justify-center text-sm lg:text-center text-gray-500  space-y-4 md:space-y-0 md:space-x-4 ">
           <Link
             href="mailto:contato@ellaninaboutique.com"
             className=" px-4 py-2 text-center border duration-200 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg  text-dark  hover:from-gray-100 hover:to-gray-50 hover:shadow-lg transition-all  active:scale-95 active:shadow-sm"
