@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import faqs from "./faqs";
 import { ChevronDown } from "lucide-react";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -20,16 +21,21 @@ export default function FAQSection() {
   }, [openIndex]);
 
   return (
-    <section className="py-8 lg:py-32 px-4 bg-gray-100 space-y-12">
-      <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl text-center ">
-        Perguntas Frequentes
-      </h2>
+    <section className="py-32 px-4 bg-gray-100 space-y-12   border-b border-t border-gray-200">
+      <div className="max-w-2xl mx-auto">
+        <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl lg:text-center ">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
       <div className="max-w-2xl mx-auto">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-300 mb-4">
+          <div key={index} className="border-b border-gray-200 mb-4">
             <button
               onClick={() => toggleAccordion(index)}
-              className="w-full flex justify-between items-center py-3 px-4 text-left text-gray-800 font-semibold"
+              className={`w-full flex justify-between items-center py-5 px-4 text-left text-black font-regular text-lg ${
+                openIndex === index ? "active" : ""
+              }`}
               aria-expanded={openIndex === index}
             >
               {faq.question}
@@ -38,7 +44,7 @@ export default function FAQSection() {
                   openIndex === index ? "rotate-180" : ""
                 }`}
               >
-                <ChevronDown />
+                <ChevronDownIcon className="text-gray-400" />
               </span>
             </button>
             <div
@@ -51,10 +57,10 @@ export default function FAQSection() {
                 overflow: "hidden",
                 transition: "height 0.3s ease",
               }}
-              className="px-4 text-gray-600"
+              className="px-4 text-gray-500"
               aria-hidden={openIndex !== index}
             >
-              <p className="py-2">{faq.answer}</p>
+              <p className="pt-0 pb-6 text-base">{faq.answer}</p>
             </div>
           </div>
         ))}
