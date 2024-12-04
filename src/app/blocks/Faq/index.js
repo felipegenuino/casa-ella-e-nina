@@ -23,7 +23,7 @@ export default function FAQSection() {
   return (
     <section className="py-32 px-4 bg-gray-100 space-y-12   border-b border-t border-gray-200">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl lg:text-center ">
+        <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl _lg:text-center ">
           Perguntas Frequentes
         </h2>
       </div>
@@ -33,7 +33,7 @@ export default function FAQSection() {
           <div key={index} className="border-b border-gray-200 mb-4">
             <button
               onClick={() => toggleAccordion(index)}
-              className={`w-full flex justify-between items-center py-5 px-4 text-left text-black font-regular text-lg ${
+              className={`w-full flex justify-between items-center py-5  text-left text-black font-regular text-lg ${
                 openIndex === index ? "active" : ""
               }`}
               aria-expanded={openIndex === index}
