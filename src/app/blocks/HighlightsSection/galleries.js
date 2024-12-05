@@ -1,17 +1,22 @@
 const galleries = [
   {
     id: 1,
-    thumb: "/midias/gallery/gallerie-1/thumb-1-p.jpg",
-    thumbBlurUrl: "/midias/gallery/gallerie-1/thumb-1-blur.jpg",
-    title: "Conheça a Casa",
+    thumb: "/midias/gallery/gallerie-1/thumb-p.jpg",
+    thumbBlurUrl: "/midias/gallery/gallerie-1/thumb-blur.jpg",
+    title: "Conheça as Casas",
     description:
       "Descubra o equilíbrio perfeito entre charme, conforto e exclusividade. Nossa casa boutique foi projetada para proporcionar uma experiência inesquecível em cada detalhe.",
     media: [
       {
         type: "image",
-        url: "/midias/gallery/gallerie-1/image-1-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/image-1-blur.jpg",
-        description: "Legenda da imagem 1",
+        url: "/midias/gallery/gallerie-1/image-4-p.jpg",
+        blurUrl: "/midias/gallery/gallerie-1/image-4-blur.jpg",
+        description: "Legenda da imagem 4",
+      },
+      {
+        type: "video",
+        url: "/midias/gallery/gallerie-1/video-1.mp4",
+        description: "Conheça as casas",
       },
       {
         type: "image",
@@ -25,12 +30,7 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/image-3-blur.jpg",
         description: "Legenda da imagem 3",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/image-4-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/image-4-blur.jpg",
-        description: "Legenda da imagem 4",
-      },
+
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/image-5-p.jpg",
@@ -42,11 +42,6 @@ const galleries = [
         url: "/midias/gallery/gallerie-1/image-21-p.jpg",
         blurUrl: "/midias/gallery/gallerie-1/image-21-blur.jpg",
         description: "Legenda da imagem 21",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/gallerie-1/video-1.mp4",
-        description: "Legenda do vídeo 1",
       },
     ],
   },
