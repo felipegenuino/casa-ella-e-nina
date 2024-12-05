@@ -15,6 +15,7 @@ import Amenities from "./blocks/Comodidades";
 import Avaliacao from "./blocks/Avaliacao";
 import FAQSection from "./blocks/Faq";
 import { Brandy } from "@phosphor-icons/react";
+import FaleComAnfitria from "./blocks/FaleComAnfitria";
 
 export default function HomePage() {
   return (
@@ -27,6 +28,8 @@ export default function HomePage() {
       <MomentosCompartilhados />
       <Reserve />
       <FAQSection />
+
+      <FaleComAnfitria />
 
       <Footer />
     </main>
