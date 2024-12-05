@@ -1,5 +1,4 @@
 export const handleSlideChange = (swiper, gallery) => {
-  // Pausar todos os vídeos e silenciá-los
   gallery.media.forEach((media, index) => {
     if (media.type === "video") {
       const videoElement = document.querySelector(
@@ -12,7 +11,6 @@ export const handleSlideChange = (swiper, gallery) => {
     }
   });
 
-  // Reproduzir o vídeo do slide ativo com som
   const activeIndex = swiper.activeIndex;
   const activeMedia = gallery.media[activeIndex];
   if (activeMedia && activeMedia.type === "video") {
@@ -39,4 +37,23 @@ export const preloadMedia = (galleries) => {
       }
     });
   });
+};
+
+export const handleVideoClick = (videoElement) => {
+  if (videoElement.paused) {
+    videoElement.play();
+  } else {
+    videoElement.pause();
+  }
+};
+
+export const handleVideoKeyPress = (e, videoElement) => {
+  if (e.code === "Space") {
+    e.preventDefault(); // Evita o scroll ao pressionar espaço
+    if (videoElement.paused) {
+      videoElement.play();
+    } else {
+      videoElement.pause();
+    }
+  }
 };
