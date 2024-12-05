@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import VideoSlide from "./VideoSlide";
 import ImageSlide from "./ImageSlide";
@@ -10,14 +10,41 @@ import "swiper/css/a11y";
 import { VideoIcon, ImageIcon } from "@radix-ui/react-icons";
 
 const ModalContent = ({ gallery, closeModal }) => {
-  const swiperRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
 
-  const handleFocus = (index) => {
-    if (swiperRef.current) {
-      swiperRef.current.slideTo(index); // Move para o slide correspondente
-      handleSlideChange(swiperRef.current, gallery); // Ativa o slide
+  const handleSlideClick = (index) => {
+    if (swiperInstance) {
+      swiperInstance.slideTo(index); // Move para o slide clicado
     }
   };
+
+  useEffect(() => {
+    if (swiperInstance) {
+      swiperInstance.on("slideChange", () => {
+        const activeIndex = swiperInstance.activeIndex;
+        const slides = swiperInstance.slides;
+
+        slides.forEach((slide, index) => {
+          if (index === activeIndex) {
+            slide.classList.add("swiper-slide-active");
+            if (slide.querySelector("video")) {
+              const video = slide.querySelector("video");
+              video.muted = false; // Ativa o som
+              video.play(); // Reproduz o vídeo
+            }
+          } else {
+            slide.classList.remove("swiper-slide-active");
+            if (slide.querySelector("video")) {
+              const video = slide.querySelector("video");
+              video.pause();
+              video.currentTime = 0;
+              video.muted = true; // Silencia o vídeo
+            }
+          }
+        });
+      });
+    }
+  }, [swiperInstance]);
 
   return (
     <div className="relative w-full h-full _overflow-y-auto">
@@ -27,7 +54,6 @@ const ModalContent = ({ gallery, closeModal }) => {
           <h3 className="text-pretty text-2xl/7 font-regular tracking-tight text-gray-100">
             {gallery.title || "Título da Galeria"}
           </h3>
-
           <p className="hidden lg:visible mt-1 max-w-2xl text-sm/6 text-gray-500">
             {gallery.description || "Descrição da galeria"}
           </p>
@@ -57,27 +83,18 @@ const ModalContent = ({ gallery, closeModal }) => {
       </div>
 
       {/* Swiper Section */}
-      <div className="bg-slate-900 flex-1 _lg:py-12  h-lvh _overflow-y-auto mb-8">
+      <div className="bg-slate-900 flex-1 h-full">
         <Swiper
+          id="swiper-gallery"
           slidesPerView={1.4}
           centeredSlides
           spaceBetween={30}
-          grabCursor={true}
-          pagination={{ clickable: true }}
-          onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
-          allowTouchMove={true} // Garante que o swipe seja permitido
-          onTouchStart={(swiper) => {
-            const videos = document.querySelectorAll("video");
-            videos.forEach((video) => video.pause()); // Pausa vídeos ao iniciar o swipe
-          }}
           breakpoints={{
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper; // Guarda a instância do Swiper
-          }}
-          id="swiper-gallery"
+          pagination={{ clickable: true }}
+          onSwiper={setSwiperInstance}
           a11y={{ enabled: true }}
           keyboard={{ enabled: true }}
           aria-label={gallery.title || "Swiper de imagens e vídeos"}
@@ -85,35 +102,28 @@ const ModalContent = ({ gallery, closeModal }) => {
           {gallery.media.map((media, index) => (
             <SwiperSlide
               key={index}
-              tabIndex={0} // Permite focar no slide com Tab
-              className="outline-none"
-              onFocus={() => handleFocus(index)} // Chama a função ao focar
+              tabIndex={0} // Permite foco direto no slide
+              className="outline-none relative" // Adiciona o ícone
+              onClick={() => handleSlideClick(index)} // Move para o slide clicado
             >
               {media.type === "video" ? (
-                <div className="relative">
+                <>
                   <VideoSlide
-                    key={index}
                     media={media}
                     galleryId={gallery.id}
                     index={index}
                     description={media.description}
                   />
-                  {/* Ícone de vídeo */}
-                  <VideoIcon
-                    width="32"
-                    height="32"
-                    className="absolute _inset-0 top-8 right-8 m-auto text-white text-4xl opacity-80 pointer-events-none"
-                  />
-                </div>
+                  <div className="absolute top-8 right-6 bg-slate-700 bg-opacity-50_ p-1 rounded">
+                    <VideoIcon className="w-5 h-5 text-white" />
+                  </div>
+                </>
               ) : (
                 <>
                   <ImageSlide src={media.url} description={media.description} />
-                  {/* Ícone de imagem */}
-                  <ImageIcon
-                    width="32"
-                    height="32"
-                    className="absolute _inset-0 top-8 right-8 m-auto text-white text-4xl opacity-80 pointer-events-none"
-                  />
+                  <div className="absolute top-8 right-6 bg-slate-700 bg-opacity-50_ p-1 rounded">
+                    <ImageIcon className="w-5 h-5 text-white" />
+                  </div>
                 </>
               )}
             </SwiperSlide>

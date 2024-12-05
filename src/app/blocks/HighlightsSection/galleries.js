@@ -8,15 +8,15 @@ const galleries = [
       "Descubra o equilíbrio perfeito entre charme, conforto e exclusividade. Nossa casa boutique foi projetada para proporcionar uma experiência inesquecível em cada detalhe.",
     media: [
       {
+        type: "video",
+        url: "/midias/gallery/gallerie-1/video-1.mp4",
+        description: "Conheça as casas",
+      },
+      {
         type: "image",
         url: "/midias/gallery/gallerie-1/image-4-p.jpg",
         blurUrl: "/midias/gallery/gallerie-1/image-4-blur.jpg",
         description: "Legenda da imagem 4",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/gallerie-1/video-1.mp4",
-        description: "Conheça as casas",
       },
       {
         type: "image",

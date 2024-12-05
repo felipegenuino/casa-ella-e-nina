@@ -1,57 +1,48 @@
-import { handleVideoClick, handleVideoKeyPress } from "./helpers";
+import React, { useEffect } from "react";
 
-const VideoSlide = ({ media, galleryId, index }) => {
-  // Verifica se a mídia é válida antes de renderizar
-  if (!media || !media.url) {
-    console.error("Media or media.url is undefined:", media);
-    return null; // Evita renderizar se os dados estiverem incorretos
-  }
-
+const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
   const videoId = `video-${galleryId}-${index}`;
 
-  const handleKeyPress = (e) => {
+  useEffect(() => {
     const videoElement = document.getElementById(videoId);
-    if (videoElement) {
-      handleVideoKeyPress(e, videoElement);
-    }
-  };
 
-  const handleClick = () => {
-    const videoElement = document.getElementById(videoId);
-    if (videoElement) {
-      handleVideoClick(videoElement);
+    // Força a ativação se for o primeiro slide
+    if (index === 0 && videoElement) {
+      videoElement.muted = false;
+      videoElement.play();
+    }
+  }, [index, videoId]);
+
+  const handleVideoClick = (event) => {
+    const videoElement = event.currentTarget;
+
+    // Ativa o slide correspondente
+    onActivateSlide();
+
+    // Pausa ou reproduz o vídeo
+    if (videoElement.paused) {
+      videoElement.play();
+    } else {
+      videoElement.pause();
     }
   };
 
   return (
-    <div
-      className="relative w-full h-full"
-      onClick={(e) => {
-        e.preventDefault(); // Impede que o evento de clique interfira no swipe
-        handleVideoClick(e.target); // Função para play/pause/mute
-      }}
-    >
-      {/* Vídeo */}
+    <div className="relative">
       <video
         id={videoId}
         src={media.url}
         muted
         autoPlay={false} // Reproduz apenas no slide ativo
         loop
-        className="object-cover w-full h-full rounded-lg pointer-events-auto"
-        onClick={(e) => {
-          e.stopPropagation(); // Garante que o clique no vídeo não interfira com o swipe
-          handleVideoClick(e.target); // Função para play/pause/mute
-        }}
-        onKeyDown={handleKeyPress}
-        // tabIndex={0} // Para ser acessível
-        aria-label={media.description}
-      ></video>
-
-      {/* Descrição */}
-      <p className="absolute bottom-4 left-4 text-white text-sm bg-black bg-opacity-50 px-2 py-1 rounded">
-        {media.description}
-      </p>
+        className="object-cover w-full h-full rounded-lg cursor-pointer"
+        onClick={handleVideoClick} // Controla o comportamento ao clicar
+      />
+      {media.description && (
+        <p className="absolute bottom-4 left-4 text-white text-sm bg-black bg-opacity-50 px-2 py-1 rounded">
+          {media.description}
+        </p>
+      )}
     </div>
   );
 };
