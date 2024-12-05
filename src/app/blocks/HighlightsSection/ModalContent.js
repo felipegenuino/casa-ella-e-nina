@@ -63,12 +63,17 @@ const ModalContent = ({ gallery, closeModal }) => {
           centeredSlides
           spaceBetween={30}
           grabCursor={true}
+          pagination={{ clickable: true }}
+          onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
+          allowTouchMove={true} // Garante que o swipe seja permitido
+          onTouchStart={(swiper) => {
+            const videos = document.querySelectorAll("video");
+            videos.forEach((video) => video.pause()); // Pausa vídeos ao iniciar o swipe
+          }}
           breakpoints={{
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-          pagination={{ clickable: true }}
-          onSlideChange={(swiper) => handleSlideChange(swiper, gallery)}
           onSwiper={(swiper) => {
             swiperRef.current = swiper; // Guarda a instância do Swiper
           }}

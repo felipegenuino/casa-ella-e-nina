@@ -24,7 +24,13 @@ const VideoSlide = ({ media, galleryId, index }) => {
   };
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center">
+    <div
+      className="relative w-full h-full"
+      onClick={(e) => {
+        e.preventDefault(); // Impede que o evento de clique interfira no swipe
+        handleVideoClick(e.target); // Função para play/pause/mute
+      }}
+    >
       {/* Vídeo */}
       <video
         id={videoId}
@@ -32,10 +38,13 @@ const VideoSlide = ({ media, galleryId, index }) => {
         muted
         autoPlay={false} // Reproduz apenas no slide ativo
         loop
-        className="object-cover w-full h-full rounded-lg"
-        onClick={handleClick}
+        className="object-cover w-full h-full rounded-lg pointer-events-auto"
+        onClick={(e) => {
+          e.stopPropagation(); // Garante que o clique no vídeo não interfira com o swipe
+          handleVideoClick(e.target); // Função para play/pause/mute
+        }}
         onKeyDown={handleKeyPress}
-        tabIndex={0} // Para ser acessível
+        // tabIndex={0} // Para ser acessível
         aria-label={media.description}
       ></video>
 
