@@ -19,9 +19,6 @@ import { Brandy } from "@phosphor-icons/react";
 export default function HomePage() {
   return (
     <main className="w-100  overflow-x-hidden" id="main-content">
-      <SkipToContent />
-
-      <div className="test">oi</div>
       <Hero />
       {/* <RefugioLuxo /> */}
       <Ambientes />

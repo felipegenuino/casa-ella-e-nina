@@ -44,7 +44,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
-                className="w-full h-full object-cover object-center block"
+                className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/h-4.jpg"
               />
             </div>
@@ -53,7 +53,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
-                className="w-full h-full object-cover object-center block"
+                className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/7.jpg"
               />
             </div>
@@ -62,7 +62,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Começar a semana assim..."
-                className="w-full object-cover h-full object-center block"
+                className="w-full object-cover h-full object-center block rounded-lg"
                 src="/midias/instagram/2.jpg"
               />
             </div>
@@ -73,7 +73,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
-                className="w-full h-full object-cover object-center block"
+                className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/b-1.jpg"
               />
             </div>
@@ -82,7 +82,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
-                className="w-full h-full object-cover object-center block"
+                className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/6.jpg"
               />
             </div>
@@ -91,7 +91,7 @@ export default function MomentosCompartilhados() {
                 width={500}
                 height={500}
                 alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
-                className="w-full h-full object-cover object-center block"
+                className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/h-3.jpg"
               />
             </div>

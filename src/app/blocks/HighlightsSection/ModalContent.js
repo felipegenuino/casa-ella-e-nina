@@ -20,6 +20,26 @@ const ModalContent = ({ gallery, closeModal }) => {
 
   useEffect(() => {
     if (swiperInstance) {
+      const handleKeyDown = (event) => {
+        if (event.key === "ArrowRight") {
+          swiperInstance.slideNext(); // Avança para o próximo slide
+        } else if (event.key === "ArrowLeft") {
+          swiperInstance.slidePrev(); // Volta para o slide anterior
+        }
+      };
+
+      // Adiciona o evento de tecla pressionada
+      window.addEventListener("keydown", handleKeyDown);
+
+      // Remove o evento ao desmontar
+      return () => {
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [swiperInstance]);
+
+  useEffect(() => {
+    if (swiperInstance) {
       swiperInstance.on("slideChange", () => {
         const activeIndex = swiperInstance.activeIndex;
         const slides = swiperInstance.slides;
@@ -97,6 +117,7 @@ const ModalContent = ({ gallery, closeModal }) => {
           onSwiper={setSwiperInstance}
           a11y={{ enabled: true }}
           keyboard={{ enabled: true }}
+          grabCursor={true}
           aria-label={gallery.title || "Swiper de imagens e vídeos"}
         >
           {gallery.media.map((media, index) => (
