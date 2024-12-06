@@ -16,12 +16,19 @@ import Avaliacao from "./blocks/Avaliacao";
 import FAQSection from "./blocks/Faq";
 import { Brandy } from "@phosphor-icons/react";
 import FaleComAnfitria from "./blocks/FaleComAnfitria";
+import BannerTop from "./blocks/BannerTop";
+import BarraSticky from "./blocks/BarraSticky";
 
 export default function HomePage() {
   return (
-    <main className="w-100  overflow-x-hidden" id="main-content">
+    <main className=" relative w-100  overflow-x-hidden" id="main-content">
+      {/* <BannerTop /> */}
+
       <Hero />
       {/* <RefugioLuxo /> */}
+
+      {/* <BarraSticky /> */}
+
       <Ambientes />
       <Amenities />
       <Testimonials />

@@ -31,7 +31,10 @@ const AmenitiesSection = () => {
     .slice(0, 10); // Limita a exibição a 10 itens principais
 
   return (
-    <section className=" bg-violet-50 overflow-hidden relative border-y border-violet-200">
+    <section
+      id="comodidades"
+      className=" bg-violet-50 overflow-hidden relative border-y border-violet-200"
+    >
       <div className="_max-w-screen-xl mx-auto ">
         <div
           className="flex flex-wrap w-full  md:pr-0 

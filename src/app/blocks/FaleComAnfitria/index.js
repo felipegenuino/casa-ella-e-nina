@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function FaleComAnfitria() {
   return (
     <section
+      id="fale-com-anfitria"
       className="relative 
     bg-gradient-to-b  from-white to-yellow-50 
     border-b border-yellow-200
@@ -41,12 +42,28 @@ export default function FaleComAnfitria() {
               Estou à disposição para responder suas dúvidas e ajudá-lo a
               planejar uma estadia incrível.
             </p>
-            <div className="flex items-center space-x-4">
+            <div
+              className="
+              flex 
+              flex-col 
+              md:flex-row 
+              lg:flex-col 
+              xl:flex-row
+              items-center 
+            space-y-2 
+            md:space-x-4
+            lg:space-x-0
+            xl:space-y-0
+            xl:space-x-6
+            
+            
+            "
+            >
               <Link
                 href="https://wa.me/5511999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border border-green-600 text-base font-medium rounded-full text-white 
+                className=" w-full md:w-auto lg:w-full inline-flex items-center justify-center px-6 py-3 border border-green-600 text-base font-medium rounded-full text-white 
                 bg-green-500 hover:bg-green-600 
                 shadow-lg 
                 transition-all
@@ -60,7 +77,7 @@ export default function FaleComAnfitria() {
                 href="mailto:anfitria@ellaninacasas.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className=" flex gap-2 px-6 py-3  
+                className=" w-full md:w-auto lg:w-full  flex gap-2 px-6 py-3  
           content-center 
           items-center 
           justify-center 

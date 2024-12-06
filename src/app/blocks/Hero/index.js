@@ -14,7 +14,10 @@ import Hero2 from "@/app/blocks/Hero2";
 
 export default function Hero() {
   return (
-    <section className="hero bg-center	bg-top min-h-screen  justify-center flex flex-col">
+    <section
+      id="hero-section"
+      className="hero bg-center	bg-top min-h-screen  justify-center flex flex-col"
+    >
       <Hero2 />
     </section>
   );

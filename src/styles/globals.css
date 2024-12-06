@@ -90,3 +90,7 @@ h5,
 video {
   pointer-events: none;
 }
+
+.fixed {
+  transition: all 0.3s ease-in-out;
+}

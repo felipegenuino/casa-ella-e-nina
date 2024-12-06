@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Reserve() {
   return (
-    <section className="py-32">
+    <section id="disponibilidade" className="py-32">
       <div className="max-w-screen-xl mx-auto px-4  md:px-8">
         <div className="space-y-12">
           <h3 className="text-gray-800 text-3xl font-regular sm:text-4xl">
