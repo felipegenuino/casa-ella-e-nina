@@ -141,7 +141,7 @@ const AmenitiesSection = () => {
         ariaHideApp={false}
         className="fixed inset-0 flex items-center justify-center  bg-black/[.06]  p-4"
         overlayClassName="fixed inset-0 bg-black/[.5] z-10"
-        contentLabel="Todas as comodidades"
+        contentLabel="Todas as Comodidades"
       >
         <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
