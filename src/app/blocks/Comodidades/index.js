@@ -102,9 +102,27 @@ const AmenitiesSection = () => {
 
             <button
               onClick={openModal}
-              className="mt-6 lg:mt-14 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg transition-all text-white 
-              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
-              active:scale-95 active:shadow-sm"
+              className="mt-6 lg:mt-14 
+              
+               flex gap-2 px-6 py-2 
+          min-h-[46px]  
+          content-center 
+          items-center 
+          justify-center 
+          border 
+          duration-200 
+          rounded-full
+          transition-all 
+          text-white  
+          bg-gradient-to-r 
+           from-purple-500 to-pink-500  
+           hover:from-indigo-500 hover:to-indigo-400  
+           active:from-indigo-600 active:to-indigo-600 
+           hover:shadow-xl 
+           active:scale-95 
+           active:shadow-sm 
+              
+              "
             >
               Mostrar todas as 55 comodidades
               <ArrowSquareOut size={24} />

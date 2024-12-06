@@ -65,12 +65,27 @@ export default function Ambientes() {
         <button
           onClick={openModal}
           aria-label="Mostrar mais sobre este lugar"
-          className="mt-6 flex gap-2 px-4 py-2 border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg transition-all text-white 
-              hover:from-pink-500 hover:to-purple-500 hover:shadow-xl 
-              active:scale-95 active:shadow-sm"
+          className="mt-6 flex gap-2 px-6 py-2 
+          min-h-[46px]  
+          content-center 
+          items-center 
+          justify-center 
+          border 
+          duration-200 
+          rounded-full
+          transition-all 
+          text-white  
+          bg-gradient-to-r 
+           from-purple-500 to-pink-500  
+           hover:from-indigo-500 hover:to-indigo-400  
+           active:from-indigo-600 active:to-indigo-600 
+           hover:shadow-xl 
+           active:scale-95 
+           active:shadow-sm 
+              "
         >
-          Mostrar mais
-          <ArrowSquareOut size={24} />
+          <span> Mostrar Mais</span>
+          <ArrowSquareOut size={24} className=" hidden md:flex" />
         </button>
       </div>
 

@@ -15,16 +15,19 @@ const GalleryList = ({ galleries, openModal }) => (
           aria-label={`Pressione para ver galeria de ${gallery.title}`}
         >
           <div
-            className="
-            transition ease-in-out
-             rounded-lg shadow-sm aspect-square duration-300  
-            hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500
-
+            className=" 
+             rounded-full shadow-sm aspect-square duration-300  
+            hover:bg-gradient-to-r 
+            hover:from-purple-500 
+            hover:to-pink-500 
+            _hover:border-4 
+            _hover:border-indigo-900/20
+            overflow-hidden transition-all
              bg-white/10
           "
           >
             <Image
-              className="rounded-lg min-w-20 min-h-20 border-4 border-transparent transition-shadow duration-300 group-hover:shadow-xl" // Shadow ao passar o mouse
+              className="rounded-full min-w-20 min-h-20 border-4 border-transparent  duration-300 transition-all group-hover:shadow-xl scale-100  hover:scale-150 "
               width={500}
               height={500}
               src={gallery.thumb}

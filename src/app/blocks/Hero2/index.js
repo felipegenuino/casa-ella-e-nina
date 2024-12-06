@@ -138,21 +138,22 @@ export default function Hero() {
                   onClick={(e) => e.preventDefault()}
                   className="
                 flex items-center justify-center 
-                text-lg py-3 px-4 
+                text-lg py-3 px-8 min-h-[64px]
                 text-center text-white 
                 font-light  
                 duration-150 
                 bg-gradient-to-r 
                 from-purple-700 to-pink-700
-                hover:from-indigo-600 hover:to-indigo-700  
-                 active:from-indigo-700 active:to-indigo-700  
-                 rounded-lg shadow-lg md:inline-flex   
+                hover:from-indigo-500 hover:to-indigo-400  
+                 active:from-indigo-600 active:to-indigo-600  
+                 rounded-full
+                  shadow-lg md:inline-flex   
              hover:shadow-xl 
               active:scale-95 active:shadow-sm transition-all 
               "
                 >
                   {/* <ArrowDown size={32} /> */}
-                  Conferir disponibilidade
+                  Conferir Disponibilidade
                 </a>
 
                 {/* <a

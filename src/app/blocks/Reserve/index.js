@@ -24,7 +24,18 @@ export default function Reserve() {
               <a
                 href="#"
                 onClick={(e) => e.preventDefault()}
-                className="inline-block py-2 px-4 text-white font-medium bg-[#E61E4D] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
+                className=" bg-[#E61E4D] 
+                flex py-2 px-6 text-white font-medium
+                rounded-full shadow-md 
+                duration-150 
+                transition-all 
+                  hover:bg-gradient-to-r
+                  hover:from-indigo-500 hover:to-indigo-400  
+                  active:from-indigo-600 active:to-indigo-600 
+                  hover:shadow-xl 
+                  active:scale-95 
+                  active:shadow-sm   
+                "
                 aria-label="Reservar no Airbnb"
               >
                 <Image
@@ -40,7 +51,18 @@ export default function Reserve() {
               <a
                 href="#"
                 onClick={(e) => e.preventDefault()}
-                className="inline-block py-3 px-4 text-white font-medium bg-[#003B95] duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none"
+                className=" 
+                 bg-[#003B95] 
+                flex py-2 px-6 text-white font-medium
+                rounded-full shadow-md 
+                duration-150 
+                transition-all 
+                  hover:bg-gradient-to-r
+                  hover:from-indigo-500 hover:to-indigo-400  
+                  active:from-indigo-600 active:to-indigo-600 
+                  hover:shadow-xl 
+                  active:scale-95 
+                  active:shadow-sm  "
                 aria-label="Reservar no Booking.com"
               >
                 <Image

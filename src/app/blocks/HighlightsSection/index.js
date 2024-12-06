@@ -35,7 +35,7 @@ const HighlightsSection = () => {
       className="
     highlight-container 
     mx-auto 
-    pt-5  
+    pt-12  
     overflow-auto 
     bg-slate-700
     lg:bg-transparent
