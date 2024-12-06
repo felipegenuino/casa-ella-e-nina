@@ -3,22 +3,24 @@ import Modal from "react-modal";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
+import ModalWithMotion from "@/app/components/ModalWithMotion";
+
 // src/app/blocks/Comodidades/index.js
 import amenities from "./amenities";
 import Image from "next/image";
 
 const AmenitiesSection = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const closeModalButtonRef = useRef(null);
 
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
-    if (modalIsOpen && closeModalButtonRef.current) {
+    if (isModalOpen && closeModalButtonRef.current) {
       closeModalButtonRef.current.focus();
     }
-  }, [modalIsOpen]);
+  }, [isModalOpen]);
 
   // Filtra e ordena os itens para a lista principal
   const mainAmenities = amenities
@@ -62,7 +64,7 @@ const AmenitiesSection = () => {
                 </h2>
 
                 <div className="text-gray-500  lg:max-w-lg ">
-                  <p class="xs:mt-3 text-gray-600">
+                  <p className="xs:mt-3 text-gray-600">
                     Veja algumas das comodidades disponíveis neste local.
                   </p>
                 </div>
@@ -135,12 +137,10 @@ const AmenitiesSection = () => {
         </div>
       </div>
 
-      <Modal
-        isOpen={modalIsOpen}
+      <ModalWithMotion
+        isOpen={isModalOpen}
         onRequestClose={closeModal}
         ariaHideApp={false}
-        className="fixed inset-0 flex items-center justify-center  bg-black/[.06]  p-4"
-        overlayClassName="fixed inset-0 bg-black/[.5] z-10"
         contentLabel="Todas as Comodidades"
       >
         <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
@@ -202,7 +202,7 @@ const AmenitiesSection = () => {
             ))}
           </div>
         </div>
-      </Modal>
+      </ModalWithMotion>
     </section>
   );
 };

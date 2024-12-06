@@ -1,13 +1,38 @@
 import Image from "next/image";
 import React from "react";
 
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
+
 const GalleryList = ({ galleries, openModal }) => (
-  <div
+  <motion.div
+    variants={container}
+    initial="hidden"
+    animate="show"
     role="list"
     className="flex flex-nowrap gap-4 overflow-x-auto px-4 pl-12  lg:pl-0 lg:justify-center"
   >
     {galleries.map((gallery, index) => (
-      <div role="listitem" key={gallery.id} className="text-center px-3">
+      <motion.div
+        variants={item}
+        role="listitem"
+        key={gallery.id}
+        className="text-center px-3"
+      >
         <button
           key={gallery.id}
           onClick={() => openModal(gallery)}
@@ -39,9 +64,9 @@ const GalleryList = ({ galleries, openModal }) => (
             {gallery.title}
           </p>
         </button>
-      </div>
+      </motion.div>
     ))}
-  </div>
+  </motion.div>
 );
 
 export default GalleryList;

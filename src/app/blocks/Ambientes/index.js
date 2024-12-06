@@ -10,9 +10,14 @@ import { Cross1Icon } from "@radix-ui/react-icons";
 import slides from "./slides"; // Importa slides de slides.js
 import { ArrowSquareOut } from "@phosphor-icons/react";
 
+import ModalWithMotion from "@/app/components/ModalWithMotion";
+
 export default function Ambientes() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isSwiperReady, setIsSwiperReady] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   // Pré-carregar imagens
   useEffect(() => {
@@ -32,9 +37,6 @@ export default function Ambientes() {
 
     preloadImages();
   }, []);
-
-  const openModal = () => setModalIsOpen(true);
-  const closeModal = () => setModalIsOpen(false);
 
   return (
     <section className="py-32 min-h-screen lg:px-8 flex flex-col  bg-white overflow-x-hidden">
@@ -114,7 +116,7 @@ export default function Ambientes() {
             pagination={{
               clickable: true,
               renderBullet: (index, className) => {
-                return `<span class="${className}"></span>`;
+                return `<span className="${className}"></span>`;
               },
             }}
             breakpoints={{
@@ -146,14 +148,7 @@ export default function Ambientes() {
         )}
       </div>
 
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        ariaHideApp={false}
-        className="fixed inset-0 flex items-center justify-center  bg-black/[.06]  p-4"
-        overlayClassName="fixed inset-0 bg-black/[.5] z-10"
-        contentLabel="Sobre este espaço"
-      >
+      <ModalWithMotion isOpen={isModalOpen} onRequestClose={closeModal}>
         <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
           <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
             <h2 className="text-2xl font-regular">Sobre este espaço</h2>
@@ -221,9 +216,10 @@ export default function Ambientes() {
               <h3 className="text-lg font-semibold">Outras observações</h3>
               <p>Consulte-nos sobre pets de pequeno porte.</p>
             </div>
+            {/* end Conteúdo do modal */}
           </div>
         </div>
-      </Modal>
+      </ModalWithMotion>
     </section>
   );
 }

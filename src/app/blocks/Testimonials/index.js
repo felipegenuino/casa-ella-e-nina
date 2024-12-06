@@ -64,7 +64,7 @@ export default function Testimonials() {
             </h2>
 
             <div className="text-gray-500  ">
-              <p class="xs:mt-3 text-gray-600">
+              <p className="xs:mt-3 text-gray-600">
                 Veja algumas das comodidades disponíveis neste local.
               </p>
             </div>
