@@ -73,7 +73,20 @@ export default function Footer() {
         <div className=" mt-12 flex flex-col md:flex-row justify-between lg:justify-center text-sm lg:text-center text-gray-500  space-y-4 md:space-y-0 md:space-x-4">
           <Link
             href="mailto:contato@ellaninaboutique.com"
-            className="px-5 py-2 text-center border duration-200 bg-gradient-to-r from-gray-50 to-gray-100 rounded-full  text-dark  hover:from-white hover:to-gray-50 hover:shadow-lg transition-all  active:scale-95 active:shadow-sm"
+            className="px-5 py-2
+                  text-black  
+            text-center border duration-200 
+          bg-gradient-to-r 
+          from-gray-50 to-gray-100 
+          hover:from-white hover:to-white
+          active:from-gray-100 active:to-gray-200 
+          
+      
+           transition-all
+            rounded-full  
+            hover:shadow-lg 
+            
+             active:scale-95 active:shadow-sm"
           >
             contato@ellaninaboutique.com
           </Link>
@@ -81,7 +94,14 @@ export default function Footer() {
           <Link
             href="https://wa.me/5581987654321"
             target="_blank"
-            className=" px-5 py-2  text-center border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full   text-white  hover:from-pink-500 hover:to-purple-500 hover:shadow-lg transition-all  active:scale-95 active:shadow-sm
+            className=" px-5 py-2  text-center border duration-200 bg-gradient-to-r 
+            from-purple-500 to-pink-500 
+            rounded-full   
+            text-white 
+             hover:from-indigo-500 hover:to-indigo-400  
+           active:from-indigo-600 active:to-indigo-600 
+             
+             hover:shadow-lg transition-all  active:scale-95 active:shadow-sm
            "
           >
             WhatsApp: +55 81 98765-4321

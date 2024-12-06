@@ -124,7 +124,7 @@ const AmenitiesSection = () => {
               
               "
             >
-              Mostrar todas as 55 comodidades
+              Mostrar Todas as 55 Comodidades
               <ArrowSquareOut size={24} />
             </button>
           </div>
