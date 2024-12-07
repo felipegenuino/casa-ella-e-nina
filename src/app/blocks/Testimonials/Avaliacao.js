@@ -6,7 +6,7 @@ export default function Avaliacao() {
       <div className="lg:max-w-screen-xl w-full px-6 mx-auto lg:px-0 pb-8">
         <div className="flex items-center space-x-2 text-gray-800">
           ★<span className="text-2xl font-semibold">5,0</span>
-          <span className="text-gray-600">· 3 comentários</span>
+          <span className="text-gray-600">· 6 comentários</span>
         </div>
 
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">

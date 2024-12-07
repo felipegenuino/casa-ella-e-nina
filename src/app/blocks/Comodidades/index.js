@@ -51,7 +51,7 @@ const AmenitiesSection = () => {
            xl:pr-10 
           2xl:pl-60
            2xl:pr-12  
-          
+          3xl:bg-yellow
           py-12  *:
           lg:py-28  
           mx-auto "

@@ -12,7 +12,7 @@ import MomentosCompartilhados from "./blocks/MomentosCompartilhados";
 import Reserve from "./blocks/Reserve";
 import Hero2 from "./blocks/Hero2";
 import Amenities from "./blocks/Comodidades";
-import Avaliacao from "./blocks/Avaliacao";
+import Avaliacao from "./blocks/Testimonials/Avaliacao";
 import FAQSection from "./blocks/Faq";
 import { Brandy } from "@phosphor-icons/react";
 import FaleComAnfitria from "./blocks/FaleComAnfitria";
