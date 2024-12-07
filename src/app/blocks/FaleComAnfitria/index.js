@@ -92,7 +92,7 @@ export default function FaleComAnfitria() {
                 active:scale-95 
                 active:shadow-sm"
               >
-                Enviar Mensagem no WhatsApp
+                Mensagem no WhatsApp
               </Link>
               <Link
                 href="mailto:anfitria@ellaninacasas.com"

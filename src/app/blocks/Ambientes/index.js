@@ -40,7 +40,7 @@ export default function Ambientes() {
 
   return (
     <section className="py-32 min-h-screen lg:px-8 flex flex-col  bg-white overflow-x-hidden">
-      <div className="max-w-screen-xl  w-full  mx-auto lg:px-8 md:px-8 px-6">
+      <div className="max-w-screen-xl w-full  mx-auto lg:px-8 md:px-8 px-6">
         <p className="text-indigo-600 font-light py-2">Experiência Única</p>
         <div className="space-y-5">
           <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
@@ -148,77 +148,66 @@ export default function Ambientes() {
         )}
       </div>
 
-      <ModalWithMotion isOpen={isModalOpen} onRequestClose={closeModal}>
-        <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
-          <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
-            <h2 className="text-2xl font-regular">Sobre este espaço</h2>
-            <button
-              onClick={closeModal}
-              className="text-gray-700 hover:text-gray-900"
-              aria-label="Fechar modal"
-            >
-              <Cross1Icon />
-            </button>
-          </header>
-
-          <div className="overflow-y-auto p-6 space-y-12 py-12">
-            {/* Conteúdo do modal */}
-            <div className=" space-y-4">
-              <p>
-                Se você procura privacidade, conforto e uma experiência única em
-                um dos destinos mais belos do litoral brasileiro, a Casa
-                Boutique é o lugar perfeito. Ideal para casais, nossa casa
-                acomoda até duas pessoas adultas e oferece um refúgio exclusivo
-                em meio à natureza exuberante de Porto de Pedras.
-              </p>
-            </div>
-            <div className=" space-y-4">
-              <h3 className="text-lg font-semibold">O espaço</h3>
-              <p>
-                Nossas casas boutique oferecem ambientes projetados com conforto
-                e elegância. Aproveite áreas de lazer privativas e quartos
-                aconchegantes que combinam estilo artesanal e modernidade. Tudo
-                pensado para proporcionar momentos únicos e relaxantes enquanto
-                você aprecia a beleza natural de Alagoas.
-              </p>
-              <p>
-                Com duas edificações charmosas e exclusivas, esta propriedade
-                recém-inaugurada foi pensada para oferecer o máximo em
-                privacidade, conforto e estilo. Na primeira edificação, você
-                desfrutará de uma luxuosa suíte master, equipada com banheiro de
-                chuveiro duplo, closet e uma acolhedora sala de estar.
-              </p>
-              <p>
-                A segunda edificação, separada da suíte, garante ainda mais
-                privacidade e abriga uma cozinha completa e moderna, perfeita
-                para preparar suas refeições com tranquilidade, além de contar
-                com um lavabo para sua conveniência.
-              </p>
-              <p>
-                Entre as duas edificações, um verdadeiro oásis espera por você:
-                uma piscina privativa para duas pessoas, rodeada por um jardim
-                exuberante com espreguiçadeiras e uma mesa ideal para refeições
-                ao ar livre. Aqui, o luxo e a praticidade se encontram para
-                criar uma estadia inesquecível em um ambiente completamente
-                exclusivo e acolhedor.
-              </p>
-            </div>
-
-            <div className=" space-y-4">
-              <h3 className="text-lg font-semibold">Acesso do hóspede</h3>
-              <p>
-                Na Casa Boutique, nossos hóspedes são recebidos pela nossa
-                recepcionista Juliana, que estará à disposição para garantir uma
-                estadia tranquila e confortável.
-              </p>
-            </div>
-            <div className=" space-y-4">
-              <h3 className="text-lg font-semibold">Outras observações</h3>
-              <p>Consulte-nos sobre pets de pequeno porte.</p>
-            </div>
-            {/* end Conteúdo do modal */}
-          </div>
+      <ModalWithMotion
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        title="Sobre este espaço"
+      >
+        {/* Conteúdo do modal */}
+        <div className=" space-y-4">
+          <p>
+            Se você procura privacidade, conforto e uma experiência única em um
+            dos destinos mais belos do litoral brasileiro, a Casa Boutique é o
+            lugar perfeito. Ideal para casais, nossa casa acomoda até duas
+            pessoas adultas e oferece um refúgio exclusivo em meio à natureza
+            exuberante de Porto de Pedras.
+          </p>
         </div>
+        <div className=" space-y-4">
+          <h3 className="text-lg font-semibold">O espaço</h3>
+          <p>
+            Nossas casas boutique oferecem ambientes projetados com conforto e
+            elegância. Aproveite áreas de lazer privativas e quartos
+            aconchegantes que combinam estilo artesanal e modernidade. Tudo
+            pensado para proporcionar momentos únicos e relaxantes enquanto você
+            aprecia a beleza natural de Alagoas.
+          </p>
+          <p>
+            Com duas edificações charmosas e exclusivas, esta propriedade
+            recém-inaugurada foi pensada para oferecer o máximo em privacidade,
+            conforto e estilo. Na primeira edificação, você desfrutará de uma
+            luxuosa suíte master, equipada com banheiro de chuveiro duplo,
+            closet e uma acolhedora sala de estar.
+          </p>
+          <p>
+            A segunda edificação, separada da suíte, garante ainda mais
+            privacidade e abriga uma cozinha completa e moderna, perfeita para
+            preparar suas refeições com tranquilidade, além de contar com um
+            lavabo para sua conveniência.
+          </p>
+          <p>
+            Entre as duas edificações, um verdadeiro oásis espera por você: uma
+            piscina privativa para duas pessoas, rodeada por um jardim
+            exuberante com espreguiçadeiras e uma mesa ideal para refeições ao
+            ar livre. Aqui, o luxo e a praticidade se encontram para criar uma
+            estadia inesquecível em um ambiente completamente exclusivo e
+            acolhedor.
+          </p>
+        </div>
+
+        <div className=" space-y-4">
+          <h3 className="text-lg font-semibold">Acesso do hóspede</h3>
+          <p>
+            Na Casa Boutique, nossos hóspedes são recebidos pela nossa
+            recepcionista Juliana, que estará à disposição para garantir uma
+            estadia tranquila e confortável.
+          </p>
+        </div>
+        <div className=" space-y-4">
+          <h3 className="text-lg font-semibold">Outras observações</h3>
+          <p>Consulte-nos sobre pets de pequeno porte.</p>
+        </div>
+        {/* end Conteúdo do modal */}
       </ModalWithMotion>
     </section>
   );
