@@ -130,7 +130,7 @@ const AmenitiesSection = () => {
               "
             >
               Mostrar Todas as 55 Comodidades
-              <ArrowSquareOut size={24} />
+              <ArrowSquareOut size={24} className="mt-[-4px]" />
             </button>
           </div>
           <div className=" md:w-1/4 lg:w-2/5 xl:w-2/5  2xl:w-2/4 w-full bg-teal-200  visible lg:flex bg-[url('/midias/ambientes/5.jpg')] bg-no-repeat bg-center bg-cover"></div>

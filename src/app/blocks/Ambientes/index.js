@@ -87,7 +87,7 @@ export default function Ambientes() {
               "
         >
           <span> Mostrar Mais</span>
-          <ArrowSquareOut size={24} className=" hidden md:flex" />
+          <ArrowSquareOut size={24} className=" hidden md:flex mt-[-4px]" />
         </button>
       </div>
 
