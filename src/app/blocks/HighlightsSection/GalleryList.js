@@ -36,7 +36,7 @@ const GalleryList = ({ galleries, openModal }) => (
         <button
           key={gallery.id}
           onClick={() => openModal(gallery)}
-          className="flex-shrink-0 w-40 group"
+          className="flex-shrink-0 w-32 lg:w-40 group"
           aria-label={`Pressione para ver galeria de ${gallery.title}`}
         >
           <div
@@ -52,15 +52,18 @@ const GalleryList = ({ galleries, openModal }) => (
           "
           >
             <Image
-              className="rounded-full min-w-20 min-h-20 border-4 border-transparent  duration-300 transition-all group-hover:shadow-xl scale-100  hover:scale-150 "
-              width={500}
-              height={500}
+              className="rounded-full min-w-32 min-h-32  lg:min-w-32 lg:min-h-32 border-4 border-transparent  duration-300 transition-all group-hover:shadow-xl scale-100  hover:scale-150 "
+              width={160}
+              height={160}
               src={gallery.thumb}
               alt={gallery.title}
               aria-hidden="true"
             />
           </div>
-          <p aria-hidden="true" className="text-xs my-2 font-bold text-white">
+          <p
+            aria-hidden="true"
+            className="text-sm my-2 font-regular text-white"
+          >
             {gallery.title}
           </p>
         </button>

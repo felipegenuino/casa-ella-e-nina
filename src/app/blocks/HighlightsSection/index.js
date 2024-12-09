@@ -37,7 +37,7 @@ const HighlightsSection = () => {
     mx-auto 
     pt-12  
     overflow-auto 
-    bg-slate-700
+    _bg-slate-700
     lg:bg-transparent
     w-full 
     z-10"

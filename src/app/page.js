@@ -10,7 +10,7 @@ import Ambientes from "./blocks/Ambientes";
 import SkipToContent from "./components/SkipToContent";
 import MomentosCompartilhados from "./blocks/MomentosCompartilhados";
 import Reserve from "./blocks/Reserve";
-import Hero2 from "./blocks/Hero2";
+import Hero2 from "./blocks/Hero";
 import Amenities from "./blocks/Comodidades";
 import Avaliacao from "./blocks/Testimonials/Avaliacao";
 import FAQSection from "./blocks/Faq";
