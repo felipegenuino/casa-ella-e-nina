@@ -35,7 +35,7 @@ const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
         muted
         autoPlay={false} // Reproduz apenas no slide ativo
         loop
-        className="object-cover w-full h-full rounded-lg cursor-pointer"
+        className="object-cover w-full h-full  cursor-pointer"
         onClick={handleVideoClick} // Controla o comportamento ao clicar
       />
       {media.description && (

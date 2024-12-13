@@ -45,19 +45,18 @@ const ModalContent = ({ gallery, closeModal }) => {
         const slides = swiperInstance.slides;
 
         slides.forEach((slide, index) => {
+          const video = slide.querySelector("video");
+
           if (index === activeIndex) {
-            slide.classList.add("swiper-slide-active");
-            if (slide.querySelector("video")) {
-              const video = slide.querySelector("video");
+            // Slide ativo
+            if (video) {
               video.muted = false; // Ativa o som
               video.play(); // Reproduz o vídeo
             }
           } else {
-            slide.classList.remove("swiper-slide-active");
-            if (slide.querySelector("video")) {
-              const video = slide.querySelector("video");
-              video.pause();
-              video.currentTime = 0;
+            // Slide inativo
+            if (video) {
+              video.pause(); // Apenas pausa o vídeo, não redefine o tempo
               video.muted = true; // Silencia o vídeo
             }
           }
@@ -84,7 +83,7 @@ const ModalContent = ({ gallery, closeModal }) => {
           className="flex gap-2 px-6 py-2  min-h-[46px]   content-center  items-center  justify-center  border  duration-200  rounded-full transition-all  text-white   bg-gradient-to-r  from-purple-500 to-pink-500   hover:from-indigo-500 hover:to-indigo-400   active:from-indigo-600 active:to-indigo-600  hover:shadow-md  active:scale-95  active:shadow-s"
           aria-label="Fechar galeria"
         >
-          <span className="text-sm">Fechar</span>
+          <span className="text-base">Fechar</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

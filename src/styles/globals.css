@@ -77,7 +77,7 @@ h5,
 
 #swiper-gallery .swiper-slide img,
 #swiper-gallery .swiper-slide video {
-  border-radius: 10px;
+  border-radius: 24px;
   border: 6px solid transparent;
 }
 
@@ -92,8 +92,7 @@ h5,
 
 #swiper-gallery .swiper-slide-active img,
 #swiper-gallery .swiper-slide-active video {
-  border: 6px solid #3b82f6;
-  border-radius: 24px;
+  border-color: #3b82f6;
 }
 
 video {
