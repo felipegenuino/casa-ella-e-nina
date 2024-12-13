@@ -20,7 +20,7 @@ const ImageSlide = ({ src, description }) => {
       aria-label={description || "Imagem da galeria"} // Descrição acessível
       onClick={handleClick}
       onKeyDown={handleKeyPress}
-      className="relative w-full h-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="relative w-full h-full flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 mb-20"
     >
       <Image
         width={480}

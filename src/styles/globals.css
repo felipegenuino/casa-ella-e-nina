@@ -68,14 +68,17 @@ h5,
 }
 
 #swiper-gallery .swiper-slide {
-  opacity: 0.2;
+  /* opacity: 0.2; */
+  opacity: 1;
   transition: opacity 0.3s ease, transform 0.3s ease;
   /* transform: scale(0.95) !important; */
   margin: 20px 0;
 }
 
-#swiper-gallery .swiper-slide img {
+#swiper-gallery .swiper-slide img,
+#swiper-gallery .swiper-slide video {
   border-radius: 10px;
+  border: 6px solid transparent;
 }
 
 #swiper-gallery .swiper-slide-active {
@@ -85,6 +88,12 @@ h5,
   z-index: 10;
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
     drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+#swiper-gallery .swiper-slide-active img,
+#swiper-gallery .swiper-slide-active video {
+  border: 6px solid #3b82f6;
+  border-radius: 24px;
 }
 
 video {

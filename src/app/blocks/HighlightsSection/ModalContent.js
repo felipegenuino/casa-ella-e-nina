@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Pagination, A11y } from "swiper/modules"; // Importa o módulo Mousewheel
 import VideoSlide from "./VideoSlide";
 import ImageSlide from "./ImageSlide";
-import { handleSlideChange } from "./helpers";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/a11y";
@@ -69,9 +69,9 @@ const ModalContent = ({ gallery, closeModal }) => {
   return (
     <div className="relative w-full h-full _overflow-y-auto">
       {/* Header */}
-      <div className="px-12 py-4 flex justify-between items-center">
+      <div className="px-12 py-4 flex justify-between items-center bg-white border-b">
         <div>
-          <h3 className="text-pretty text-2xl/7 font-regular tracking-tight text-gray-100">
+          <h3 className="text-pretty text-2xl/7 font-regular tracking-tight text-black">
             {gallery.title || "Título da Galeria"}
           </h3>
           <p className="hidden lg:visible mt-1 max-w-2xl text-sm/6 text-gray-500">
@@ -81,7 +81,7 @@ const ModalContent = ({ gallery, closeModal }) => {
 
         <button
           onClick={closeModal}
-          className="right-4 bg-gray-800 text-white flex items-center justify-between rounded-full px-4 py-2 z-50 gap-1 hover:bg-gray-900"
+          className="flex gap-2 px-6 py-2  min-h-[46px]   content-center  items-center  justify-center  border  duration-200  rounded-full transition-all  text-white   bg-gradient-to-r  from-purple-500 to-pink-500   hover:from-indigo-500 hover:to-indigo-400   active:from-indigo-600 active:to-indigo-600  hover:shadow-md  active:scale-95  active:shadow-s"
           aria-label="Fechar galeria"
         >
           <span className="text-sm">Fechar</span>
@@ -108,7 +108,7 @@ const ModalContent = ({ gallery, closeModal }) => {
           id="swiper-gallery"
           slidesPerView={1.4}
           centeredSlides
-          spaceBetween={30}
+          spaceBetween={20}
           breakpoints={{
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
@@ -118,7 +118,10 @@ const ModalContent = ({ gallery, closeModal }) => {
           a11y={{ enabled: true }}
           keyboard={{ enabled: true }}
           grabCursor={true}
+          mousewheel={true} // Ativa o Mousewheel
+          modules={[Mousewheel, Pagination, A11y]} // Inclui os módulos
           aria-label={gallery.title || "Swiper de imagens e vídeos"}
+          className=" bg-white"
         >
           {gallery.media.map((media, index) => (
             <SwiperSlide
