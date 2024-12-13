@@ -3,7 +3,7 @@ const path = require("path");
 const sharp = require("sharp");
 
 // Atualize para o caminho correto
-const baseDirectory = path.join(__dirname, "../public/midias/gallery");
+const baseDirectory = path.join(__dirname, "../public/midias/gallery/");
 
 function processImages() {
   if (!fs.existsSync(baseDirectory)) {
