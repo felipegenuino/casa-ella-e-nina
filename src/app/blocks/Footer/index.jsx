@@ -86,7 +86,7 @@ export default function Footer() {
 
         <div className=" mt-12 flex flex-col md:flex-row justify-between lg:justify-center text-sm lg:text-center text-gray-500  space-y-4 md:space-y-0 md:space-x-4">
           <Link
-            href="mailto:contato@ellaninaboutique.com"
+            href="mailto:casasboutique@gmail.com"
             className="px-5 py-2
                   text-black  
             text-center border duration-200 

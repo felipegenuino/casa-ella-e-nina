@@ -26,8 +26,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:contato@ellaninaboutique.com">
-                contato@ellaninaboutique.com
+              <a href="mailto:casasboutique@gmail.com">
+                casasboutique@gmail.com
               </a>
             </li>
             <li>Al 101 Norte - Laje, Porto de Pedras, AL, 57945000, Brasil</li>

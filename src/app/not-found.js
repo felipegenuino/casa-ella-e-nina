@@ -9,10 +9,7 @@ export default function NotFound() {
         Opa! Parece que você tentou acessar algo que não existe ou foi movido.
         Volte para a página inicial ou explore outros links no site.
       </p>
-      <a
-        href="/"
-        className="px-6 py-3 text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
-      >
+      <a href="/" className="button-primary">
         Voltar para a página inicial
       </a>
     </div>

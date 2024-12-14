@@ -90,7 +90,7 @@ export default function FaleComAnfitria() {
                 Mensagem no WhatsApp
               </Link>
               <Link
-                href="mailto:anfitria@ellaninacasas.com"
+                href="mailto:casasboutique@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-primary w-full md:w-auto lg:w-full"

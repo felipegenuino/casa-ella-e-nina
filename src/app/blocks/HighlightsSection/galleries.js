@@ -588,7 +588,7 @@ const galleries = [
     id: 4,
     thumb: "/midias/gallery/gallerie-4/thumb-4-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-4/thumb-4-blur.jpg",
-    title: "Experiência Gastronômica",
+    title: "Praias e passeios",
     description:
       "Desfrute de momentos únicos ao redor da mesa. Nossa cozinha e espaço para refeições foram pensados para criar memórias saborosas.",
     media: [
@@ -661,113 +661,6 @@ const galleries = [
         type: "video",
         url: "/midias/gallery/gallerie-4/video-5.mp4",
         description: "Legenda do vídeo 5",
-      },
-    ],
-  },
-  {
-    id: 5,
-    thumb: "/midias/gallery/gallerie-5/thumb-5-p.jpg",
-    thumbBlurUrl: "/midias/gallery/gallerie-5/thumb-5-blur.jpg",
-    title: "Localização e Vista",
-    description:
-      "Encante-se com a localização privilegiada e as vistas deslumbrantes que fazem deste lugar o refúgio perfeito para relaxar e se conectar com a natureza.",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-1-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-1-blur.jpg",
-        description: "Legenda da imagem 1",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-2-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-2-blur.jpg",
-        description: "Legenda da imagem 2",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-3-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-3-blur.jpg",
-        description: "Legenda da imagem 3",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-4-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-4-blur.jpg",
-        description: "Legenda da imagem 4",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-5-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-5-blur.jpg",
-        description: "Legenda da imagem 5",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-5/image-21-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-5/image-21-blur.jpg",
-        description: "Legenda da imagem 21",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/gallerie-5/video-1.mp4",
-        description: "Legenda do vídeo 1",
-      },
-    ],
-  },
-  {
-    id: 6,
-    thumb: "/midias/gallery/gallerie-6/thumb-6-p.jpg",
-    thumbBlurUrl: "/midias/gallery/gallerie-6/thumb-6-blur.jpg",
-    title: "Café da Manhã",
-    description:
-      "Comece o dia da melhor forma com um café da manhã preparado com carinho, acompanhado pela tranquilidade e beleza de Alagoas.",
-    media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-6-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-6-blur.jpg",
-        description: "Legenda da imagem 6",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-7-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-7-blur.jpg",
-        description: "Legenda da imagem 7",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-8-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-8-blur.jpg",
-        description: "Legenda da imagem 8",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-9-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-9-blur.jpg",
-        description: "Legenda da imagem 9",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-10-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-10-blur.jpg",
-        description: "Legenda da imagem 10",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-6/image-22-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-6/image-22-blur.jpg",
-        description: "Legenda da imagem 22",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/gallerie-6/video-2.mp4",
-        description: "Legenda do vídeo 2",
-      },
-      {
-        type: "video",
-        url: "/midias/gallery/gallerie-6/video-3.mp4",
-        description: "Legenda do vídeo 3",
       },
     ],
   },

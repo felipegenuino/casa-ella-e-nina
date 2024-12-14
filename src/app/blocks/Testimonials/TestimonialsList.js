@@ -54,17 +54,30 @@ function TestimonialsList() {
           </div>
         ))}
       </div>
-      <div className="w-full mx-6 flex justify-center items-center  py-4 mb-6  _bg-yellow-50">
-        <Link
-          title="Abre em outra janela"
-          target="_blank"
-          className="mx-auto
+      <div className="w-full flex justify-center items-center  py-4 mb-6  _bg-yellow-50">
+        <div className="md:space-x-4 space-y-4 md:space-y-0 flex flex-col md:flex-row md:justify-center md:items-center">
+          <Link
+            title="Abre em outra janela"
+            target="_blank"
+            className="lg:mx-auto
             lg:text-base text-lg transition-colors duration-300  
                text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
-          href="https://www.airbnb.com.br/rooms/1049859270366355530/reviews?preview_for_ml=true&source_impression_id=p3_1702991100_xtLxwyiJs7cmelpN&scroll_to_review=1267497349451369858"
-        >
-          Comentários do Airbnb
-        </Link>
+            href="https://www.airbnb.com.br/rooms/1049859270366355530/reviews?preview_for_ml=true&source_impression_id=p3_1702991100_xtLxwyiJs7cmelpN&scroll_to_review=1267497349451369858"
+          >
+            Comentários no Airbnb
+          </Link>
+
+          <Link
+            title="Abre em outra janela"
+            target="_blank"
+            className="lg:mx-auto
+            lg:text-base text-lg transition-colors duration-300  
+               text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
+            href="https://www.booking.com/hotel/br/pousada-casas-boutique-ella-amp-nina-no-patacho.pt-br.html#tab-reviews"
+          >
+            Comentários no Booking.com
+          </Link>
+        </div>
       </div>
     </>
   );
