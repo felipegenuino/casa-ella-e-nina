@@ -2,7 +2,7 @@ import { Fraunces, Sora } from "next/font/google";
 import "../styles/globals.css";
 
 export const metadata = {
-  title: "Casas Boutique Ella & Nina",
+  title: "Casas Boutique Ella & Nina | Patacho, Alagoas - Brasil",
   description:
     "Descubra a Casa Ella e Nina, uma casa boutique em Alagoas, com charme único e hospitalidade excepcional. Reserve já sua estadia.",
   manifest: "/site.webmanifest",
