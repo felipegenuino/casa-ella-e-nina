@@ -33,6 +33,45 @@ h5,
   .swiper-pagination-bullet-active {
     @apply w-5 h-5 bg-yellow-500 scale-110 shadow-lg;
   }
+
+  .button-primary {
+    @apply gap-2 px-6 py-3 
+    flex content-center  items-center  justify-center  
+    border rounded-full 
+    duration-200  transition-all 
+    text-white text-base
+    bg-gradient-to-r from-purple-500 to-pink-500   
+    hover:from-indigo-500 hover:to-indigo-400   
+    active:from-indigo-600 active:to-indigo-600  
+    hover:shadow-xl active:shadow-sm
+    active:scale-95;
+  }
+
+  .button-primary--small {
+    @apply gap-2 px-6 py-3 
+    flex content-center  items-center  justify-center  
+    border rounded-full 
+    duration-200  transition-all 
+    text-white text-base
+    bg-gradient-to-r from-purple-500 to-pink-500   
+    hover:from-indigo-500 hover:to-indigo-400   
+    active:from-indigo-600 active:to-indigo-600  
+    hover:shadow-xl active:shadow-sm
+    active:scale-95;
+  }
+
+  .button-whatsapp {
+    @apply gap-2 px-6 py-3 
+    flex content-center  items-center  justify-center  
+    border rounded-full 
+    duration-200  transition-all 
+    text-white text-base
+    bg-gradient-to-r bg-green-500 from-green-500
+    hover:bg-green-600   
+    active:from-indigo-600 active:to-indigo-600  
+    hover:shadow-xl active:shadow-sm
+    active:scale-95;
+  }
 }
 
 .player-wrapper {

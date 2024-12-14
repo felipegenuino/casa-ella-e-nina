@@ -66,9 +66,9 @@ const ModalContent = ({ gallery, closeModal }) => {
   }, [swiperInstance]);
 
   return (
-    <div className="relative w-full h-full _overflow-y-auto">
+    <div className="relative w-full h-full ">
       {/* Header */}
-      <div className="px-12 py-4 flex justify-between items-center bg-white border-b">
+      <div className="px-12 py-2 flex justify-between items-center bg-white border-b">
         <div>
           <h3 className="text-pretty text-2xl/7 font-regular tracking-tight text-black">
             {gallery.title || "Título da Galeria"}
@@ -80,7 +80,7 @@ const ModalContent = ({ gallery, closeModal }) => {
 
         <button
           onClick={closeModal}
-          className="flex gap-2 px-6 py-2  min-h-[46px]   content-center  items-center  justify-center  border  duration-200  rounded-full transition-all  text-white   bg-gradient-to-r  from-purple-500 to-pink-500   hover:from-indigo-500 hover:to-indigo-400   active:from-indigo-600 active:to-indigo-600  hover:shadow-md  active:scale-95  active:shadow-s"
+          className="button-primary"
           aria-label="Fechar galeria"
         >
           <span className="text-base">Fechar</span>
@@ -102,7 +102,7 @@ const ModalContent = ({ gallery, closeModal }) => {
       </div>
 
       {/* Swiper Section */}
-      <div className="bg-slate-900 flex-1 h-full">
+      <div className="bg-violet-50 flex-1 h-full">
         <Swiper
           id="swiper-gallery"
           slidesPerView={1.4}
@@ -112,7 +112,7 @@ const ModalContent = ({ gallery, closeModal }) => {
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 4 },
           }}
-          pagination={{ clickable: true }}
+          pagination={{ clickable: true, dynamicBullets: true }}
           onSwiper={setSwiperInstance}
           a11y={{ enabled: true }}
           keyboard={{ enabled: true }}
@@ -120,7 +120,7 @@ const ModalContent = ({ gallery, closeModal }) => {
           mousewheel={true} // Ativa o Mousewheel
           modules={[Mousewheel, Pagination, A11y]} // Inclui os módulos
           aria-label={gallery.title || "Swiper de imagens e vídeos"}
-          className=" bg-white"
+          className=" bg-violet-50"
         >
           {gallery.media.map((media, index) => (
             <SwiperSlide

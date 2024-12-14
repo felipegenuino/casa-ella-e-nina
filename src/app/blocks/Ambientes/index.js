@@ -67,23 +67,7 @@ export default function Ambientes() {
         <button
           onClick={openModal}
           aria-label="Mostrar mais sobre este lugar"
-          className="mt-6 flex gap-2 px-6 py-2 
-          min-h-[46px]  
-          content-center 
-          items-center 
-          justify-center 
-          border 
-          duration-200 
-          rounded-full
-          transition-all 
-          text-white  
-          bg-gradient-to-r 
-           from-purple-500 to-pink-500  
-           hover:from-indigo-500 hover:to-indigo-400  
-           active:from-indigo-600 active:to-indigo-600 
-           hover:shadow-xl 
-           active:scale-95 
-           active:shadow-sm 
+          className="button-primary  mt-6 
               "
         >
           <span> Mostrar Mais</span>
@@ -115,9 +99,7 @@ export default function Ambientes() {
             }}
             pagination={{
               clickable: true,
-              renderBullet: (index, className) => {
-                return `<span className="${className}"></span>`;
-              },
+              dynamicBullets: true,
             }}
             breakpoints={{
               640: { slidesPerView: 2 },
@@ -151,7 +133,7 @@ export default function Ambientes() {
       <ModalWithMotion
         isOpen={isModalOpen}
         onRequestClose={closeModal}
-        title="Sobre este espaço"
+        title="Sobre este Espaço"
       >
         {/* Conteúdo do modal */}
         <div className=" space-y-4">

@@ -28,7 +28,7 @@ const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
   };
 
   return (
-    <div className="relative mb-20">
+    <div className="relative">
       <video
         id={videoId}
         src={media.url}

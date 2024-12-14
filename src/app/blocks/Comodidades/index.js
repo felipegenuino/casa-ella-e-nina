@@ -107,29 +107,9 @@ const AmenitiesSection = () => {
 
             <button
               onClick={openModal}
-              className="mt-6 lg:mt-14 
-              
-               flex gap-2 px-6 py-2 
-          min-h-[46px]  
-          content-center 
-          items-center 
-          justify-center 
-          border 
-          duration-200 
-          rounded-full
-          transition-all 
-          text-white  
-          bg-gradient-to-r 
-           from-purple-500 to-pink-500  
-           hover:from-indigo-500 hover:to-indigo-400  
-           active:from-indigo-600 active:to-indigo-600 
-           hover:shadow-xl 
-           active:scale-95 
-           active:shadow-sm 
-              
-              "
+              className="mt-6 lg:mt-14 button-primary "
             >
-              Mostrar Todas as 55 Comodidades
+              <span>Mostrar Todas as 55 Comodidades</span>
               <ArrowSquareOut size={24} className="mt-[-4px]" />
             </button>
           </div>
@@ -140,68 +120,51 @@ const AmenitiesSection = () => {
       <ModalWithMotion
         isOpen={isModalOpen}
         onRequestClose={closeModal}
-        ariaHideApp={false}
-        contentLabel="Todas as Comodidades"
+        title="Todas as Comodidades"
       >
-        <div className="rounded-xl overflow-hidden bg-white max-w-3xl w-full relative flex flex-col max-h-[90vh]">
-          <header className="sticky top-0 bg-white border-b border-gray-200 p-4 z-10 flex justify-between items-center">
-            <h2 className="text-2xl font-regular">Todas as comodidades</h2>
-            <button
-              onClick={closeModal}
-              ref={closeModalButtonRef}
-              className="text-gray-700 hover:text-gray-900"
-              aria-label="Fechar modal"
-            >
-              <Cross1Icon />
-            </button>
-          </header>
+        {/* Conteúdo do modal */}
+        {amenities.map((category, index) => (
+          <div key={index} className="mb-4 pb-14">
+            <h3 className="font-semibold text-lg mb-2">{category.category}</h3>
 
-          <div className="overflow-y-auto p-6 pt-12">
-            {amenities.map((category, index) => (
-              <div key={index} className="mb-4 pb-14">
-                <h3 className="font-semibold text-lg mb-2">
-                  {category.category}
-                </h3>
-
-                {category.items.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start space-x-3 py-6 border-b	border-slate-200"
-                    aria-hidden={item.unavailable ? "true" : "false"}
+            {category.items.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-start space-x-3 py-6 border-b	border-slate-200"
+                aria-hidden={item.unavailable ? "true" : "false"}
+              >
+                <Image
+                  src={`/midias/amenities/${item.icon}`}
+                  alt=""
+                  width={24}
+                  height={24}
+                  // className="w-6 h-6"
+                />
+                <div>
+                  <p
+                    className={`font-medium ${
+                      item.unavailable ? "line-through text-gray-400" : ""
+                    }`}
                   >
-                    <Image
-                      src={`/midias/amenities/${item.icon}`}
-                      alt=""
-                      width={24}
-                      height={24}
-                      // className="w-6 h-6"
-                    />
-                    <div>
-                      <p
-                        className={`font-medium ${
-                          item.unavailable ? "line-through text-gray-400" : ""
-                        }`}
-                      >
-                        {item.name}
-                      </p>
-                      {item.details && (
-                        <p
-                          className={`text-sm ${
-                            item.unavailable
-                              ? "line-through text-gray-400"
-                              : "text-gray-500"
-                          }`}
-                        >
-                          {item.details}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                    {item.name}
+                  </p>
+                  {item.details && (
+                    <p
+                      className={`text-sm ${
+                        item.unavailable
+                          ? "line-through text-gray-400"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      {item.details}
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
-        </div>
+        ))}
+        {/* end Conteúdo do modal */}
       </ModalWithMotion>
     </section>
   );

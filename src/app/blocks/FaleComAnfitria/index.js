@@ -84,13 +84,8 @@ export default function FaleComAnfitria() {
                 href="https://wa.me/5511999999999"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto lg:w-full inline-flex items-center justify-center px-6 py-3 border border-green-600 text-base font-medium rounded-full text-white 
-                bg-green-500 hover:bg-green-600 
-                shadow-lg 
-                transition-all
-                hover:shadow-xl 
-                active:scale-95 
-                active:shadow-sm"
+                className=" w-full md:w-auto lg:w-full
+                button-whatsapp "
               >
                 Mensagem no WhatsApp
               </Link>
@@ -98,22 +93,7 @@ export default function FaleComAnfitria() {
                 href="mailto:anfitria@ellaninacasas.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full md:w-auto lg:w-full flex gap-2 px-6 py-3  
-                content-center 
-                items-center 
-                justify-center 
-                border 
-                duration-200 
-                rounded-full 
-                transition-all 
-                text-white  
-                bg-gradient-to-r 
-                from-purple-500 to-pink-500  
-                hover:from-indigo-500 hover:to-indigo-400  
-                active:from-indigo-600 active:to-indigo-600 
-                hover:shadow-xl 
-                active:scale-95 
-                active:shadow-sm"
+                className="button-primary w-full md:w-auto lg:w-full"
               >
                 Enviar Email
               </Link>
