@@ -12,7 +12,10 @@ import HighlightsSection from "../HighlightsSection";
 export default function Hero() {
   const hasVideo = true; // Altere para false para usar imagem estática
   return (
-    <section className="hero relative min-h-screen flex  flex-col items-center _justify-center bg-cover bg-center">
+    <section
+      id="hero"
+      className="hero relative min-h-screen flex  flex-col items-center _justify-center bg-cover bg-center"
+    >
       {/* Fundo de vídeo ou imagem */}
       {hasVideo ? (
         <video

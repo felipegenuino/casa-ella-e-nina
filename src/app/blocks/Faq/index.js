@@ -21,7 +21,10 @@ export default function FAQSection() {
   }, [openIndex]);
 
   return (
-    <section className="py-32  bg-green-50 space-y-12    border-b border-t border-gray-200">
+    <section
+      id="faq"
+      className="py-32  bg-green-50 space-y-12    border-b border-t border-gray-200"
+    >
       <div className="max-w-screen-xl mx-auto px-4  md:px-8 space-y-6">
         <h2 className=" text-gray-800 text-3xl font-regular sm:text-4xl _lg:text-center ">
           Perguntas Frequentes

@@ -4,7 +4,10 @@ import React from "react";
 
 export default function MomentosCompartilhados() {
   return (
-    <section className="pt-24 lg:pt-32 border-y border-yellow-200 bg-yellow-50 ">
+    <section
+      id="momentos-compartilhados"
+      className="pt-24 lg:pt-32 border-y border-yellow-200 bg-yellow-50 "
+    >
       <div className=" space-y-6">
         <div className="max-w-screen-xl mx-auto px-4  md:px-8">
           <p className="text-indigo-600 font-light py-2">

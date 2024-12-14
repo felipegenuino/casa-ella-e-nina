@@ -32,6 +32,7 @@ const HighlightsSection = () => {
 
   return (
     <div
+      id="galerias"
       className="
     highlight-container 
     mx-auto 

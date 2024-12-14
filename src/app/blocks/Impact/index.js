@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Impact() {
   return (
-    <section className="py-14">
+    <section id="impact" className="py-14">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
           <div className="flex-1 sm:hidden lg:block">

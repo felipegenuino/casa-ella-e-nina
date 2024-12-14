@@ -5,7 +5,7 @@ import TestimonialsList from "./TestimonialsList";
 
 export default function Testimonials() {
   return (
-    <section className="pt-24 lg:pt-32">
+    <section id="historias" className="pt-24 lg:pt-32">
       <div className="_max-w-screen-xl mx-auto lg:px-8 md:px-8">
         <div className=" max-w-screen-xl  mx-auto  px-6 md:px-0 mb-8 w-full _bg-red-300">
           <p className="text-indigo-600 font-light py-2">
