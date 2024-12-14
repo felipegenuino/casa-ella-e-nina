@@ -31,7 +31,7 @@ const ImageSlide = ({ src, description }) => {
         className="object-cover w-full h-full rounded-lg"
       />
       {description && (
-        <p className="absolute bottom-4 mx-4 px-4 py-2 left-0 right-0  text-white text-sm bg-violet-950 bg-opacity-85  rounded">
+        <p className="absolute bottom-4 mx-4 px-4 py-2 left-0 right-0  text-white text-sm bg-violet-950 bg-opacity-85 rounded">
           {description}
         </p>
       )}

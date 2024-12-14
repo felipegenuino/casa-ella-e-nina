@@ -447,7 +447,7 @@ const galleries = [
     id: 2,
     thumb: "/midias/gallery/gallerie-2/thumb-2-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-2/thumb-2-blur.jpg",
-    title: "Ambientes Internos",
+    title: "Café da Manhã",
     description:
       "Ambientes aconchegantes e funcionais que combinam estilo e modernidade. Viva momentos únicos em cada espaço cuidadosamente planejado.",
     media: [
