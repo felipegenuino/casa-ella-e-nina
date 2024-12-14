@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import { Link } from "react-scroll";
+
 import {
   WhatsappLogo,
   ArrowDown,
@@ -136,10 +138,14 @@ export default function Hero() {
                 em meio à natureza exuberante de Porto de Pedras.
               </p>
               <div className="md:items-center md:justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                <a
+                <Link
+                  to="reserve"
+                  smooth={true}
+                  duration={1500}
                   href="#"
                   onClick={(e) => e.preventDefault()}
                   className="
+                  cursor-pointer
                 flex items-center justify-center 
                 text-lg py-3 px-8 min-h-[64px]
                 text-center text-white 
@@ -157,7 +163,7 @@ export default function Hero() {
                 >
                   {/* <ArrowDown size={32} /> */}
                   Conferir Disponibilidade
-                </a>
+                </Link>
 
                 {/* <a
                   href="#"

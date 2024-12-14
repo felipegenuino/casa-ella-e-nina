@@ -1,5 +1,7 @@
 import React from "react";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
+
 import Image from "next/image";
 
 export default function Footer() {
@@ -28,8 +30,12 @@ export default function Footer() {
 
           <div className="flex flex-col  lg:flex-row   items-center lg:justify-center mt-8 space-y-2 lg:space-y-0">
             <Link
-              href="/"
-              className="w-full
+              to="reserve"
+              smooth={true}
+              duration={1500}
+              className="
+              cursor-pointer
+              w-full
               mx-4 lg:text-base text-lg transition-colors duration-300   text-indigo-600 underline underline-offset-4 hover:no-underline
               active:scale-95 "
             >
@@ -37,32 +43,40 @@ export default function Footer() {
             </Link>
 
             <Link
-              href="/"
-              className="w-full
+              to="ambientes"
+              smooth={true}
+              duration={1500}
+              className="cursor-pointer w-full
               mx-4 lg:text-base text-lg transition-colors duration-300   text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95 "
             >
               Ambientes
             </Link>
 
             <Link
-              href="/"
-              className="w-full
+              to="comodidades"
+              smooth={true}
+              duration={1500}
+              className="cursor-pointer w-full
               mx-4 lg:text-base text-lg transition-colors duration-300   text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95 "
             >
               Comodidades
             </Link>
 
             <Link
-              href="/"
-              className="w-full
+              to="fale-com-anfitria"
+              smooth={true}
+              duration={1500}
+              className="w-full cursor-pointer
               mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
             >
-              Fale conosco
+              Fale com a Anfitriã
             </Link>
 
             <Link
-              href="#"
-              className="w-full
+              to="faq"
+              smooth={true}
+              duration={1500}
+              className="cursor-pointer w-full
               mx-4 lg:text-base text-lg transition-colors duration-300   text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
             >
               Perguntas Frequentes

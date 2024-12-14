@@ -29,7 +29,7 @@ export default function FaleComAnfitria() {
         bg-gradient-to-b from-white to-yellow-50 
         border-b border-yellow-200
         py-16
-        lg:py-0"
+        lg:pt-24 lg:pb-0"
     >
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
@@ -81,7 +81,7 @@ export default function FaleComAnfitria() {
               xl:space-x-6"
             >
               <Link
-                href="https://wa.me/5511999999999"
+                href="https://api.whatsapp.com/send/?phone=5548996377637&text=Tenho%20uma%20dúvida%20relacionada%20a%20Casas%20Ella%20e%20Nina&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" w-full md:w-auto lg:w-full
