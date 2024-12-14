@@ -1,6 +1,34 @@
 import { Fraunces, Sora } from "next/font/google";
 import "../styles/globals.css";
 
+export const metadata = {
+  title: "Casas Boutique Ella & Nina - Alagoas",
+  description:
+    "Descubra as Casas Ella e Nina, sua casa boutique em Alagoas, com charme único e hospitalidade excepcional. Reserve já sua estadia.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: "/midias/metadata/favicon.ico",
+    apple: "/midias/metadata/apple-icon.png",
+  },
+  openGraph: {
+    title: "Casas Boutique Ella & Nina - Alagoas",
+    description:
+      "Descubra as Casas Ella e Nina, sua casa boutique em Alagoas, com charme único e hospitalidade excepcional. Reserve já sua estadia.",
+    url: "https://casa-ella-e-nina.vercel.app",
+    siteName: "Casas Boutique Ella & Nina - Alagoas",
+    images: [
+      {
+        url: "https://casa-ella-e-nina.vercel.app/midias/metadata/open-graph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Casas Boutique Ella & Nina",
+      },
+    ],
+    locale: "pt-BR",
+    type: "website",
+  },
+};
+
 // Configurando as fontes Fraunces (títulos) e Sora (corpo)
 const fontTitle = Fraunces({
   subsets: ["latin"],
@@ -14,12 +42,6 @@ const fontBody = Sora({
   weight: ["400", "700"], // Use os pesos que deseja para o corpo de texto
   display: "swap", // Para melhor performance na troca de fontes
 });
-
-export const metadata = {
-  title: "Casa Ella e Nina | Casas Boutique - Alagoas",
-  description:
-    "Descubra a Casa Ella e Nina, uma casa boutique em Alagoas, com charme único e hospitalidade excepcional. Reserve já sua estadia.",
-};
 
 export default function RootLayout({ children }) {
   return (

@@ -99,8 +99,7 @@ export default function FaleComAnfitria() {
               </Link>
             </div>
             <p className="text-sm text-gray-500">
-              Respondemos em até 24 horas. Estamos prontos para tornar sua
-              experiência inesquecível!
+              Estamos prontos para tornar sua experiência inesquecível!
             </p>
           </motion.div>
         </div>

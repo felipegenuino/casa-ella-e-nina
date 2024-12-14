@@ -92,7 +92,7 @@ export default function Hero() {
                 <span className="md:block mr-2 text-indigo-300">
                   Viva uma experiência
                 </span>
-                de luxo e conforto
+                de conforto e charme
                 <span className="md:block  ml-2 text-indigo-300">
                   na Praia do Patacho
                 </span>
