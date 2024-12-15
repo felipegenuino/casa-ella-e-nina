@@ -2,92 +2,137 @@
 
 const slides = [
   {
-    image: "/midias/ambientes/1-0.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/capaAmbientes-p.jpg",
+    caption: "",
   },
   {
-    image: "/midias/ambientes/1-1.jpg",
-    caption: "Vista da piscina privativa ao entardecer",
+    image: "/midias/gallery/gallerie-0/entrada-1-p.jpg",
+    caption: "Casa Ella à esquerda. (Entrada individual)",
   },
   {
-    image: "/midias/ambientes/1-2.jpg",
-    caption: "Área de estar com detalhes artesanais",
+    image: "/midias/gallery/gallerie-0/entrada-2-p.jpg",
+    caption: "Casa Nina à direita. (Entrada individual)",
+  },
+
+  {
+    image: "/midias/gallery/gallerie-0/vistaPiscina-1-p.jpg",
+    caption: "Vista para piscina",
   },
   {
-    image: "/midias/ambientes/2.jpg",
-    caption: "Quarto decorado com toque acolhedor",
+    image: "/midias/gallery/gallerie-0/vistaPiscina-2-p.jpg",
+    caption: "Vista para piscina",
   },
   {
-    image: "/midias/ambientes/3.jpg",
-    caption: "Café da manhã com itens regionais",
+    image: "/midias/gallery/gallerie-0/vistaPiscina-3-p.jpg",
+    caption: "Entrada para área gourmet",
   },
   {
-    image: "/midias/ambientes/4.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/areaSol-1-p.jpg",
+    caption: "Área de sol com espreguiçadeiras e rede. Sombra e água fresca",
   },
   {
-    image: "/midias/ambientes/5.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/areaSol-2-p.jpg",
+    caption: "Área de sol com espreguiçadeiras e rede. Sombra e água fresca",
   },
   {
-    image: "/midias/ambientes/6.jpg",
-    caption: "Vista da piscina privativa ao entardecer",
+    image: "/midias/gallery/gallerie-0/mesaCafeJanta-1-p.jpg",
+    caption: "Mesa de café da manhã",
   },
   {
-    image: "/midias/ambientes/8.jpg",
-    caption: "Quarto decorado com toque acolhedor",
+    image: "/midias/gallery/gallerie-0/areaGourmet-1-p.jpg",
+    caption: "Área Gourmet",
   },
   {
-    image: "/midias/ambientes/9.jpg",
-    caption: "Café da manhã com itens regionais",
+    image: "/midias/gallery/gallerie-0/areaGourmet-2-p.jpg",
+    caption: "Área Gourmet",
   },
   {
-    image: "/midias/ambientes/10.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/cafe-3-a-p.jpg",
+    caption: "Café da manhã completo",
   },
   {
-    image: "/midias/ambientes/11.jpg",
-    caption: "Vista da piscina privativa ao entardecer",
+    image: "/midias/gallery/gallerie-0/cafe-3-b-p.jpg",
+    caption: "Café da manhã completo",
   },
   {
-    image: "/midias/ambientes/12.jpg",
-    caption: "Área de estar com detalhes artesanais",
+    image: "/midias/gallery/gallerie-0/cafe-4-a-p.jpg",
+    caption: "Café da manhã completo",
   },
   {
-    image: "/midias/ambientes/13.jpg",
-    caption: "Quarto decorado com toque acolhedor",
+    image: "/midias/gallery/gallerie-0/cafe-4-b-p.jpg",
+    caption: "Café da manhã completo",
   },
   {
-    image: "/midias/ambientes/14.jpg",
-    caption: "Café da manhã com itens regionais",
+    image: "/midias/gallery/gallerie-0/cafe-4-c-p.jpg",
+    caption: "Café da manhã completo",
   },
   {
-    image: "/midias/ambientes/j-1.jpg",
-    caption: "Vista da piscina privativa ao entardecer",
+    image: "/midias/gallery/gallerie-0/mesaCafeJanta-2-p.jpg",
+    caption: "Mesa para refeições",
   },
   {
-    image: "/midias/ambientes/j-2.jpg",
-    caption: "Área de estar com detalhes artesanais",
+    image: "/midias/gallery/gallerie-0/sala-1-a-p.jpg",
+    caption: "Sala TV",
   },
   {
-    image: "/midias/ambientes/q-1.jpg",
-    caption: "Quarto decorado com toque acolhedor",
+    image: "/midias/gallery/gallerie-0/sala-1-b-p.jpg",
+    caption: "Sala TV",
   },
   {
-    image: "/midias/ambientes/q-2.jpg",
-    caption: "Café da manhã com itens regionais",
+    image: "/midias/gallery/gallerie-0/quarto-3-p.jpg",
+    caption: "Quarto",
   },
   {
-    image: "/midias/ambientes/q-4.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/quarto-4-p.jpg",
+    caption: "Quarto",
   },
   {
-    image: "/midias/ambientes/q-5.jpg",
-    caption: "Café da manhã com itens regionais",
+    image: "/midias/gallery/gallerie-0/quarto-5-p.jpg",
+    caption: "Quarto",
   },
   {
-    image: "/midias/ambientes/s-1.jpg",
-    caption: "Fachada da casa com a praia ao fundo",
+    image: "/midias/gallery/gallerie-0/quarto-1-p.jpg",
+    caption: "Cama king size",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/quarto-2-p.jpg",
+    caption: "Cama king size",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/quarto-7-p.jpg",
+    caption: "Vista quarto",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/quarto-8-p.jpg",
+    caption: "Vista quarto",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/quarto-9-p.jpg",
+    caption: "Vista quarto",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/banheiro_completo-3-p.jpg",
+    caption: "Banheiro",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/banheiro_completo-4-p.jpg",
+    caption: "Banheiro",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/kitPraia-p.jpg",
+    caption: "Kit praia e piscina",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/patio-1-p.jpg",
+    caption: "Pátio",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/patio-2-p.jpg",
+    caption: "Pátio",
+  },
+  {
+    image: "/midias/gallery/gallerie-0/patio-3-p.jpg",
+    caption: "Pátio",
   },
 ];
 

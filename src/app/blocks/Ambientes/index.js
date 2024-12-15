@@ -47,8 +47,8 @@ export default function Ambientes() {
         <p className="text-indigo-600 font-light py-2">Experiência Única</p>
         <div className="space-y-5">
           <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
-            <span className="md:block">Viva momentos </span> de conforto e
-            exclusividade
+            <span className="md:block">Viva momentos </span> de Conforto e
+            Exclusividade
           </h2>
 
           <p className="text-gray-500  space-y-1  ">

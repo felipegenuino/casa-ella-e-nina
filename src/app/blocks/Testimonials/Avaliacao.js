@@ -13,7 +13,7 @@ export default function Avaliacao() {
           {/* Avaliação Geral */}
           <div className="col-span-2 sm:col-span-1 sm:row-span-2 mb-4">
             <h3 className="text-sm font-semibold text-gray-800">
-              Avaliação geral
+              Avaliação Geral
             </h3>
             <div className="space-y-1 mt-1">
               {[5, 4, 3, 2, 1].map((rating, index) => (
