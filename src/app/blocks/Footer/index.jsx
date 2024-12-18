@@ -102,7 +102,7 @@ export default function Footer() {
             
              active:scale-95 active:shadow-sm"
           >
-            contato@ellaninaboutique.com
+            casasboutique@gmail.com
           </Link>
 
           <Link
