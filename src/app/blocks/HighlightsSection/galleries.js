@@ -724,7 +724,7 @@ const galleries = [
     id: 4,
     thumb: "/midias/gallery/gallerie-4/thumb-p.jpg",
     thumbBlurUrl: "/midias/gallery/gallerie-4/thumb-blur.jpg",
-    title: "Praias e passeios",
+    title: "Praias e Passeios",
     description:
       "Desfrute de momentos únicos ao redor da mesa. Nossa cozinha e espaço para refeições foram pensados para criar memórias saborosas.",
     media: [
