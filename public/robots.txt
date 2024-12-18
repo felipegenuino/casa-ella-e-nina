@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Bloqueia páginas específicas
+Disallow: /admin
+Disallow: /test
+
+# Sitemap
+Sitemap: https://casasboutiquepatacho.com.br/sitemap.xml

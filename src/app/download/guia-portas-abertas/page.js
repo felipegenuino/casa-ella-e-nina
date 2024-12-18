@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
+  metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Download | Portas Abertas - Casas Ella e Nina",
   description: "Faça o download do guia Portas Abertas das Casas Ella e Nina.",
   openGraph: {

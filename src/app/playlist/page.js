@@ -1,4 +1,5 @@
 export const metadata = {
+  metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Curta a Trilha Sonora | Casa Boutique Ella e Nina",
   description:
     "Ouça as playlists exclusivas inspiradas nas grandes musas do jazz: Nina Simone e Ella Fitzgerald. Aproveite uma experiência musical inesquecível.",

@@ -1,9 +1,9 @@
 const nextConfig = {
-  output: "export", // Gera arquivos estáticos
-  reactStrictMode: true, // (opcional) habilita modo estrito
+  output: "export",
+  reactStrictMode: true,
   swcMinify: true,
   images: {
-    unoptimized: true, // Desativa otimização automática de imagens
+    unoptimized: true, // Desativa otimização automática
   },
 };
 
