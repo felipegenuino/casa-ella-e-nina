@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏡 Casa Ella & Nina – Casa Boutique na Praia do Patacho
 
-## Getting Started
+![Casa Ella & Nina](./screenshot.jpg)
 
-First, run the development server:
+🚀 **Casa Ella & Nina** é um site de apresentação para uma casa boutique exclusiva localizada na **Praia do Patacho, Alagoas - Brasil**. Com um design moderno e minimalista, o site permite aos visitantes conhecerem o espaço, verem fotos, verificarem comodidades e realizarem reservas através do **Airbnb e Booking.com**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌟 Principais Características
+- 🌽 **Casa Boutique na Praia do Patacho**
+- 📸 **Galeria de Imagens Interativa**
+- 🏠 **Detalhamento das Comodidades**
+- 🗓 **Reserva Fácil via Airbnb e Booking**
+- 🎨 **Design Moderno e Responsivo**
+- ⚡ **Performance Otimizada**
+- 🌍 **SEO aprimorado para buscas no Google**
+
+---
+
+## 📷 Demonstração
+🔗 [Acesse o site ao vivo](https://casasboutiquepatacho.com.br)
+
+![Casa Ella & Nina Preview](./screenshot.jpg)
+
+---
+
+## 🚀 Como Rodar o Projeto Localmente
+Siga os passos abaixo para rodar o projeto no seu ambiente local:
+
+### 🔹 1. Clone o repositório
+```sh
+git clone https://github.com/seu-usuario/casa-ella-e-nina.git
+cd casa-ella-e-nina
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔹 2. Instale as dependências
+```sh
+npm install
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### 🔹 3. Rode o ambiente de desenvolvimento
+```sh
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Acesse **[http://localhost:3000](http://localhost:3000)** no seu navegador.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tecnologias Utilizadas
+O projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 14** – Framework para React
+- **TailwindCSS** – Estilização flexível e responsiva
+- **Swiper.js** – Carrossel interativo para exibição de imagens
+- **Vercel** – Hospedagem e deploy contínuo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📂 Estrutura do Projeto
+```
+casa-ella-e-nina/
+├── public/            # Arquivos estáticos (favicon, imagens, etc)
+├── src/
+│   ├── app/           # Páginas e componentes do Next.js
+│   ├── components/    # Componentes reutilizáveis
+│   ├── styles/        # Arquivos de estilo
+│   └── utils/         # Funções auxiliares
+├── .next/             # Build gerado pelo Next.js
+├── package.json       # Dependências do projeto
+├── README.md          # Documentação do projeto
+└── screenshot.jpg     # Captura de tela do site
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🔥 Melhorias Futuras
+- Integração com **Google Analytics** para métricas de acessos
+- Implementação de um **CMS** para edição dinâmica de conteúdo
+- SEO contínuo para melhorar ranqueamento
+
+---
+
+## 📌 Licença
+Este projeto é **privado**, todos os direitos reservados.
+
+📩 **Dúvidas ou sugestões?** Entre em contato! 😃
