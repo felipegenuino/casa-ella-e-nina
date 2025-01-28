@@ -35,7 +35,7 @@ export default function Reserve() {
               />
               <div className="absolute inset-0 bg-indigo-950/60 flex flex-col justify-center items-center text-white text-center">
                 <h3 className="text-5xl font-semibold">Casa Ella</h3>
-                <p className="mt-2 text-indigo-300 text-sm">
+                <p className="mt-2 text-indigo-50 text-sm">
                   Acomode-se na charmosa Casa Ella.
                 </p>
               </div>
@@ -68,7 +68,7 @@ export default function Reserve() {
               />
               <div className="absolute inset-0 bg-indigo-950/60 flex flex-col justify-center items-center text-white text-center">
                 <h3 className="text-5xl font-semibold">Casa Nina</h3>
-                <p className="mt-2 text-indigo-300 text-sm">
+                <p className="mt-2 text-indigo-50 text-sm">
                   Acomode-se na charmosa Casa Nina.
                 </p>
               </div>
