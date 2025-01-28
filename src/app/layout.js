@@ -1,3 +1,6 @@
+import { Fraunces, Sora } from "next/font/google";
+import "../styles/globals.css";
+
 export const metadata = {
   metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Casa Boutique na Praia do Patacho | Casas Ella & Nina - Alagoas",
@@ -49,3 +52,29 @@ export const metadata = {
     images: ["https://casa-ella-e-nina.vercel.app/midias/metadata/open-graph-image.jpg"],
   },
 };
+
+// Configurando as fontes Fraunces (títulos) e Sora (corpo)
+const fontTitle = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-title",
+  weight: ["400", "700"], // Use os pesos que deseja para os títulos
+  display: "swap", // Para melhor performance na troca de fontes
+});
+const fontBody = Sora({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "700"], // Use os pesos que deseja para o corpo de texto
+  display: "swap", // Para melhor performance na troca de fontes
+});
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="pt-br">
+      <body
+        className={`${fontTitle.variable} ${fontBody.variable} antialiased w-100`}
+      >
+        <div id="__next">{children}</div>
+      </body>
+    </html>
+  );
+}
