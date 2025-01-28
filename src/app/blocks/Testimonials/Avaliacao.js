@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Avaliacao() {
   return (
-    <section className="pt-4 lg:pt-16 flex flex-col justify-center">
+    <section id="avaliacoes" className="pt-4 lg:pt-16 flex flex-col justify-center">
       <div className="lg:max-w-screen-xl w-full px-6 mx-auto lg:px-0 pb-8">
         <div className="flex items-center space-x-2 text-gray-800">
           ★<span className="text-2xl font-semibold">5,0</span>

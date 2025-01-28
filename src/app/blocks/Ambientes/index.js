@@ -141,11 +141,11 @@ export default function Ambientes() {
         {/* Conteúdo do modal */}
         <div className=" space-y-4">
           <p>
-            Se você procura privacidade, conforto e uma experiência única em um
-            dos destinos mais belos do litoral brasileiro, a Casa Boutique é o
-            lugar perfeito. Ideal para casais, nossa casa acomoda até duas
-            pessoas adultas e oferece um refúgio exclusivo em meio à natureza
-            exuberante de Porto de Pedras.
+          Se você busca privacidade, conforto e uma experiência única 
+          em um dos destinos mais belos do litoral brasileiro, a Casa Boutique 
+          é o refúgio perfeito. Ideal para casais, nossa casa acomoda até 
+          duas pessoas adultas e oferece uma estadia exclusiva em meio 
+          à natureza exuberante de Porto de Pedras.
           </p>
         </div>
         <div className=" space-y-4">

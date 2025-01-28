@@ -66,17 +66,7 @@ function TestimonialsList() {
           >
             Comentários no Airbnb
           </Link>
-
-          <Link
-            title="Abre em outra janela"
-            target="_blank"
-            className="lg:mx-auto
-            lg:text-base text-lg transition-colors duration-300  
-               text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
-            href="https://www.booking.com/hotel/br/pousada-casas-boutique-ella-amp-nina-no-patacho.pt-br.html#tab-reviews"
-          >
-            Comentários no Booking.com
-          </Link>
+ 
         </div>
       </div>
     </>

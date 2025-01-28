@@ -60,7 +60,7 @@ const AmenitiesSection = () => {
               <p className="text-indigo-600 font-light py-2">Comodidades</p>
               <div className="space-y-5">
                 <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
-                  O que esse lugar oferece
+                O Que Esse Lugar Oferece
                 </h2>
 
                 <div className="text-gray-500  lg:max-w-lg ">

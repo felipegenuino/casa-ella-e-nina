@@ -73,7 +73,7 @@ export default function Hero() {
                 Casas Boutique
               </p>
               <p className="text-white/50 font-regular">
-                Patacho . Alagoas . Brasil
+              Praia do Patacho, Alagoas - Brasil
               </p>
             </div>
 
@@ -131,11 +131,11 @@ export default function Hero() {
               </div>
 
               <p className="text-white/90 max-w-screen-sm md:mx-auto md:text-center">
-                Se você procura privacidade, conforto e uma experiência única em
-                um dos destinos mais belos do litoral brasileiro, a Casa
-                Boutique é o lugar perfeito. Ideal para casais, nossa casa
-                acomoda até duas pessoas adultas e oferece um refúgio exclusivo
-                em meio à natureza exuberante de Porto de Pedras.
+              Se você busca privacidade, conforto e uma experiência única 
+              em um dos destinos mais belos do litoral brasileiro, a Casa Boutique 
+              é o refúgio perfeito. Ideal para casais, nossa casa acomoda até 
+              duas pessoas adultas e oferece uma estadia exclusiva em meio 
+              à natureza exuberante de Porto de Pedras.
               </p>
               <div className="md:items-center md:justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                 <Link
@@ -204,7 +204,7 @@ export default function Hero() {
       {/* Logos de Reservas */}
       <div className=" z-10 py-10 my-4 w-full text-center ">
         <p className="text-sm mb-4 text-indigo-200 font-regular">
-          Escolha Onde Quer Reservar
+        Reserve sua estadia com conforto e praticidade
         </p>
         <div className="flex justify-center items-center px-4 gap-8">
           <Image
@@ -214,13 +214,7 @@ export default function Hero() {
             width={175}
             height={56}
           />
-          <Image
-            // className="h-10 mt-2"
-            width={222}
-            height={40}
-            src="/midias/brands/booking-white.svg"
-            alt="booking"
-          />
+           
         </div>
       </div>
     </section>

@@ -81,11 +81,11 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="https://wa.me/5581987654321"
+            href="https://wa.me/5548996377637"
             target="_blank"
             className="px-5 py-2 text-center border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white hover:from-indigo-500 hover:to-indigo-400 active:from-indigo-600 active:to-indigo-600 hover:shadow-lg transition-all active:scale-95 active:shadow-sm"
           >
-            WhatsApp: +55 81 98765-4321
+            WhatsApp: +55 48 99637‑7637
           </Link>
         </div>
       </div>

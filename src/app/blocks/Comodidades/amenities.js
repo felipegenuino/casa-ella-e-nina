@@ -188,13 +188,13 @@ const amenities = [
       {
         name: "Detector de fumaça",
         unavailable: true,
-        priority: 10,
+        // priority: 10,
         icon: "detector-fumaca.svg",
       },
       {
         name: "Alarme de monóxido de carbono",
         unavailable: true,
-        priority: 9,
+        // priority: 9,
         icon: "alarme-de-monoxido-de-carbono.svg",
       },
       { name: "Aquecimento", unavailable: true, icon: "aquecimento.svg" },
