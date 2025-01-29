@@ -1,6 +1,5 @@
 # 🏡 Casa Ella & Nina – Casa Boutique na Praia do Patacho
 
-![Casa Ella & Nina](./screenshot.jpg)
 
 🚀 **Casa Ella & Nina** é um site de apresentação para uma casa boutique exclusiva localizada na **Praia do Patacho, Alagoas - Brasil**. Com um design moderno e minimalista, o site permite aos visitantes conhecerem o espaço, verem fotos, verificarem comodidades e realizarem reservas através do **Airbnb e Booking.com**.
 
@@ -53,7 +52,7 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - **Next.js 14** – Framework para React
 - **TailwindCSS** – Estilização flexível e responsiva
 - **Swiper.js** – Carrossel interativo para exibição de imagens
-- **Vercel** – Hospedagem e deploy contínuo
+- **Host** – Hospedagem compartilhada
 
 ---
 
@@ -61,6 +60,7 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 ```
 casa-ella-e-nina/
 ├── public/            # Arquivos estáticos (favicon, imagens, etc)
+├── out/               # Arquivos exportados para servidor compartilhado
 ├── src/
 │   ├── app/           # Páginas e componentes do Next.js
 │   ├── components/    # Componentes reutilizáveis
@@ -80,7 +80,6 @@ Se seu servidor compartilhado **não suporta Node.js**, você pode exportar o Ne
 ### 🔹 1. Gerar os arquivos estáticos
 ```sh
 npm run build
-npm run export
 ```
 Isso criará uma pasta `/out` com os arquivos estáticos prontos para deploy.
 
@@ -129,6 +128,6 @@ Agora seu site estará acessível pelo domínio configurado no servidor comparti
 ---
 
 ## 📌 Licença
-Este projeto é **privado**, todos os direitos reservados a Felipe Genuino.
+Este projeto é **privado**, todos os direitos reservados.
 
 📩 **Dúvidas ou sugestões?** Entre em contato! 😃
