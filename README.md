@@ -9,7 +9,7 @@
 - 🏝 **Casa Boutique na Praia do Patacho**
 - 📸 **Galeria de Imagens Interativa**
 - 🏠 **Detalhamento das Comodidades**
-- 📅 **Reserva Fácil via Airbnb e Booking**
+- 📅 **Reserva Fácil via Airbnb**
 - 🎨 **Design Moderno e Responsivo**
 - ⚡ **Performance Otimizada**
 - 🌍 **SEO aprimorado para buscas no Google**
@@ -92,7 +92,7 @@ Em seguida, faça upload do `deploy.tar.gz` para o servidor via **FTP, SFTP ou g
 ### 🔹 3. Descomprimir no servidor
 Conecte-se ao servidor e extraia os arquivos na pasta pública:
 ```sh
-tar -xzvf deploy.tar.gz -C /caminho/para/public_html
+tar -xzvf deploy.tar.gz -C /caminho/para/public_html/casasboutiquepatacho.com.br
 ```
 Se o servidor exigir, renomeie a pasta `out/` para `public_html` ou o diretório correto do seu host.
 
