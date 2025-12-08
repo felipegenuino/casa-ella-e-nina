@@ -45,5 +45,6 @@ e o versionamento segue **Semantic Versioning (SemVer)**.
 ---
 
 ## 🗂 Histórico de versões
+- **1.0.0** — Primeira versão estável em produção
 - **0.2.0** — Atualizações técnicas, documentação e fluxo visual  
 - **0.1.0** — Primeira versão estável do site
