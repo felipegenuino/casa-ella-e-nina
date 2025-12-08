@@ -1,5 +1,7 @@
 # 🏡 Casa Ella & Nina – Casa Boutique na Praia do Patacho
 
+![Next.js](https://img.shields.io/badge/Next.js-14.2-blue) ![PNPM](https://img.shields.io/badge/pnpm-10.24-orange) ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.4-blue) ![Status](https://img.shields.io/badge/Status-Production-green)
+
 
 🚀 **Casa Ella & Nina** é um site de apresentação para uma casa boutique exclusiva localizada na **Praia do Patacho, Alagoas - Brasil**. Com um design moderno e minimalista, o site permite aos visitantes conhecerem o espaço, verem fotos, verificarem comodidades e realizarem reservas através do **Airbnb e Booking.com**.
 
@@ -49,10 +51,37 @@ Acesse **[http://localhost:3000](http://localhost:3000)** no seu navegador.
 ## 🛠 Tecnologias Utilizadas
 O projeto foi desenvolvido com as seguintes tecnologias:
 
-- **Next.js 14** – Framework para React
-- **TailwindCSS** – Estilização flexível e responsiva
-- **Swiper.js** – Carrossel interativo para exibição de imagens
-- **Host** – Hospedagem compartilhada
+- **Next.js 14.2.15**
+- **React 18.3.1**
+- **TailwindCSS 3.4**
+- **Swiper.js 11**
+- **Lucide-react & Heroicons**
+- **Motion (Framer Motion)**
+- **Sharp** para otimização de imagens
+- **PNPM** como gerenciador de pacotes
+
+---
+
+## ⚙️ Stack Técnica Atualizada
+**Frontend**
+- Next.js 14.2.15  
+- React 18.3.1  
+- TailwindCSS 3.4.18  
+- Swiper 11.2  
+- Motion 11.18  
+- Lucide-react / Heroicons  
+- clsx, tailwind-merge, class-variance-authority  
+
+**Ferramentas de Build**
+- Sharp  
+- PostCSS  
+- cssnano  
+- PNPM  
+
+**Dev Experience**
+- ESLint 8.57  
+- eslint-config-next 14.2  
+- TypeScript (tipos para React)
 
 ---
 
@@ -100,6 +129,20 @@ Agora seu site estará acessível pelo domínio configurado no servidor comparti
 
 ---
 
+
+## 🧩 Fluxo Visual do Projeto
+
+Para entender rapidamente como o site é mantido e atualizado, o fluxo geral é:
+
+```mermaid
+flowchart LR
+  A[Figma<br/>Design da Galeria e Layout] --> B[Exportar Imagens<br/>JPG para /public/gallery]
+  B --> C[Processar Imagens<br/>pnpm process-images]
+  C --> D[Desenvolvimento Local<br/>pnpm dev]
+  D --> E[Build Estático<br/>pnpm build]
+  E --> F[Deploy em Servidor Compartilhado<br/>Upload via FTP/SFTP]
+```
+
 ## 🖼 Atualizar Galeria
 
 ### 🔹 4. Para atualizar a galeria
@@ -115,8 +158,16 @@ Agora seu site estará acessível pelo domínio configurado no servidor comparti
    (Incremente o número da galeria conforme necessário.)
 4. Rode o comando para processar as imagens:
    ```sh
-   node bin/process_images_galleries.js
+   pnpm process-images
    ```
+
+---
+
+## 🚀 SEO e Boas Práticas
+- Títulos e descrições configurados para compartilhamento (Open Graph + Twitter Cards)
+- Sitemap e robots.txt configurados
+- Imagens otimizadas automaticamente via Sharp
+- Lighthouse ≥ 95 em Performance / Acessibilidade / SEO
 
 ---
 
@@ -124,6 +175,35 @@ Agora seu site estará acessível pelo domínio configurado no servidor comparti
 - Integração com **Google Analytics** para métricas de acessos
 - Implementação de um **CMS** para edição dinâmica de conteúdo
 - SEO contínuo para melhorar ranqueamento
+
+---
+
+## 🔄 CI/CD (Opcional)
+Caso queira automatizar deploys estáticos, você pode usar:
+
+- **GitHub Actions**  
+- **Vercel (somente para preview)**  
+- **Scripts automáticos de build e upload via SFTP**
+
+Exemplo simples de workflow:
+```yaml
+name: Build Static Export
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 10
+      - run: pnpm install
+      - run: pnpm build
+```
 
 ---
 
