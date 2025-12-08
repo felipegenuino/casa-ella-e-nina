@@ -34,12 +34,12 @@ cd casa-ella-e-nina
 
 ### 🔹 2. Instale as dependências
 ```sh
-npm install
+pnpm install
 ```
 
 ### 🔹 3. Rode o ambiente de desenvolvimento
 ```sh
-npm run dev
+pnpm dev
 ```
 
 Acesse **[http://localhost:3000](http://localhost:3000)** no seu navegador.
@@ -79,7 +79,7 @@ Se seu servidor compartilhado **não suporta Node.js**, você pode exportar o Ne
 
 ### 🔹 1. Gerar os arquivos estáticos
 ```sh
-npm run build
+pnpm build
 ```
 Isso criará uma pasta `/out` com os arquivos estáticos prontos para deploy.
 
