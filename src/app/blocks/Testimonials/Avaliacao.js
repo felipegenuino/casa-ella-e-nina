@@ -1,12 +1,40 @@
 import Image from "next/image";
 
+function Laurel({ side }) {
+  return (
+    <Image
+      src={`/midias/reviews/laurel-${side}.webp`}
+      alt=""
+      aria-hidden="true"
+      width={240}
+      height={365}
+      className="h-16 w-auto lg:h-20"
+    />
+  );
+}
+
 export default function Avaliacao() {
   return (
     <section id="avaliacoes" className="pt-4 lg:pt-16 flex flex-col justify-center">
       <div className="lg:max-w-screen-xl w-full px-6 mx-auto lg:px-0 pb-8">
-        <div className="flex items-center space-x-2 text-gray-800">
-          ★<span className="text-2xl font-semibold">4,95</span>
-          <span className="text-gray-600">· 78 avaliações</span>
+        <div className="flex flex-col items-center text-center mb-10">
+          <div className="flex items-center justify-center gap-2 text-gray-800">
+            <Laurel side="left" />
+            <span className="text-6xl lg:text-7xl font-bold leading-none tracking-tight">
+              4,95
+            </span>
+            <Laurel side="right" />
+          </div>
+          <p className="mt-4 text-xl lg:text-2xl font-semibold text-gray-900">
+            Preferido dos hóspedes
+          </p>
+          <p className="mt-2 max-w-md text-sm text-gray-600">
+            Uma das acomodações preferidas dos hóspedes, com base em avaliações,
+            comentários e confiabilidade.
+          </p>
+          <p className="mt-2 text-sm text-gray-500">
+            Superhost · 78 avaliações · 3 anos hospedando
+          </p>
         </div>
 
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">

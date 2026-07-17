@@ -1,7 +1,19 @@
 import React from "react";
+import Link from "next/link";
 
 import Avaliacao from "./Avaliacao";
-import TestimonialsList from "./TestimonialsList";
+import TestimonialsCarousel from "./TestimonialsCarousel";
+
+const airbnbLinks = [
+  {
+    label: "Casa Ella no Airbnb",
+    href: "https://www.airbnb.com.br/rooms/987771438493887391/reviews",
+  },
+  {
+    label: "Casa Nina no Airbnb",
+    href: "https://www.airbnb.com.br/rooms/1049859270366355530/reviews",
+  },
+];
 
 export default function Testimonials() {
   return (
@@ -24,8 +36,23 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-        <TestimonialsList />
         <Avaliacao />
+        <div className="max-w-screen-xl mx-auto px-6 md:px-0">
+          <TestimonialsCarousel />
+        </div>
+        <div className="w-full flex flex-wrap justify-center items-center gap-x-8 gap-y-3 py-4 mb-6">
+          {airbnbLinks.map((l) => (
+            <Link
+              key={l.href}
+              title="Abre em outra janela"
+              target="_blank"
+              className="text-lg lg:text-base transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
+              href={l.href}
+            >
+              {l.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
