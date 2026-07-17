@@ -1,18 +1,21 @@
 import { Fraunces, Sora } from "next/font/google";
 import "../styles/globals.css";
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1e1b4be6",
+};
+
 export const metadata = {
   metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Casa Boutique na Praia do Patacho | Casas Ella & Nina - Alagoas",
   description:
     "A Casa Ella & Nina é uma casa boutique exclusiva na Praia do Patacho, Alagoas. Desfrute de conforto, privacidade e um refúgio perfeito. Reserve agora e viva essa experiência única!",
   manifest: "/site.webmanifest",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#1e1b4be6",
 
   icons: {
     icon: "/favicon.ico",
-    apple: "/midias/metadata/apple-icon.png",
     shortcut: "/favicon.ico",
     apple: [
       { rel: "apple-touch-icon", sizes: "57x57", url: "/midias/metadata/apple-icon-57x57.png" },
