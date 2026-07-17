@@ -154,3 +154,16 @@ video {
 .ReactModal__Overlay--before-close {
   opacity: 0;
 }
+
+/* Foco visível para navegação por teclado (não afeta clique do mouse) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
