@@ -10,7 +10,7 @@ const testimonials = [
       "Atesto o que li em outra avaliação: é uma verdadeira poesia em forma de casa! Linda, aconchegante, privativa e completa. ",
       "Foi sensacional os momentos vividos nessa casa junto com minha esposa, levaremos as recordações para sempre com muito carinho e afeto. Passamos 5 dias e, se pudéssemos, ficaríamos por semanas, meses… Fácil acesso para toda a Rota dos Milagres. Um dia voltaremos 💚",
     ],
-    image: null,
+    image: "/midias/testimonials/diego.webp",
   },
   {
     id: 9,
@@ -23,7 +23,7 @@ const testimonials = [
       "A casa é um sonho e com certeza foi além das nossas expectativas. Tudo com um bom gosto absurdo, além da piscina, que também é um diferencial. ",
       "Recomendo para todos! Tudo maravilhoso e incrível. Voltaria com certeza.",
     ],
-    image: null,
+    image: "/midias/testimonials/pedro-ella.webp",
   },
   {
     id: 10,
@@ -35,7 +35,7 @@ const testimonials = [
     comment: [
       "Lugar simplesmente incrível! Uma paz absurda, perfeito pra descansar e desligar do mundo. Já quero voltar!",
     ],
-    image: null,
+    image: "/midias/testimonials/marcia.webp",
   },
   {
     id: 11,
@@ -48,7 +48,7 @@ const testimonials = [
       "Excelente estadia na Rota dos Milagres, na Praia do Patacho (Porto de Pedras). Foi a nossa primeira vez na região e, após dias explorando as redondezas, chegamos à conclusão de que a localização e a casa foram uma das melhores opções que poderíamos ter encontrado. ",
       "A casa é de grande porte, bastante confortável para dois adultos. O capricho com o espaço é enorme e recomendamos muito a estadia, torcendo desde já para ter a oportunidade de voltar!",
     ],
-    image: null,
+    image: "/midias/testimonials/lucas.webp",
   },
   {
     id: 12,
@@ -60,7 +60,7 @@ const testimonials = [
     comment: [
       "Gostamos muito da hospedagem. Local muito aconchegante e agradável, equipado com tudo que precisamos! Localização muito boa.",
     ],
-    image: null,
+    image: "/midias/testimonials/karoline.webp",
   },
   {
     id: 13,
@@ -73,7 +73,7 @@ const testimonials = [
       "A estadia foi incrível: a casa é belíssima, confortável e super bem equipada, fácil de encontrar e aconchegante. Nos mínimos detalhes, percebe-se o zelo e a preocupação em receber bem os hóspedes. ",
       "O café da manhã é delicioso e bem servido. Passamos dias maravilhosos e, sem dúvidas, voltaremos!",
     ],
-    image: null,
+    image: "/midias/testimonials/larissa.webp",
   },
   {
     id: 14,
@@ -85,7 +85,7 @@ const testimonials = [
     comment: [
       "A casa é muito aconchegante, arrumadinha e confortável. Recomendamos!",
     ],
-    image: null,
+    image: "/midias/testimonials/ana-paula.webp",
   },
   {
     id: 15,
@@ -98,7 +98,7 @@ const testimonials = [
       "Sem palavras para descrever os dias na Casa Ella. Localização ótima, perto de muitas praias do Circuito dos Milagres. Casa linda, jardim lindo, piscina bem cuidada, cama gostosa, cozinha completa e, acima de tudo, atenção exemplar por parte das anfitriãs. ",
       "Café da manhã todos os dias, fresquinho, com o melhor da culinária local. Obrigado por toda a atenção e voltarei com certeza ❤️",
     ],
-    image: null,
+    image: "/midias/testimonials/patrick.webp",
   },
   {
     id: 16,
@@ -110,7 +110,7 @@ const testimonials = [
     comment: [
       "Excelente casa, melhor do que nas fotos. Localização excelente, perto das melhores praias de Milagres. Provavelmente irei voltar. Tudo limpo e organizado.",
     ],
-    image: null,
+    image: "/midias/testimonials/pedro-2.webp",
   },
   {
     id: 1,
