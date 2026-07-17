@@ -5,8 +5,8 @@ export default function Avaliacao() {
     <section id="avaliacoes" className="pt-4 lg:pt-16 flex flex-col justify-center">
       <div className="lg:max-w-screen-xl w-full px-6 mx-auto lg:px-0 pb-8">
         <div className="flex items-center space-x-2 text-gray-800">
-          ★<span className="text-2xl font-semibold">5,0</span>
-          <span className="text-gray-600">· 6 comentários</span>
+          ★<span className="text-2xl font-semibold">4,95</span>
+          <span className="text-gray-600">· 78 avaliações</span>
         </div>
 
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">
@@ -27,7 +27,11 @@ export default function Avaliacao() {
                       className={`h-full ${
                         rating === 5 ? "bg-gray-800" : "bg-gray-300"
                       }`}
-                      style={{ width: rating === 5 ? "100%" : "20%" }}
+                      style={{
+                        width: { 5: "96%", 4: "4%", 3: "1%", 2: "1%", 1: "1%" }[
+                          rating
+                        ],
+                      }}
                     ></div>
                   </div>
                 </div>
@@ -59,7 +63,7 @@ export default function Avaliacao() {
             },
             {
               label: "Localização",
-              rating: "5,0",
+              rating: "4,9",
               icon: "/midias/amenities/localizacao.svg",
             },
             {

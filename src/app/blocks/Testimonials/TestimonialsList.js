@@ -11,20 +11,29 @@ function TestimonialsList() {
   return (
     <>
       <div className="grid grid-cols-1  lg:gap-x-6  lg:gap-y-16 mt-4 mb-8 pt-2  lg:grid-cols-3">
-        {testimonials.slice(0, 3).map((testimonial) => (
+        {testimonials.slice(0, 6).map((testimonial) => (
           <div
             key={testimonial.id}
             className="flex w-full flex-col items-start justify-between even:bg-white odd:bg-slate-50 p-5 py-12  lg:rounded-xl"
           >
             <div className="p-0 flex gap-y-0 text-xs flex-col md:flex-row lg:flex-col h-full md:items-start">
               <div className="relative flex md:flex-col lg:flex-col  gap-x-4 md:px-4 lg:px-0 ">
-                <Image
-                  src={testimonial.image}
-                  alt={`Foto de ${testimonial.name}`}
-                  width={80}
-                  height={80}
-                  className="h-20 w-20 rounded-lg bg-gray-50 object-cover"
-                />
+                {testimonial.image ? (
+                  <Image
+                    src={testimonial.image}
+                    alt={`Foto de ${testimonial.name}`}
+                    width={80}
+                    height={80}
+                    className="h-20 w-20 rounded-lg bg-gray-50 object-cover"
+                  />
+                ) : (
+                  <div
+                    aria-hidden="true"
+                    className="h-20 w-20 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-3xl font-semibold select-none"
+                  >
+                    {testimonial.name.charAt(0)}
+                  </div>
+                )}
 
                 <div className="text-sm/6">
                   <p className="font-semibold text-gray-900">
