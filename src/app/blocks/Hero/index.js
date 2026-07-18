@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { Link } from "react-scroll";
+import { useTranslations } from "next-intl";
 
 import {
   WhatsappLogo,
@@ -12,6 +13,7 @@ import {
 import HighlightsSection from "../HighlightsSection";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   const hasVideo = true; // Altere para false para usar imagem estática
   return (
     <section
@@ -31,7 +33,7 @@ export default function Hero() {
       ) : (
         <Image
           src="/midias/hero/img-1.jpg"
-          alt="Background"
+          alt={t("backgroundAlt")}
           layout="fill"
           objectFit="cover"
           className="absolute inset-0"
@@ -70,10 +72,10 @@ export default function Hero() {
                 src="/midias/hero/brand-hero-light.svg"
               />
               <p className="text-white tracking-widest	mt-4 text-xl font-bold	">
-                Casas Boutique
+                {t("brandLabel")}
               </p>
               <p className="text-white/50 font-regular">
-              Praia do Patacho, Alagoas - Brasil
+              {t("location")}
               </p>
             </div>
 
@@ -90,11 +92,11 @@ export default function Hero() {
             "
               >
                 <span className="md:block mr-2 text-indigo-300">
-                  Viva uma experiência
+                  {t("titleHighlight1")}
                 </span>
-                de conforto e charme
+                {t("titleMiddle")}
                 <span className="md:block  ml-2 text-indigo-300">
-                  na Praia do Patacho
+                  {t("titleHighlight2")}
                 </span>
               </h2>
 
@@ -108,7 +110,7 @@ export default function Hero() {
                     className="relative shrink-0 top-0 h-5 w-5"
                     aria-hidden="true"
                   />
-                  <div>2 Hóspedes</div>
+                  <div>{t("guests")}</div>
                 </div>
 
                 <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
@@ -117,7 +119,7 @@ export default function Hero() {
                     className="relative shrink-0 top-0 h-5 w-5"
                     aria-hidden="true"
                   />
-                  <div>1 Quarto</div>
+                  <div>{t("bedroom")}</div>
                 </div>
 
                 <div className="flex items-center gap-2 text-xs lg:text-lg lg:font-medium">
@@ -126,16 +128,12 @@ export default function Hero() {
                     className="relative shrink-0 top-0 h-5 w-5"
                     aria-hidden="true"
                   />
-                  <div>2 camas</div>
+                  <div>{t("beds")}</div>
                 </div>
               </div>
 
               <p className="text-white/90 max-w-screen-sm md:mx-auto md:text-center">
-              Se você busca privacidade, conforto e uma experiência única 
-              em um dos destinos mais belos do litoral brasileiro, a Casa Boutique 
-              é o refúgio perfeito. Ideal para casais, nossa casa acomoda até 
-              duas pessoas adultas e oferece uma estadia exclusiva em meio 
-              à natureza exuberante de Porto de Pedras.
+              {t("description")}
               </p>
               <div className="md:items-center md:justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                 <Link
@@ -162,7 +160,7 @@ export default function Hero() {
               "
                 >
                   {/* <ArrowDown size={32} /> */}
-                  Conferir Disponibilidade
+                  {t("cta")}
                 </Link>
 
                 {/* <a
@@ -204,7 +202,7 @@ export default function Hero() {
       {/* Logos de Reservas */}
       <div className=" z-10 py-10 my-4 w-full text-center ">
         <p className="text-sm mb-4 text-indigo-200 font-regular">
-        Reserve sua estadia com conforto e praticidade
+        {t("bookingText")}
         </p>
         <div className="flex justify-center items-center px-4 gap-8">
           <Image

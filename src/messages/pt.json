@@ -2,5 +2,492 @@
   "metadata": {
     "title": "Casa Boutique na Praia do Patacho | Casas Ella & Nina - Alagoas",
     "description": "A Casa Ella & Nina é uma casa boutique exclusiva na Praia do Patacho, Alagoas. Desfrute de conforto, privacidade e um refúgio perfeito. Reserve agora e viva essa experiência única!"
+  },
+  "ambientes": {
+    "eyebrow": "Experiência Única",
+    "tituloEnfase": "Viva momentos",
+    "tituloResto": "de Conforto e Exclusividade",
+    "introP1": "Nossas casas boutique oferecem ambientes projetados com conforto e elegância.",
+    "introP2": "Aproveite áreas de lazer privativas e quartos aconchegantes que combinam estilo artesanal e modernidade.",
+    "introP3": "Tudo pensado para proporcionar momentos únicos e relaxantes enquanto você aprecia a beleza natural de Alagoas.",
+    "ctaAriaLabel": "Mostrar mais sobre este lugar",
+    "cta": "Mostrar Mais",
+    "carouselAriaLabel": "Carrossel de imagens das casas",
+    "loading": "Carregando imagens...",
+    "modalTitle": "Sobre este Espaço",
+    "modalIntro": "Se você busca privacidade, conforto e uma experiência única em um dos destinos mais belos do litoral brasileiro, a Casa Boutique é o refúgio perfeito. Ideal para casais, nossa casa acomoda até duas pessoas adultas e oferece uma estadia exclusiva em meio à natureza exuberante de Porto de Pedras.",
+    "modalSpaceHeading": "O espaço",
+    "modalSpaceP1": "Nossas casas boutique oferecem ambientes projetados com conforto e elegância. Aproveite áreas de lazer privativas e quartos aconchegantes que combinam estilo artesanal e modernidade. Tudo pensado para proporcionar momentos únicos e relaxantes enquanto você aprecia a beleza natural de Alagoas.",
+    "modalSpaceP2": "Com duas edificações charmosas e exclusivas, esta propriedade recém-inaugurada foi pensada para oferecer o máximo em privacidade, conforto e estilo. Na primeira edificação, você desfrutará de uma luxuosa suíte master, equipada com banheiro de chuveiro duplo, closet e uma acolhedora sala de estar.",
+    "modalSpaceP3": "A segunda edificação, separada da suíte, garante ainda mais privacidade e abriga uma cozinha completa e moderna, perfeita para preparar suas refeições com tranquilidade, além de contar com um lavabo para sua conveniência.",
+    "modalSpaceP4": "Entre as duas edificações, um verdadeiro oásis espera por você: uma piscina privativa para duas pessoas, rodeada por um jardim exuberante com espreguiçadeiras e uma mesa ideal para refeições ao ar livre. Aqui, o luxo e a praticidade se encontram para criar uma estadia inesquecível em um ambiente completamente exclusivo e acolhedor.",
+    "modalAccessHeading": "Acesso do hóspede",
+    "modalAccessP1": "Na Casa Boutique, nossos hóspedes são recebidos pela nossa recepcionista Juliana, que estará à disposição para garantir uma estadia tranquila e confortável.",
+    "modalNotesHeading": "Outras observações",
+    "modalNotesP1": "Consulte-nos sobre pets de pequeno porte.",
+    "items": [
+      {
+        "caption": ""
+      },
+      {
+        "caption": "Casa Ella à esquerda. (Entrada individual)"
+      },
+      {
+        "caption": "Casa Nina à direita. (Entrada individual)"
+      },
+      {
+        "caption": "Vista para piscina"
+      },
+      {
+        "caption": "Vista para piscina"
+      },
+      {
+        "caption": "Entrada para área gourmet"
+      },
+      {
+        "caption": "Área de sol com espreguiçadeiras e rede. Sombra e água fresca"
+      },
+      {
+        "caption": "Área de sol com espreguiçadeiras e rede. Sombra e água fresca"
+      },
+      {
+        "caption": "Mesa de café da manhã"
+      },
+      {
+        "caption": "Área Gourmet"
+      },
+      {
+        "caption": "Área Gourmet"
+      },
+      {
+        "caption": "Café da manhã completo"
+      },
+      {
+        "caption": "Café da manhã completo"
+      },
+      {
+        "caption": "Café da manhã completo"
+      },
+      {
+        "caption": "Café da manhã completo"
+      },
+      {
+        "caption": "Café da manhã completo"
+      },
+      {
+        "caption": "Mesa para refeições"
+      },
+      {
+        "caption": "Sala TV"
+      },
+      {
+        "caption": "Sala TV"
+      },
+      {
+        "caption": "Quarto"
+      },
+      {
+        "caption": "Quarto"
+      },
+      {
+        "caption": "Quarto"
+      },
+      {
+        "caption": "Cama king size"
+      },
+      {
+        "caption": "Cama king size"
+      },
+      {
+        "caption": "Vista quarto"
+      },
+      {
+        "caption": "Vista quarto"
+      },
+      {
+        "caption": "Vista quarto"
+      },
+      {
+        "caption": "Banheiro"
+      },
+      {
+        "caption": "Banheiro"
+      },
+      {
+        "caption": "Kit praia e piscina"
+      },
+      {
+        "caption": "Pátio"
+      },
+      {
+        "caption": "Pátio"
+      },
+      {
+        "caption": "Pátio"
+      }
+    ]
+  },
+  "bannerTop": {
+    "evento": "GeneriCon 2023",
+    "mensagem": "Junte-se a nós em Denver, de 7 a 9 de junho, para ver o que vem por aí.",
+    "cta": "Inscreva-se agora",
+    "fechar": "Fechar"
+  },
+  "comodidades": {
+    "eyebrow": "Comodidades",
+    "titulo": "O Que Esse Lugar Oferece",
+    "lead": "Veja algumas das comodidades disponíveis neste local.",
+    "cta": "Mostrar Todas as 55 Comodidades",
+    "modalTitulo": "Todas as Comodidades",
+    "categories": [
+      {
+        "name": "Banheiro",
+        "items": [
+          {
+            "name": "Produtos de limpeza"
+          },
+          {
+            "name": "Sabonete para o corpo"
+          },
+          {
+            "name": "Chuveiro externo"
+          },
+          {
+            "name": "Água quente"
+          }
+        ]
+      },
+      {
+        "name": "Quarto e lavanderia",
+        "items": [
+          {
+            "name": "Máquina de lavar na acomodação por Gratuito"
+          },
+          {
+            "name": "Básico",
+            "details": "Toalhas, lençóis, sabonete e papel higiênico"
+          },
+          {
+            "name": "Cabides"
+          },
+          {
+            "name": "Roupa de cama"
+          },
+          {
+            "name": "Roupas de cama de algodão egípcio da Buddmeyer"
+          },
+          {
+            "name": "Cobertores e travesseiros extras"
+          },
+          {
+            "name": "Ferro de passar"
+          },
+          {
+            "name": "Varal para secar roupas"
+          },
+          {
+            "name": "Local para guardar as roupas: closet"
+          }
+        ]
+      },
+      {
+        "name": "Entretenimento",
+        "items": [
+          {
+            "name": "TV de alta definição de 50 polegadas com Netflix, Roku"
+          },
+          {
+            "name": "Sistema de som"
+          },
+          {
+            "name": "Livros e material de leitura"
+          }
+        ]
+      },
+      {
+        "name": "Climatização",
+        "items": [
+          {
+            "name": "Ar-condicionado"
+          },
+          {
+            "name": "Ventiladores portáteis"
+          }
+        ]
+      },
+      {
+        "name": "Segurança doméstica",
+        "items": [
+          {
+            "name": "Câmeras de segurança na parte externa da propriedade"
+          },
+          {
+            "name": "Extintor de incêndio"
+          },
+          {
+            "name": "Kit de primeiros socorros"
+          }
+        ]
+      },
+      {
+        "name": "Internet e escritório",
+        "items": [
+          {
+            "name": "Wi-Fi"
+          }
+        ]
+      },
+      {
+        "name": "Cozinha e sala de jantar",
+        "items": [
+          {
+            "name": "Cozinha",
+            "details": "Espaço onde os hóspedes podem preparar suas próprias refeições"
+          },
+          {
+            "name": "Refrigerador"
+          },
+          {
+            "name": "Microondas"
+          },
+          {
+            "name": "Itens básicos de cozinha",
+            "details": "Vasilhas, panelas, óleo, sal e pimenta"
+          },
+          {
+            "name": "Louças e talheres",
+            "details": "Tigelas, hashi, pratos, copos, etc."
+          },
+          {
+            "name": "Freezer"
+          },
+          {
+            "name": "Fogão a gás Atlas de aço inoxidável"
+          },
+          {
+            "name": "Forno normal Atlas de aço inoxidável"
+          },
+          {
+            "name": "Chaleira de água quente"
+          },
+          {
+            "name": "Cafeteira: cafeteira elétrica"
+          },
+          {
+            "name": "Taças de vinho"
+          },
+          {
+            "name": "Assadeira"
+          },
+          {
+            "name": "Liquidificador"
+          },
+          {
+            "name": "Utensílios para churrasco",
+            "details": "Grelha e espetos"
+          },
+          {
+            "name": "Mesa de jantar"
+          },
+          {
+            "name": "Café"
+          }
+        ]
+      },
+      {
+        "name": "Características da localização",
+        "items": [
+          {
+            "name": "Acesso à praia compartilhado"
+          },
+          {
+            "name": "Lavanderia nas proximidades"
+          }
+        ]
+      },
+      {
+        "name": "Ar livre",
+        "items": [
+          {
+            "name": "Pátio ou varanda (Privativa)"
+          },
+          {
+            "name": "Quintal privado — totalmente cercado"
+          },
+          {
+            "name": "Móveis externos"
+          },
+          {
+            "name": "Rede"
+          },
+          {
+            "name": "Área de jantar externa"
+          },
+          {
+            "name": "Cozinha ao ar livre"
+          },
+          {
+            "name": "Churrasqueira"
+          },
+          {
+            "name": "Itens básicos de praia",
+            "details": "Toalhas de praia, guarda-sol, esteira, equipamento de mergulho"
+          },
+          {
+            "name": "Cadeira espreguiçadeira"
+          }
+        ]
+      },
+      {
+        "name": "Estacionamento e instalações",
+        "items": [
+          {
+            "name": "Estacionamento incluído"
+          },
+          {
+            "name": "Estacionamento gratuito na rua"
+          },
+          {
+            "name": "Piscina privativa"
+          },
+          {
+            "name": "Casa térrea",
+            "details": "Não há escadas na casa"
+          }
+        ]
+      },
+      {
+        "name": "Serviços",
+        "items": [
+          {
+            "name": "Café da Manhã",
+            "details": "O café da manhã é fornecido"
+          },
+          {
+            "name": "Limpeza disponível durante a estadia"
+          },
+          {
+            "name": "O anfitrião recebe você"
+          }
+        ]
+      },
+      {
+        "name": "Não incluso",
+        "items": [
+          {
+            "name": "Secadora"
+          },
+          {
+            "name": "Detector de fumaça"
+          },
+          {
+            "name": "Alarme de monóxido de carbono"
+          },
+          {
+            "name": "Aquecimento"
+          }
+        ]
+      }
+    ]
+  },
+  "faleComAnfitria": {
+    "titulo": "Fale com a Anfitriã",
+    "descricao": "Olá! Sou Mariangela, sua anfitriã na Casa Boutique Ella e Nina. Estou à disposição para responder suas dúvidas e ajudá-lo a planejar uma estadia incrível.",
+    "whatsapp": "Mensagem no WhatsApp",
+    "whatsappMensagem": "Tenho uma dúvida relacionada a Casas Ella e Nina",
+    "email": "Enviar Email",
+    "rodape": "Estamos prontos para tornar sua experiência inesquecível!",
+    "imagemAlt": "Mariangela, anfitriã da Casa Boutique Ella e Nina"
+  },
+  "faq": {
+    "titulo": "Perguntas Frequentes",
+    "items": [
+      {
+        "q": "Posso levar animais de estimação?",
+        "a": "Animais de estimação são permitidos, mas pedimos que entre em contato conosco para saber as condições específicas."
+      },
+      {
+        "q": "Como funciona o check-in e o check-out?",
+        "a": "O check-in é a partir das 14h e o check-out deve ser realizado até às 12h. Podemos tentar acomodar horários alternativos, mediante disponibilidade."
+      },
+      {
+        "q": "Quais serviços estão inclusos na diária?",
+        "a": "A diária inclui café da manhã, arrumação do quarto e acesso a todas as comodidades do local."
+      },
+      {
+        "q": "É permitido fumar na propriedade?",
+        "a": "Não é permitido fumar dentro das acomodações. Áreas externas estão disponíveis para fumantes."
+      }
+    ]
+  },
+  "footer": {
+    "reserve": "Reserve",
+    "ambientes": "Ambientes",
+    "comodidades": "Comodidades",
+    "faleComAnfitria": "Fale com a Anfitriã",
+    "faq": "Perguntas Frequentes",
+    "playlist": "Playlist",
+    "email": "casasboutique@gmail.com",
+    "whatsapp": "WhatsApp: +55 48 99637‑7637"
+  },
+  "hero": {
+    "backgroundAlt": "Fundo",
+    "brandLabel": "Casas Boutique",
+    "location": "Praia do Patacho, Alagoas - Brasil",
+    "titleHighlight1": "Viva uma experiência",
+    "titleMiddle": "de conforto e charme",
+    "titleHighlight2": "na Praia do Patacho",
+    "guests": "2 Hóspedes",
+    "bedroom": "1 Quarto",
+    "beds": "2 camas",
+    "description": "Se você busca privacidade, conforto e uma experiência única em um dos destinos mais belos do litoral brasileiro, a Casa Boutique é o refúgio perfeito. Ideal para casais, nossa casa acomoda até duas pessoas adultas e oferece uma estadia exclusiva em meio à natureza exuberante de Porto de Pedras.",
+    "cta": "Conferir Disponibilidade",
+    "bookingText": "Reserve sua estadia com conforto e praticidade"
+  },
+  "momentos": {
+    "eyebrow": "O Que Nossos Hóspedes Dizem",
+    "titulo": "Momentos Compartilhados",
+    "lead": "Confira os momentos reais e experiências incríveis de quem já se hospedou na Casa Boutique Ella e Nina.",
+    "seguirAntes": "Siga-nos no",
+    "instagram": "instagram",
+    "instagramTitle": "Vá para página do instagram (nova janela)",
+    "seguirDepois": "para acompanhar as novidades e se inspirar para a sua próxima viagem!",
+    "altDetalhes": "Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas...",
+    "altCuidado": "Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho.",
+    "altSemana": "Começar a semana assim..."
+  },
+  "reserve": {
+    "title": "Reserve Sua Estadia",
+    "lead": "Escolha uma de nossas casas boutique e finalize sua reserva pelo Airbnb.",
+    "airbnbAlt": "Reservar no Airbnb",
+    "ella": {
+      "desc": "Acomode-se na charmosa Casa Ella."
+    },
+    "nina": {
+      "desc": "Acomode-se na charmosa Casa Nina."
+    }
+  },
+  "testimonials": {
+    "eyebrow": "O Que Nossos Hóspedes Dizem",
+    "titleLine1": "Histórias de Experiências",
+    "titleLine2": "Memoráveis na Casa Ella e Nina",
+    "lead": "Cada experiência é única e cheia de momentos especiais.",
+    "readReviewsCta": "Leia os comentários completos direto no Airbnb:",
+    "airbnbEllaLabel": "Avaliações da Casa Ella",
+    "airbnbNinaLabel": "Avaliações da Casa Nina",
+    "airbnbLinkTitle": "Abre o anúncio no Airbnb (nova janela)",
+    "preferredHeading": "Preferido dos hóspedes",
+    "preferredDesc": "Uma das acomodações preferidas dos hóspedes, com base em avaliações, comentários e confiabilidade.",
+    "superhostLine": "Superhost · 78 avaliações · 3 anos hospedando",
+    "overallRating": "Avaliação Geral",
+    "cleanliness": "Limpeza",
+    "accuracy": "Exatidão do anúncio",
+    "checkin": "Check-in",
+    "communication": "Comunicação",
+    "location": "Localização",
+    "costBenefit": "Custo-benefício",
+    "carouselAriaLabel": "Avaliações dos hóspedes",
+    "photoAlt": "Foto de {name}",
+    "ratingAriaLabel": "{rating} de 5 estrelas"
   }
 }

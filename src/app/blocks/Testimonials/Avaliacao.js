@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function Laurel({ side }) {
   return (
@@ -14,6 +15,7 @@ function Laurel({ side }) {
 }
 
 export default function Avaliacao() {
+  const t = useTranslations("testimonials");
   return (
     <section id="avaliacoes" className="pt-4 lg:pt-16 flex flex-col justify-center">
       <div className="lg:max-w-screen-xl w-full px-6 mx-auto lg:px-0 pb-8">
@@ -26,22 +28,19 @@ export default function Avaliacao() {
             <Laurel side="right" />
           </div>
           <p className="mt-4 text-xl lg:text-2xl font-semibold text-gray-900">
-            Preferido dos hóspedes
+            {t("preferredHeading")}
           </p>
           <p className="mt-2 max-w-md text-sm text-gray-600">
-            Uma das acomodações preferidas dos hóspedes, com base em avaliações,
-            comentários e confiabilidade.
+            {t("preferredDesc")}
           </p>
-          <p className="mt-2 text-sm text-gray-500">
-            Superhost · 78 avaliações · 3 anos hospedando
-          </p>
+          <p className="mt-2 text-sm text-gray-500">{t("superhostLine")}</p>
         </div>
 
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-7 gap-4 border-t border-gray-300 pt-4">
           {/* Avaliação Geral */}
           <div className="col-span-2 sm:col-span-1 sm:row-span-2 mb-4">
             <h3 className="text-sm font-semibold text-gray-800">
-              Avaliação Geral
+              {t("overallRating")}
             </h3>
             <div className="space-y-1 mt-1">
               {[5, 4, 3, 2, 1].map((rating, index) => (
@@ -70,32 +69,32 @@ export default function Avaliacao() {
           {/* Avaliações Individuais */}
           {[
             {
-              label: "Limpeza",
+              labelKey: "cleanliness",
               rating: "5,0",
               icon: "/midias/amenities/limpeza.svg",
             },
             {
-              label: "Exatidão do anúncio",
+              labelKey: "accuracy",
               rating: "5,0",
               icon: "/midias/amenities/check.svg",
             },
             {
-              label: "Check-in",
+              labelKey: "checkin",
               rating: "5,0",
               icon: "/midias/amenities/chaves.svg",
             },
             {
-              label: "Comunicação",
+              labelKey: "communication",
               rating: "5,0",
               icon: "/midias/amenities/comunicacao.svg",
             },
             {
-              label: "Localização",
+              labelKey: "location",
               rating: "4,9",
               icon: "/midias/amenities/localizacao.svg",
             },
             {
-              label: "Custo-benefício",
+              labelKey: "costBenefit",
               rating: "5,0",
               icon: "/midias/amenities/tag.svg",
             },
@@ -105,14 +104,14 @@ export default function Avaliacao() {
               className="flex flex-col items-center text-center border-l border-gray-300 px-2 sm:py-6"
             >
               <h4 className="text-sm font-semibold text-gray-800">
-                {item.label}
+                {t(item.labelKey)}
               </h4>
               <span className="text-lg font-medium text-gray-800">
                 {item.rating}
               </span>
               <Image
                 src={item.icon}
-                alt={item.label}
+                alt={t(item.labelKey)}
                 width={32}
                 height={32}
                 className="mt-1"

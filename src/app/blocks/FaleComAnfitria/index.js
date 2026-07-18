@@ -3,8 +3,10 @@ import Link from "next/link";
 import { motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import { useTranslations } from "next-intl";
 
 export default function FaleComAnfitria() {
+  const t = useTranslations("faleComAnfitria");
   const ref = useRef(null);
   const [inViewRef, inView] = useInView({ threshold: 0.2 });
   const controls = useAnimation();
@@ -41,7 +43,7 @@ export default function FaleComAnfitria() {
             >
               <Image
                 src="/midias/host/anfitria.png"
-                alt="Mariangela, anfitriã da Casa Boutique Ella e Nina"
+                alt={t("imagemAlt")}
                 width={500}
                 height={500}
                 className="lg:object-cover"
@@ -59,13 +61,9 @@ export default function FaleComAnfitria() {
             className="space-y-6 mt-8 lg:mt-0 lg:pl-12"
           >
             <h2 className="text-3xl font-regular text-gray-800 sm:text-4xl">
-              Fale com a Anfitriã
+              {t("titulo")}
             </h2>
-            <p className="text-lg text-gray-600">
-              Olá! Sou Mariangela, sua anfitriã na Casa Boutique Ella e Nina.
-              Estou à disposição para responder suas dúvidas e ajudá-lo a
-              planejar uma estadia incrível.
-            </p>
+            <p className="text-lg text-gray-600">{t("descricao")}</p>
             <div
               className="
                 flex 
@@ -81,13 +79,15 @@ export default function FaleComAnfitria() {
               xl:space-x-6"
             >
               <Link
-                href="https://api.whatsapp.com/send/?phone=5548996377637&text=Tenho%20uma%20dúvida%20relacionada%20a%20Casas%20Ella%20e%20Nina&type=phone_number&app_absent=0"
+                href={`https://api.whatsapp.com/send/?phone=5548996377637&text=${encodeURIComponent(
+                  t("whatsappMensagem")
+                )}&type=phone_number&app_absent=0`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" w-full md:w-auto lg:w-full
                 button-whatsapp "
               >
-                Mensagem no WhatsApp
+                {t("whatsapp")}
               </Link>
               <Link
                 href="mailto:casasboutique@gmail.com"
@@ -95,12 +95,10 @@ export default function FaleComAnfitria() {
                 rel="noopener noreferrer"
                 className="button-primary w-full md:w-auto lg:w-full"
               >
-                Enviar Email
+                {t("email")}
               </Link>
             </div>
-            <p className="text-sm text-gray-500">
-              Estamos prontos para tornar sua experiência inesquecível!
-            </p>
+            <p className="text-sm text-gray-500">{t("rodape")}</p>
           </motion.div>
         </div>
       </div>

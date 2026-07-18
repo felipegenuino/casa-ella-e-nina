@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Modal from "react-modal";
 import { Cross1Icon } from "@radix-ui/react-icons";
 import { ArrowSquareOut } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 import ModalWithMotion from "@/app/components/ModalWithMotion";
 
@@ -10,6 +11,7 @@ import amenities from "./amenities";
 import Image from "next/image";
 
 const AmenitiesSection = () => {
+  const t = useTranslations("comodidades");
   const closeModalButtonRef = useRef(null);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -24,10 +26,10 @@ const AmenitiesSection = () => {
 
   // Filtra e ordena os itens para a lista principal
   const mainAmenities = amenities
-    .flatMap((category) =>
+    .flatMap((category, categoryIndex) =>
       category.items
+        .map((item, itemIndex) => ({ ...item, categoryIndex, itemIndex }))
         .filter((item) => item.priority !== undefined)
-        .map((item) => ({ ...item, category: category.category }))
     )
     .sort((a, b) => a.priority - b.priority)
     .slice(0, 10); // Limita a exibição a 10 itens principais
@@ -57,15 +59,15 @@ const AmenitiesSection = () => {
           mx-auto "
           >
             <div className=" mb-8 border-b-gray-200 border-b pb-8">
-              <p className="text-indigo-600 font-light py-2">Comodidades</p>
+              <p className="text-indigo-600 font-light py-2">{t("eyebrow")}</p>
               <div className="space-y-5">
                 <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
-                O Que Esse Lugar Oferece
+                {t("titulo")}
                 </h2>
 
                 <div className="text-gray-500  lg:max-w-lg ">
                   <p className="xs:mt-3 text-gray-600">
-                    Veja algumas das comodidades disponíveis neste local.
+                    {t("lead")}
                   </p>
                 </div>
               </div>
@@ -87,9 +89,11 @@ const AmenitiesSection = () => {
                         item.unavailable ? "line-through text-gray-400" : ""
                       }`}
                     >
-                      {item.name}
+                      {t(
+                        `categories.${item.categoryIndex}.items.${item.itemIndex}.name`
+                      )}
                     </p>
-                    {item.details && (
+                    {item.hasDetails && (
                       <p
                         className={`text-sm ${
                           item.unavailable
@@ -97,7 +101,7 @@ const AmenitiesSection = () => {
                             : "text-gray-500"
                         }`}
                       >
-                        {/* {item.details} */}
+                        {/* {t(`categories.${item.categoryIndex}.items.${item.itemIndex}.details`)} */}
                       </p>
                     )}
                   </div>
@@ -109,7 +113,7 @@ const AmenitiesSection = () => {
               onClick={openModal}
               className="mt-6 lg:mt-14 button-primary "
             >
-              <span>Mostrar Todas as 55 Comodidades</span>
+              <span>{t("cta")}</span>
               <ArrowSquareOut size={24} className="mt-[-4px]" />
             </button>
           </div>
@@ -120,12 +124,14 @@ const AmenitiesSection = () => {
       <ModalWithMotion
         isOpen={isModalOpen}
         onRequestClose={closeModal}
-        title="Todas as Comodidades"
+        title={t("modalTitulo")}
       >
         {/* Conteúdo do modal */}
         {amenities.map((category, index) => (
           <div key={index} className="mb-4 pb-14">
-            <h3 className="font-semibold text-lg mb-2">{category.category}</h3>
+            <h3 className="font-semibold text-lg mb-2">
+              {t(`categories.${index}.name`)}
+            </h3>
 
             {category.items.map((item, idx) => (
               <div
@@ -146,9 +152,9 @@ const AmenitiesSection = () => {
                       item.unavailable ? "line-through text-gray-400" : ""
                     }`}
                   >
-                    {item.name}
+                    {t(`categories.${index}.items.${idx}.name`)}
                   </p>
-                  {item.details && (
+                  {item.hasDetails && (
                     <p
                       className={`text-sm ${
                         item.unavailable
@@ -156,7 +162,7 @@ const AmenitiesSection = () => {
                           : "text-gray-500"
                       }`}
                     >
-                      {item.details}
+                      {t(`categories.${index}.items.${idx}.details`)}
                     </p>
                   )}
                 </div>

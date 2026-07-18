@@ -2,5 +2,492 @@
   "metadata": {
     "title": "Boutique House at Praia do Patacho | Casas Ella & Nina - Alagoas",
     "description": "Casa Ella & Nina is an exclusive boutique house at Praia do Patacho, Alagoas. Enjoy comfort, privacy and a perfect retreat. Book now and live this unique experience!"
+  },
+  "ambientes": {
+    "eyebrow": "Unique Experience",
+    "tituloEnfase": "Live moments",
+    "tituloResto": "of Comfort and Exclusivity",
+    "introP1": "Our boutique houses offer spaces designed with comfort and elegance.",
+    "introP2": "Enjoy private leisure areas and cozy bedrooms that combine artisanal style with modernity.",
+    "introP3": "Everything designed to provide unique, relaxing moments while you enjoy the natural beauty of Alagoas.",
+    "ctaAriaLabel": "Show more about this place",
+    "cta": "Show More",
+    "carouselAriaLabel": "Carousel of house images",
+    "loading": "Loading images...",
+    "modalTitle": "About this Space",
+    "modalIntro": "If you're looking for privacy, comfort and a unique experience in one of the most beautiful destinations on the Brazilian coast, Casa Boutique is the perfect retreat. Ideal for couples, our house accommodates up to two adults and offers an exclusive stay amid the lush nature of Porto de Pedras.",
+    "modalSpaceHeading": "The space",
+    "modalSpaceP1": "Our boutique houses offer spaces designed with comfort and elegance. Enjoy private leisure areas and cozy bedrooms that combine artisanal style with modernity. Everything designed to provide unique, relaxing moments while you enjoy the natural beauty of Alagoas.",
+    "modalSpaceP2": "With two charming, exclusive buildings, this recently opened property was designed to offer the utmost in privacy, comfort and style. In the first building, you'll enjoy a luxurious master suite, equipped with a double shower bathroom, closet and a cozy living room.",
+    "modalSpaceP3": "The second building, separate from the suite, ensures even more privacy and houses a complete, modern kitchen, perfect for preparing your meals in peace, plus a guest bathroom for your convenience.",
+    "modalSpaceP4": "Between the two buildings, a true oasis awaits you: a private pool for two, surrounded by a lush garden with loungers and a table perfect for outdoor meals. Here, luxury and practicality come together to create an unforgettable stay in a completely exclusive and welcoming setting.",
+    "modalAccessHeading": "Guest access",
+    "modalAccessP1": "At Casa Boutique, our guests are welcomed by our receptionist Juliana, who will be on hand to ensure a smooth and comfortable stay.",
+    "modalNotesHeading": "Other notes",
+    "modalNotesP1": "Ask us about small pets.",
+    "items": [
+      {
+        "caption": ""
+      },
+      {
+        "caption": "Casa Ella on the left. (Private entrance)"
+      },
+      {
+        "caption": "Casa Nina on the right. (Private entrance)"
+      },
+      {
+        "caption": "Pool view"
+      },
+      {
+        "caption": "Pool view"
+      },
+      {
+        "caption": "Entrance to the gourmet area"
+      },
+      {
+        "caption": "Sun deck with loungers and a hammock. Shade and cool water"
+      },
+      {
+        "caption": "Sun deck with loungers and a hammock. Shade and cool water"
+      },
+      {
+        "caption": "Breakfast table"
+      },
+      {
+        "caption": "Gourmet Area"
+      },
+      {
+        "caption": "Gourmet Area"
+      },
+      {
+        "caption": "Full breakfast"
+      },
+      {
+        "caption": "Full breakfast"
+      },
+      {
+        "caption": "Full breakfast"
+      },
+      {
+        "caption": "Full breakfast"
+      },
+      {
+        "caption": "Full breakfast"
+      },
+      {
+        "caption": "Dining table"
+      },
+      {
+        "caption": "TV Room"
+      },
+      {
+        "caption": "TV Room"
+      },
+      {
+        "caption": "Bedroom"
+      },
+      {
+        "caption": "Bedroom"
+      },
+      {
+        "caption": "Bedroom"
+      },
+      {
+        "caption": "King size bed"
+      },
+      {
+        "caption": "King size bed"
+      },
+      {
+        "caption": "Bedroom view"
+      },
+      {
+        "caption": "Bedroom view"
+      },
+      {
+        "caption": "Bedroom view"
+      },
+      {
+        "caption": "Bathroom"
+      },
+      {
+        "caption": "Bathroom"
+      },
+      {
+        "caption": "Beach and pool kit"
+      },
+      {
+        "caption": "Patio"
+      },
+      {
+        "caption": "Patio"
+      },
+      {
+        "caption": "Patio"
+      }
+    ]
+  },
+  "bannerTop": {
+    "evento": "GeneriCon 2023",
+    "mensagem": "Join us in Denver from June 7 – 9 to see what’s coming next.",
+    "cta": "Register now",
+    "fechar": "Dismiss"
+  },
+  "comodidades": {
+    "eyebrow": "Amenities",
+    "titulo": "What This Place Offers",
+    "lead": "See some of the amenities available at this location.",
+    "cta": "Show All 55 Amenities",
+    "modalTitulo": "All Amenities",
+    "categories": [
+      {
+        "name": "Bathroom",
+        "items": [
+          {
+            "name": "Cleaning products"
+          },
+          {
+            "name": "Body soap"
+          },
+          {
+            "name": "Outdoor shower"
+          },
+          {
+            "name": "Hot water"
+          }
+        ]
+      },
+      {
+        "name": "Bedroom and laundry",
+        "items": [
+          {
+            "name": "Washing machine in the accommodation – Free"
+          },
+          {
+            "name": "Essentials",
+            "details": "Towels, bed sheets, soap and toilet paper"
+          },
+          {
+            "name": "Hangers"
+          },
+          {
+            "name": "Bed linen"
+          },
+          {
+            "name": "Egyptian cotton bed linen by Buddmeyer"
+          },
+          {
+            "name": "Extra blankets and pillows"
+          },
+          {
+            "name": "Iron"
+          },
+          {
+            "name": "Clothes drying rack"
+          },
+          {
+            "name": "Place to store clothes: closet"
+          }
+        ]
+      },
+      {
+        "name": "Entertainment",
+        "items": [
+          {
+            "name": "50-inch HD TV with Netflix, Roku"
+          },
+          {
+            "name": "Sound system"
+          },
+          {
+            "name": "Books and reading material"
+          }
+        ]
+      },
+      {
+        "name": "Climate control",
+        "items": [
+          {
+            "name": "Air conditioning"
+          },
+          {
+            "name": "Portable fans"
+          }
+        ]
+      },
+      {
+        "name": "Home safety",
+        "items": [
+          {
+            "name": "Exterior security cameras"
+          },
+          {
+            "name": "Fire extinguisher"
+          },
+          {
+            "name": "First aid kit"
+          }
+        ]
+      },
+      {
+        "name": "Internet and office",
+        "items": [
+          {
+            "name": "Wi-Fi"
+          }
+        ]
+      },
+      {
+        "name": "Kitchen and dining",
+        "items": [
+          {
+            "name": "Kitchen",
+            "details": "Space where guests can prepare their own meals"
+          },
+          {
+            "name": "Refrigerator"
+          },
+          {
+            "name": "Microwave"
+          },
+          {
+            "name": "Kitchen basics",
+            "details": "Bowls, pots and pans, oil, salt and pepper"
+          },
+          {
+            "name": "Dishes and silverware",
+            "details": "Bowls, chopsticks, plates, glasses, etc."
+          },
+          {
+            "name": "Freezer"
+          },
+          {
+            "name": "Atlas stainless steel gas stove"
+          },
+          {
+            "name": "Atlas stainless steel conventional oven"
+          },
+          {
+            "name": "Hot water kettle"
+          },
+          {
+            "name": "Coffee maker: electric coffee maker"
+          },
+          {
+            "name": "Wine glasses"
+          },
+          {
+            "name": "Baking tray"
+          },
+          {
+            "name": "Blender"
+          },
+          {
+            "name": "BBQ utensils",
+            "details": "Grill and skewers"
+          },
+          {
+            "name": "Dining table"
+          },
+          {
+            "name": "Coffee"
+          }
+        ]
+      },
+      {
+        "name": "Location features",
+        "items": [
+          {
+            "name": "Shared beach access"
+          },
+          {
+            "name": "Laundromat nearby"
+          }
+        ]
+      },
+      {
+        "name": "Outdoor",
+        "items": [
+          {
+            "name": "Patio or balcony (Private)"
+          },
+          {
+            "name": "Private backyard — fully fenced"
+          },
+          {
+            "name": "Outdoor furniture"
+          },
+          {
+            "name": "Hammock"
+          },
+          {
+            "name": "Outdoor dining area"
+          },
+          {
+            "name": "Outdoor kitchen"
+          },
+          {
+            "name": "BBQ grill"
+          },
+          {
+            "name": "Beach essentials",
+            "details": "Beach towels, umbrella, mat, snorkeling gear"
+          },
+          {
+            "name": "Lounge chair"
+          }
+        ]
+      },
+      {
+        "name": "Parking and facilities",
+        "items": [
+          {
+            "name": "Parking included"
+          },
+          {
+            "name": "Free street parking"
+          },
+          {
+            "name": "Private pool"
+          },
+          {
+            "name": "Single-story house",
+            "details": "No stairs in the house"
+          }
+        ]
+      },
+      {
+        "name": "Services",
+        "items": [
+          {
+            "name": "Breakfast",
+            "details": "Breakfast is provided"
+          },
+          {
+            "name": "Cleaning available during the stay"
+          },
+          {
+            "name": "The host greets you"
+          }
+        ]
+      },
+      {
+        "name": "Not included",
+        "items": [
+          {
+            "name": "Dryer"
+          },
+          {
+            "name": "Smoke detector"
+          },
+          {
+            "name": "Carbon monoxide alarm"
+          },
+          {
+            "name": "Heating"
+          }
+        ]
+      }
+    ]
+  },
+  "faleComAnfitria": {
+    "titulo": "Talk to the Host",
+    "descricao": "Hello! I'm Mariangela, your host at Casa Boutique Ella e Nina. I'm here to answer your questions and help you plan an incredible stay.",
+    "whatsapp": "Message on WhatsApp",
+    "whatsappMensagem": "I have a question about Casas Ella e Nina",
+    "email": "Send Email",
+    "rodape": "We're ready to make your experience unforgettable!",
+    "imagemAlt": "Mariangela, host of Casa Boutique Ella e Nina"
+  },
+  "faq": {
+    "titulo": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Can I bring pets?",
+        "a": "Pets are allowed, but please contact us to find out the specific conditions."
+      },
+      {
+        "q": "How does check-in and check-out work?",
+        "a": "Check-in is from 2pm and check-out must be done by 12pm. We can try to accommodate alternative times, subject to availability."
+      },
+      {
+        "q": "What services are included in the daily rate?",
+        "a": "The daily rate includes breakfast, room cleaning, and access to all of the property's amenities."
+      },
+      {
+        "q": "Is smoking allowed on the property?",
+        "a": "Smoking is not allowed inside the accommodations. Outdoor areas are available for smokers."
+      }
+    ]
+  },
+  "footer": {
+    "reserve": "Book Now",
+    "ambientes": "Rooms",
+    "comodidades": "Amenities",
+    "faleComAnfitria": "Talk to the Host",
+    "faq": "FAQ",
+    "playlist": "Playlist",
+    "email": "casasboutique@gmail.com",
+    "whatsapp": "WhatsApp: +55 48 99637‑7637"
+  },
+  "hero": {
+    "backgroundAlt": "Background",
+    "brandLabel": "Boutique Houses",
+    "location": "Praia do Patacho, Alagoas - Brazil",
+    "titleHighlight1": "Live an experience",
+    "titleMiddle": "of comfort and charm",
+    "titleHighlight2": "at Praia do Patacho",
+    "guests": "2 Guests",
+    "bedroom": "1 Bedroom",
+    "beds": "2 beds",
+    "description": "If you're looking for privacy, comfort and a unique experience in one of the most beautiful destinations on the Brazilian coast, Casa Boutique is the perfect retreat. Ideal for couples, our house accommodates up to two adults and offers an exclusive stay amid the lush nature of Porto de Pedras.",
+    "cta": "Check Availability",
+    "bookingText": "Book your stay with comfort and convenience"
+  },
+  "momentos": {
+    "eyebrow": "What Our Guests Say",
+    "titulo": "Shared Moments",
+    "lead": "Check out real moments and amazing experiences from those who have already stayed at Casa Boutique Ella e Nina.",
+    "seguirAntes": "Follow us on",
+    "instagram": "instagram",
+    "instagramTitle": "Go to Instagram page (new window)",
+    "seguirDepois": "to keep up with the news and get inspired for your next trip!",
+    "altDetalhes": "Every detail, every color, frames, mirror shape, embroidered towels...",
+    "altCuidado": "Every detail matters. Dishes, cutlery and napkins chosen with care.",
+    "altSemana": "Starting the week like this..."
+  },
+  "reserve": {
+    "title": "Book Your Stay",
+    "lead": "Choose one of our boutique houses and complete your booking on Airbnb.",
+    "airbnbAlt": "Book on Airbnb",
+    "ella": {
+      "desc": "Settle into the charming Casa Ella."
+    },
+    "nina": {
+      "desc": "Settle into the charming Casa Nina."
+    }
+  },
+  "testimonials": {
+    "eyebrow": "What Our Guests Say",
+    "titleLine1": "Stories of Memorable Experiences",
+    "titleLine2": "at Casa Ella and Nina",
+    "lead": "Every experience is unique and full of special moments.",
+    "readReviewsCta": "Read the full reviews straight from Airbnb:",
+    "airbnbEllaLabel": "Casa Ella Reviews",
+    "airbnbNinaLabel": "Casa Nina Reviews",
+    "airbnbLinkTitle": "Opens the listing on Airbnb (new window)",
+    "preferredHeading": "Guest favorite",
+    "preferredDesc": "One of the most loved homes by guests, based on ratings, reviews, and reliability.",
+    "superhostLine": "Superhost · 78 reviews · 3 years hosting",
+    "overallRating": "Overall Rating",
+    "cleanliness": "Cleanliness",
+    "accuracy": "Listing accuracy",
+    "checkin": "Check-in",
+    "communication": "Communication",
+    "location": "Location",
+    "costBenefit": "Value",
+    "carouselAriaLabel": "Guest reviews",
+    "photoAlt": "Photo of {name}",
+    "ratingAriaLabel": "{rating} out of 5 stars"
   }
 }

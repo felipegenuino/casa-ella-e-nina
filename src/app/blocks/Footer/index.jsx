@@ -2,8 +2,11 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll"; // Para ancoras
 import Link from "next/link"; // Para links internos
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer id="footer-section" className="bg-white">
       <div className="container px-6 py-12 mx-auto">
@@ -23,7 +26,7 @@ export default function Footer() {
               duration={1500}
               className="cursor-pointer w-full mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
             >
-              Reserve
+              {t("reserve")}
             </ScrollLink>
 
             <ScrollLink
@@ -32,7 +35,7 @@ export default function Footer() {
               duration={1500}
               className="cursor-pointer w-full mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
             >
-              Ambientes
+              {t("ambientes")}
             </ScrollLink>
 
             <ScrollLink
@@ -41,7 +44,7 @@ export default function Footer() {
               duration={1500}
               className="cursor-pointer w-full mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
             >
-              Comodidades
+              {t("comodidades")}
             </ScrollLink>
 
             <ScrollLink
@@ -50,7 +53,7 @@ export default function Footer() {
               duration={1500}
               className="w-full cursor-pointer mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
             >
-              Fale com a Anfitriã
+              {t("faleComAnfitria")}
             </ScrollLink>
 
             <ScrollLink
@@ -59,7 +62,7 @@ export default function Footer() {
               duration={1500}
               className="cursor-pointer w-full mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
             >
-              Perguntas Frequentes
+              {t("faq")}
             </ScrollLink>
 
             {/* Adicionando o Link para Playlist */}
@@ -67,7 +70,7 @@ export default function Footer() {
               href="/playlist" // Caminho interno para a rota de playlist
               className="cursor-pointer w-full mx-4 lg:text-base text-lg transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline text-nowrap active:scale-95"
             >
-              Playlist
+              {t("playlist")}
             </Link>
           </div>
         </div>
@@ -77,7 +80,7 @@ export default function Footer() {
             href="mailto:casasboutique@gmail.com"
             className="px-5 py-2 text-black text-center border duration-200 bg-gradient-to-r from-gray-50 to-gray-100 hover:from-white hover:to-white active:from-gray-100 active:to-gray-200 transition-all rounded-full hover:shadow-lg active:scale-95 active:shadow-sm"
           >
-            casasboutique@gmail.com
+            {t("email")}
           </Link>
 
           <Link
@@ -85,7 +88,7 @@ export default function Footer() {
             target="_blank"
             className="px-5 py-2 text-center border duration-200 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-white hover:from-indigo-500 hover:to-indigo-400 active:from-indigo-600 active:to-indigo-600 hover:shadow-lg transition-all active:scale-95 active:shadow-sm"
           >
-            WhatsApp: +55 48 99637‑7637
+            {t("whatsapp")}
           </Link>
         </div>
       </div>

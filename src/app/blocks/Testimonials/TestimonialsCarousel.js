@@ -8,10 +8,14 @@ import "swiper/css/pagination";
 import "swiper/css/effect-cards";
 import { Autoplay, Pagination, A11y, EffectCards } from "swiper/modules";
 
+import { useTranslations, useLocale } from "next-intl";
+
 import { formatDistanceToNow, parseISO } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import { ptBR, enUS, es } from "date-fns/locale";
 
 import testimonials from "./data";
+
+const dateLocales = { pt: ptBR, en: enUS, es };
 
 function shuffle(list) {
   const arr = [...list];
@@ -23,6 +27,8 @@ function shuffle(list) {
 }
 
 function Card({ testimonial, deck }) {
+  const t = useTranslations("testimonials");
+  const locale = useLocale();
   return (
     <div
       className={`flex flex-col rounded-xl bg-slate-50 p-6 lg:p-7 ${
@@ -33,7 +39,7 @@ function Card({ testimonial, deck }) {
         {testimonial.image ? (
           <Image
             src={testimonial.image}
-            alt={`Foto de ${testimonial.name}`}
+            alt={t("photoAlt", { name: testimonial.name })}
             width={56}
             height={56}
             className="h-14 w-14 rounded-full bg-gray-50 object-cover"
@@ -49,14 +55,18 @@ function Card({ testimonial, deck }) {
         <div>
           <p className="font-semibold text-gray-900">{testimonial.name}</p>
           <p className="text-xs text-gray-500">
-            {`Há ${formatDistanceToNow(parseISO(testimonial.date), {
-              locale: ptBR,
-            })}`}
+            {formatDistanceToNow(parseISO(testimonial.date), {
+              locale: dateLocales[locale] || ptBR,
+              addSuffix: true,
+            })}
           </p>
         </div>
       </div>
 
-      <p className="mt-2 text-black" aria-label={`${testimonial.rating} de 5 estrelas`}>
+      <p
+        className="mt-2 text-black"
+        aria-label={t("ratingAriaLabel", { rating: testimonial.rating })}
+      >
         {"★".repeat(testimonial.rating)}
         <span className="text-gray-300">{"★".repeat(5 - testimonial.rating)}</span>
       </p>
@@ -81,6 +91,7 @@ function Card({ testimonial, deck }) {
 }
 
 export default function TestimonialsCarousel() {
+  const t = useTranslations("testimonials");
   const [items, setItems] = useState([]);
 
   const [isMobile, setIsMobile] = useState(false);
@@ -111,7 +122,7 @@ export default function TestimonialsCarousel() {
           modules={[EffectCards, Autoplay, A11y]}
           style={{ height: 420 }}
           className="!overflow-visible"
-          aria-label="Avaliações dos hóspedes"
+          aria-label={t("carouselAriaLabel")}
         >
           {items.map((testimonial) => (
             <SwiperSlide
@@ -141,7 +152,7 @@ export default function TestimonialsCarousel() {
       }}
       modules={[Autoplay, Pagination, A11y]}
       className="!pb-12"
-      aria-label="Avaliações dos hóspedes"
+      aria-label={t("carouselAriaLabel")}
     >
       {items.map((testimonial) => (
         <SwiperSlide key={testimonial.id} className="!h-auto">

@@ -1,8 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function MomentosCompartilhados() {
+  const t = useTranslations("momentos");
+
   return (
     <section
       id="momentos-compartilhados"
@@ -10,31 +13,25 @@ export default function MomentosCompartilhados() {
     >
       <div className=" space-y-6">
         <div className="max-w-screen-xl mx-auto px-4  md:px-8">
-          <p className="text-indigo-600 font-light py-2">
-            O Que Nossos Hóspedes Dizem
-          </p>
+          <p className="text-indigo-600 font-light py-2">{t("eyebrow")}</p>
           <div className="space-y-6">
             <h2 className="text-gray-800 text-3xl font-regular sm:text-4xl">
-              Momentos Compartilhados
+              {t("titulo")}
             </h2>
 
             <p className="space-y-1">
-              <span className="text-gray-500 lg:flex">
-                Confira os momentos reais e experiências incríveis de quem já se
-                hospedou na Casa Boutique Ella e Nina.
-              </span>
+              <span className="text-gray-500 lg:flex">{t("lead")}</span>
               <span className="text-gray-800 mx-2 lg:mx-0 lg:flex ">
-                Siga-nos no
+                {t("seguirAntes")}
                 <Link
                   className=" mx-1 underline underline-offset-4  text-blue-800 transition-all "
                   href="https://www.instagram.com/casasboutiquepatacho/"
                   target="_blank"
-                  title="Vá para página do instagram (nova janela)"
+                  title={t("instagramTitle")}
                 >
-                  instagram
+                  {t("instagram")}
                 </Link>
-                para acompanhar as novidades e se inspirar para a sua próxima
-                viagem!
+                {t("seguirDepois")}
               </span>
             </p>
           </div>
@@ -46,7 +43,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
+                alt={t("altDetalhes")}
                 className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/h-4.jpg"
               />
@@ -55,7 +52,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
+                alt={t("altCuidado")}
                 className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/7.jpg"
               />
@@ -64,7 +61,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Começar a semana assim..."
+                alt={t("altSemana")}
                 className="w-full object-cover h-full object-center block rounded-lg"
                 src="/midias/instagram/2.jpg"
               />
@@ -75,7 +72,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
+                alt={t("altDetalhes")}
                 className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/b-1.jpg"
               />
@@ -84,7 +81,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Todos os detalhes, todas as cores, molduras, formato do espelho, bordado das toalhas..."
+                alt={t("altDetalhes")}
                 className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/6.jpg"
               />
@@ -93,7 +90,7 @@ export default function MomentosCompartilhados() {
               <Image
                 width={500}
                 height={500}
-                alt="Cada detalhe importa. Loucas, talheres e guardanapos escolhidos com carinho."
+                alt={t("altCuidado")}
                 className="w-full h-full object-cover object-center block rounded-lg"
                 src="/midias/instagram/h-3.jpg"
               />

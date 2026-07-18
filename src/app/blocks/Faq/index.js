@@ -1,10 +1,12 @@
 // src/app/blocks/FAQSection.js
 import { useState, useRef, useEffect } from "react";
+import { useTranslations } from "next-intl";
 import faqs from "./faqs";
 import { ChevronDown } from "lucide-react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 export default function FAQSection() {
+  const t = useTranslations("faq");
   const [openIndex, setOpenIndex] = useState(null);
   const contentRefs = useRef([]);
 
@@ -27,11 +29,11 @@ export default function FAQSection() {
     >
       <div className="max-w-screen-xl mx-auto px-4  md:px-8 space-y-6">
         <h2 className=" text-gray-800 text-3xl font-regular sm:text-4xl _lg:text-center ">
-          Perguntas Frequentes
+          {t("titulo")}
         </h2>
 
         <div>
-          {faqs.map((faq, index) => (
+          {faqs.map((_, index) => (
             <div key={index} className=" border-b border-gray-200  mb-4">
               <button
                 onClick={() => toggleAccordion(index)}
@@ -40,7 +42,7 @@ export default function FAQSection() {
                 }`}
                 aria-expanded={openIndex === index}
               >
-                {faq.question}
+                {t(`items.${index}.q`)}
                 <span
                   className={`transform transition-transform duration-200 ${
                     openIndex === index ? "rotate-180" : ""
@@ -62,7 +64,7 @@ export default function FAQSection() {
                 className="pr-4 text-gray-500"
                 aria-hidden={openIndex !== index}
               >
-                <p className="pt-0 pb-6 text-base">{faq.answer}</p>
+                <p className="pt-0 pb-6 text-base">{t(`items.${index}.a`)}</p>
               </div>
             </div>
           ))}
