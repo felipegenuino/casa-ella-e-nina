@@ -23,7 +23,7 @@ function shuffle(list) {
 
 function Card({ testimonial }) {
   return (
-    <div className="flex h-full flex-col rounded-xl bg-slate-50 p-6 lg:p-7">
+    <div className="flex flex-col rounded-xl bg-slate-50 p-6 lg:p-7">
       <div className="flex items-center gap-x-4">
         {testimonial.image ? (
           <Image
@@ -94,7 +94,7 @@ export default function TestimonialsCarousel() {
       aria-label="Avaliações dos hóspedes"
     >
       {items.map((testimonial) => (
-        <SwiperSlide key={testimonial.id} className="h-auto self-stretch !flex">
+        <SwiperSlide key={testimonial.id} className="!h-auto">
           <Card testimonial={testimonial} />
         </SwiperSlide>
       ))}

@@ -167,11 +167,3 @@ summary:focus-visible,
   outline-offset: 2px;
   border-radius: 4px;
 }
-
-/* Cards de avaliação com altura uniforme no carrossel */
-#historias .swiper-wrapper {
-  align-items: stretch;
-}
-#historias .swiper-slide {
-  height: auto;
-}

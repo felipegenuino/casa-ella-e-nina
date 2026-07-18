@@ -37,9 +37,6 @@ export default function Testimonials() {
           </div>
         </div>
         <Avaliacao />
-        <div className="max-w-screen-xl mx-auto px-6 md:px-0">
-          <TestimonialsCarousel />
-        </div>
         <div className="w-full flex flex-wrap justify-center items-center gap-x-8 gap-y-3 py-4 mb-6">
           {airbnbLinks.map((l) => (
             <Link
@@ -52,6 +49,9 @@ export default function Testimonials() {
               {l.label}
             </Link>
           ))}
+        </div>
+        <div className="max-w-screen-xl mx-auto px-6 md:px-0">
+          <TestimonialsCarousel />
         </div>
       </div>
     </section>
