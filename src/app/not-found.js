@@ -1,13 +1,14 @@
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
+};
+
 export const metadata = {
   metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Página não encontrada | Casa Ella e Nina",
   description:
     "Ops! A página que você está procurando não existe. Volte para a página inicial e explore mais sobre a Casa Ella e Nina.",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
-  themeColor: "#ffffff",
   robots: {
     index: false, // Não indexar a página 404
     follow: false,
