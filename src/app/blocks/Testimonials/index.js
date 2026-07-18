@@ -6,11 +6,11 @@ import TestimonialsCarousel from "./TestimonialsCarousel";
 
 const airbnbLinks = [
   {
-    label: "Casa Ella no Airbnb",
+    label: "Avaliações da Casa Ella",
     href: "https://www.airbnb.com.br/rooms/987771438493887391/reviews",
   },
   {
-    label: "Casa Nina no Airbnb",
+    label: "Avaliações da Casa Nina",
     href: "https://www.airbnb.com.br/rooms/1049859270366355530/reviews",
   },
 ];
@@ -37,18 +37,24 @@ export default function Testimonials() {
           </div>
         </div>
         <Avaliacao />
-        <div className="w-full flex flex-wrap justify-center items-center gap-x-8 gap-y-3 py-4 mb-6">
-          {airbnbLinks.map((l) => (
-            <Link
-              key={l.href}
-              title="Abre em outra janela"
-              target="_blank"
-              className="text-lg lg:text-base transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
-              href={l.href}
-            >
-              {l.label}
-            </Link>
-          ))}
+        <div className="w-full flex flex-col items-center gap-y-3 py-4 mb-6 px-6">
+          <p className="text-gray-600 text-center">
+            Leia os comentários completos direto no Airbnb:
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+            {airbnbLinks.map((l) => (
+              <Link
+                key={l.href}
+                title="Abre o anúncio no Airbnb (nova janela)"
+                target="_blank"
+                className="inline-flex items-center gap-1 text-lg lg:text-base transition-colors duration-300 text-indigo-600 underline underline-offset-4 hover:no-underline active:scale-95"
+                href={l.href}
+              >
+                {l.label}
+                <span aria-hidden="true">↗</span>
+              </Link>
+            ))}
+          </div>
         </div>
         <div className="max-w-screen-xl mx-auto px-6 md:px-0">
           <TestimonialsCarousel />
