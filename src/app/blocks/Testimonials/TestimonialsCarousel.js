@@ -82,6 +82,7 @@ export default function TestimonialsCarousel() {
       spaceBetween={24}
       slidesPerView={1.1}
       grabCursor
+      autoHeight
       loop
       autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
       pagination={{ clickable: true, dynamicBullets: true }}
