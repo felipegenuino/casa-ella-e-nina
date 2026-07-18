@@ -489,5 +489,16 @@
     "carouselAriaLabel": "Avaliações dos hóspedes",
     "photoAlt": "Foto de {name}",
     "ratingAriaLabel": "{rating} de 5 estrelas"
+  },
+  "dock": {
+    "menu": "Menu",
+    "cta": "Reservar",
+    "langLabel": "Selecionar idioma",
+    "ambientes": "Ambientes",
+    "comodidades": "Comodidades",
+    "avaliacoes": "Avaliações",
+    "reserva": "Reserva",
+    "faq": "FAQ",
+    "contato": "Contato"
   }
 }

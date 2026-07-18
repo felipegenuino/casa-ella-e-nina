@@ -489,5 +489,16 @@
     "carouselAriaLabel": "Guest reviews",
     "photoAlt": "Photo of {name}",
     "ratingAriaLabel": "{rating} out of 5 stars"
+  },
+  "dock": {
+    "menu": "Menu",
+    "cta": "Book now",
+    "langLabel": "Select language",
+    "ambientes": "Spaces",
+    "comodidades": "Amenities",
+    "avaliacoes": "Reviews",
+    "reserva": "Booking",
+    "faq": "FAQ",
+    "contato": "Contact"
   }
 }

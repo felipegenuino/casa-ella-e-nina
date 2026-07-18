@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale, getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import Dock from "../components/Dock";
 import "../../styles/globals.css";
 
 export const viewport = {
@@ -94,6 +95,7 @@ export default async function LocaleLayout({ children, params }) {
       >
         <NextIntlClientProvider messages={messages}>
           <div id="__next">{children}</div>
+          <Dock />
         </NextIntlClientProvider>
       </body>
     </html>
