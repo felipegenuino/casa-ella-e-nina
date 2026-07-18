@@ -22,9 +22,13 @@ function shuffle(list) {
   return arr;
 }
 
-function Card({ testimonial }) {
+function Card({ testimonial, deck }) {
   return (
-    <div className="flex flex-col rounded-xl bg-slate-50 p-6 lg:p-7">
+    <div
+      className={`flex flex-col rounded-xl bg-slate-50 p-6 lg:p-7 ${
+        deck ? "h-full" : ""
+      }`}
+    >
       <div className="flex items-center gap-x-4">
         {testimonial.image ? (
           <Image
@@ -57,10 +61,20 @@ function Card({ testimonial }) {
         <span className="text-gray-300">{"★".repeat(5 - testimonial.rating)}</span>
       </p>
 
-      <div className="mt-3 space-y-3 text-sm/6 text-gray-700 lg:text-base/7">
+      <div
+        className={`mt-3 space-y-3 text-sm/6 text-gray-700 lg:text-base/7 ${
+          deck ? "relative min-h-0 flex-1 overflow-hidden" : ""
+        }`}
+      >
         {testimonial.comment.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
+        {deck && (
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-slate-50 to-transparent"
+          />
+        )}
       </div>
     </div>
   );
@@ -95,7 +109,8 @@ export default function TestimonialsCarousel() {
           loop
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           modules={[EffectCards, Autoplay, A11y]}
-          className="!overflow-visible pb-6"
+          style={{ height: 420 }}
+          className="!overflow-visible"
           aria-label="Avaliações dos hóspedes"
         >
           {items.map((testimonial) => (
@@ -103,7 +118,7 @@ export default function TestimonialsCarousel() {
               key={testimonial.id}
               className="!rounded-xl !overflow-hidden"
             >
-              <Card testimonial={testimonial} />
+              <Card testimonial={testimonial} deck />
             </SwiperSlide>
           ))}
         </Swiper>
