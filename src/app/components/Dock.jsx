@@ -46,7 +46,6 @@ export default function Dock() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const [shown, setShown] = useState(false);
   const [active, setActive] = useState(SECTIONS[0].id);
   const [present, setPresent] = useState([]);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,13 +53,6 @@ export default function Dock() {
 
   const menuRef = useRef(null);
   const langRef = useRef(null);
-
-  useEffect(() => {
-    const onScroll = () => setShown(window.scrollY > window.innerHeight * 0.7);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const ids = SECTIONS.filter((s) => document.getElementById(s.id)).map((s) => s.id);
@@ -94,9 +86,7 @@ export default function Dock() {
   return (
     <nav
       aria-label={t("menu")}
-      className={`fixed bottom-4 left-1/2 z-40 -translate-x-1/2 transition-[opacity,transform] duration-500 ${
-        shown ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
-      }`}
+      className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2"
     >
       <div className="flex items-center gap-2 rounded-full border border-white/10 bg-indigo-950/95 p-1.5 shadow-[0_16px_44px_rgba(20,18,45,0.45)] backdrop-blur-xl">
         {/* MENU */}
