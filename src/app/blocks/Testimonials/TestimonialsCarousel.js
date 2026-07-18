@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination, A11y } from "swiper/modules";
+import "swiper/css/effect-cards";
+import { Autoplay, Pagination, A11y, EffectCards } from "swiper/modules";
 
 import { formatDistanceToNow, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -68,26 +69,59 @@ function Card({ testimonial }) {
 export default function TestimonialsCarousel() {
   const [items, setItems] = useState([]);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   // Embaralha só no cliente para dar volume/variedade sem quebrar a hidratação.
   useEffect(() => {
     setItems(shuffle(testimonials));
+    const mq = window.matchMedia("(max-width: 639px)");
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
   }, []);
 
   if (!items.length) {
     return <div className="min-h-[280px]" aria-hidden="true" />;
   }
 
+  // Mobile: baralho de cards empilhados (efeito "cards").
+  if (isMobile) {
+    return (
+      <div className="mx-auto w-full max-w-[320px] px-2">
+        <Swiper
+          effect="cards"
+          grabCursor
+          loop
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          modules={[EffectCards, Autoplay, A11y]}
+          className="!overflow-visible pb-6"
+          aria-label="Avaliações dos hóspedes"
+        >
+          {items.map((testimonial) => (
+            <SwiperSlide
+              key={testimonial.id}
+              className="!rounded-xl !overflow-hidden"
+            >
+              <Card testimonial={testimonial} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    );
+  }
+
+  // Desktop / tablet: carrossel de vários cards.
   return (
     <Swiper
       spaceBetween={24}
-      slidesPerView={1.1}
+      slidesPerView={2}
       grabCursor
       autoHeight
       loop
       autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
       pagination={{ clickable: true, dynamicBullets: true }}
       breakpoints={{
-        640: { slidesPerView: 2 },
         1024: { slidesPerView: 3 },
       }}
       modules={[Autoplay, Pagination, A11y]}
