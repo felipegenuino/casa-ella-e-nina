@@ -16,12 +16,7 @@ const galleries = [
           "Esta villa espaçosa dispõe de 1 quarto, 2 banheiros, roupa de cama, toalhas, TV de tela plana com serviços de streaming, área para refeições, cozinha totalmente equipada e varanda com vista da piscina. Esta villa também inclui uma varanda térrea que funciona como área para refeições ao ar livre. Um closet, serviço de lavanderia e segurança durante todo o dia também estão disponíveis.",
         ],
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/entrada-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/entrada-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "title", title: "Entrada" },
       {
         type: "video",
         url: "/midias/gallery/gallerie-1/video-1.mp4",
@@ -52,12 +47,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/entrada-4-blur.jpg",
         description: "Vista para piscina",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/sala_estar-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/sala_estar-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Sala de estar",
+        tags: ["TV", "Ar-condicionado", "Livros e material de leitura", "Sistema de som"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/sala_estar-1-p.jpg",
@@ -71,12 +62,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/sala_estar-2-blur.jpg",
         description: "Rede para descansar",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/cozinha_completa-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/cozinha_completa-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Cozinha Completa",
+        tags: ["Assadeira", "Cafeteira", "Forno", "Livros de culinária", "Café", "Chaleira de água quente", "Freezer", "Itens básicos de cozinha", "Fogão", "Taças de vinho", "Microondas", "Refrigerador", "Louças e talheres", "Utensílios para churrasco", "Liquidificador"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/cozinha_completa-1-p.jpg",
@@ -95,12 +82,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/cozinha_completa-3-blur.jpg",
         description: "Cozinha Completa",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/area_jantar-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/area_jantar-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Área de Jantar",
+        tags: ["Taças de vinho", "Mesa de jantar"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/area_jantar-1-p.jpg",
@@ -131,12 +114,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/area_jantar-5-blur.jpg",
         description: "Mesa refeições no jardim",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/quarto-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/quarto-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Quarto",
+        tags: ["Cama king", "Ar-condicionado", "Aquecimento", "TV", "Cabides", "Cobertores e travesseiros extras", "Roupa de cama", "Ferro de passar", "Local para guardar as roupas"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/quarto-1-p.jpg",
@@ -191,12 +170,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/quarto-9-blur.jpg",
         description: "Na suíte uma área de descanso na rede",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/banheiro_completo-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/banheiro_completo-capa-blur.jpg",
-        description: "Banheiro completo",
-      },
+      { type: "card", variant: "tags", title: "Banheiro Completo",
+        tags: ["Água quente", "Produtos de limpeza", "Sabonete para o corpo"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/banheiro_completo-1-p.jpg",
@@ -239,24 +214,16 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/banheiro_completo-7-blur.jpg",
         description: "Banheiro completo",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/lavabo-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/lavabo-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Lavabo",
+        tags: ["Produtos de limpeza"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/lavabo-1-p.jpg",
         blurUrl: "/midias/gallery/gallerie-1/lavabo-1-blur.jpg",
         description: "Lavabo da piscina",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/quintal-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/quintal-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Quintal",
+        tags: ["Cadeira espreguiçadeira", "Área de jantar externa", "Móveis externos", "Chuveiro externo", "Churrasqueira", "Rede"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/quintal-1-p.jpg",
@@ -281,12 +248,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/quintal-4-blur.jpg",
         description: "Vista da piscina com área gourmet",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/patio-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/patio-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Pátio",
+        tags: ["Iluminação noturna"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/patio-1-p.jpg",
@@ -354,12 +317,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/fundos-4-blur.jpg",
         description: "Fundos",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/piscina-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/piscina-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Piscina",
+        tags: ["Cadeira espreguiçadeira", "Rede"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/piscina-1-p.jpg",
