@@ -432,6 +432,7 @@
   },
   "hero": {
     "backgroundAlt": "Fondo",
+    "brandAlt": "Casas Ella y Nina — Casa Boutique en Praia do Patacho",
     "brandLabel": "Casas Boutique",
     "location": "Praia do Patacho, Alagoas - Brasil",
     "titleHighlight1": "Vive una experiencia",
@@ -500,5 +501,8 @@
     "reserva": "Reserva",
     "faq": "FAQ",
     "contato": "Contacto"
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido"
   }
 }

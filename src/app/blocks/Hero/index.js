@@ -64,13 +64,15 @@ export default function Hero() {
         <div className="max-w-screen-lg">
           <div className="flex-none space-y-5 px-4 md:px-6  justify-center ">
             <div className="mx-auto py-40 md:py-52 px-4 md:px-6 text-center">
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                className="mx-auto"
-                src="/midias/hero/brand-hero-light.svg"
-              />
+              <h1 className="m-0">
+                <Image
+                  width={500}
+                  height={500}
+                  alt={t("brandAlt")}
+                  className="mx-auto"
+                  src="/midias/hero/brand-hero-light.svg"
+                />
+              </h1>
               <p className="text-white tracking-widest	mt-4 text-xl font-bold	">
                 {t("brandLabel")}
               </p>

@@ -4,6 +4,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale, getMessages, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Dock from "../components/Dock";
+import SkipToContent from "../components/SkipToContent";
 import "../../styles/globals.css";
 
 export const viewport = {
@@ -87,12 +88,14 @@ export default async function LocaleLayout({ children, params }) {
   }
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "a11y" });
 
   return (
     <html lang={locale}>
       <body
         className={`${fontTitle.variable} ${fontBody.variable} antialiased w-100`}
       >
+        <SkipToContent label={t("skipToContent")} />
         <NextIntlClientProvider messages={messages}>
           <div id="__next">{children}</div>
           <Dock />
