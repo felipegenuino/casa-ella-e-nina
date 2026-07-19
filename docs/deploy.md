@@ -29,6 +29,11 @@ O outro projeto do Felipe já resolve deploy em shared hosting:
 - rtamundi é **estático** (build custom → `dist/`), por isso cabe no HostGator
   (que **não roda Node.js**).
 
+## Detalhes confirmados
+
+- **Domínio:** casasboutiquepatacho.com.br
+- **Destino no servidor (FTP `server-dir`):** `public_html/casasboutiquepatacho.com.br`
+
 ## Plano para o Casa Ella & Nina (espelhar o rtamundi)
 
 Para deployar no HostGator via GitHub Actions FTPS, o site precisa voltar a ser
