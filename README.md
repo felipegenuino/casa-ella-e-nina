@@ -104,6 +104,12 @@ casa-ella-e-nina/
 ---
 
 ## 🌐 Como Fazer o Deploy em Servidor Compartilhado
+
+> ⚠️ **Desatualizado.** Após a migração multilíngue, o projeto virou Next.js
+> dinâmico (middleware de idioma) e `pnpm build` **não gera mais `out/`**. O
+> passo a passo abaixo (export estático → FTP) **não funciona como está**.
+> Veja o plano de deploy atualizado em [`docs/deploy.md`](./docs/deploy.md).
+
 Se seu servidor compartilhado **não suporta Node.js**, você pode exportar o Next.js como um site estático e copiá-lo para o servidor.
 
 ### 🔹 1. Gerar os arquivos estáticos
