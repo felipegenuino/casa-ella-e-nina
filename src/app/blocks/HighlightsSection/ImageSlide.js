@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-const ImageSlide = ({ src, description }) => {
+const ImageSlide = ({ src, description, fallbackAlt = "Imagem da galeria" }) => {
   return (
     <div
       role="img" // Declara que o elemento é uma imagem
-      aria-label={description || "Imagem da galeria"} // Descrição acessível
+      aria-label={description || fallbackAlt} // Descrição acessível
       className="relative w-full h-full flex items-center justify-center _mb-20"
     >
       <Image
@@ -13,7 +13,7 @@ const ImageSlide = ({ src, description }) => {
         height={852}
         src={src}
         aria-hidden="true"
-        alt={description || "Imagem da galeria"} // Texto alternativo para leitores de tela
+        alt={description || fallbackAlt} // Texto alternativo para leitores de tela
         className="object-cover w-full h-full rounded-lg"
       />
       {description && (

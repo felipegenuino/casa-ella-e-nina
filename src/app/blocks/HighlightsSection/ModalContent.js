@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, A11y } from "swiper/modules"; // Importa o módulo Mousewheel
 import VideoSlide from "./VideoSlide";
 import ImageSlide from "./ImageSlide";
+import { tGallery } from "./translations";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/a11y";
@@ -11,6 +13,10 @@ import { VideoIcon, ImageIcon } from "@radix-ui/react-icons";
 
 const ModalContent = ({ gallery, closeModal }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
+  const locale = useLocale();
+  const t = useTranslations("highlights");
+  const galleryTitle = tGallery(gallery.title, locale);
+  const galleryDescription = tGallery(gallery.description, locale);
 
   const handleSlideClick = (index) => {
     if (swiperInstance) {
@@ -71,19 +77,19 @@ const ModalContent = ({ gallery, closeModal }) => {
       <div className="px-12 py-2 flex justify-between items-center bg-white border-b">
         <div>
           <h3 className="text-pretty text-2xl/7 font-regular tracking-tight text-black">
-            {gallery.title || "Título da Galeria"}
+            {galleryTitle}
           </h3>
-          <p className="hidden lg:visible mt-1 max-w-2xl text-sm/6 text-gray-500">
-            {gallery.description || "Descrição da galeria"}
+          <p className="hidden lg:block mt-1 max-w-2xl text-sm/6 text-gray-500">
+            {galleryDescription}
           </p>
         </div>
 
         <button
           onClick={closeModal}
           className="button-primary"
-          aria-label="Fechar galeria"
+          aria-label={t("closeGalleryLabel")}
         >
-          <span className="text-base">Fechar</span>
+          <span className="text-base">{t("close")}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -119,7 +125,7 @@ const ModalContent = ({ gallery, closeModal }) => {
           grabCursor={true}
           mousewheel={true} // Ativa o Mousewheel
           modules={[Mousewheel, Pagination, A11y]} // Inclui os módulos
-          aria-label={gallery.title || "Swiper de imagens e vídeos"}
+          aria-label={galleryTitle}
           className=" bg-violet-50"
         >
           {gallery.media.map((media, index) => (
@@ -135,7 +141,7 @@ const ModalContent = ({ gallery, closeModal }) => {
                     media={media}
                     galleryId={gallery.id}
                     index={index}
-                    description={media.description}
+                    description={tGallery(media.description, locale)}
                   />
                   <div className="absolute top-8 right-6 bg-slate-700 bg-opacity-50_ p-1 rounded">
                     <VideoIcon className="w-5 h-5 text-white" />
@@ -143,7 +149,11 @@ const ModalContent = ({ gallery, closeModal }) => {
                 </>
               ) : (
                 <>
-                  <ImageSlide src={media.url} description={media.description} />
+                  <ImageSlide
+                    src={media.url}
+                    description={tGallery(media.description, locale)}
+                    fallbackAlt={t("imageFallbackAlt")}
+                  />
                   <div className="absolute top-8 right-6 bg-slate-700 bg-opacity-50_ p-1 rounded">
                     <ImageIcon className="w-5 h-5 text-white" />
                   </div>

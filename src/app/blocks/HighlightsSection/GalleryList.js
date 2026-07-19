@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 import { motion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
+import { tGallery } from "./translations";
 
 const container = {
   hidden: { opacity: 0 },
@@ -18,7 +20,11 @@ const item = {
   show: { opacity: 1 },
 };
 
-const GalleryList = ({ galleries, openModal }) => (
+const GalleryList = ({ galleries, openModal }) => {
+  const locale = useLocale();
+  const t = useTranslations("highlights");
+
+  return (
   <motion.div
     variants={container}
     initial="hidden"
@@ -26,7 +32,9 @@ const GalleryList = ({ galleries, openModal }) => (
     role="list"
     className="flex flex-nowrap gap-4 overflow-x-auto px-4 pl-12  lg:pl-0 lg:justify-center"
   >
-    {galleries.map((gallery, index) => (
+    {galleries.map((gallery, index) => {
+      const title = tGallery(gallery.title, locale);
+      return (
       <motion.div
         variants={item}
         role="listitem"
@@ -37,7 +45,7 @@ const GalleryList = ({ galleries, openModal }) => (
           key={gallery.id}
           onClick={() => openModal(gallery)}
           className="flex-shrink-0 w-32 lg:w-40 group"
-          aria-label={`Pressione para ver galeria de ${gallery.title}`}
+          aria-label={t("viewGalleryLabel", { title })}
         >
           <div
             className=" 
@@ -56,7 +64,7 @@ const GalleryList = ({ galleries, openModal }) => (
               width={160}
               height={160}
               src={gallery.thumb}
-              alt={gallery.title}
+              alt={title}
               aria-hidden="true"
             />
           </div>
@@ -64,12 +72,14 @@ const GalleryList = ({ galleries, openModal }) => (
             aria-hidden="true"
             className="text-sm my-2 font-regular text-white"
           >
-            {gallery.title}
+            {title}
           </p>
         </button>
       </motion.div>
-    ))}
+      );
+    })}
   </motion.div>
-);
+  );
+};
 
 export default GalleryList;

@@ -504,5 +504,11 @@
   },
   "a11y": {
     "skipToContent": "Pular para o conteúdo"
+  },
+  "highlights": {
+    "viewGalleryLabel": "Pressione para ver a galeria {title}",
+    "close": "Fechar",
+    "closeGalleryLabel": "Fechar galeria",
+    "imageFallbackAlt": "Imagem da galeria"
   }
 }

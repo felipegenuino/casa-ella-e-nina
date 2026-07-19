@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
+const VideoSlide = ({ media, galleryId, index, description, onActivateSlide }) => {
   const videoId = `video-${galleryId}-${index}`;
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
     const videoElement = event.currentTarget;
 
     // Ativa o slide correspondente
-    onActivateSlide();
+    onActivateSlide?.();
 
     // Pausa ou reproduz o vídeo
     if (videoElement.paused) {
@@ -38,9 +38,9 @@ const VideoSlide = ({ media, galleryId, index, onActivateSlide }) => {
         className="object-cover w-full h-full  cursor-pointer"
         onClick={handleVideoClick} // Controla o comportamento ao clicar
       />
-      {media.description && (
+      {description && (
         <p className="absolute bottom-4 mx-4 px-4 py-2 left-0 right-0  text-white text-sm bg-violet-950 bg-opacity-85 rounded">
-          {media.description}
+          {description}
         </p>
       )}
     </div>
