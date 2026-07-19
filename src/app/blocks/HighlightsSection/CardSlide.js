@@ -15,12 +15,12 @@ export default function CardSlide({
     <div
       role="img"
       aria-label={title}
-      className="relative h-full w-full overflow-hidden rounded-lg bg-[#254174]"
+      className="relative aspect-[480/852] w-full overflow-hidden rounded-3xl bg-[#254174]"
     >
       <div className="absolute inset-0 bg-indigo-600/70" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/50" />
 
-      <div className="relative z-10 flex h-full flex-col gap-8 px-8 py-14 md:px-10 md:py-16">
+      <div className="relative z-10 flex h-full flex-col gap-8 overflow-y-auto px-8 py-14 md:px-10 md:py-16">
         <div className="heading text-4xl md:text-5xl text-[#f0fdf4]">{title}</div>
 
         {variant === "intro" && intro.length > 0 && (
