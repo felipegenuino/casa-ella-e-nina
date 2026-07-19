@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
-import SwiperCore, { Navigation, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import GalleryList from "./GalleryList";
 import ModalContent from "./ModalContent";
 import { preloadMedia } from "./helpers";
 import galleries from "./galleries";
-
-SwiperCore.use([Navigation, Pagination]);
 
 const HighlightsSection = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
