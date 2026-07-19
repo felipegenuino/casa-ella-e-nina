@@ -27,63 +27,115 @@ reexportar imagem.
 
 ## Decisões (confirmadas com o usuário)
 
-- **Fundo:** gradiente navy sutil da marca (sem foto). Nada de imagem de fundo.
+- **Fundo:** ~~gradiente navy sutil (sem foto)~~ → **⚠️ REABRIR.** Ao ler o
+  Figma, descobri que os cards são **desenhados com foto de fundo** (mesmo
+  overlay/gradiente do hero) e o `get_design_context` entrega a **URL da foto
+  limpa**. Ou seja, manter a foto virou fácil. Decisão pendente do usuário:
+  (a) manter a foto do Figma (fiel ao design) ou (b) navy sólido/gradiente.
+  A arquitetura do `CardSlide` suporta os dois (foto é opcional).
 - **Estrutura de conteúdo:** Abordagem 1 — `card` como novo tipo de mídia no
   `galleries.js` (fonte PT) + traduções no `translations.js` existente (tGallery).
-- **Conteúdo:** a IA rascunha o PT (títulos pelos nomes de seção, intro/tags
-  transcritos dos prints, demais inferidos e marcados ⚠️); o usuário revisa e
-  completa antes da tradução en/es.
+- **Conteúdo:** extraído direto do Figma (ver tabela). O usuário só revisa/completa
+  os poucos itens ⚠️.
 - **Posição:** cada card segue como o **1º slide da sua seção** (mesma posição
   das imagens-capa atuais).
 - **Sem badge** de ícone de mídia nos cards (não são foto/vídeo).
 
+## Design (tokens exatos do Figma)
+
+Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]`):
+
+- **Fundo:** `#254174` (navy) + [foto opcional] + Overlay `rgba(79,70,229,.7)`
+  (= `bg-indigo-600/70`, igual ao hero) + Gradiente `from-black/80 to-black/50`
+  (igual ao hero).
+- **Content:** `flex flex-col gap-[40px] px-[40px] py-[80px]`, itens à esquerda.
+- **Título:** Fraunces (`--font-title`), `~60px`, cor **`#F0FDF4`** (Feta),
+  `tracking -2.4px`. (No app: escalar responsivo, ex. `text-4xl md:text-5xl`.)
+- **Tag (pill):** `bg-[rgba(30,52,93,.3)]`, `rounded-[4px]`, `px-[14px] py-[8px]`,
+  `h-[42px]`; texto Sora (`--font-body`) `~20px` cor **`#A5B4FC`** (Melrose).
+- **Tags:** `flex flex-wrap gap-[24px]` (listas longas quebram; curtas empilham).
+- **Intro:** parágrafos abaixo do título, fonte corpo, branco/claro, `gap` entre.
+
 ## Escopo
 
-**~20 cards capa** no total (mais que os ~14 estimados inicialmente):
+**~20 cards capa** (conteúdo extraído do Figma; ⚠️ = pendente do usuário).
+"Ambientes - Galeria 0" foi **removida a pedido da cliente** → ignorada.
 
-| # | Galeria | idx | arquivo capa (sem `-p.jpg`) | Título PT (rascunho) | Variante | Conteúdo (rascunho) | Status |
-|---|---------|-----|------------------------------|----------------------|----------|---------------------|--------|
-| 1 | Conheça as Casas | 0 | sobre-as-casas-1 | As Casas | **intro** | 2 parágrafos (abaixo) | ✓ transcrito |
-| 2 | Conheça as Casas | 1 | entrada-capa | Entrada | title | — | ✓ transcrito |
-| 3 | Conheça as Casas | 7 | sala_estar-capa | Sala de estar | **tags** | TV; Ar-condicionado; Livros e material de leitura; Sistema de som | ✓ transcrito |
-| 4 | Conheça as Casas | 10 | cozinha_completa-capa | Cozinha | title | (tags? ⚠️) | ⚠️ revisar |
-| 5 | Conheça as Casas | 14 | area_jantar-capa | Área de jantar | title | (tags? ⚠️) | ⚠️ revisar |
-| 6 | Conheça as Casas | 20 | quarto-capa | Quarto | title | (tags? ⚠️) | ⚠️ revisar |
-| 7 | Conheça as Casas | 30 | banheiro_completo-capa | Banheiro | title | (tags? ⚠️) | ⚠️ revisar |
-| 8 | Conheça as Casas | 38 | lavabo-capa | Lavabo | title | — | ⚠️ revisar |
-| 9 | Conheça as Casas | 40 | quintal-capa | Quintal | title | — | ⚠️ revisar |
-| 10 | Conheça as Casas | 45 | patio-capa | Pátio | title | — | ⚠️ revisar |
-| 11 | Conheça as Casas | 57 | piscina-capa | Piscina | title | (tags? ⚠️) | ⚠️ revisar |
-| 12 | Café da Manhã | 0 | capa-cafe-da-manha | Café da Manhã | title | (intro? ⚠️) | ⚠️ revisar |
-| 13 | Área de Lazer | 0 | capa | Área de Lazer | title | (intro? ⚠️) | ⚠️ revisar |
-| 14 | Praias e Passeios | 0 | capa | Praias e Passeios | title | (intro? ⚠️) | ⚠️ revisar |
-| 15 | Praias e Passeios | 1 | capapatacho | Praia do Patacho | title | (intro? ⚠️) | ⚠️ revisar |
-| 16 | Praias e Passeios | 11 | capaPraiadalaje | Praia da Laje | title | (intro? ⚠️) | ⚠️ revisar |
-| 17 | Praias e Passeios | 12 | capaPasseiosdejangada | Passeios de Jangada | title | (intro? ⚠️) | ⚠️ revisar |
-| 18 | Praias e Passeios | 13 | capaVisitaSantuario | Visita ao Santuário | title | (intro? ⚠️) | ⚠️ revisar |
-| 19 | Praias e Passeios | 14 | capaFarolPortoDepedras | Farol de Porto de Pedras | title | (intro? ⚠️) | ⚠️ revisar |
-| 20 | Praias e Passeios | 15 | capaTatuamunha | Tatuamunha | title | (intro? ⚠️) | ⚠️ revisar |
+| # | Galeria | frame (Figma) | Título | Variante | Status |
+|---|---------|---------------|--------|----------|--------|
+| 1 | Conheça as Casas | sobre-as-casas-1 | As Casas | intro | ✓ Figma |
+| 2 | Conheça as Casas | entrada-capa | Entrada | title | ✓ Figma |
+| 3 | Conheça as Casas | sala_estar-capa | Sala de estar | tags | ✓ print |
+| 4 | Conheça as Casas | cozinha_completa-capa | Cozinha Completa | tags | ✓ Figma ⚠️ (2 tags estranhas) |
+| 5 | Conheça as Casas | area_jantar-capa | Área de Jantar | tags | ✓ Figma |
+| 6 | Conheça as Casas | quarto-capa | Quarto | tags | ✓ Figma |
+| 7 | Conheça as Casas | banheiro_completo-capa | Banheiro Completo | tags | ✓ Figma |
+| 8 | Conheça as Casas | lavabo-capa | Lavabo | tags | ✓ Figma |
+| 9 | Conheça as Casas | quintal-capa | Quintal | tags | ✓ Figma |
+| 10 | Conheça as Casas | patio-capa | Pátio | tags | ✓ Figma ⚠️ (confirmar) |
+| 11 | Conheça as Casas | piscina-capa | Piscina | tags | ✓ Figma |
+| 12 | Café da Manhã | capa-cafe-da-manha | Café da Manhã | intro | ✓ Figma |
+| 13 | Área de Lazer | capa | Área de Lazer | intro? | ⚠️ falta conteúdo |
+| 14 | Praias e Passeios | capa | Praias e Passeios | especial? | ⚠️ 6 botões (layout?) |
+| 15 | Praias e Passeios | capapatacho | Praia do Patacho | intro | ✓ Figma |
+| 16 | Praias e Passeios | capaPraiadalaje | Praia da Laje | intro | ✓ Figma |
+| 17 | Praias e Passeios | capaPasseiosdejangada | Passeios de Jangada | intro | ✓ Figma |
+| 18 | Praias e Passeios | capaVisitaSantuario | Visita ao Santuário | title? | ⚠️ falta conteúdo |
+| 19 | Praias e Passeios | capaFarolPortoDepedras | Farol de Porto de Pedras | intro | ✓ Figma |
+| 20 | Praias e Passeios | capaTatuamunha | Tatuamunha | intro | ⚠️ texto = dup do Farol |
 
-> ⚠️ Os índices (`idx`) valem para o estado atual do `galleries.js` e serão
-> reconfirmados na implementação (arquivo é a fonte da verdade).
+### Conteúdo PT extraído do Figma
 
-### Conteúdo transcrito (card 1 — As Casas, intro)
+**1. As Casas** (intro, 2 parágrafos):
+> "Situada em Porto de Pedras, a Pousada Casas Boutique Ella & Nina no Patacho oferece acomodações com Wi-Fi gratuito, ar-condicionado, área de praia privativa e acesso a um jardim com piscina ao ar livre aberta o ano todo. A propriedade tem vista do jardim e do pátio interno, e fica a 1,9 km da Praia do Patacho. A acomodação oferece serviço de limpeza e check-in e check-out privativos."
+>
+> "Esta villa espaçosa dispõe de 1 quarto, 2 banheiros, roupa de cama, toalhas, TV de tela plana com serviços de streaming, área para refeições, cozinha totalmente equipada e varanda com vista da piscina. Esta villa também inclui uma varanda térrea que funciona como área para refeições ao ar livre. Um closet, serviço de lavanderia e segurança durante todo o dia também estão disponíveis."
 
-Parágrafo 1: "Situada em Porto de Pedras, a Pousada Casas Boutique Ella & Nina no
-Patacho oferece acomodações com Wi-Fi gratuito, ar-condicionado, área de praia
-privativa e acesso a um jardim com piscina ao ar livre aberta o ano todo. A
-propriedade tem vista do jardim e do pátio interno, e fica a 1,9 km da Praia do
-Patacho. A acomodação oferece serviço de limpeza e check-in e check-out privativos."
+**2. Entrada** — title (só título).
 
-Parágrafo 2: "Esta villa espaçosa dispõe de 1 quarto, 2 banheiros, roupa de cama,
-toalhas, TV de tela plana com serviços de streaming, área para refeições, cozinha
-totalmente equipada e varanda com vista da piscina. Esta villa também inclui uma
-varanda térrea que funciona como área para refeições ao ar livre. Um closet,
-serviço de lavanderia e segurança durante todo o dia também estão disponíveis."
+**3. Sala de estar** — tags: TV · Ar-condicionado · Livros e material de leitura · Sistema de som.
 
-> **Ação do usuário:** revisar títulos, decidir variante (title/intro/tags) de
-> cada ⚠️ e fornecer o texto de intro/tags onde aplicável. Muitos covers da
-> galeria 4 (passeios) podem ter texto descritivo embutido que a IA não viu.
+**4. Cozinha Completa** — tags: Assadeira · Cafeteira · Forno · Chaleira de água quente · Freezer · Itens básicos de cozinha · Fogão · Taças de vinho · Microondas · Refrigerador · Louças e talheres · Utensílios para churrasco · Liquidificador · ⚠️~~Livros e material de leitura~~ · ⚠️~~Café~~ *(essas 2 parecem resíduo de outro card — confirmar remoção)*.
+
+**5. Área de Jantar** — tags: Taças de vinho · Mesa de jantar.
+
+**6. Quarto** — tags: Cama king · Ar-condicionado · Aquecimento · TV · Cabides · Cobertores e travesseiros extras · Roupa de cama · Ferro de passar · Local para guardar as roupas.
+
+**7. Banheiro Completo** — tags: Água quente · Produtos de limpeza · Sabonete para o corpo.
+
+**8. Lavabo** — tags: Produtos de limpeza.
+
+**9. Quintal** — tags: Cadeira espreguiçadeira · Área de jantar externa · Móveis externos · Chuveiro externo · Churrasqueira · Rede.
+
+**10. Pátio** — tags: Iluminação noturna. ⚠️ *(só 1 tag; confirmar se é isso ou title-only)*
+
+**11. Piscina** — tags: Cadeira espreguiçadeira · Rede.
+
+**12. Café da Manhã** (intro, 2 parágrafos):
+> "Opções de café da manhã à la carte e continental com pratos quentes, itens de confeitaria frescos e frutas estão disponíveis diariamente na villa."
+>
+> "Você pode aproveitar o clima quente com a churrasqueira da propriedade, economizando uma viagem ao supermercado, solicitando entrega de supermercado."
+
+**13. Área de Lazer** — ⚠️ no Figma as camadas estão como "Descrição" (placeholder). **Falta o conteúdo real** (intro? tags?).
+
+**14. Praias e Passeios (capa)** — ⚠️ tem **6 "Button Text"** — parece um cover especial (botões/navegação p/ os passeios), não um card simples. **Definir layout/conteúdo.**
+
+**15. Praia do Patacho** — intro: "Eleita uma das praias mais bonitas do Brasil, bandeira azul."
+
+**16. Praia da Laje** — intro: "Conhecida pelas águas cristalinas e tranquilidade."
+
+**17. Passeios de Jangada** — intro: "Passeio imperdível".
+
+**18. Visita ao Santuário** — ⚠️ sem texto capturado. **Falta conteúdo** (título/intro).
+
+**19. Farol de Porto de Pedras** — intro: "Uma vista incrível do alto entre Rio Manguaba e a praia."
+
+**20. Tatuamunha** — ⚠️ no Figma está com o **mesmo texto do Farol** ("Uma vista incrível…") — provável copy-paste. **Fornecer o texto correto.**
+
+> **Pendências do usuário (⚠️):** (4) confirmar remoção de 2 tags da cozinha ·
+> (10) confirmar Pátio · (13) conteúdo da Área de Lazer · (14) layout/conteúdo
+> do cover de Praias · (18) conteúdo do Santuário · (20) texto de Tatuamunha ·
+> **+ decisão foto de fundo vs. navy** (topo do doc).
 
 ## Modelo de dados (`galleries.js` — fonte PT)
 
