@@ -424,12 +424,11 @@ const galleries = [
     description:
       "Ambientes aconchegantes e funcionais que combinam estilo e modernidade. Viva momentos únicos em cada espaço cuidadosamente planejado.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-2/capa-cafe-da-manha-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-2/capa-cafe-da-manha-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "intro", title: "Café da Manhã",
+        intro: [
+          "Opções de café da manhã à la carte e continental com pratos quentes, itens de confeitaria frescos e frutas estão disponíveis diariamente na villa.",
+          "Você pode aproveitar o clima quente com a churrasqueira da propriedade, economizando uma viagem ao supermercado, solicitando entrega de supermercado.",
+        ] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-2/cafe-1-p.jpg",
@@ -530,12 +529,7 @@ const galleries = [
     description:
       "Relaxe e se divirta em nossa área de lazer privativa, projetada para oferecer momentos de descanso com vista para a beleza natural ao seu redor.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-3/capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-3/capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "title", title: "Área de Lazer" },
       {
         type: "image",
         url: "/midias/gallery/gallerie-3/kit-cadeirapraia-1-p.jpg",
@@ -690,18 +684,17 @@ const galleries = [
     description:
       "Desfrute de momentos únicos ao redor da mesa. Nossa cozinha e espaço para refeições foram pensados para criar memórias saborosas.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capa-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capapatacho-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capapatacho-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "nav", title: "Lugares para Conhecer",
+        links: [
+          { label: "Praia do Patacho", target: "patacho" },
+          { label: "Praia da Laje", target: "praia-da-laje" },
+          { label: "Passeios de Jangada", target: "passeios-jangada" },
+          { label: "Visita ao Santuário", target: "visita-santuario" },
+          { label: "Farol de Porto de Pedras", target: "farol" },
+          { label: "Tatuamunha", target: "tatuamunha" },
+        ] },
+      { type: "card", variant: "intro", title: "Praia do Patacho", slug: "patacho",
+        intro: ["Eleita uma das praias mais bonitas do Brasil, bandeira azul."] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-4/patacho-1-a-p.jpg",
@@ -756,36 +749,15 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-4/patacho-8-blur.jpg",
         description: "",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaPraiadalaje-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaPraiadalaje-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaPasseiosdejangada-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaPasseiosdejangada-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaVisitaSantuario-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaVisitaSantuario-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaFarolPortoDepedras-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaFarolPortoDepedras-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaTatuamunha-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaTatuamunha-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "intro", title: "Praia da Laje", slug: "praia-da-laje",
+        intro: ["Conhecida pelas águas cristalinas e tranquilidade."] },
+      { type: "card", variant: "intro", title: "Passeios de Jangada", slug: "passeios-jangada",
+        intro: ["Passeio imperdível."] },
+      { type: "card", variant: "title", title: "Visita ao Santuário do Peixe-Boi", slug: "visita-santuario" },
+      { type: "card", variant: "intro", title: "Farol de Porto de Pedras", slug: "farol",
+        intro: ["Uma vista incrível do alto entre Rio Manguaba e a praia."] },
+      { type: "card", variant: "intro", title: "Tatuamunha", slug: "tatuamunha",
+        intro: ["Encontro do Rio com Mar."] },
     ],
   },
 ];
