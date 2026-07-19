@@ -58,7 +58,7 @@ export default function GuideDownloadPage() {
               src="/downloads/guia-portas-abertas/cover.png"
               width={500}
               height={500}
-              alt=""
+              alt="Capa do guia Portas Abertas das Casas Ella e Nina"
               priority
             />
           </div>
