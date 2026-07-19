@@ -27,12 +27,9 @@ reexportar imagem.
 
 ## Decisões (confirmadas com o usuário)
 
-- **Fundo:** ~~gradiente navy sutil (sem foto)~~ → **⚠️ REABRIR.** Ao ler o
-  Figma, descobri que os cards são **desenhados com foto de fundo** (mesmo
-  overlay/gradiente do hero) e o `get_design_context` entrega a **URL da foto
-  limpa**. Ou seja, manter a foto virou fácil. Decisão pendente do usuário:
-  (a) manter a foto do Figma (fiel ao design) ou (b) navy sólido/gradiente.
-  A arquitetura do `CardSlide` suporta os dois (foto é opcional).
+- **Fundo:** ✅ **navy com gradiente, sem foto** (confirmado). Reaproveita a
+  pilha do Figma **menos a imagem**: base `#254174` + Overlay `rgba(79,70,229,.7)`
+  + Gradiente `from-black/80 to-black/50`. (Não baixar as fotos dos cards.)
 - **Estrutura de conteúdo:** Abordagem 1 — `card` como novo tipo de mídia no
   `galleries.js` (fonte PT) + traduções no `translations.js` existente (tGallery).
 - **Conteúdo:** extraído direto do Figma (ver tabela). O usuário só revisa/completa
@@ -75,14 +72,14 @@ Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]
 | 10 | Conheça as Casas | patio-capa | Pátio | tags | ✓ Figma ⚠️ (confirmar) |
 | 11 | Conheça as Casas | piscina-capa | Piscina | tags | ✓ Figma |
 | 12 | Café da Manhã | capa-cafe-da-manha | Café da Manhã | intro | ✓ Figma |
-| 13 | Área de Lazer | capa | Área de Lazer | intro? | ⚠️ falta conteúdo |
-| 14 | Praias e Passeios | capa | Praias e Passeios | especial? | ⚠️ 6 botões (layout?) |
+| 13 | Área de Lazer | capa | Área de Lazer | title | ✓ |
+| 14 | Praias e Passeios | capa | Praias e Passeios | **nav** | ✓ (6 âncoras) |
 | 15 | Praias e Passeios | capapatacho | Praia do Patacho | intro | ✓ Figma |
 | 16 | Praias e Passeios | capaPraiadalaje | Praia da Laje | intro | ✓ Figma |
 | 17 | Praias e Passeios | capaPasseiosdejangada | Passeios de Jangada | intro | ✓ Figma |
-| 18 | Praias e Passeios | capaVisitaSantuario | Visita ao Santuário | title? | ⚠️ falta conteúdo |
+| 18 | Praias e Passeios | capaVisitaSantuario | Visita ao Santuário | title | intro pendente (cliente) |
 | 19 | Praias e Passeios | capaFarolPortoDepedras | Farol de Porto de Pedras | intro | ✓ Figma |
-| 20 | Praias e Passeios | capaTatuamunha | Tatuamunha | intro | ⚠️ texto = dup do Farol |
+| 20 | Praias e Passeios | capaTatuamunha | Tatuamunha | title | intro pendente (cliente) |
 
 ### Conteúdo PT extraído do Figma
 
@@ -95,7 +92,7 @@ Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]
 
 **3. Sala de estar** — tags: TV · Ar-condicionado · Livros e material de leitura · Sistema de som.
 
-**4. Cozinha Completa** — tags: Assadeira · Cafeteira · Forno · Chaleira de água quente · Freezer · Itens básicos de cozinha · Fogão · Taças de vinho · Microondas · Refrigerador · Louças e talheres · Utensílios para churrasco · Liquidificador · ⚠️~~Livros e material de leitura~~ · ⚠️~~Café~~ *(essas 2 parecem resíduo de outro card — confirmar remoção)*.
+**4. Cozinha Completa** — tags: Assadeira · Cafeteira · Forno · **Livros de culinária** · Café · Chaleira de água quente · Freezer · Itens básicos de cozinha · Fogão · Taças de vinho · Microondas · Refrigerador · Louças e talheres · Utensílios para churrasco · Liquidificador. *(✓ "Livros e material de leitura" corrigido p/ "Livros de culinária"; "Café" mantido.)*
 
 **5. Área de Jantar** — tags: Taças de vinho · Mesa de jantar.
 
@@ -107,7 +104,7 @@ Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]
 
 **9. Quintal** — tags: Cadeira espreguiçadeira · Área de jantar externa · Móveis externos · Chuveiro externo · Churrasqueira · Rede.
 
-**10. Pátio** — tags: Iluminação noturna. ⚠️ *(só 1 tag; confirmar se é isso ou title-only)*
+**10. Pátio** — tags: Iluminação noturna. ✓
 
 **11. Piscina** — tags: Cadeira espreguiçadeira · Rede.
 
@@ -116,9 +113,10 @@ Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]
 >
 > "Você pode aproveitar o clima quente com a churrasqueira da propriedade, economizando uma viagem ao supermercado, solicitando entrega de supermercado."
 
-**13. Área de Lazer** — ⚠️ no Figma as camadas estão como "Descrição" (placeholder). **Falta o conteúdo real** (intro? tags?).
+**13. Área de Lazer** — title (só título, sem descrição). ✓
 
-**14. Praias e Passeios (capa)** — ⚠️ tem **6 "Button Text"** — parece um cover especial (botões/navegação p/ os passeios), não um card simples. **Definir layout/conteúdo.**
+**14. Praias e Passeios (capa)** — **variante `nav`** (nova): título "Praias e Passeios" + 6 botões-âncora que dão `slideTo` na capa de cada passeio do carrossel:
+Praia do Patacho · Praia da Laje · Passeios de Jangada · Visita ao Santuário · Farol de Porto de Pedras · Tatuamunha.
 
 **15. Praia do Patacho** — intro: "Eleita uma das praias mais bonitas do Brasil, bandeira azul."
 
@@ -126,16 +124,15 @@ Todos os cards capa compartilham o mesmo layout (frame 480×852, `rounded-[12px]
 
 **17. Passeios de Jangada** — intro: "Passeio imperdível".
 
-**18. Visita ao Santuário** — ⚠️ sem texto capturado. **Falta conteúdo** (título/intro).
+**18. Visita ao Santuário** — title por enquanto. Intro **pendente** (o usuário vai pegar texto/imagens com a cliente e adicionamos depois).
 
 **19. Farol de Porto de Pedras** — intro: "Uma vista incrível do alto entre Rio Manguaba e a praia."
 
-**20. Tatuamunha** — ⚠️ no Figma está com o **mesmo texto do Farol** ("Uma vista incrível…") — provável copy-paste. **Fornecer o texto correto.**
+**20. Tatuamunha** — title por enquanto (o texto do Figma era dup do Farol). Intro **pendente** (texto/imagens virão da cliente).
 
-> **Pendências do usuário (⚠️):** (4) confirmar remoção de 2 tags da cozinha ·
-> (10) confirmar Pátio · (13) conteúdo da Área de Lazer · (14) layout/conteúdo
-> do cover de Praias · (18) conteúdo do Santuário · (20) texto de Tatuamunha ·
-> **+ decisão foto de fundo vs. navy** (topo do doc).
+> **Pendente (não bloqueia a implementação):** textos de intro do Santuário (18)
+> e Tatuamunha (20) + fotos dos passeios — virão da cliente e serão adicionados
+> depois (cards entram como title; conteúdo é só acrescentar depois).
 
 ## Modelo de dados (`galleries.js` — fonte PT)
 
@@ -152,11 +149,24 @@ Cada card capa deixa de ser `{ type:"image", url, blurUrl, description }` e pass
 // variante tags
 { type: "card", variant: "tags", title: "Sala de estar",
   tags: ["TV", "Ar-condicionado", "Livros e material de leitura", "Sistema de som"] }
+
+// variante nav — botões-âncora que dão slideTo em outra capa do carrossel
+{ type: "card", variant: "nav", title: "Praias e Passeios",
+  slug: "praias-index",
+  links: [ { label: "Praia do Patacho", target: "patacho" },
+           { label: "Praia da Laje", target: "praia-da-laje" }, /* … */ ] }
+
+// capas-alvo do nav ganham um `slug` para serem referenciadas
+{ type: "card", variant: "intro", title: "Praia do Patacho", slug: "patacho",
+  intro: ["Eleita uma das praias mais bonitas do Brasil, bandeira azul."] }
 ```
 
 - `intro` é um array de parágrafos (0..n).
 - `tags` é um array de strings.
 - `title` sempre presente.
+- `links` (só na variante `nav`): `{ label, target }`; `target` casa com o
+  `slug` de outra card. O `ModalContent` monta um mapa `slug → índice` e o botão
+  chama `swiper.slideTo(índice)`.
 
 ## Componente `CardSlide` (novo)
 
@@ -170,10 +180,13 @@ Arquivo: `src/app/blocks/HighlightsSection/CardSlide.js`.
 - **Variantes:**
   - `title`: só o título.
   - `intro`: título + parágrafos (fonte corpo, `text-white/80`, `space-y-*`).
-  - `tags`: título + pills empilhadas — cada pill `rounded`, `bg-white/10`,
-    borda sutil, `text-white/85`, alinhadas à esquerda (igual ao print).
-- **A11y:** `role="img"` + `aria-label` com o título (e resumo p/ tags), como o
-  `ImageSlide`.
+  - `tags`: título + pills (`flex-wrap gap-6`) — `bg-[rgba(30,52,93,.3)]`,
+    `rounded-[4px] px-3.5 py-2`, texto Sora `#A5B4FC`.
+  - `nav`: título + botões-âncora (mesma estética das pills, porém clicáveis)
+    que chamam `onNavigate(target)` → `swiper.slideTo`. Recebe o callback do
+    `ModalContent`.
+- **A11y:** `title/intro/tags` = `role="img"` + `aria-label` (como `ImageSlide`);
+  `nav` usa `<button>`s reais com texto.
 - Sem badge de ícone (diferente de foto/vídeo).
 
 ## Integração (`ModalContent.js`)
@@ -187,9 +200,14 @@ media.type === "card" ? (
     title={tGallery(media.title, locale)}
     intro={(media.intro || []).map((p) => tGallery(p, locale))}
     tags={(media.tags || []).map((tag) => tGallery(tag, locale))}
+    links={(media.links || []).map((l) => ({ ...l, label: tGallery(l.label, locale) }))}
+    onNavigate={(target) => { const i = slugIndex[target]; if (i != null) swiperInstance?.slideTo(i); }}
   />
 ) : media.type === "video" ? ( … ) : ( … )
 ```
+
+- `slugIndex`: mapa `slug → índice` montado a partir de `gallery.media`
+  (`media.forEach((m,i) => { if (m.slug) slugIndex[m.slug]=i })`).
 
 ## Tradução (`translations.js` — tGallery)
 
