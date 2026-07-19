@@ -8,10 +8,13 @@ const galleries = [
       "Descubra o equilíbrio perfeito entre charme, conforto e exclusividade. Nossa casa boutique foi projetada para proporcionar uma experiência inesquecível em cada detalhe.",
     media: [
       {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/sobre-as-casas-1-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/sobre-as-casas-1-blur.jpg",
-        description: "",
+        type: "card",
+        variant: "intro",
+        title: "As Casas",
+        intro: [
+          "Situada em Porto de Pedras, a Pousada Casas Boutique Ella & Nina no Patacho oferece acomodações com Wi-Fi gratuito, ar-condicionado, área de praia privativa e acesso a um jardim com piscina ao ar livre aberta o ano todo. A propriedade tem vista do jardim e do pátio interno, e fica a 1,9 km da Praia do Patacho. A acomodação oferece serviço de limpeza e check-in e check-out privativos.",
+          "Esta villa espaçosa dispõe de 1 quarto, 2 banheiros, roupa de cama, toalhas, TV de tela plana com serviços de streaming, área para refeições, cozinha totalmente equipada e varanda com vista da piscina. Esta villa também inclui uma varanda térrea que funciona como área para refeições ao ar livre. Um closet, serviço de lavanderia e segurança durante todo o dia também estão disponíveis.",
+        ],
       },
       {
         type: "image",
