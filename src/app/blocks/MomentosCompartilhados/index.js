@@ -21,7 +21,7 @@ export default function MomentosCompartilhados() {
 
             <p className="space-y-1">
               <span className="text-gray-500 lg:flex">{t("lead")}</span>
-              <span className="text-gray-800 mx-2 lg:mx-0 lg:flex ">
+              <span className="text-gray-800 mx-1 lg:mx-0 lg:flex ">
                 {t("seguirAntes")}
                 <Link
                   className=" mx-1 underline underline-offset-4  text-blue-800 transition-all "

@@ -55,9 +55,7 @@ export default function Ambientes() {
 
           <p className="text-gray-500  space-y-1  ">
             <span className="lg:flex">{t("introP1")}</span>
-            <span className="text-gray-800 mx-2 lg:flex lg:mx-0">
-              {t("introP2")}
-            </span>
+            <span className="text-gray-800 mx-1 lg:flex lg:mx-0">{t("introP2")}</span>
             <span className="lg:flex">{t("introP3")}</span>
           </p>
         </div>
