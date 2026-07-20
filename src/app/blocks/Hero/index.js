@@ -63,7 +63,7 @@ export default function Hero() {
       <div className="z-10 max-w-screen-lg mx-auto text-gray-600 gap-x-12 items-center justify overflow-hidden md:flex md:px-8 flex-1  __bg-white/10 rounded-md mt-10 py-10">
         <div className="max-w-screen-lg">
           <div className="flex-none space-y-5 px-4 md:px-6  justify-center ">
-            <div className="mx-auto py-40 md:py-52 px-4 md:px-6 text-center">
+            <div className="mx-auto pt-12 pb-40 md:pt-16 md:pb-52 px-4 md:px-6 text-center">
               <h1 className="m-0">
                 <Image
                   width={500}
