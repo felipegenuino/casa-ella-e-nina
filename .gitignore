@@ -48,3 +48,6 @@ public/midias/videos/*
 !public/midias/videos/*.js
 !public/midias/videos/*.ts
 public/_next-video
+
+# Windows "mark of the web" (alternate data stream) — lixo, quebra FTP
+*:Zone.Identifier
