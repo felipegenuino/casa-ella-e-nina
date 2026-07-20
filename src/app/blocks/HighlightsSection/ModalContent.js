@@ -118,6 +118,8 @@ const ModalContent = ({ gallery, closeModal }) => {
         <Swiper
           id="swiper-gallery"
           slidesPerView={1.4}
+          slidesOffsetBefore={48}
+          slidesOffsetAfter={48}
           spaceBetween={20}
           breakpoints={{
             768: { slidesPerView: 3 },
