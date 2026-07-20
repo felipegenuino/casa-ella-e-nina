@@ -12,8 +12,11 @@
   `pt/ en/ es/` (páginas + assets). `trailingSlash: true` gera `pasta/index.html`,
   que o Apache serve sem depender de MultiViews.
 - **CI/CD:** `.github/workflows/deploy.yml` — a cada `push` na `main` (ou disparo
-  manual em *Actions*): `pnpm install` → `pnpm build` → upload via FTPS com
-  `SamKirkland/FTP-Deploy-Action@v4.3.5`.
+  manual em *Actions*): `pnpm install` → `pnpm build` → upload via **SFTP** com
+  `wlixcc/SFTP-Deploy-Action@v1.2.5` (porta **2222** na HostGator shared).
+  > **Por que SFTP e não FTPS:** o FTPS da HostGator derruba a conexão no meio de
+  > uploads grandes (`SSL alert 50 / tlsv1 alert decode error` no socket de dados)
+  > — falhou 3× em pontos diferentes. SFTP (sobre SSH) é criptografado e estável.
 - **`.htaccess`** (`public/.htaccess`, copiado ao `out/` no build): HTTPS forçado,
   `www` → sem-www, headers de segurança, compressão, cache, `ErrorDocument 404`
   e o redirect da raiz `^$ /pt/ [R=302,L]`.
@@ -28,18 +31,24 @@ no seletor de idioma do menu. Páginas `/pt /en /es` são estáticas
 
 ## Configuração no GitHub (feita uma vez)
 
+**Pré-requisito:** SSH/SFTP habilitado no cPanel da HostGator (cPanel → **SSH Access**;
+em alguns planos precisa pedir ativação ao suporte).
+
 Em **Settings → Secrets and variables → Actions → New repository secret**, criar:
 
-| Secret         | Valor (do painel/FTP do HostGator)        |
-| -------------- | ----------------------------------------- |
-| `FTP_SERVER`   | host FTP (ex.: `ftp.casasboutiquepatacho.com.br` ou o IP/host do cPanel) |
-| `FTP_USERNAME` | usuário FTP                               |
-| `FTP_PASSWORD` | senha FTP                                 |
+| Secret         | Valor                                              |
+| -------------- | -------------------------------------------------- |
+| `SSH_HOST`     | host SSH (ex.: `br36.hostgator.com.br` ou o domínio) |
+| `SSH_USERNAME` | usuário SSH/cPanel                                  |
+| `SSH_PASSWORD` | senha SSH (ou usar chave via `ssh_private_key`)     |
 
 ⚠️ **Nunca** commitar credenciais — só nos Secrets do repo.
 
-- **Destino no servidor (`server-dir`):** `./public_html/casasboutiquepatacho.com.br/`
-- **Protocolo:** `ftps` (se der erro de conexão, trocar para `ftp` no `deploy.yml`).
+- **Porta:** `2222` (HostGator shared; já fixa no `deploy.yml`).
+- **Destino (`remote_path`):** `./public_html/casasboutiquepatacho.com.br` (relativo à home).
+- Se a HostGator recusar login por senha via SSH, trocar para **chave**: gerar par,
+  registrar a pública no cPanel (SSH Access → Manage Keys) e pôr a privada no secret
+  `SSH_PRIVATE_KEY`, ajustando o `deploy.yml` para `ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}`.
 
 ## Publicar
 

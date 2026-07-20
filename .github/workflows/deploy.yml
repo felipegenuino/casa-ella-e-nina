@@ -34,13 +34,16 @@ jobs:
       - name: Build static site (pt/en/es)
         run: pnpm build # next build + export -> ./out
 
-      - name: Deploy FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy SFTP
+        # O FTPS da HostGator é instável (SSL alert 50 no socket de dados);
+        # SFTP (SSH) é criptografado e estável.
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps # se der erro de conexão, troque para "ftp"
-          local-dir: ./out/
-          # Diretório do site no servidor (o usuário FTP costuma cair na home).
-          server-dir: ./public_html/casasboutiquepatacho.com.br/
+          server: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }} # ou troque por ssh_private_key
+          port: 2222 # HostGator shared usa 2222 (não 22)
+          local_path: "./out/*"
+          # Caminho relativo à home do login SSH (mesma lógica do FTP).
+          remote_path: "./public_html/casasboutiquepatacho.com.br"
+          sftp_only: "true"
