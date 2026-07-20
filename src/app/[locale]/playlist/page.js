@@ -1,3 +1,5 @@
+import { setRequestLocale, getTranslations } from "next-intl/server";
+
 export const metadata = {
   metadataBase: new URL("https://casasboutiquepatacho.com.br"),
   title: "Curta a Trilha Sonora | Casa Boutique Ella e Nina",
@@ -29,7 +31,10 @@ export const metadata = {
   },
 };
 
-export default function PlaylistsPage() {
+export default async function PlaylistsPage({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "playlist" });
   return (
     <div
       className="min-h-screen  px-4 sm:px-6 lg:px-8 
@@ -39,12 +44,10 @@ export default function PlaylistsPage() {
     >
       <header className="text-center mb-12">
         <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl lg:text-6xl">
-          Curta a Trilha Sonora
+          {t("title")}
         </h1>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-          As melhores músicas para acompanhar sua experiência na Casa Boutique.
-          Conheça as playlists exclusivas inspiradas em Nina Simone e Ella
-          Fitzgerald.
+          {t("subtitle")}
         </p>
       </header>
 
@@ -68,7 +71,7 @@ export default function PlaylistsPage() {
             rel="noopener noreferrer"
             className="mt-4 button-primary"
           >
-            Ouvir no Spotify
+            {t("listen")}
           </a>
         </section>
 
@@ -91,7 +94,7 @@ export default function PlaylistsPage() {
             rel="noopener noreferrer"
             className="mt-4 button-primary"
           >
-            Ouvir no Spotify
+            {t("listen")}
           </a>
         </section>
       </main>

@@ -521,5 +521,10 @@
     "close": "Close",
     "closeGalleryLabel": "Close gallery",
     "imageFallbackAlt": "Gallery image"
+  },
+  "playlist": {
+    "title": "Enjoy the Soundtrack",
+    "subtitle": "The best music to accompany your experience at the boutique house. Discover the exclusive playlists inspired by Nina Simone and Ella Fitzgerald.",
+    "listen": "Listen on Spotify"
   }
 }

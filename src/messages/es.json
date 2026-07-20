@@ -521,5 +521,10 @@
     "close": "Cerrar",
     "closeGalleryLabel": "Cerrar galería",
     "imageFallbackAlt": "Imagen de la galería"
+  },
+  "playlist": {
+    "title": "Disfruta la Banda Sonora",
+    "subtitle": "La mejor música para acompañar tu experiencia en la casa boutique. Descubre las playlists exclusivas inspiradas en Nina Simone y Ella Fitzgerald.",
+    "listen": "Escuchar en Spotify"
   }
 }

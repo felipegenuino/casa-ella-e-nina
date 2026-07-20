@@ -521,5 +521,10 @@
     "close": "Fechar",
     "closeGalleryLabel": "Fechar galeria",
     "imageFallbackAlt": "Imagem da galeria"
+  },
+  "playlist": {
+    "title": "Curta a Trilha Sonora",
+    "subtitle": "As melhores músicas para acompanhar sua experiência na Casa Boutique. Conheça as playlists exclusivas inspiradas em Nina Simone e Ella Fitzgerald.",
+    "listen": "Ouvir no Spotify"
   }
 }
