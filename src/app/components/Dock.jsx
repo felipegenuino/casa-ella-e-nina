@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
 const SECTIONS = [
+  { id: "hero", key: "inicio" },
   { id: "ambientes", key: "ambientes" },
   { id: "comodidades", key: "comodidades" },
   { id: "historias", key: "avaliacoes" },

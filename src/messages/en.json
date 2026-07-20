@@ -496,9 +496,11 @@
     "costBenefit": "Value",
     "carouselAriaLabel": "Guest reviews",
     "photoAlt": "Photo of {name}",
-    "ratingAriaLabel": "{rating} out of 5 stars"
+    "ratingAriaLabel": "{rating} out of 5 stars",
+    "translatedNote": "Translated from Portuguese"
   },
   "dock": {
+    "inicio": "Home",
     "menu": "Menu",
     "cta": "Book now",
     "langLabel": "Select language",

@@ -496,9 +496,11 @@
     "costBenefit": "Relación calidad-precio",
     "carouselAriaLabel": "Reseñas de huéspedes",
     "photoAlt": "Foto de {name}",
-    "ratingAriaLabel": "{rating} de 5 estrellas"
+    "ratingAriaLabel": "{rating} de 5 estrellas",
+    "translatedNote": "Traducido del portugués"
   },
   "dock": {
+    "inicio": "Inicio",
     "menu": "Menú",
     "cta": "Reservar",
     "langLabel": "Seleccionar idioma",
