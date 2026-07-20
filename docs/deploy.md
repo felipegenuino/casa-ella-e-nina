@@ -1,93 +1,58 @@
 # Deploy — Casa Ella & Nina
 
-> Documento de planejamento. **O deploy ainda NÃO está configurado** para a
-> arquitetura atual. Este doc registra o plano; a execução fica para depois
-> (prioridade atual: cards capa traduzíveis).
+> ✅ **Deploy configurado** (20/07/2026). Espelha o rtamundi
+> (`rta-brasil-sudeste-2026`): site estático + GitHub Actions → FTPS pro HostGator.
+> A única diferença é o `server-dir` (diretório do projeto no servidor).
 
-## Situação atual (⚠️ inconsistente)
+## Como funciona
 
-- O **README.md** descreve deploy por **export estático** (`pnpm build` → `out/`
-  → `tar` → FTP/SFTP → `public_html/`). **Essa doc está desatualizada.**
-- Após a migração multilíngue (18/07), o projeto virou **Next.js dinâmico**:
-  - `next.config.mjs` **não tem** `output: "export"`.
-  - Existe `src/middleware.js` (roteamento de idioma `/` → `/pt`, geo-IP).
-  - `pnpm build` gera build de servidor (`.next`), **não** gera mais `out/`.
-- Consequência: **não dá pra subir estático pro HostGator** como o README diz —
-  o middleware não rodaria e o `/` não redirecionaria pro `/pt`.
-- A pasta `out/` versionada é resíduo da fase antiga.
+- **Host:** HostGator (Apache/LiteSpeed) — **não roda Node.js**, por isso o site
+  é publicado como **estático**.
+- **Build:** `next build` com `output: "export"` → gera `./out/` com
+  `pt/ en/ es/` (páginas + assets). `trailingSlash: true` gera `pasta/index.html`,
+  que o Apache serve sem depender de MultiViews.
+- **CI/CD:** `.github/workflows/deploy.yml` — a cada `push` na `main` (ou disparo
+  manual em *Actions*): `pnpm install` → `pnpm build` → upload via FTPS com
+  `SamKirkland/FTP-Deploy-Action@v4.3.5`.
+- **`.htaccess`** (`public/.htaccess`, copiado ao `out/` no build): HTTPS forçado,
+  `www` → sem-www, headers de segurança, compressão, cache, `ErrorDocument 404`
+  e o redirect da raiz `^$ /pt/ [R=302,L]`.
 
-## Padrão de referência: rtamundi (`rta-brasil-sudeste-2026`)
+### Redirect da raiz (`/` → `/pt/`)
 
-O outro projeto do Felipe já resolve deploy em shared hosting:
+O middleware (roteamento de idioma + geo-IP) **não roda** em hosting estático —
+`next build` só emite um aviso e o ignora. O geo-IP dependia de headers da Vercel
+de qualquer forma. Então a home cai em **pt** via `.htaccess`; o visitante troca
+no seletor de idioma do menu. Páginas `/pt /en /es` são estáticas
+(`generateStaticParams` no `[locale]/layout.js`).
 
-- **Host:** HostGator (Apache/LiteSpeed), site em `public_html/<domínio>/`.
-- **CI/CD:** GitHub Actions (`.github/workflows/deploy.yml`) — em `push` na `main`:
-  build → **upload via FTPS** com `SamKirkland/FTP-Deploy-Action@v4.3.5`,
-  secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
-- **`.htaccess`:** HTTPS forçado, `www` → sem-www, headers de segurança,
-  compressão, cache, `ErrorDocument 404`.
-- rtamundi é **estático** (build custom → `dist/`), por isso cabe no HostGator
-  (que **não roda Node.js**).
+## Configuração no GitHub (feita uma vez)
 
-## Detalhes confirmados
+Em **Settings → Secrets and variables → Actions → New repository secret**, criar:
 
-- **Domínio:** casasboutiquepatacho.com.br
-- **Destino no servidor (FTP `server-dir`):** `public_html/casasboutiquepatacho.com.br`
+| Secret         | Valor (do painel/FTP do HostGator)        |
+| -------------- | ----------------------------------------- |
+| `FTP_SERVER`   | host FTP (ex.: `ftp.casasboutiquepatacho.com.br` ou o IP/host do cPanel) |
+| `FTP_USERNAME` | usuário FTP                               |
+| `FTP_PASSWORD` | senha FTP                                 |
 
-## Plano para o Casa Ella & Nina (espelhar o rtamundi)
+⚠️ **Nunca** commitar credenciais — só nos Secrets do repo.
 
-Para deployar no HostGator via GitHub Actions FTPS, o site precisa voltar a ser
-**estático**. Passos:
+- **Destino no servidor (`server-dir`):** `./public_html/casasboutiquepatacho.com.br/`
+- **Protocolo:** `ftps` (se der erro de conexão, trocar para `ftp` no `deploy.yml`).
 
-1. **Reativar export estático** no `next.config.mjs`:
-   ```js
-   const nextConfig = {
-     output: "export",
-     images: { unoptimized: true }, // já está assim
-     // ...
-   };
-   ```
-   - `next-intl` funciona em static export via o `generateStaticParams` que já
-     existe em `[locale]/layout.js` + `setRequestLocale`.
-   - `pnpm build` volta a gerar `out/` (pastas `pt/ en/ es/` + assets).
+## Publicar
 
-2. **Redirect `/` → `/pt` sem middleware** (middleware não roda em hosting
-   estático). Opções:
-   - Regra no `.htaccess`: `RewriteRule ^$ /pt/ [R=302,L]`, ou
-   - `index.html` na raiz com redirect.
-   - Trade-off: perde-se o geo-IP; todo mundo cai no `/pt` e troca no seletor
-     de idioma (aceitável).
+1. Configurar os 3 Secrets acima (uma vez).
+2. `git push origin main` → a Action builda e sobe sozinha.
+3. Acompanhar em **Actions**. Ao terminar, conferir https://casasboutiquepatacho.com.br
+   (raiz → `/pt/`, trocar idioma, galerias/modal/dock nos 3 idiomas).
 
-3. **`.htaccess`** — adaptar o do rtamundi (HTTPS, www→sem-www, headers, cache,
-   404) + a regra de redirect do passo 2. Colocar em `public/.htaccess` para
-   ser copiado ao `out/` no build (confirmar que o export inclui).
-
-4. **GitHub Actions** — criar `.github/workflows/deploy.yml` espelhando o do
-   rtamundi:
-   - build: `pnpm install` + `pnpm build` (gera `out/`).
-   - deploy: `SamKirkland/FTP-Deploy-Action`, `local-dir: ./out/`,
-     `server-dir: ./public_html/casasboutiquepatacho.com.br/`,
-     `protocol: ftps`.
-   - Secrets no repo GitHub: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`
-     (⚠️ configurar em Settings → Secrets, nunca no código).
-
-5. **Verificar antes de publicar:**
-   - Todos os componentes client (swiper, react-modal, framer-motion,
-     react-scroll, next-intl) funcionam em static export.
-   - `/pt /en /es` abrem; `/` redireciona; galerias/modal e dock OK nos 3 idiomas.
-   - `next/image` já está `unoptimized` (necessário p/ export).
-   - Limpar a pasta `out/` versionada antiga (passar a ser artefato de build).
-
-## Alternativa: Vercel
-
-Se preferir manter a arquitetura dinâmica (middleware, geo-IP real), deployar na
-**Vercel** (grátis nesse porte, deploy via Git, middleware nativo) — sem HostGator
-e sem tornar estático. Não segue o padrão rtamundi, mas é o "modo Next" natural.
+Disparo manual: aba **Actions → Deploy via FTP → Run workflow**.
 
 ## Villa Canuí 118 (futuro)
 
-O projeto será **duplicado** para um segundo site — "Villa Canuí 118" (nova casa,
-conteúdo específico). O mesmo padrão de deploy se aplica: cada site tem seu
-próprio repo/Action, domínio, `server-dir` (`public_html/<domínio-canui>/`) e
-secrets FTP. Vale deixar o `deploy.yml` e o `.htaccess` parametrizáveis para
-facilitar a duplicação.
+O projeto será **duplicado** para um segundo site — "Villa Canuí 118". Mesmo
+padrão: repo próprio, seus Secrets FTP e `server-dir`
+(`public_html/<domínio-canui>/`). Basta copiar `deploy.yml` + `public/.htaccess`
+e trocar o `server-dir` e o domínio.

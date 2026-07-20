@@ -131,7 +131,7 @@ export default async function RelatorioPage({ params }) {
 
       <main className="mx-auto max-w-3xl px-6">
         {/* STATS */}
-        <div className="-mt-9 grid grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_22px_50px_rgba(30,27,75,0.15)] sm:grid-cols-4">
+        <div className="relative z-10 -mt-9 grid grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_22px_50px_rgba(30,27,75,0.15)] sm:grid-cols-4">
           {stats.map((s, i) => (
             <div key={i} className="border-gray-100 p-5 text-center [&:not(:last-child)]:border-r [&:nth-child(-n+2)]:border-b sm:[&:nth-child(-n+2)]:border-b-0">
               <div className="text-3xl font-semibold text-indigo-600 md:text-4xl">{s.n}</div>

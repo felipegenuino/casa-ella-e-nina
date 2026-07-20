@@ -1,0 +1,69 @@
+# ============================================================
+# .htaccess — Casas Boutique Ella & Nina (Next.js static export)
+# Apache 2.4 / LiteSpeed (HostGator)
+# Copiado do out/ a cada build (fica em public/).
+# ============================================================
+
+# ----- Listagem de diretórios -----
+Options -Indexes
+
+# ----- Cabeçalhos de segurança -----
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ----- Protege .htaccess e arquivos ocultos/sensíveis -----
+<FilesMatch "^\.(ht|git|env)">
+    Require all denied
+</FilesMatch>
+
+# ----- Página de erro 404 personalizada (Next gera 404.html na raiz) -----
+ErrorDocument 404 /404.html
+
+# ----- MIME (PWA: web app manifest) -----
+<IfModule mod_mime.c>
+    AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ----- Compressão (performance) -----
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
+
+# ----- Cache do navegador -----
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css            "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp          "access plus 1 year"
+    ExpiresByType image/avif          "access plus 1 year"
+    ExpiresByType image/jpeg          "access plus 1 year"
+    ExpiresByType image/png           "access plus 1 year"
+    ExpiresByType image/svg+xml       "access plus 1 year"
+    ExpiresByType image/x-icon        "access plus 1 year"
+    ExpiresByType font/woff2          "access plus 1 year"
+    ExpiresByType text/html           "access plus 0 seconds"
+</IfModule>
+
+# ============================================================
+# FORÇAR HTTPS + canonicalizar para SEM www + raiz -> /pt/
+# ============================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Força HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Canonicaliza para SEM www (www -> raiz)
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+    # Raiz -> idioma padrão (pt). O site é estático: sem middleware/geo-IP,
+    # então a home entra em português; o visitante troca no seletor do menu.
+    RewriteRule ^$ /pt/ [R=302,L]
+</IfModule>
+# ============================================================

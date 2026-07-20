@@ -1,0 +1,48 @@
+name: Deploy via FTP
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permite disparar manualmente na aba Actions também
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      # Node 24 vira padrão das actions em 16/06/2026; opt-in antecipado
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Build static site (pt/en/es)
+        run: pnpm build # next build + export -> ./out
+
+      - name: Deploy FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps # se der erro de conexão, troque para "ftp"
+          local-dir: ./out/
+          # Diretório do site no servidor (o usuário FTP costuma cair na home).
+          server-dir: ./public_html/casasboutiquepatacho.com.br/

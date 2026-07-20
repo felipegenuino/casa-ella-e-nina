@@ -117,6 +117,10 @@ export default function Dock() {
   const visible = SECTIONS.filter((s) => present.includes(s.id));
   const current = LANGS.find((l) => l.code === locale) || LANGS[0];
 
+  // O relatório é uma página standalone (sem as seções do site), então o Dock
+  // não faz sentido lá.
+  if (pathname.startsWith("/relatorio")) return null;
+
   return (
     <nav
       aria-label={t("menu")}
