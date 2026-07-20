@@ -47,3 +47,16 @@ jobs:
           # Caminho relativo à home do login SSH (mesma lógica do FTP).
           remote_path: "./public_html/casasboutiquepatacho.com.br"
           sftp_only: "true"
+
+      # O passo acima usa `put -r ./out/*` e o glob do sftp IGNORA dotfiles,
+      # então o .htaccess não sobe. Este passo sobe ele explicitamente.
+      - name: Deploy .htaccess (dotfile)
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
+        with:
+          server: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 2222
+          local_path: "./out/.htaccess"
+          remote_path: "./public_html/casasboutiquepatacho.com.br/.htaccess"
+          sftp_only: "true"
