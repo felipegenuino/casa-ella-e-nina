@@ -9,7 +9,7 @@ export default function Footer() {
 
   return (
     <footer id="footer-section" className="bg-white">
-      <div className="container px-6 py-12 mx-auto">
+      <div className="container px-6 pt-12 pb-32 mx-auto">
         <div className="flex flex-col md:flex-row-reverse lg:flex-col md:justify-between items-start lg:items-center lg:text-center">
           <Image
             src="/midias/brands/casas-ella-e-nina.jpg"
