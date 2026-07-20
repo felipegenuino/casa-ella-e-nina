@@ -114,14 +114,14 @@ export default function Ambientes() {
                 aria-hidden={index !== 0}
               >
                 {slide.card ? (
-                  <div className="relative h-[450px] w-[300px] overflow-hidden rounded-lg bg-[#254174]">
+                  <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg bg-[#254174]">
                     <div className="absolute inset-0 bg-indigo-600/70" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/50" />
-                    <div className="relative z-10 flex h-full flex-col gap-6 px-6 py-10">
+                    <div className="relative z-10 flex h-full flex-col gap-5 px-5 py-8">
                       {t.raw("cardFeatures").map((feature, i) => (
                         <p
                           key={i}
-                          className="heading text-3xl leading-tight text-[#f0fdf4]"
+                          className="heading text-2xl leading-tight text-[#f0fdf4]"
                         >
                           {feature}
                         </p>
