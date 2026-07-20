@@ -58,7 +58,7 @@ export default async function PlaylistsPage({ params }) {
           </h2> */}
           <iframe
             style={{ borderRadius: "12px" }}
-            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX8OYzU0lx5hL?utm_source=generator"
+            src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4xXdS0?utm_source=generator"
             width="100%"
             height="352"
             frameBorder="0"
@@ -66,7 +66,7 @@ export default async function PlaylistsPage({ params }) {
             loading="lazy"
           ></iframe>
           <a
-            href="https://open.spotify.com/playlist/37i9dQZF1DX8OYzU0lx5hL?si=41202f67972244f6"
+            href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO4xXdS0?si=41202f67972244f6"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 button-primary"
