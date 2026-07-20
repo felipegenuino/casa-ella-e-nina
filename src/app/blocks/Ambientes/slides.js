@@ -4,7 +4,8 @@
 
 const slides = [
   {
-    image: "/midias/gallery/gallerie-0/capaAmbientes-p.jpg",
+    // Card capa em HTML (traduzível) no lugar da imagem com texto embutido.
+    card: true,
   },
   {
     image: "/midias/gallery/gallerie-0/entrada-1-p.jpg",

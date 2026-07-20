@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import ReactModal from "react-modal";
 import { Cross1Icon } from "@radix-ui/react-icons";
+import { useTranslations } from "next-intl";
 
 // Configurando ReactModal
 if (typeof window !== "undefined") {
@@ -15,6 +16,7 @@ export default function ModalWithMotion({
   children,
   footerContent, // Novo prop para permitir footer customizado, se necessário
 }) {
+  const t = useTranslations("a11y");
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");
@@ -50,7 +52,7 @@ export default function ModalWithMotion({
           <button
             onClick={onRequestClose}
             className="text-gray-700 hover:text-gray-900"
-            aria-label="Fechar modal"
+            aria-label={t("closeModal")}
           >
             <Cross1Icon />
           </button>
@@ -67,9 +69,9 @@ export default function ModalWithMotion({
             <button
               onClick={onRequestClose}
               className="button-primary"
-              aria-label="Fechar modal"
+              aria-label={t("closeModal")}
             >
-              Fechar
+              {t("close")}
             </button>
           )}
         </footer>

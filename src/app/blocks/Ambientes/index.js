@@ -26,6 +26,7 @@ export default function Ambientes() {
     const preloadImages = async () => {
       const imagePromises = slides.map((slide) => {
         return new Promise((resolve) => {
+          if (!slide.image) return resolve(); // card HTML, sem imagem
           const img = new window.Image(); // Garante o uso da API nativa
           img.src = slide.image;
           img.onload = resolve;
@@ -112,16 +113,35 @@ export default function Ambientes() {
                 className="flex flex-col items-center relative mb-10"
                 aria-hidden={index !== 0}
               >
-                <Image
-                  src={slide.image}
-                  alt={t(`items.${index}.caption`)}
-                  width={300}
-                  height={450}
-                  className="object-cover rounded-lg bg-gray-300"
-                />
-                <p className="mt-2 text-xs text-gray-700 ">
-                  {t(`items.${index}.caption`)}
-                </p>
+                {slide.card ? (
+                  <div className="relative h-[450px] w-[300px] overflow-hidden rounded-lg bg-[#254174]">
+                    <div className="absolute inset-0 bg-indigo-600/70" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/50" />
+                    <div className="relative z-10 flex h-full flex-col gap-6 px-6 py-10">
+                      {t.raw("cardFeatures").map((feature, i) => (
+                        <p
+                          key={i}
+                          className="heading text-3xl leading-tight text-[#f0fdf4]"
+                        >
+                          {feature}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <Image
+                      src={slide.image}
+                      alt={t(`items.${index}.caption`)}
+                      width={300}
+                      height={450}
+                      className="object-cover rounded-lg bg-gray-300"
+                    />
+                    <p className="mt-2 text-xs text-gray-700 ">
+                      {t(`items.${index}.caption`)}
+                    </p>
+                  </>
+                )}
               </SwiperSlide>
             ))}
           </Swiper>

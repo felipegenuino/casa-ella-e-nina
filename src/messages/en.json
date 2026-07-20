@@ -125,6 +125,11 @@
       {
         "caption": "Patio"
       }
+    ],
+    "cardFeatures": [
+      "Exclusive Space",
+      "Complete Leisure",
+      "Breakfast Included"
     ]
   },
   "bannerTop": {
@@ -503,7 +508,9 @@
     "contato": "Contact"
   },
   "a11y": {
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "close": "Close",
+    "closeModal": "Close modal"
   },
   "highlights": {
     "viewGalleryLabel": "Press to view the {title} gallery",

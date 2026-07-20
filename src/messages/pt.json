@@ -125,6 +125,11 @@
       {
         "caption": "Pátio"
       }
+    ],
+    "cardFeatures": [
+      "Ambiente Exclusivo",
+      "Lazer Completo",
+      "Café da Manhã Incluso"
     ]
   },
   "bannerTop": {
@@ -503,7 +508,9 @@
     "contato": "Contato"
   },
   "a11y": {
-    "skipToContent": "Pular para o conteúdo"
+    "skipToContent": "Pular para o conteúdo",
+    "close": "Fechar",
+    "closeModal": "Fechar modal"
   },
   "highlights": {
     "viewGalleryLabel": "Pressione para ver a galeria {title}",

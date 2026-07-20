@@ -125,6 +125,11 @@
       {
         "caption": "Patio"
       }
+    ],
+    "cardFeatures": [
+      "Ambiente Exclusivo",
+      "Ocio Completo",
+      "Desayuno Incluido"
     ]
   },
   "bannerTop": {
@@ -503,7 +508,9 @@
     "contato": "Contacto"
   },
   "a11y": {
-    "skipToContent": "Saltar al contenido"
+    "skipToContent": "Saltar al contenido",
+    "close": "Cerrar",
+    "closeModal": "Cerrar modal"
   },
   "highlights": {
     "viewGalleryLabel": "Presiona para ver la galería {title}",
