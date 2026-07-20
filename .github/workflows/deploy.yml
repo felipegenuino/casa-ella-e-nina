@@ -41,7 +41,7 @@ jobs:
         with:
           server: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }} # ou troque por ssh_private_key
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # chave privada (par da autorizada no cPanel)
           port: 2222 # HostGator shared usa 2222 (não 22)
           local_path: "./out/*"
           # Caminho relativo à home do login SSH (mesma lógica do FTP).
