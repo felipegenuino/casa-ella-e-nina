@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination, A11y } from "swiper/modules"; // Importa o módulo Mousewheel
 import VideoSlide from "./VideoSlide";
 import ImageSlide from "./ImageSlide";
+import CardSlide from "./CardSlide";
 import { tGallery } from "./translations";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,6 +18,11 @@ const ModalContent = ({ gallery, closeModal }) => {
   const t = useTranslations("highlights");
   const galleryTitle = tGallery(gallery.title, locale);
   const galleryDescription = tGallery(gallery.description, locale);
+
+  const slugIndex = {};
+  gallery.media.forEach((m, i) => {
+    if (m.slug) slugIndex[m.slug] = i;
+  });
 
   const handleSlideClick = (index) => {
     if (swiperInstance) {
@@ -112,7 +118,8 @@ const ModalContent = ({ gallery, closeModal }) => {
         <Swiper
           id="swiper-gallery"
           slidesPerView={1.4}
-          centeredSlides
+          slidesOffsetBefore={48}
+          slidesOffsetAfter={48}
           spaceBetween={20}
           breakpoints={{
             768: { slidesPerView: 3 },
@@ -135,7 +142,22 @@ const ModalContent = ({ gallery, closeModal }) => {
               className="outline-none relative" // Adiciona o ícone
               onClick={() => handleSlideClick(index)} // Move para o slide clicado
             >
-              {media.type === "video" ? (
+              {media.type === "card" ? (
+                <CardSlide
+                  variant={media.variant}
+                  title={tGallery(media.title, locale)}
+                  intro={(media.intro || []).map((p) => tGallery(p, locale))}
+                  tags={(media.tags || []).map((tag) => tGallery(tag, locale))}
+                  links={(media.links || []).map((l) => ({
+                    target: l.target,
+                    label: tGallery(l.label, locale),
+                  }))}
+                  onNavigate={(target) => {
+                    const i = slugIndex[target];
+                    if (i != null) swiperInstance?.slideTo(i);
+                  }}
+                />
+              ) : media.type === "video" ? (
                 <>
                   <VideoSlide
                     media={media}

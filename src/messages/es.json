@@ -125,6 +125,11 @@
       {
         "caption": "Patio"
       }
+    ],
+    "cardFeatures": [
+      "Ambiente Exclusivo",
+      "Ocio Completo",
+      "Desayuno Incluido"
     ]
   },
   "bannerTop": {
@@ -462,10 +467,12 @@
     "lead": "Elige una de nuestras casas boutique y finaliza tu reserva por Airbnb.",
     "airbnbAlt": "Reservar en Airbnb",
     "ella": {
-      "desc": "Acomódate en la encantadora Casa Ella."
+      "desc": "Acomódate en la encantadora Casa Ella.",
+      "title": "Casa Ella"
     },
     "nina": {
-      "desc": "Acomódate en la encantadora Casa Nina."
+      "desc": "Acomódate en la encantadora Casa Nina.",
+      "title": "Casa Nina"
     }
   },
   "testimonials": {
@@ -489,9 +496,11 @@
     "costBenefit": "Relación calidad-precio",
     "carouselAriaLabel": "Reseñas de huéspedes",
     "photoAlt": "Foto de {name}",
-    "ratingAriaLabel": "{rating} de 5 estrellas"
+    "ratingAriaLabel": "{rating} de 5 estrellas",
+    "translatedNote": "Traducido del portugués"
   },
   "dock": {
+    "inicio": "Inicio",
     "menu": "Menú",
     "cta": "Reservar",
     "langLabel": "Seleccionar idioma",
@@ -503,7 +512,9 @@
     "contato": "Contacto"
   },
   "a11y": {
-    "skipToContent": "Saltar al contenido"
+    "skipToContent": "Saltar al contenido",
+    "close": "Cerrar",
+    "closeModal": "Cerrar modal"
   },
   "highlights": {
     "viewGalleryLabel": "Presiona para ver la galería {title}",

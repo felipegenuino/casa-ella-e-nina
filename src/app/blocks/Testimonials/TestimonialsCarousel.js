@@ -14,6 +14,7 @@ import { formatDistanceToNow, parseISO } from "date-fns";
 import { ptBR, enUS, es } from "date-fns/locale";
 
 import testimonials from "./data";
+import { getReviewComment } from "./translations";
 
 const dateLocales = { pt: ptBR, en: enUS, es };
 
@@ -76,9 +77,12 @@ function Card({ testimonial, deck }) {
           deck ? "relative min-h-0 flex-1 overflow-hidden" : ""
         }`}
       >
-        {testimonial.comment.map((paragraph, index) => (
+        {getReviewComment(testimonial, locale).map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
+        {locale !== "pt" && (
+          <p className="text-xs italic text-gray-400">{t("translatedNote")}</p>
+        )}
         {deck && (
           <div
             aria-hidden="true"

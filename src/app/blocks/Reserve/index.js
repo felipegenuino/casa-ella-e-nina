@@ -29,13 +29,13 @@ export default function Reserve() {
             <div className="relative">
               <Image
                 src="/midias/reserve/bg-casa-ella.jpg"
-                alt="Casa Ella"
+                alt={t("ella.title")}
                 width={600}
                 height={400}
                 className="w-full object-cover transition-transform group-hover:scale-105 duration-300"
               />
               <div className="absolute inset-0 bg-indigo-950/60 flex flex-col justify-center items-center text-white text-center">
-                <h3 className="text-5xl font-semibold">Casa Ella</h3>
+                <h3 className="text-5xl font-semibold">{t("ella.title")}</h3>
                 <p className="mt-2 text-indigo-50 text-sm">{t("ella.desc")}</p>
               </div>
             </div>
@@ -60,13 +60,13 @@ export default function Reserve() {
             <div className="relative">
               <Image
                 src="/midias/reserve/bg-casa-nina.jpg"
-                alt="Casa Nina"
+                alt={t("nina.title")}
                 width={600}
                 height={400}
                 className="w-full object-cover transition-transform group-hover:scale-105 duration-300"
               />
               <div className="absolute inset-0 bg-indigo-950/60 flex flex-col justify-center items-center text-white text-center">
-                <h3 className="text-5xl font-semibold">Casa Nina</h3>
+                <h3 className="text-5xl font-semibold">{t("nina.title")}</h3>
                 <p className="mt-2 text-indigo-50 text-sm">{t("nina.desc")}</p>
               </div>
             </div>

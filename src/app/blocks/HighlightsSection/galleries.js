@@ -8,17 +8,15 @@ const galleries = [
       "Descubra o equilíbrio perfeito entre charme, conforto e exclusividade. Nossa casa boutique foi projetada para proporcionar uma experiência inesquecível em cada detalhe.",
     media: [
       {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/sobre-as-casas-1-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/sobre-as-casas-1-blur.jpg",
-        description: "",
+        type: "card",
+        variant: "intro",
+        title: "As Casas",
+        intro: [
+          "Na Praia do Patacho, em Porto de Pedras, a casa boutique Ella & Nina oferece Wi-Fi, ar-condicionado, praia privativa e jardim com piscina aberta o ano todo — a 1,9 km da praia.",
+          "A villa tem 1 quarto, 2 banheiros, cozinha completa, TV com streaming, área de refeições e varanda com vista da piscina. Também conta com closet, lavanderia e segurança 24h.",
+        ],
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/entrada-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/entrada-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "title", title: "Entrada" },
       {
         type: "video",
         url: "/midias/gallery/gallerie-1/video-1.mp4",
@@ -49,12 +47,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/entrada-4-blur.jpg",
         description: "Vista para piscina",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/sala_estar-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/sala_estar-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Sala de estar",
+        tags: ["TV", "Ar-condicionado", "Livros e material de leitura", "Sistema de som"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/sala_estar-1-p.jpg",
@@ -68,12 +62,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/sala_estar-2-blur.jpg",
         description: "Rede para descansar",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/cozinha_completa-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/cozinha_completa-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Cozinha Completa",
+        tags: ["Assadeira", "Cafeteira", "Forno", "Livros de culinária", "Café", "Chaleira de água quente", "Freezer", "Itens básicos de cozinha", "Fogão", "Taças de vinho", "Microondas", "Refrigerador", "Louças e talheres", "Utensílios para churrasco", "Liquidificador"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/cozinha_completa-1-p.jpg",
@@ -92,12 +82,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/cozinha_completa-3-blur.jpg",
         description: "Cozinha Completa",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/area_jantar-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/area_jantar-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Área de Jantar",
+        tags: ["Taças de vinho", "Mesa de jantar"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/area_jantar-1-p.jpg",
@@ -128,12 +114,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/area_jantar-5-blur.jpg",
         description: "Mesa refeições no jardim",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/quarto-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/quarto-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Quarto",
+        tags: ["Cama king", "Ar-condicionado", "Aquecimento", "TV", "Cabides", "Cobertores e travesseiros extras", "Roupa de cama", "Ferro de passar", "Local para guardar as roupas"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/quarto-1-p.jpg",
@@ -188,12 +170,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/quarto-9-blur.jpg",
         description: "Na suíte uma área de descanso na rede",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/banheiro_completo-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/banheiro_completo-capa-blur.jpg",
-        description: "Banheiro completo",
-      },
+      { type: "card", variant: "tags", title: "Banheiro Completo",
+        tags: ["Água quente", "Produtos de limpeza", "Sabonete para o corpo"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/banheiro_completo-1-p.jpg",
@@ -236,24 +214,16 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/banheiro_completo-7-blur.jpg",
         description: "Banheiro completo",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/lavabo-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/lavabo-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Lavabo",
+        tags: ["Produtos de limpeza"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/lavabo-1-p.jpg",
         blurUrl: "/midias/gallery/gallerie-1/lavabo-1-blur.jpg",
         description: "Lavabo da piscina",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/quintal-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/quintal-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Quintal",
+        tags: ["Cadeira espreguiçadeira", "Área de jantar externa", "Móveis externos", "Chuveiro externo", "Churrasqueira", "Rede"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/quintal-1-p.jpg",
@@ -278,12 +248,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/quintal-4-blur.jpg",
         description: "Vista da piscina com área gourmet",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/patio-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/patio-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Pátio",
+        tags: ["Iluminação noturna"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/patio-1-p.jpg",
@@ -351,12 +317,8 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-1/fundos-4-blur.jpg",
         description: "Fundos",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-1/piscina-capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-1/piscina-capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "tags", title: "Piscina",
+        tags: ["Cadeira espreguiçadeira", "Rede"] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-1/piscina-1-p.jpg",
@@ -462,12 +424,11 @@ const galleries = [
     description:
       "Ambientes aconchegantes e funcionais que combinam estilo e modernidade. Viva momentos únicos em cada espaço cuidadosamente planejado.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-2/capa-cafe-da-manha-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-2/capa-cafe-da-manha-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "intro", title: "Café da Manhã",
+        intro: [
+          "Opções de café da manhã à la carte e continental com pratos quentes, itens de confeitaria frescos e frutas estão disponíveis diariamente na villa.",
+          "Você pode aproveitar o clima quente com a churrasqueira da propriedade, economizando uma viagem ao supermercado, solicitando entrega de supermercado.",
+        ] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-2/cafe-1-p.jpg",
@@ -568,12 +529,7 @@ const galleries = [
     description:
       "Relaxe e se divirta em nossa área de lazer privativa, projetada para oferecer momentos de descanso com vista para a beleza natural ao seu redor.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-3/capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-3/capa-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "title", title: "Área de Lazer" },
       {
         type: "image",
         url: "/midias/gallery/gallerie-3/kit-cadeirapraia-1-p.jpg",
@@ -728,18 +684,17 @@ const galleries = [
     description:
       "Desfrute de momentos únicos ao redor da mesa. Nossa cozinha e espaço para refeições foram pensados para criar memórias saborosas.",
     media: [
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capa-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capa-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capapatacho-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capapatacho-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "nav", title: "Lugares para Conhecer",
+        links: [
+          { label: "Praia do Patacho", target: "patacho" },
+          { label: "Praia da Laje", target: "praia-da-laje" },
+          { label: "Passeios de Jangada", target: "passeios-jangada" },
+          { label: "Visita ao Santuário", target: "visita-santuario" },
+          { label: "Farol de Porto de Pedras", target: "farol" },
+          { label: "Tatuamunha", target: "tatuamunha" },
+        ] },
+      { type: "card", variant: "intro", title: "Praia do Patacho", slug: "patacho",
+        intro: ["Eleita uma das praias mais bonitas do Brasil, bandeira azul."] },
       {
         type: "image",
         url: "/midias/gallery/gallerie-4/patacho-1-a-p.jpg",
@@ -794,36 +749,15 @@ const galleries = [
         blurUrl: "/midias/gallery/gallerie-4/patacho-8-blur.jpg",
         description: "",
       },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaPraiadalaje-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaPraiadalaje-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaPasseiosdejangada-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaPasseiosdejangada-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaVisitaSantuario-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaVisitaSantuario-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaFarolPortoDepedras-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaFarolPortoDepedras-blur.jpg",
-        description: "",
-      },
-      {
-        type: "image",
-        url: "/midias/gallery/gallerie-4/capaTatuamunha-p.jpg",
-        blurUrl: "/midias/gallery/gallerie-4/capaTatuamunha-blur.jpg",
-        description: "",
-      },
+      { type: "card", variant: "intro", title: "Praia da Laje", slug: "praia-da-laje",
+        intro: ["Conhecida pelas águas cristalinas e tranquilidade."] },
+      { type: "card", variant: "intro", title: "Passeios de Jangada", slug: "passeios-jangada",
+        intro: ["Passeio imperdível."] },
+      { type: "card", variant: "title", title: "Visita ao Santuário do Peixe-Boi", slug: "visita-santuario" },
+      { type: "card", variant: "intro", title: "Farol de Porto de Pedras", slug: "farol",
+        intro: ["Uma vista incrível do alto entre Rio Manguaba e a praia."] },
+      { type: "card", variant: "intro", title: "Tatuamunha", slug: "tatuamunha",
+        intro: ["Encontro do Rio com Mar."] },
     ],
   },
 ];

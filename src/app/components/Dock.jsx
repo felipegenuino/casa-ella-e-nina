@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
 const SECTIONS = [
+  { id: "hero", key: "inicio" },
   { id: "ambientes", key: "ambientes" },
   { id: "comodidades", key: "comodidades" },
   { id: "historias", key: "avaliacoes" },
@@ -53,6 +54,39 @@ export default function Dock() {
 
   const menuRef = useRef(null);
   const langRef = useRef(null);
+
+  // Scroll suave até a seção. Animação própria (rAF + scroll instantâneo por
+  // frame) porque o smooth nativo é intermitente neste layout; respeita
+  // prefers-reduced-motion.
+  const scrollToId = (id) => (e) => {
+    e.preventDefault();
+    setMenuOpen(false);
+    const el = document.getElementById(id);
+    if (!el) return;
+    const startY = window.scrollY;
+    const targetY = el.getBoundingClientRect().top + startY;
+    const finish = () => history.replaceState(null, "", `#${id}`);
+
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      window.scrollTo({ top: targetY, behavior: "instant" });
+      finish();
+      return;
+    }
+
+    const dist = targetY - startY;
+    const duration = 500;
+    const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+    let startTime = null;
+    const step = (now) => {
+      if (startTime === null) startTime = now;
+      const p = Math.min((now - startTime) / duration, 1);
+      window.scrollTo({ top: startY + dist * easeOutCubic(p), behavior: "instant" });
+      if (p < 1) requestAnimationFrame(step);
+      else finish();
+    };
+    requestAnimationFrame(step);
+  };
 
   useEffect(() => {
     const ids = SECTIONS.filter((s) => document.getElementById(s.id)).map((s) => s.id);
@@ -111,7 +145,7 @@ export default function Dock() {
                 <a
                   key={s.id}
                   href={`#${s.id}`}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={scrollToId(s.id)}
                   className={`rounded-xl px-3 py-2.5 text-[14px] font-semibold transition-colors ${
                     active === s.id ? "bg-white/15 text-white" : "text-white/70 hover:bg-white/10 hover:text-white"
                   }`}
@@ -168,6 +202,7 @@ export default function Dock() {
         {/* CTA */}
         <a
           href="#reserve"
+          onClick={scrollToId("reserve")}
           className="whitespace-nowrap rounded-full bg-white px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-[1px] text-indigo-950 shadow-[0_0_0_4px_rgba(255,255,255,0.14)] transition-transform duration-200 hover:-translate-y-0.5 active:scale-[0.97]"
         >
           {t("cta")}

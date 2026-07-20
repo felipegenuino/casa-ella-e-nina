@@ -125,6 +125,11 @@
       {
         "caption": "Patio"
       }
+    ],
+    "cardFeatures": [
+      "Exclusive Space",
+      "Complete Leisure",
+      "Breakfast Included"
     ]
   },
   "bannerTop": {
@@ -462,10 +467,12 @@
     "lead": "Choose one of our boutique houses and complete your booking on Airbnb.",
     "airbnbAlt": "Book on Airbnb",
     "ella": {
-      "desc": "Settle into the charming Casa Ella."
+      "desc": "Settle into the charming House Ella.",
+      "title": "House Ella"
     },
     "nina": {
-      "desc": "Settle into the charming Casa Nina."
+      "desc": "Settle into the charming House Nina.",
+      "title": "House Nina"
     }
   },
   "testimonials": {
@@ -474,8 +481,8 @@
     "titleLine2": "at Casa Ella and Nina",
     "lead": "Every experience is unique and full of special moments.",
     "readReviewsCta": "Read the full reviews straight from Airbnb:",
-    "airbnbEllaLabel": "Casa Ella Reviews",
-    "airbnbNinaLabel": "Casa Nina Reviews",
+    "airbnbEllaLabel": "House Ella Reviews",
+    "airbnbNinaLabel": "House Nina Reviews",
     "airbnbLinkTitle": "Opens the listing on Airbnb (new window)",
     "preferredHeading": "Guest favorite",
     "preferredDesc": "One of the most loved homes by guests, based on ratings, reviews, and reliability.",
@@ -489,9 +496,11 @@
     "costBenefit": "Value",
     "carouselAriaLabel": "Guest reviews",
     "photoAlt": "Photo of {name}",
-    "ratingAriaLabel": "{rating} out of 5 stars"
+    "ratingAriaLabel": "{rating} out of 5 stars",
+    "translatedNote": "Translated from Portuguese"
   },
   "dock": {
+    "inicio": "Home",
     "menu": "Menu",
     "cta": "Book now",
     "langLabel": "Select language",
@@ -503,7 +512,9 @@
     "contato": "Contact"
   },
   "a11y": {
-    "skipToContent": "Skip to content"
+    "skipToContent": "Skip to content",
+    "close": "Close",
+    "closeModal": "Close modal"
   },
   "highlights": {
     "viewGalleryLabel": "Press to view the {title} gallery",
