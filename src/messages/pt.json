@@ -467,10 +467,12 @@
     "lead": "Escolha uma de nossas casas boutique e finalize sua reserva pelo Airbnb.",
     "airbnbAlt": "Reservar no Airbnb",
     "ella": {
-      "desc": "Acomode-se na charmosa Casa Ella."
+      "desc": "Acomode-se na charmosa Casa Ella.",
+      "title": "Casa Ella"
     },
     "nina": {
-      "desc": "Acomode-se na charmosa Casa Nina."
+      "desc": "Acomode-se na charmosa Casa Nina.",
+      "title": "Casa Nina"
     }
   },
   "testimonials": {

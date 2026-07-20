@@ -467,10 +467,12 @@
     "lead": "Choose one of our boutique houses and complete your booking on Airbnb.",
     "airbnbAlt": "Book on Airbnb",
     "ella": {
-      "desc": "Settle into the charming Casa Ella."
+      "desc": "Settle into the charming House Ella.",
+      "title": "House Ella"
     },
     "nina": {
-      "desc": "Settle into the charming Casa Nina."
+      "desc": "Settle into the charming House Nina.",
+      "title": "House Nina"
     }
   },
   "testimonials": {
