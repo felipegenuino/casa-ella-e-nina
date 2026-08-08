@@ -74,9 +74,19 @@ jobs:
           # partir do segundo deploy) e um put por arquivo. O find pré-ordena,
           # então todo pai é criado antes do filho, e enxerga dotfiles — o
           # .htaccess entra aqui e dispensa o passo separado que existia antes.
+          #
+          # O `put` do sftp roda glob() no caminho local, e o App Router gera
+          # diretórios literais como `[locale]`. Sem escapar, o sftp lê isso
+          # como classe de caracteres, entra no modo "vários arquivos", trata o
+          # destino como pasta e repete o basename — o envio morre com
+          # `dest open ".../page-abc.js/page-abc.js": No such file or directory`.
+          # O sed abaixo escapa [ ] * ? e a própria barra invertida.
+          esc='s/[][*?\\]/\\&/g'
           {
-            find out -mindepth 1 -type d -printf "-mkdir $REMOTE/%P\n"
-            find out -type f -printf "put out/%P $REMOTE/%P\n"
+            find out -mindepth 1 -type d -printf '%P\n' | sed "$esc" \
+              | awk -v r="$REMOTE" '{print "-mkdir " r "/" $0}'
+            find out -type f -printf '%P\n' | sed "$esc" \
+              | awk -v r="$REMOTE" '{print "put out/" $0 " " r "/" $0}'
           } > batch.sftp
           echo "Arquivos a enviar: $(find out -type f | wc -l)"
 
