@@ -36,27 +36,52 @@ jobs:
 
       - name: Deploy SFTP
         # O FTPS da HostGator é instável (SSL alert 50 no socket de dados);
-        # SFTP (SSH) é criptografado e estável.
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
-        with:
-          server: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # chave privada (par da autorizada no cPanel)
-          port: 2222 # HostGator shared usa 2222 (não 22)
-          local_path: "./out/*"
-          # Caminho relativo à home do login SSH (mesma lógica do FTP).
-          remote_path: "./public_html/casasboutiquepatacho.com.br"
-          sftp_only: "true"
+        # SFTP (SSH) é criptografado e estável. Porta 2222, não 22, no shared.
+        #
+        # Aqui era usada a wlixcc/SFTP-Deploy-Action. Ela grava a chave com
+        # `printf "%s"`, sem newline final, e o OpenSSH recusa o arquivo com
+        # `error in libcrypto`. Hoje funciona só porque o secret foi colado pela
+        # interface web, que preserva a quebra de linha final — mas basta
+        # alguém regravar o secret com `gh secret set` lendo de stdin (que faz
+        # TrimRight("\r\n")) para o deploy quebrar sem nenhuma mudança de código.
+        # Escrevendo a chave com `printf '%s\n'`, o newline é garantido.
+        env:
+          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USERNAME }}
+          REMOTE: ./public_html/casasboutiquepatacho.com.br
+        run: |
+          install -m 600 /dev/null key.pem
+          printf '%s\n' "$SSH_KEY" > key.pem
+          ssh-keygen -l -f key.pem > /dev/null || { echo "::error::Chave inválida."; exit 1; }
 
-      # O passo acima usa `put -r ./out/*` e o glob do sftp IGNORA dotfiles,
-      # então o .htaccess não sobe. Este passo sobe ele explicitamente.
-      - name: Deploy .htaccess (dotfile)
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.5
-        with:
-          server: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 2222
-          local_path: "./out/.htaccess"
-          remote_path: "./public_html/casasboutiquepatacho.com.br/.htaccess"
-          sftp_only: "true"
+          mkdir -p ~/.ssh
+          ssh-keyscan -p 2222 "$SSH_HOST" >> ~/.ssh/known_hosts 2>/dev/null
+
+          find out -name '.DS_Store' -delete
+
+          # O batch do sftp separa argumentos por espaço e não tem como escapar,
+          # então um caminho com espaço subiria truncado e silenciosamente errado.
+          if find out -name '*[[:space:]]*' | grep -q .; then
+            echo "::error::Caminho com espaço dentro de out/ — o batch do sftp não suporta."
+            find out -name '*[[:space:]]*'
+            exit 1
+          fi
+
+          # A conta da HostGator não tem shell ("Shell access is not enabled"),
+          # então não dá para usar rsync nem `ssh mkdir`: tudo sai pelo batch.
+          # Um -mkdir por diretório (o `-` ignora "já existe", que acontece a
+          # partir do segundo deploy) e um put por arquivo. O find pré-ordena,
+          # então todo pai é criado antes do filho, e enxerga dotfiles — o
+          # .htaccess entra aqui e dispensa o passo separado que existia antes.
+          {
+            find out -mindepth 1 -type d -printf "-mkdir $REMOTE/%P\n"
+            find out -type f -printf "put out/%P $REMOTE/%P\n"
+          } > batch.sftp
+          echo "Arquivos a enviar: $(find out -type f | wc -l)"
+
+          sftp -P 2222 -i key.pem -b batch.sftp "$SSH_USER@$SSH_HOST"
+
+      - name: Remove a chave do runner
+        if: always()
+        run: rm -f key.pem
