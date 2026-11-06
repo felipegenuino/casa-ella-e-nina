@@ -3,6 +3,7 @@ import { Link as ScrollLink } from "react-scroll"; // Para ancoras
 import Link from "next/link"; // Para links internos
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { CookieSettingsLink } from "../../components/Analytics";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -91,6 +92,10 @@ export default function Footer() {
             {t("whatsapp")}
           </Link>
         </div>
+
+        <p className="mt-8 text-center text-sm">
+          <CookieSettingsLink className="text-gray-600 underline" />
+        </p>
       </div>
     </footer>
   );
